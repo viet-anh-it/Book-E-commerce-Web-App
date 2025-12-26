@@ -1,0 +1,61 @@
+server:
+  port: 8282
+  ssl:
+    bundle: web-server-bundle
+
+spring:
+  ssl:
+    bundle:
+      jks:
+        web-server-bundle:
+          key:
+            alias: bookommerce_ssl
+          keystore:
+            location: classpath:bookommerce-ssl.p12
+            password: 123456
+            type: PKCS12
+        client-trust-bundle:
+          key:
+            alias: bookommerce_ssl
+          keystore:
+            location: classpath:bookommerce-ssl.p12
+            password: 123456
+            type: PKCS12
+          truststore:
+            location: classpath:bookommerce-ssl.p12
+            password: 123456
+            type: PKCS12
+  application:
+    name: auth-server
+  datasource:
+    url: jdbc:mysql://localhost:3806/bookommerce-auth-server-dev-db
+    username: root
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+  session:
+    jdbc:
+      initialize-schema: always
+
+# logging:
+#   level:
+#     org:
+#       zalando:
+#         logbook: TRACE
+
+# logbook:
+#   format:
+#     style: http
+
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+  file:
+    name: logs/auth-server.log

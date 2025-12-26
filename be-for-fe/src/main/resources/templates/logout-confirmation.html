@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <title>Logout - Bookommerce</title>
+    <!-- Font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            /* Light Theme Tokens (Ant Design inspired) */
+            --primary-color: #1677ff;
+            --primary-hover: #4096ff;
+            --text-color: #000000e0;
+            --text-secondary: #00000073;
+            --bg-color: #f0f2f5;
+            --component-bg: #ffffff;
+            --border-color: #d9d9d9;
+            --border-hover: #4096ff;
+            --shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
+            /* Stronger shadow for floating effect */
+            --floating-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+            --radius: 8px;
+            --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            --transition: all 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            --brand-gradient: linear-gradient(135deg, #1677ff 0%, #80bfff 100%);
+        }
+
+        [data-theme="dark"] {
+            /* Dark Theme Tokens */
+            --primary-color: #1668dc;
+            --primary-hover: #1677ff;
+            --text-color: #ffffffd9;
+            --text-secondary: #ffffff73;
+            --bg-color: #000000;
+            --component-bg: #141414;
+            --border-color: #424242;
+            --border-hover: #1668dc;
+            --shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.6), 0 3px 6px -4px rgba(0, 0, 0, 0.4), 0 9px 28px 8px rgba(0, 0, 0, 0.3);
+            --floating-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.6), 0 10px 10px -5px rgba(0, 0, 0, 0.4);
+            --brand-gradient: linear-gradient(135deg, #1668dc 0%, #15395b 100%);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-family);
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            transition: background-color 0.3s ease, color 0.3s ease;
+            padding: 20px;
+        }
+
+        .auth-container {
+            width: 100%;
+            max-width: 900px;
+            /* Wider for 2 columns */
+        }
+
+        .auth-card {
+            background: var(--component-bg);
+            border-radius: 12px;
+            box-shadow: var(--floating-shadow);
+            /* Stronger shadow */
+            display: flex;
+            /* 2-column layout */
+            overflow: hidden;
+            min-height: 400px;
+            /* Adjusted height */
+            /* No border as requested */
+        }
+
+        /* Left Side: Visual */
+        .auth-visual {
+            flex: 1;
+            background: var(--brand-gradient);
+            padding: 40px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            color: #ffffff;
+            position: relative;
+        }
+
+        .visual-icon-wrapper {
+            width: 80px;
+            height: 80px;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 24px;
+            color: #ffffff;
+            backdrop-filter: blur(4px);
+        }
+
+        .visual-icon-wrapper svg {
+            width: 40px;
+            height: 40px;
+        }
+
+        .visual-content h2 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            line-height: 1.3;
+            text-align: center;
+        }
+
+        .visual-content p {
+            font-size: 16px;
+            opacity: 0.9;
+            line-height: 1.6;
+            text-align: center;
+        }
+
+        /* Right Side: Content */
+        .auth-content-side {
+            flex: 1;
+            padding: 48px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 24px;
+            font-weight: 700;
+            margin-bottom: 12px;
+            color: var(--text-color);
+        }
+
+        p.confirmation-text {
+            font-size: 16px;
+            color: var(--text-secondary);
+            margin-bottom: 32px;
+            line-height: 1.5;
+        }
+
+        .btn-group {
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+        }
+
+        .btn {
+            display: inline-block;
+            width: 100%;
+            font-weight: 500;
+            text-align: center;
+            border: 1px solid transparent;
+            cursor: pointer;
+            height: 44px;
+            /* Slightly taller */
+            padding: 4px 15px;
+            font-size: 15px;
+            border-radius: 6px;
+            transition: var(--transition);
+            user-select: none;
+            line-height: 1.5;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+        }
+
+        .btn-primary {
+            color: #fff;
+            background-color: var(--primary-color);
+            box-shadow: 0 4px 10px rgba(22, 119, 255, 0.3);
+            /* Button shadow */
+        }
+
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            transform: translateY(-1px);
+        }
+
+        .app-logo {
+            font-size: 20px;
+            font-weight: 600;
+            color: var(--text-color);
+            margin-bottom: 24px;
+            display: inline-block;
+            text-decoration: none;
+        }
+
+        .app-logo span {
+            color: var(--primary-color);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .auth-card {
+                flex-direction: column;
+                min-height: auto;
+            }
+
+            .auth-visual {
+                padding: 32px 24px;
+            }
+
+            .auth-content-side {
+                padding: 32px 24px;
+            }
+        }
+
+        /* Theme Toggle */
+        .theme-toggle {
+            position: absolute;
+            top: 24px;
+            right: 24px;
+            background: none;
+            border: none;
+            cursor: pointer;
+            color: var(--text-secondary);
+            font-size: 20px;
+            padding: 8px;
+            border-radius: 50%;
+            transition: var(--transition);
+            z-index: 10;
+        }
+
+        .theme-toggle:hover {
+            background-color: rgba(0, 0, 0, 0.05);
+            color: var(--text-color);
+        }
+
+        [data-theme="dark"] .theme-toggle:hover {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+</head>
+
+<body>
+    <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
+        <span id="themeIcon">☀️</span>
+    </button>
+
+    <div class="auth-container">
+        <div class="auth-card">
+            <!-- Left Side: Visual -->
+            <div class="auth-visual">
+                <div class="visual-icon-wrapper">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+                        stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round"
+                            d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15m3 0l3-3m0 0l-3-3m3 3H9" />
+                    </svg>
+                </div>
+                <div class="visual-content">
+                    <h2>See You Soon!</h2>
+                    <p>We hope you enjoyed your time with Bookommerce.</p>
+                </div>
+            </div>
+
+            <!-- Right Side: Content -->
+            <div class="auth-content-side">
+                <a href="/" class="app-logo"><span>Book</span>ommerce</a>
+                <h1>Ready to Leave?</h1>
+                <p class="confirmation-text">You are about to be logged out of your account. You will need to login
+                    again to continue shopping.</p>
+
+                <div class="btn-group">
+                    <form action="/logout" method="post" style="width: 100%;">
+                        <input type="hidden" name="_csrf" th:value="${_csrf.token}">
+                        <button type="submit" class="btn btn-primary">Logout</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // --- Dark Mode Logic ---
+        const themeToggle = document.getElementById('themeToggle');
+        const themeIcon = document.getElementById('themeIcon');
+
+        function getPreferredTheme() {
+            const storedTheme = localStorage.getItem('theme');
+            if (storedTheme) return storedTheme;
+            return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+        }
+
+        function setTheme(theme) {
+            document.documentElement.setAttribute('data-theme', theme);
+            localStorage.setItem('theme', theme);
+            themeIcon.textContent = theme === 'dark' ? '🌙' : '☀️';
+        }
+
+        setTheme(getPreferredTheme());
+
+        themeToggle.addEventListener('click', () => {
+            const currentTheme = document.documentElement.getAttribute('data-theme');
+            setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+    </script>
+</body>
+
+</html>

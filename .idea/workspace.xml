@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="74710ecf-10f6-4373-8601-ca9a016fc210" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/bookommerce-web-ui/src/App.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bookommerce-web-ui/src/App.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookommerce-web-ui/src/api/auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/bookommerce-web-ui/src/api/auth.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookommerce-web-ui/src/components/Header.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bookommerce-web-ui/src/components/Header.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookommerce-web-ui/src/contexts/AuthContext.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bookommerce-web-ui/src/contexts/AuthContext.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bookommerce-web-ui/src/pages/CartPage.jsx" beforeDir="false" afterPath="$PROJECT_DIR$/bookommerce-web-ui/src/pages/CartPage.jsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/BookommerceApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/BookommerceApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/config/SecurityConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/config/SecurityConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/controller/GenreController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/controller/GenreController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/controller/RatingController.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/controller/RatingController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/request/CreateBookRequestDto.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/request/CreateBookRequestDto.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/ApiErrorResponse.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/ApiErrorResponse.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/exception/GlobalExceptionHandler.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/exception/GlobalExceptionHandler.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/service/GenreService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/service/GenreService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resource-server/src/main/resources/application.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/resource-server/src/main/resources/application.yaml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/bookommerce-web-ui" />
+  </component>
+  <component name="KubernetesApiPersistence"><![CDATA[{}]]></component>
+  <component name="KubernetesApiProvider"><![CDATA[{
+  "isMigrated": true
+}]]></component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="mavenHomeTypeForPersistence" value="WRAPPER" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
+  <component name="ProjectColorInfo"><![CDATA[{
+  "associatedIndex": 5
+}]]></component>
+  <component name="ProjectId" id="36eKGi2ox90dpU4YOYKmaGySc8l" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "ModuleVcsDetector.initialDetectionPerformed": "true",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.TerminalTabsStorage.copyFrom.TerminalArrangementManager.252": "true",
+    "RunOnceActivity.typescript.service.memoryLimit.init": "true",
+    "com.intellij.ml.llm.matterhorn.ej.ui.settings.DefaultModelSelectionForGA.v1": "true",
+    "git-widget-placeholder": "master",
+    "ignore.virus.scanning.warn.message": "true",
+    "junie.onboarding.icon.badge.shown": "true",
+    "kotlin-language-version-configured": "true",
+    "last_opened_file_path": "C:/Users/PC/OneDrive/Desktop/bookommerce",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "preferences.lookFeel",
+    "to.speed.mode.migration.done": "true",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-30f59d01ecdd-cffe25b9f5b3-intellij.indexing.shared.core-IU-253.28294.334" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="74710ecf-10f6-4373-8601-ca9a016fc210" name="Changes" comment="" />
+      <created>1765361506237</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1765361506237</updated>
+      <workItem from="1765361520981" duration="692000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+</project>

@@ -1,0 +1,169 @@
+import React, { useState } from 'react';
+import { Card, Typography, Button, theme, Rate, InputNumber, notification } from 'antd';
+import { addToCart } from '../api/cart';
+import ToastProgressBar from './common/ToastProgressBar';
+import { ShoppingCartOutlined, CloseOutlined } from '@ant-design/icons';
+import { useNavigate, useLocation } from 'react-router-dom';
+
+const { Text, Title } = Typography;
+
+const ProductCard = ({ product }) => {
+    const {
+        token: { colorBgContainer, colorText },
+    } = theme.useToken();
+
+    const navigate = useNavigate();
+    const location = useLocation();
+    const [quantity, setQuantity] = useState(1);
+    const [api, contextHolder] = notification.useNotification();
+
+    const handleAddToCart = async (e) => {
+        e.stopPropagation();
+
+        try {
+            await addToCart({ bookId: product.id, quantity });
+
+            const key = `success-${Date.now()}`;
+            const duration = 3;
+
+            api.success({
+                message: 'Added to cart successfully',
+                description: (
+                    <div style={{ position: 'relative', paddingBottom: 10 }}>
+                        <ToastProgressBar duration={duration} onClose={() => api.destroy(key)} />
+                    </div>
+                ),
+                key,
+                duration: 0, // Disable auto-close, let ProgressBar handle it
+                placement: 'topRight',
+                closeIcon: <CloseOutlined style={{ color: colorText }} />,
+            });
+
+        } catch (error) {
+            console.error("Add to cart error:", error);
+            const key = `error-${Date.now()}`;
+            const duration = 4;
+
+            let message = 'Validation failed';
+            let description = 'Check your input';
+
+            if (error.response) {
+                const { status, data } = error.response;
+                if (status === 200) {
+                    // Sometimes 200 might cloak an error if backend style is weird, but per spec 200 is success. 
+                    // This block is unlikely reachable if axios throws, but just in case.
+                } else if (status === 400) {
+                    message = data.message || 'Validation failed';
+                    if (data.errors && data.errors.fieldErrors) {
+                        const fieldErrorMessages = Object.values(data.errors.fieldErrors).flat();
+                        description = (
+                            <ul style={{ paddingLeft: 20, margin: 0 }}>
+                                {fieldErrorMessages.map((msg, idx) => <li key={idx}>{msg}</li>)}
+                            </ul>
+                        );
+                    }
+                } else if (status === 401) {
+                    message = 'Unauthorized';
+                    description = 'Please login to continue.';
+                } else {
+                    message = 'Unexpected Error Occur!';
+                    description = data.message || 'Something went wrong.';
+                }
+            } else {
+                message = 'Unexpected Error Occur!';
+                description = 'Network error or server unreachable.';
+            }
+
+            api.error({
+                message,
+                description: (
+                    <div style={{ position: 'relative', paddingBottom: 10 }}>
+                        {description}
+                        <ToastProgressBar duration={duration} onClose={() => api.destroy(key)} />
+                    </div>
+                ),
+                key,
+                duration: 0,
+                placement: 'topRight',
+                closeIcon: <CloseOutlined style={{ color: colorText }} />,
+            });
+        }
+    };
+
+    const handleQuantityChange = (value) => {
+        setQuantity(value);
+    };
+
+    return (
+        <>
+            {contextHolder}
+            <Card
+                className="product-card"
+                hoverable
+                onClick={() => navigate(`/books/${product.id}`, { state: { from: location, scrollY: window.scrollY } })}
+                style={{ width: '100%', height: '100%', display: 'flex', flexDirection: 'column' }}
+                cover={
+                    <div style={{
+                        position: 'relative',
+                        width: '100%',
+                        paddingTop: '133.33%', // 3:4 Aspect Ratio (4/3 * 100)
+                        overflow: 'hidden',
+                        backgroundColor: '#f0f0f0'
+                    }}>
+                        <img
+                            className="product-image"
+                            alt={product.title}
+                            src={`https://bff.bookommerce.com:8181${product.thumbnailUrlPath}`}
+                            style={{
+                                position: 'absolute',
+                                top: 0,
+                                left: 0,
+                                width: '100%',
+                                height: '100%',
+                                objectFit: 'cover',
+                            }}
+                        />
+                    </div>
+                }
+                bodyStyle={{ flex: 1, display: 'flex', flexDirection: 'column', padding: 12 }}
+                actions={[
+                    <div key="add-to-cart" style={{ padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8, width: '100%' }} onClick={e => e.stopPropagation()}>
+                        <InputNumber
+                            min={1}
+                            max={99}
+                            value={quantity}
+                            onChange={handleQuantityChange}
+                            size="middle"
+                            style={{ width: 60 }}
+                            onPressEnter={handleAddToCart}
+                        />
+                        <Button type="primary" icon={<ShoppingCartOutlined />} size="middle" onClick={handleAddToCart}>
+                            Add
+                        </Button>
+                    </div>
+                ]}
+            >
+                <div style={{ flex: 1 }}>
+                    <Title level={5} ellipsis={{ rows: 2 }} style={{ marginBottom: 8, fontSize: 16 }}>
+                        {product.title}
+                    </Title>
+                    <Text type="secondary" style={{ fontSize: 12, display: 'block', marginBottom: 4 }}>
+                        {product.author}
+                    </Text>
+                    <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                        <Rate disabled allowHalf value={product.rating} style={{ fontSize: 12 }} />
+                        <Text type="secondary" style={{ fontSize: 12 }}>({product.rating})</Text>
+                    </div>
+                </div>
+
+                <div style={{ marginTop: 12 }}>
+                    <Text strong style={{ fontSize: 18, color: '#fa541c' }}>
+                        {new Intl.NumberFormat('vi-VN', { style: 'currency', currency: 'VND' }).format(product.price)}
+                    </Text>
+                </div>
+            </Card>
+        </>
+    );
+};
+
+export default React.memo(ProductCard);

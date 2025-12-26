@@ -1,0 +1,52 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
+        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
+        'Noto Color Emoji';
+}
+
+/* Custom Upload Wrapper Styles */
+.custom-upload-wrapper {
+    width: 100%;
+    aspect-ratio: 3/4;
+    position: relative;
+    overflow: hidden;
+    /* Ensure content doesn't spill */
+}
+
+.custom-upload-wrapper .ant-upload-wrapper,
+.custom-upload-wrapper .ant-upload-list,
+.custom-upload-wrapper .ant-upload-select,
+.custom-upload-wrapper .ant-upload-list-item-container {
+    width: 100% !important;
+    height: 100% !important;
+    margin: 0 !important;
+    display: block !important;
+    /* Ensure block display */
+}
+
+.custom-upload-wrapper .ant-upload-list-item {
+    padding: 0 !important;
+    height: 100% !important;
+    width: 100% !important;
+    border: none !important;
+    /* Remove border to avoid flickering edges */
+}
+
+.custom-upload-wrapper .ant-upload-list-item-image {
+    object-fit: cover !important;
+    width: 100% !important;
+    height: 100% !important;
+}
+
+/* Ant Design Upload specific transitions disable to prevent flicker */
+.custom-upload-wrapper .ant-upload-list-item-container {
+    transition: none !important;
+}

@@ -1,0 +1,35 @@
+package com.bookommerce.auth_server.interceptor;
+
+import org.springframework.lang.NonNull;
+import org.springframework.security.authentication.AnonymousAuthenticationToken;
+import org.springframework.security.core.Authentication;
+import org.springframework.security.core.context.SecurityContextHolder;
+import org.springframework.web.servlet.HandlerInterceptor;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
+
+public class LoginSignupPageInterceptor implements HandlerInterceptor {
+
+    //@formatter:off
+    @Override
+    public boolean preHandle(
+        @NonNull HttpServletRequest request,
+        @NonNull HttpServletResponse response,
+        @NonNull Object handler) throws Exception {
+        if(isAuthenticated()) {
+            response.sendRedirect("http://app.bookommerce.com:8080");
+            return false;
+        }
+        return true;
+    }
+
+    private boolean isAuthenticated() {
+        Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
+        if (authentication == null || authentication.getClass().isAssignableFrom(AnonymousAuthenticationToken.class)) {
+            return false;
+        }
+        return true;
+    }
+    //@formatter:on
+}
