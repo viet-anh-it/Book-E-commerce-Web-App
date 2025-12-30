@@ -3,6 +3,7 @@ package com.bookommerce.resource_server.utils;
 import org.springframework.validation.BeanPropertyBindingResult;
 import org.springframework.validation.BindingResult;
 
+import jakarta.validation.ConstraintValidatorContext;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
@@ -13,5 +14,15 @@ public final class ValidationUtils {
         BeanPropertyBindingResult bindingResult = new BeanPropertyBindingResult(target, objectName);
         bindingResult.rejectValue(field, "", defaultMessage);
         return bindingResult;
+    }
+
+    public static void buildValidationMessage(String field, String message, ConstraintValidatorContext context) {
+        if (field == null) {
+            field = "";
+        }
+        context.disableDefaultConstraintViolation();
+        context.buildConstraintViolationWithTemplate(message)
+            .addPropertyNode(field)
+            .addConstraintViolation();
     }
 }

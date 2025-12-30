@@ -4,6 +4,6 @@ import jakarta.validation.constraints.Min;
 
 //@formatter:off
 public record BookIdRequestDto(
-    @Min(value = 0, message = "Book ID must be greater than or equal to 0")
+    @Min(value = 0, message = "ID less than 0 is not allowed")
     long id
 ) {}

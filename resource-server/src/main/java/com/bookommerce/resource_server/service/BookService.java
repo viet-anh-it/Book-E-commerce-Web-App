@@ -28,12 +28,14 @@ import com.bookommerce.resource_server.dto.request.UpdateBookByIdRequestDto;
 import com.bookommerce.resource_server.dto.response.GetAllBooksResponseDto;
 import com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto;
 import com.bookommerce.resource_server.entity.Book;
+import com.bookommerce.resource_server.entity.Cart;
 import com.bookommerce.resource_server.entity.Genre;
 import com.bookommerce.resource_server.entity.Rating;
 import com.bookommerce.resource_server.entity.RatingStatistic;
 import com.bookommerce.resource_server.exception.BookNotFoundException;
 import com.bookommerce.resource_server.exception.GenreNotFoundException;
 import com.bookommerce.resource_server.repository.BookRepository;
+import com.bookommerce.resource_server.repository.CartRepository;
 import com.bookommerce.resource_server.repository.GenreRepository;
 import com.bookommerce.resource_server.repository.RatingStatisticRepository;
 import com.bookommerce.resource_server.repository.specification.BookSpecification;
@@ -59,6 +61,7 @@ public class BookService {
     BookMapper bookMapper;
     RatingService ratingService;
     GenreRepository genreRepository;
+    CartRepository cartRepository;
 
     @Transactional
     public void createBook(CreateBookRequestDto createBookRequestDto) throws IOException {
@@ -160,15 +163,73 @@ public class BookService {
     }
 
     @Transactional
-    public void updateBook(BookIdRequestDto bookIdRequestDto, UpdateBookByIdRequestDto updateBookRequestDto) {
+    public void updateBook(BookIdRequestDto bookIdRequestDto, UpdateBookByIdRequestDto updateBookRequestDto) throws IOException {
         Optional<Book> optionalBook = this.bookRepository.findById(bookIdRequestDto.id());
         if (optionalBook.isEmpty()) {
             BindingResult bindingResult = 
                 ValidationUtils.createBindingResult(bookIdRequestDto, "bookIdRequestDto", "id", "Could not find a book with ID: " + bookIdRequestDto.id());
             throw new BookNotFoundException(bindingResult);
         }
+
+        long genreId = updateBookRequestDto.genreId();
+        Optional<Genre> optionalGenre = this.genreRepository.findById(genreId);
+        if (optionalGenre.isEmpty()) {
+            BindingResult bindingResult = 
+                ValidationUtils.createBindingResult(updateBookRequestDto, "updateBookRequestDto", "genreId", "Genre not found with id: " + genreId);
+            throw new GenreNotFoundException(bindingResult);
+        }
+
         Book book = optionalBook.get();
+        MultipartFile bookImageFile = updateBookRequestDto.image();
+        Path destination = null;
+        if (bookImageFile != null && !bookImageFile.isEmpty()) {
+            Files.delete(Paths.get(BOOK_IMAGE_UPLOAD_DIR, StringUtils.getFilename(book.getThumbnailUrlPath())));
+            String cleanPath = StringUtils.cleanPath(bookImageFile.getOriginalFilename());
+            String fileExtension = StringUtils.getFilenameExtension(cleanPath);
+            String uniqueFileName = UUID.randomUUID().toString() + "." + fileExtension;
+            destination = Paths.get(BOOK_IMAGE_UPLOAD_DIR, uniqueFileName);
+            bookImageFile.transferTo(destination);
+            book.setThumbnailUrlPath("/images/books/" + uniqueFileName);
+        }
+
+        book.setGenre(optionalGenre.get());
+        book.setTitle(updateBookRequestDto.title());
+        book.setAuthor(updateBookRequestDto.author());
+        book.setPrice(updateBookRequestDto.price());
+        book.setStock(updateBookRequestDto.stock());
         book.setDescription(updateBookRequestDto.description());
-        this.bookRepository.save(book);
+        try {
+            this.bookRepository.save(book);
+        } catch (Exception exception) {
+            if (destination != null) {
+                Files.delete(destination);
+            }
+            throw exception;
+        }
+    }
+
+    @Transactional
+    public void deleteBookById(BookIdRequestDto bookIdRequestDto) throws IOException {
+        Optional<Book> optionalBook = this.bookRepository.findById(bookIdRequestDto.id());
+        if (optionalBook.isEmpty()) {
+            BindingResult bindingResult = 
+                ValidationUtils.createBindingResult(bookIdRequestDto, "bookIdRequestDto", null, "Could not find a book with ID: " + bookIdRequestDto.id());
+            throw new BookNotFoundException(bindingResult);
+        }
+
+        Book book = optionalBook.get();
+        book.getCartItems().forEach(cartItem -> {
+            Cart cart = cartItem.getCart();
+            cart.getCartItems().remove(cartItem);
+
+            double newCartTotalPrice = cart.getTotalPrice() - cartItem.getSubtotal();
+            cart.setTotalPrice(newCartTotalPrice);
+            int newCartItemCount = cart.getItemCount() - cartItem.getQuantity();
+            cart.setItemCount(newCartItemCount);
+
+            this.cartRepository.save(cart);
+        });
+        Files.delete(Paths.get(BOOK_IMAGE_UPLOAD_DIR, StringUtils.getFilename(book.getThumbnailUrlPath())));
+        this.bookRepository.delete(book);
     }
 }

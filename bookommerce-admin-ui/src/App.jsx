@@ -7,6 +7,7 @@ import AdminHeader from './components/Header';
 import AdminFooter from './components/Footer';
 import AdminDrawer from './components/Drawer';
 import BookPage from './pages/books/BookPage';
+import BookDetail from './pages/books/BookDetail';
 import './index.css';
 
 const { Content } = Layout;
@@ -71,6 +72,7 @@ function App() {
               <Routes>
                 <Route path="/" element={<div>Welcome to Bookommerce Admin Dashboard</div>} />
                 <Route path="/books" element={<BookPage />} />
+                <Route path="/books/:id" element={<BookDetail />} />
                 {/* Add more routes as needed */}
               </Routes>
             </Content>

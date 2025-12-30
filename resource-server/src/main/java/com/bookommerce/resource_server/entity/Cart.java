@@ -2,6 +2,7 @@ package com.bookommerce.resource_server.entity;
 
 import java.util.Set;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
@@ -32,7 +33,7 @@ public class Cart {
     int itemCount;
     double totalPrice;
 
-    @OneToMany(mappedBy = CartItem_.CART, fetch = FetchType.EAGER)
+    @OneToMany(mappedBy = CartItem_.CART, fetch = FetchType.EAGER, cascade = CascadeType.REMOVE, orphanRemoval = true)
     Set<CartItem> cartItems;
 
     String userEmail;

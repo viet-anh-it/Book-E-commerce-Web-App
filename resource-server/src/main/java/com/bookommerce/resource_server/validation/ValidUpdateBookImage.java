@@ -9,13 +9,12 @@ import java.lang.annotation.Target;
 import jakarta.validation.Constraint;
 import jakarta.validation.Payload;
 
-@Target(ElementType.TYPE)
-@Retention(RetentionPolicy.RUNTIME)
+@Target(value = { ElementType.TYPE })
+@Retention(value = RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = PriceRangeValidator.class)
-public @interface ValidPriceRange {
-
-    String message() default "Min price must be less than or equal to max price";
+@Constraint(validatedBy = { UpdateBookImageValidator.class })
+public @interface ValidUpdateBookImage {
+    String message() default "";
 
     Class<?>[] groups() default {};
 

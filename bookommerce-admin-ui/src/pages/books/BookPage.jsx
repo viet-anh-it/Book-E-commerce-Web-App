@@ -1,13 +1,16 @@
 import React, { useEffect, useState } from 'react';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { Table, Button, Space, Input, Modal, message, Typography, Popconfirm, Image } from 'antd';
-import { PlusOutlined, EditOutlined, DeleteOutlined, SearchOutlined } from '@ant-design/icons';
-import { getBooks, deleteBook, createBook, updateBook } from '../../services/bookService';
+import { PlusOutlined, EditOutlined, DeleteOutlined, SearchOutlined, EyeOutlined } from '@ant-design/icons';
+import { getBooks, deleteBook, createBook, updateBook, getBookById } from '../../services/bookService';
 import { getGenres } from '../../services/genreService';
 import BookFormModal from './BookFormModal';
 
 const { Title } = Typography;
 
 const BookPage = () => {
+    const navigate = useNavigate();
+    const [searchParams, setSearchParams] = useSearchParams();
     const [books, setBooks] = useState([]);
     const [loading, setLoading] = useState(false);
     const [searchText, setSearchText] = useState('');
@@ -19,36 +22,85 @@ const BookPage = () => {
     const [genres, setGenres] = useState([]);
     const [genresLoading, setGenresLoading] = useState(false);
     const [formErrors, setFormErrors] = useState([]);
+    const [pagination, setPagination] = useState({
+        page: 0,
+        size: 10,
+        total: 0
+    });
 
-    const fetchBooks = async () => {
+    const fetchBooks = async (page = 0, size = 10, search = '') => {
         setLoading(true);
         try {
-            const response = await getBooks();
-            if (response && response.status === 200) {
+            const params = {
+                page,
+                size,
+                search: search || undefined
+            };
+            const response = await getBooks(params);
+            if (response?.status === 200) {
                 setBooks(response.data || []);
+                if (response.meta) {
+                    setPagination({
+                        page: response.meta.page,
+                        size: response.meta.size,
+                        total: response.meta.total
+                    });
+                }
             } else {
-                setBooks([]);
-                message.error('Failed to fetch books');
+                Modal.error({
+                    title: 'Unexpected Error Occur!',
+                });
             }
         } catch (error) {
-            setBooks([]);
-            message.error('Failed to fetch books');
+            if (error.response?.status === 400) {
+                const { globalErrors = [], fieldErrors = {} } = error.response.data.errors || {};
+                const errorMessages = [...globalErrors, ...Object.values(fieldErrors).flat()];
+                Modal.error({
+                    title: 'Validation failed',
+                    content: (
+                        <ul>
+                            {errorMessages.map((msg, index) => (
+                                <li key={index}>{msg}</li>
+                            ))}
+                        </ul>
+                    ),
+                });
+            } else {
+                Modal.error({
+                    title: 'Unexpected Error Occur!',
+                });
+            }
         } finally {
             setLoading(false);
         }
     };
 
     useEffect(() => {
-        fetchBooks();
-    }, []);
+        const pageParam = searchParams.get('page');
+        const page = pageParam ? Number.parseInt(pageParam) - 1 : 0;
+
+        fetchBooks(page, pagination.size, searchText);
+    }, [searchParams]);
+
+    const handleTableChange = (newPagination) => {
+        const newPage = newPagination.current;
+        setSearchParams({ page: newPage.toString() });
+    };
+
+    const handleSearch = (value) => {
+        setSearchText(value);
+        setSearchParams({ page: '1' }); // Reset to page 1 which triggers the useEffect
+    };
 
     const handleDelete = async (id) => {
         try {
             await deleteBook(id);
             message.success('Book deleted successfully');
-            fetchBooks();
+            fetchBooks(pagination.page, pagination.size, searchText);
         } catch (error) {
-            message.error('Failed to delete book');
+            Modal.error({
+                title: 'Unexpected Error Occur!',
+            });
         }
     };
 
@@ -85,11 +137,38 @@ const BookPage = () => {
     };
 
     const handleEdit = async (record) => {
-        setEditingBook(record);
-        setFormErrors([]);
-        const success = await fetchGenres();
-        if (success) {
-            setIsModalOpen(true);
+        setLoading(true);
+        try {
+            const response = await getBookById(record.id);
+            if (response && response.status === 200) {
+                const bookData = response.data;
+                setEditingBook({
+                    id: bookData.id,
+                    title: bookData.title,
+                    author: bookData.author,
+                    price: bookData.price,
+                    description: bookData.description,
+                    quantity: bookData.stock,
+                    category: bookData.genreId,
+                    thumbnail: bookData.thumbnailUrlPath ? `https://bff.bookommerce.com:8181${bookData.thumbnailUrlPath}` : '',
+                    thumbnailUrlPath: bookData.thumbnailUrlPath,
+                });
+                setFormErrors([]);
+                const success = await fetchGenres();
+                if (success) {
+                    setIsModalOpen(true);
+                }
+            } else {
+                Modal.error({
+                    title: 'Unexpected Error Occur!',
+                });
+            }
+        } catch (error) {
+            Modal.error({
+                title: 'Unexpected Error Occur!',
+            });
+        } finally {
+            setLoading(false);
         }
     };
 
@@ -104,22 +183,37 @@ const BookPage = () => {
         setFormErrors([]);
         try {
             if (editingBook) {
-                await updateBook(editingBook._id, values);
-                message.success('Book updated successfully');
+                const response = await updateBook(editingBook.id, values);
+                if (response && (response.status === 200 || response.status === 201)) {
+                    message.success('Book updated successfully');
+                    setIsModalOpen(false);
+                    fetchBooks(pagination.page, pagination.size, searchText);
+                } else {
+                    Modal.error({
+                        title: 'Unexpected Error Occur!',
+                    });
+                }
             } else {
-                await createBook(values);
-                message.success('Book added successfully');
+                const response = await createBook(values);
+                if (response && (response.status === 200 || response.status === 201)) {
+                    message.success('Book added successfully');
+                    setIsModalOpen(false);
+                    fetchBooks(pagination.page, pagination.size, searchText);
+                } else {
+                    Modal.error({
+                        title: 'Unexpected Error Occur!',
+                    });
+                }
             }
-            setIsModalOpen(false);
-            fetchBooks();
         } catch (error) {
             if (error.response) {
                 const status = error.response.status;
                 if (status === 400) {
-                    const fieldErrors = error.response.data.errors?.fieldErrors;
-                    if (fieldErrors) {
+                    const { globalErrors = [], fieldErrors = {} } = error.response.data.errors || {};
+
+                    // Map field errors to UI fields
+                    if (Object.keys(fieldErrors).length > 0) {
                         const antErrors = Object.keys(fieldErrors).map(key => {
-                            // Map API field names to UI field names
                             let name = key;
                             if (key === 'stock') name = 'quantity';
                             if (key === 'genreId') name = 'category';
@@ -131,18 +225,32 @@ const BookPage = () => {
                             };
                         });
                         setFormErrors(antErrors);
+                    } else {
+                        setFormErrors([]);
                     }
-                } else if (status === 401) {
-                    message.error('Please login to continue!');
-                } else if (status === 403) {
-                    message.error('Forbidden!');
-                } else if (status === 500) {
-                    message.error('Unexpected Error Occur!');
+
+                    // Show global errors in modal
+                    if (globalErrors.length > 0) {
+                        Modal.error({
+                            title: 'Validation failed',
+                            content: (
+                                <ul>
+                                    {globalErrors.map((msg, index) => (
+                                        <li key={index}>{msg}</li>
+                                    ))}
+                                </ul>
+                            ),
+                        });
+                    }
                 } else {
-                    message.error('Failed to save book');
+                    Modal.error({
+                        title: 'Unexpected Error Occur!',
+                    });
                 }
             } else {
-                message.error('Failed to save book');
+                Modal.error({
+                    title: 'Unexpected Error Occur!',
+                });
             }
         } finally {
             setModalLoading(false);
@@ -152,15 +260,20 @@ const BookPage = () => {
     const columns = [
         {
             title: 'Thumbnail',
-            dataIndex: 'thumbnail',
-            key: 'thumbnail',
-            render: (text) => <Image width={50} src={text} fallback="https://via.placeholder.com/50" />,
+            dataIndex: 'thumbnailUrlPath',
+            key: 'thumbnailUrlPath',
+            render: (text) => (
+                <Image
+                    width={50}
+                    src={text ? `https://bff.bookommerce.com:8181${text}` : "https://via.placeholder.com/50"}
+                    fallback="https://via.placeholder.com/50"
+                />
+            ),
         },
         {
             title: 'Title',
             dataIndex: 'title',
             key: 'title',
-            filterable: true,
             sorter: (a, b) => a.title.localeCompare(b.title),
         },
         {
@@ -172,24 +285,24 @@ const BookPage = () => {
             title: 'Price',
             dataIndex: 'price',
             key: 'price',
-            render: (price) => `$${price.toFixed(2)}`,
+            render: (price) => `đ${price?.toLocaleString()}`,
             sorter: (a, b) => a.price - b.price,
         },
         {
-            title: 'Quantity',
-            dataIndex: 'quantity',
-            key: 'quantity',
-        },
-        {
-            title: 'Category',
-            dataIndex: 'category',
-            key: 'category',
+            title: 'Rating',
+            dataIndex: 'rating',
+            key: 'rating',
+            render: (rating) => rating?.toFixed(1) || 'N/A',
         },
         {
             title: 'Action',
             key: 'action',
             render: (_, record) => (
                 <Space size="middle">
+                    <Button
+                        icon={<EyeOutlined />}
+                        onClick={() => navigate(`/books/${record.id}`)}
+                    />
                     <Button
                         type="primary"
                         icon={<EditOutlined />}
@@ -198,7 +311,7 @@ const BookPage = () => {
                     <Popconfirm
                         title="Delete the book"
                         description="Are you sure to delete this book?"
-                        onConfirm={() => handleDelete(record._id)}
+                        onConfirm={() => handleDelete(record.id)}
                         okText="Yes"
                         cancelText="No"
                     >
@@ -208,11 +321,6 @@ const BookPage = () => {
             ),
         },
     ];
-
-    const filteredBooks = Array.isArray(books) ? books.filter(book =>
-        book.title?.toLowerCase().includes(searchText.toLowerCase()) ||
-        book.author?.toLowerCase().includes(searchText.toLowerCase())
-    ) : [];
 
     return (
         <div style={{ padding: '0px' }}>
@@ -227,15 +335,22 @@ const BookPage = () => {
                 placeholder="Search by title or author"
                 prefix={<SearchOutlined />}
                 style={{ marginBottom: 16, maxWidth: 300 }}
-                onChange={(e) => setSearchText(e.target.value)}
+                onChange={(e) => handleSearch(e.target.value)}
             />
 
             <Table
                 columns={columns}
-                dataSource={filteredBooks}
-                rowKey="_id"
+                dataSource={books}
+                rowKey="id"
                 loading={loading}
-                pagination={{ pageSize: 5 }}
+                pagination={{
+                    current: pagination.page + 1,
+                    pageSize: pagination.size,
+                    total: pagination.total,
+                    showSizeChanger: true,
+                    pageSizeOptions: ['10', '20'],
+                }}
+                onChange={handleTableChange}
             />
 
             <BookFormModal

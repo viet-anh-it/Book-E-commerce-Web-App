@@ -9,41 +9,18 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Builder;
 
 // @formatter:off
-/**
- * DTO for single book response.
- * <p>
- * This record contains the detailed information of a book.
- * </p>
- *
- * @param id              the unique identifier of the book.
- * @param title           the title of the book.
- * @param author          the author of the book.
- * @param thumbnailUrlPath    the URL of the book's thumbnail.
- * @param price           the price of the book.
- * @param description     the description of the book.
- * @param ratingStatistic the rating statistic of the book.
- */
 public record GetBookByIdResponseDto(
     long id,
     String title,
     String author,
     String thumbnailUrlPath,
     double price,
+    int stock,
+    long genreId,
     String description,
     Ratings ratings,
     RatingStatistic ratingStatistic
 ) {
-    /**
-     * DTO for rating statistic.
-     *
-     * @param averagePoint the average rating point.
-     * @param ratingCount  the total number of ratings.
-     * @param _1PointCount the count of 1-star ratings.
-     * @param _2PointCount the count of 2-star ratings.
-     * @param _3PointCount the count of 3-star ratings.
-     * @param _4PointCount the count of 4-star ratings.
-     * @param _5PointCount the count of 5-star ratings.
-     */
     public record RatingStatistic(
         double averagePoint,
         long ratingCount,

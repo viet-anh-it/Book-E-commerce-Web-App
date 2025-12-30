@@ -12,9 +12,9 @@ import jakarta.validation.Payload;
 @Target(value = { ElementType.FIELD })
 @Retention(value = RetentionPolicy.RUNTIME)
 @Documented
-@Constraint(validatedBy = { ValidBookImageValidator.class })
+@Constraint(validatedBy = { BookImageValidator.class })
 public @interface ValidBookImage {
-    String message() default "Invalid book image";
+    String message() default "";
 
     Class<?>[] groups() default {};
 

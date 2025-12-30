@@ -23,5 +23,6 @@ public interface BookMapper {
     GetAllBooksResponseDto toGetAllBooksResponseDto(Book book);
 
     @Mapping(target = "ratings", source = "ratings")
+    @Mapping(target = "genreId", source = "book.genre.id")
     GetBookByIdResponseDto toGetBookByIdResponseDto(Book book, GetBookByIdResponseDto.Ratings ratings);
 }

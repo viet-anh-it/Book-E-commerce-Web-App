@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import { Modal, Form, Input, InputNumber, Select, Row, Col, Upload, message } from 'antd';
+import { Modal, Form, Input, InputNumber, Select, Row, Col, Upload } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
-// import ReactQuill from 'react-quill';
-// import 'react-quill/dist/quill.snow.css';
 
 const getBase64 = (file) =>
     new Promise((resolve, reject) => {
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = () => resolve(reader.result);
-        reader.onerror = (error) => reject(error);
+        reader.onerror = (error) => reject(new Error(error));
     });
 
 const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, genresLoading, formErrors }) => {
@@ -66,6 +64,10 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
 
         if (fileList.length > 0 && fileList[0].originFileObj) {
             formData.append('image', fileList[0].originFileObj);
+        } else if (initialValues && initialValues.thumbnailUrlPath) {
+            formData.append('imageUrlPath', initialValues.thumbnailUrlPath);
+        } else {
+            formData.append('imageUrlPath', '');
         }
 
         onOk(formData);

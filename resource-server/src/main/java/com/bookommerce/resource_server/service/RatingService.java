@@ -21,12 +21,6 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-/**
- * Service class for managing ratings.
- * <p>
- * This class contains business logic for submitting ratings.
- * </p>
- */
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -37,12 +31,6 @@ public class RatingService {
     BookRepository bookRepository;
 
     // @formatter:off
-    /**
-     * Creates a new rating for a book.
-     *
-     * @param createRatingRequestDto the DTO containing rating details.
-     * @throws RuntimeException if the book being rated is not found.
-     */
     @Transactional
     public void createRating(CreateRatingRequestDto createRatingRequestDto) {
         Rating rating = this.ratingMapper.toRating(createRatingRequestDto);

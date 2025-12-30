@@ -4,6 +4,7 @@ import java.util.Set;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
@@ -49,11 +50,15 @@ public class Book {
     @JsonIgnore
     Genre genre;
 
-    @OneToMany(mappedBy = Rating_.BOOK, fetch = FetchType.LAZY)
+    @OneToMany(mappedBy = Rating_.BOOK, fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @JsonIgnore
     Set<Rating> ratings;
 
-    @OneToOne(mappedBy = RatingStatistic_.BOOK, fetch = FetchType.LAZY)
+    @OneToOne(mappedBy = RatingStatistic_.BOOK, fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
     @JsonIgnore
     RatingStatistic ratingStatistic;
+
+    @OneToMany(mappedBy = CartItem_.BOOK, fetch = FetchType.LAZY, cascade = CascadeType.REMOVE)
+    @JsonIgnore
+    Set<CartItem> cartItems;
 }

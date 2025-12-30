@@ -25,11 +25,11 @@ import org.springframework.data.domain.Page;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
+import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
-import org.springframework.web.bind.annotation.RequestBody;
 
 @RestController
 @RequestMapping("/api")
@@ -80,14 +80,25 @@ public class BookController {
                                 .build());
         }
 
-        @PutMapping("/books/{id}")
+        @PutMapping(path = "/books/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
         public ResponseEntity<ApiSuccessResponse<Void>> updateBookById(
                 @Valid BookIdRequestDto bookIdRequestDto,
-                @RequestBody @Valid UpdateBookByIdRequestDto updateBookRequestDto) {
+                @ModelAttribute @Valid UpdateBookByIdRequestDto updateBookRequestDto) throws IOException {
                 this.bookService.updateBook(bookIdRequestDto, updateBookRequestDto);
                 ApiSuccessResponse<Void> apiSuccessResponse = ApiSuccessResponse.<Void>builder()
                                 .status(HttpStatus.OK.value())
                                 .message("Book updated successfully")
+                                .build();
+                return ResponseEntity.status(HttpStatus.OK).body(apiSuccessResponse);
+        }
+
+        @DeleteMapping("/books/{id}")
+        public ResponseEntity<ApiSuccessResponse<Void>> deleteBookById(
+                @Valid BookIdRequestDto bookIdRequestDto) throws IOException {
+                this.bookService.deleteBookById(bookIdRequestDto);
+                ApiSuccessResponse<Void> apiSuccessResponse = ApiSuccessResponse.<Void>builder()
+                                .status(HttpStatus.OK.value())
+                                .message("Book deleted successfully")
                                 .build();
                 return ResponseEntity.status(HttpStatus.OK).body(apiSuccessResponse);
         }

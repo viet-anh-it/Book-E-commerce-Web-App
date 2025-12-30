@@ -33,6 +33,10 @@ public class RouteConfig {
                 .and(GatewayRouterFunctions.route()
                     .PUT("/api/books/{id}", HandlerFunctions.http())
                     .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
+                    .build())
+                .and(GatewayRouterFunctions.route()
+                    .DELETE("/api/books/{id}", HandlerFunctions.http())
+                    .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
                     .build());
         //@formatter:on
     }
