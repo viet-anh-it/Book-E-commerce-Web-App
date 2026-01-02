@@ -1,6 +1,7 @@
 import React from 'react';
 import { Layout, Switch, Flex, Typography, theme as antTheme, Button } from 'antd';
-import { SunOutlined, MoonOutlined, MenuFoldOutlined, MenuUnfoldOutlined } from '@ant-design/icons';
+import { SunOutlined, MoonOutlined, MenuFoldOutlined, MenuUnfoldOutlined, LogoutOutlined } from '@ant-design/icons';
+import { useAuth } from '../contexts/AuthContext';
 
 const { Header } = Layout;
 const { Title } = Typography;
@@ -8,7 +9,7 @@ const { Title } = Typography;
 /**
  * AdminHeader Component
  * 
- * Displays the brand logo and the theme toggle switch.
+ * Displays the brand logo, theme toggle switch, and logout button.
  * 
  * @param {Object} props
  * @param {boolean} props.isDarkMode - Current theme mode status (true if dark)
@@ -21,6 +22,8 @@ const AdminHeader = ({ isDarkMode, onThemeChange, collapsed, setCollapsed }) => 
     const {
         token: { colorBgContainer, paddingInline },
     } = antTheme.useToken();
+
+    const { logout } = useAuth();
 
     return (
         <Header
@@ -52,14 +55,23 @@ const AdminHeader = ({ isDarkMode, onThemeChange, collapsed, setCollapsed }) => 
                 </Title>
             </Flex>
 
-            {/* Theme Toggle - Light/Dark Mode */}
-            <Flex gap="small" align="center">
+            {/* Actions - Theme Toggle and Logout */}
+            <Flex gap="middle" align="center">
                 <Switch
                     checkedChildren={<MoonOutlined />}
                     unCheckedChildren={<SunOutlined />}
                     checked={isDarkMode}
                     onChange={onThemeChange}
                 />
+
+                <Button
+                    type="primary"
+                    danger
+                    icon={<LogoutOutlined />}
+                    onClick={logout}
+                >
+                    Logout
+                </Button>
             </Flex>
         </Header>
     );

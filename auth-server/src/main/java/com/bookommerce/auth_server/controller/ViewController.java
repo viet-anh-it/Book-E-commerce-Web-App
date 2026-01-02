@@ -13,6 +13,11 @@ public class ViewController {
         return "login";
     }
 
+    @GetMapping("/store-login")
+    public String renderStoreLoginPage() {
+        return "store-login";
+    }
+
     @GetMapping("/signup")
     public String renderSignupPage() {
         return "signup";

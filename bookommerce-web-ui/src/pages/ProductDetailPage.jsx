@@ -5,8 +5,9 @@ import { ArrowLeftOutlined, ShoppingCartOutlined, DownOutlined, UpOutlined, Clos
 import { addToCart } from '../api/cart';
 import ToastProgressBar from '../components/common/ToastProgressBar';
 import ProductReviews from '../components/ProductReviews';
-import { getBookById, getRatings } from '../api/book';
+import { getBookById, getRatings, createRating } from '../api/book';
 import BackToTopButton from '../components/BackToTopButton';
+import { useAuth } from '../contexts/AuthContext';
 
 const { Title, Text } = Typography;
 
@@ -14,6 +15,7 @@ const ProductDetailPage = () => {
     const { id } = useParams();
     const navigate = useNavigate();
     const location = useLocation();
+    const { user } = useAuth();
     const [quantity, setQuantity] = useState(1);
     const [api, contextHolder] = notification.useNotification();
     const {
@@ -101,6 +103,7 @@ const ProductDetailPage = () => {
     const [filterOption, setFilterOption] = useState('all');
     const [limitOption, setLimitOption] = useState(5);
     const [currentPage, setCurrentPage] = useState(0);
+    const [submittingReview, setSubmittingReview] = useState(false);
 
     // Refs for height calculation
     const leftColumnRef = useRef(null);
@@ -199,6 +202,48 @@ const ProductDetailPage = () => {
             }
         } catch (error) {
             console.error('Failed to fetch reviews:', error);
+        }
+    };
+
+    const handleSubmitReview = async (values) => {
+        try {
+            setSubmittingReview(true);
+            const reviewData = {
+                bookId: parseInt(id),
+                point: values.point,
+                comment: values.comment
+            };
+            await createRating(reviewData);
+
+            api.success({
+                message: 'Đánh giá thành công',
+                description: 'Cảm ơn bạn đã để lại nhận xét!',
+                placement: 'topRight',
+            });
+
+            // Refresh reviews and product data to update statistics
+            fetchReviews(0, limitOption, sortOption, filterOption);
+            // Re-fetch product to get updated rating statistics
+            const data = await getBookById(id);
+            if (data && data.data) {
+                setProduct(prev => ({
+                    ...prev,
+                    rating: data.data.ratingStatistic?.averagePoint || 0,
+                    ratingCount: data.data.ratingStatistic?.ratingCount || 0,
+                    ratingStatistic: data.data.ratingStatistic
+                }));
+            }
+            return true;
+        } catch (error) {
+            console.error('Failed to submit review:', error);
+            api.error({
+                message: 'Đánh giá thất bại',
+                description: error.response?.data?.message || 'Có lỗi xảy ra khi gửi đánh giá.',
+                placement: 'topRight',
+            });
+            return false;
+        } finally {
+            setSubmittingReview(false);
         }
     };
 
@@ -538,17 +583,28 @@ const ProductDetailPage = () => {
                                 </Title>
 
                                 <div style={{ marginTop: 24, display: 'flex', gap: 16, alignItems: 'center' }}>
-                                    <Text>Quantity:</Text>
-                                    <InputNumber
-                                        min={1}
-                                        defaultValue={1}
-                                        value={quantity}
-                                        onChange={setQuantity}
-                                        onPressEnter={handleAddToCart}
-                                    />
-                                    <Button type="primary" icon={<ShoppingCartOutlined />} size="large" onClick={handleAddToCart}>
-                                        Add to Cart
-                                    </Button>
+                                    {user ? (
+                                        <>
+                                            <Text>Quantity:</Text>
+                                            <InputNumber
+                                                min={1}
+                                                defaultValue={1}
+                                                value={quantity}
+                                                onChange={setQuantity}
+                                                onPressEnter={handleAddToCart}
+                                            />
+                                            <Button type="primary" icon={<ShoppingCartOutlined />} size="large" onClick={handleAddToCart}>
+                                                Add to Cart
+                                            </Button>
+                                        </>
+                                    ) : (
+                                        <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
+                                            <Text style={{ fontSize: '16px' }}>Want to buy this book?</Text>
+                                            <a href="https://auth.bookommerce.com:8282/page/login" className="auth-link" style={{ fontSize: '16px', fontWeight: 'bold', color: '#1890ff' }}>
+                                                Login for Shopping
+                                            </a>
+                                        </div>
+                                    )}
                                 </div>
                             </div>
                         </Card>
@@ -599,6 +655,7 @@ const ProductDetailPage = () => {
                         bodyStyle={{ padding: 24 }}
                     >
                         <ProductReviews
+                            user={user}
                             reviews={reviews}
                             meta={reviewsMeta}
                             sortOption={sortOption}
@@ -609,6 +666,8 @@ const ProductDetailPage = () => {
                             onLoadMore={handleLoadMore}
                             onLimitChange={handleLimitChange}
                             onReset={handleReset}
+                            onSubmitReview={handleSubmitReview}
+                            submittingReview={submittingReview}
                             disabled={isDefault}
                         />
                     </Card>

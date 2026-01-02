@@ -56,6 +56,7 @@ public class BookService {
     @Value(value = "${upload.image.book}")
     String BOOK_IMAGE_UPLOAD_DIR;
 
+    BookCrudService bookCrudService;
     BookRepository bookRepository;
     RatingStatisticRepository ratingStatisticRepository;
     BookMapper bookMapper;
@@ -85,7 +86,7 @@ public class BookService {
         book.setGenre(optionalGenre.get());
         book.setThumbnailUrlPath("/images/books/" + uniqueFileName);
         try {
-            this.bookRepository.save(book);
+            this.bookCrudService.save(book);
         } catch(Exception exception) {
             Files.delete(destination);
             throw exception;
@@ -96,7 +97,6 @@ public class BookService {
     }
 
     public Page<GetAllBooksResponseDto> getAllBooks(BooksFilterRequestDto booksFilterRequestDto) {
-        // @formatter:off
         int pageNumber = booksFilterRequestDto.getPage();
         int pageSize = booksFilterRequestDto.getSize();
         Direction sortDirection = booksFilterRequestDto.getOrder();
@@ -129,12 +129,12 @@ public class BookService {
             combinedSpecification = combinedSpecification.and(ratingGreaterThanOrEqualTo);
         }
 
-        Page<Book> pagedBooks = this.bookRepository.findAll(combinedSpecification, pageable);
+        Page<Book> pagedBooks = this.bookCrudService.findAll(combinedSpecification, pageable);
         return pagedBooks.map(book -> this.bookMapper.toGetAllBooksResponseDto(book));
     }
 
     public GetBookByIdResponseDto getBookById(BookIdRequestDto bookIdRequestDto) {
-        Optional<Book> optionalBook = this.bookRepository.findById(bookIdRequestDto.id());
+        Optional<Book> optionalBook = this.bookCrudService.findById(bookIdRequestDto.id());
         if (optionalBook.isEmpty()) {
             BindingResult bindingResult = 
                 ValidationUtils.createBindingResult(bookIdRequestDto, "bookIdRequestDto", "id", "Could not find a book with ID: " + bookIdRequestDto.id());
@@ -142,7 +142,6 @@ public class BookService {
         }
         Book book = optionalBook.get();
         Page<Rating> pagedRatings = this.ratingService.get5NewestRatingsByBookId(bookIdRequestDto.id());
-        //@formatter:off
         GetBookByIdResponseDto.Ratings.PagingSortingMeta ratingsPagingSortingMeta = GetBookByIdResponseDto.Ratings.PagingSortingMeta.builder()
                 .page(pagedRatings.getPageable().getPageNumber())
                 .size(pagedRatings.getPageable().getPageSize())
@@ -164,7 +163,7 @@ public class BookService {
 
     @Transactional
     public void updateBook(BookIdRequestDto bookIdRequestDto, UpdateBookByIdRequestDto updateBookRequestDto) throws IOException {
-        Optional<Book> optionalBook = this.bookRepository.findById(bookIdRequestDto.id());
+        Optional<Book> optionalBook = this.bookCrudService.findById(bookIdRequestDto.id());
         if (optionalBook.isEmpty()) {
             BindingResult bindingResult = 
                 ValidationUtils.createBindingResult(bookIdRequestDto, "bookIdRequestDto", "id", "Could not find a book with ID: " + bookIdRequestDto.id());
@@ -199,7 +198,7 @@ public class BookService {
         book.setStock(updateBookRequestDto.stock());
         book.setDescription(updateBookRequestDto.description());
         try {
-            this.bookRepository.save(book);
+            this.bookCrudService.save(book);
         } catch (Exception exception) {
             if (destination != null) {
                 Files.delete(destination);
@@ -210,7 +209,7 @@ public class BookService {
 
     @Transactional
     public void deleteBookById(BookIdRequestDto bookIdRequestDto) throws IOException {
-        Optional<Book> optionalBook = this.bookRepository.findById(bookIdRequestDto.id());
+        Optional<Book> optionalBook = this.bookCrudService.findById(bookIdRequestDto.id());
         if (optionalBook.isEmpty()) {
             BindingResult bindingResult = 
                 ValidationUtils.createBindingResult(bookIdRequestDto, "bookIdRequestDto", null, "Could not find a book with ID: " + bookIdRequestDto.id());
@@ -230,6 +229,6 @@ public class BookService {
             this.cartRepository.save(cart);
         });
         Files.delete(Paths.get(BOOK_IMAGE_UPLOAD_DIR, StringUtils.getFilename(book.getThumbnailUrlPath())));
-        this.bookRepository.delete(book);
+        this.bookCrudService.delete(book);
     }
 }

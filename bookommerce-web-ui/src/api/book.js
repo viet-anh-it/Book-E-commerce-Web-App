@@ -24,3 +24,12 @@ export const getRatings = async (bookId, params) => {
         throw error;
     }
 };
+export const createRating = async (ratingData) => {
+    try {
+        const response = await axiosInstance.post('/api/ratings', ratingData);
+        return response.data;
+    } catch (error) {
+        console.error('Error creating rating:', error);
+        throw error;
+    }
+};

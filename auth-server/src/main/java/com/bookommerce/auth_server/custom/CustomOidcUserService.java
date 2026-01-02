@@ -1,6 +1,7 @@
 package com.bookommerce.auth_server.custom;
 
 import java.util.Optional;
+import java.util.Set;
 
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserRequest;
 import org.springframework.security.oauth2.client.oidc.userinfo.OidcUserService;
@@ -8,7 +9,10 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.OAuth2AuthenticationException;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 
+import com.bookommerce.auth_server.constant.Roles;
+import com.bookommerce.auth_server.entity.Role;
 import com.bookommerce.auth_server.entity.User;
+import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
 
 import lombok.AccessLevel;
@@ -21,6 +25,7 @@ public class CustomOidcUserService implements OAuth2UserService<OidcUserRequest,
 
     OidcUserService delegate = new OidcUserService();
     UserRepository userRepository;
+    RoleRepository roleRepository;
 
     @Override
     public OidcUser loadUser(OidcUserRequest userRequest) throws OAuth2AuthenticationException {
@@ -29,6 +34,8 @@ public class CustomOidcUserService implements OAuth2UserService<OidcUserRequest,
         if (optionalUser.isEmpty()) {
             User user = new User();
             user.setEmail(oidcUser.getEmail());
+            Role role = this.roleRepository.findByName(Roles.ROLE_CUSTOMER.name());
+            user.setRoles(Set.of(role));
             this.userRepository.save(user);
         }
         return oidcUser;

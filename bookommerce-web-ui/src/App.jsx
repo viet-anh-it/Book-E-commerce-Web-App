@@ -10,7 +10,8 @@ import ScrollToTop from './components/ScrollToTop';
 import ProtectedRoute from './components/ProtectedRoute';
 import { createRoot } from 'react-dom/client'
 import './css/index.css'
-import { AuthProvider } from './contexts/AuthContext';
+import ForbiddenPage from './pages/ForbiddenPage';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -35,37 +36,49 @@ const App = () => {
   );
 };
 
+const AppInner = ({ isDarkMode, toggleTheme }) => {
+  const { user } = useAuth();
+
+  if (user && !user.authorities?.includes('ROLE_CUSTOMER')) {
+    return <ForbiddenPage />;
+  }
+
+  return (
+    <BrowserRouter>
+      <ScrollToTop />
+      <Layout style={{ minHeight: '100vh' }}>
+        {/* Top Marketing Bar */}
+        <div style={{
+          backgroundColor: '#f5f5f5',
+          textAlign: 'center',
+          lineHeight: 0, // Remove extra space below image
+        }}>
+          <img
+            src="https://cdn1.fahasa.com/media/wysiwyg/Thang-11-2025/Homepage_T11_1263x60_BachViet.png"
+            alt="Marketing Banner"
+            style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
+          />
+        </div>
+        <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
+        <Routes>
+          <Route path="/" element={<ProductDiscoveryPage />} />
+          <Route path="/books/:id" element={<ProductDetailPage />} />
+          <Route path="/cart" element={
+            <ProtectedRoute>
+              <CartPage />
+            </ProtectedRoute>
+          } />
+        </Routes>
+        <AppFooter />
+      </Layout>
+    </BrowserRouter>
+  );
+};
+
 const AppContent = ({ isDarkMode, toggleTheme }) => {
   return (
     <AuthProvider>
-      <BrowserRouter>
-        <ScrollToTop />
-        <Layout style={{ minHeight: '100vh' }}>
-          {/* Top Marketing Bar */}
-          <div style={{
-            backgroundColor: '#f5f5f5',
-            textAlign: 'center',
-            lineHeight: 0, // Remove extra space below image
-          }}>
-            <img
-              src="https://cdn1.fahasa.com/media/wysiwyg/Thang-11-2025/Homepage_T11_1263x60_BachViet.png"
-              alt="Marketing Banner"
-              style={{ width: '100%', height: 'auto', display: 'block', objectFit: 'cover' }}
-            />
-          </div>
-          <Header isDarkMode={isDarkMode} onToggleTheme={toggleTheme} />
-          <Routes>
-            <Route path="/" element={<ProductDiscoveryPage />} />
-            <Route path="/books/:id" element={<ProductDetailPage />} />
-            <Route path="/cart" element={
-              <ProtectedRoute>
-                <CartPage />
-              </ProtectedRoute>
-            } />
-          </Routes>
-          <AppFooter />
-        </Layout>
-      </BrowserRouter>
+      <AppInner isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
     </AuthProvider>
   );
 };

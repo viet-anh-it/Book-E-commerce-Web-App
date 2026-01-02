@@ -31,6 +31,7 @@ import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 
+// @formatter:off
 @RestController
 @RequestMapping("/api")
 @RequiredArgsConstructor
@@ -39,7 +40,6 @@ public class BookController {
 
         BookService bookService;
 
-        //@formatter:off
         @PostMapping(path = "/books", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
         public ResponseEntity<ApiSuccessResponse<Void>> createBook(
                 @ModelAttribute @Valid CreateBookRequestDto createBookRequestDto) throws IOException {
@@ -51,7 +51,6 @@ public class BookController {
                 return ResponseEntity.status(HttpStatus.CREATED).body(apiSuccessResponse);
         }
 
-        // @formatter:off
         @GetMapping("/books")
         public ResponseEntity<ApiSuccessResponse<List<GetAllBooksResponseDto>>> getAllBooks(
                 @ModelAttribute @Valid BooksFilterRequestDto booksFilterRequestDto) {

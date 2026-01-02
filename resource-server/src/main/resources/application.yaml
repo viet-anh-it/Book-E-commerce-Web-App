@@ -45,6 +45,9 @@ logging:
     org:
       springframework:
         security: DEBUG
+  file:
+    name: logs/resource-server.log
+    max-size: 10MB
 
 upload:
   image:

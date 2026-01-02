@@ -36,6 +36,10 @@ axiosInstance.interceptors.response.use(function (response) {
     // Bất kì mã trạng thái nào lọt ra ngoài tầm 2xx đều khiến hàm này được trigger\
     // Làm gì đó với lỗi response
     NProgress.done();
+
+    // If the error status is 401 (Unauthorized), let the application handle it
+    // e.g. via AuthContext or individual component error handling.
+
     return Promise.reject(error);
 });
 

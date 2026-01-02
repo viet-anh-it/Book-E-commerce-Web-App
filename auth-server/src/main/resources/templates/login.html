@@ -241,7 +241,6 @@
 
         /* Buttons */
         .btn {
-            display: inline-block;
             width: 100%;
             font-weight: 500;
             text-align: center;
@@ -683,15 +682,16 @@
                     <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
 
                     <div class="form-item" id="emailGroup">
-                        <label class="form-label">Email<span class="required">*</span></label>
+                        <label class="form-label" for="email">Email<span class="required">*</span></label>
                         <div class="input-wrapper">
-                            <input type="email" name="email" class="input-field" placeholder="Enter your email">
+                            <input type="email" id="email" name="email" class="input-field"
+                                placeholder="Enter your email">
                         </div>
                         <div class="error-message" id="error-email"></div>
                     </div>
 
                     <div class="form-item" id="passwordGroup">
-                        <label class="form-label">Password<span class="required">*</span></label>
+                        <label class="form-label" for="password">Password<span class="required">*</span></label>
                         <div class="input-wrapper">
                             <input type="password" name="password" id="password" class="input-field"
                                 placeholder="Enter your password">
@@ -735,6 +735,9 @@
 
                 <div class="auth-footer">
                     Don't have an account? <a href="/page/signup">Sign Up</a>
+                    <div style="margin-top: 12px; font-size: 13px;">
+                        Are you a seller? <a href="/page/store-login">Login to Store Portal</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -909,7 +912,7 @@
             const csrfToken = document.querySelector('input[name="_csrf"]').value;
 
             try {
-                const response = await fetch('/api/login', {
+                const response = await fetch('/api/login/customer', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
@@ -922,6 +925,13 @@
                 // Status 401 has NO BODY
                 if (response.status === 401) {
                     showToast('Bad credentials', 'error');
+                    submitBtn.disabled = false;
+                    submitBtn.textContent = 'Login';
+                    return;
+                }
+
+                if (response.status === 403) {
+                    showToast('Access denied', 'error');
                     submitBtn.disabled = false;
                     submitBtn.textContent = 'Login';
                     return;

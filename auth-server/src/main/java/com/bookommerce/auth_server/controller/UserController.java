@@ -1,5 +1,7 @@
 package com.bookommerce.auth_server.controller;
 
+import java.util.Map;
+
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -22,8 +24,8 @@ public class UserController {
     UserService userService;
 
     @GetMapping("/me")
-    public ResponseEntity<ApiSuccessResponse<String>> getAuthenticatedUser() {
-        return ResponseEntity.ok(ApiSuccessResponse.<String>builder()
+    public ResponseEntity<ApiSuccessResponse<Map<String, Object>>> getAuthenticatedUser() {
+        return ResponseEntity.ok(ApiSuccessResponse.<Map<String, Object>>builder()
                 .status(HttpStatus.OK.value())
                 .message("Get authenticated user successfully")
                 .data(this.userService.getAuthenticatedUser())

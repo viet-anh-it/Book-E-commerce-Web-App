@@ -92,99 +92,6 @@ code {
     box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial,
-        'Noto Sans', sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol',
-        'Noto Color Emoji';
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
-    background-color: #f5f5f5;
-}
-
-code {
-    font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-        monospace;
-}
-
-/* Hide scrollbar for Chrome, Safari and Opera */
-.no-scrollbar::-webkit-scrollbar {
-    display: none;
-}
-
-/* Hide scrollbar for IE, Edge and Firefox */
-.no-scrollbar {
-    -ms-overflow-style: none;
-    /* IE and Edge */
-    scrollbar-width: none;
-    /* Firefox */
-}
-
-/* Highlight active accordion header */
-.ant-collapse-item-active>.ant-collapse-header {
-    background-color: rgba(22, 119, 255, 0.15) !important;
-    /* Ant Design Blue with opacity */
-    border-radius: 0 !important;
-}
-
-@keyframes fadeIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-.fade-in {
-    animation: fadeIn 0.3s ease-out both;
-}
-
-/* Filter Header Hover Effect */
-.ant-collapse-item:not(.ant-collapse-item-active)>.ant-collapse-header:hover {
-    background-color: rgba(22, 119, 255, 0.12) !important;
-}
-
-/* Reset Icon Effects */
-.reset-icon {
-    transition: transform 0.2s ease;
-}
-
-.reset-icon:hover {
-    transform: scale(1.2);
-    color: #1677ff !important;
-    /* Optional: Change color on hover */
-}
-
-.reset-icon:active {
-    transform: scale(0.9);
-}
-
-/* Back Button Styles */
-.back-button {
-    background-color: #1677ff !important;
-    color: #ffffff !important;
-    border-radius: 8px !important;
-    transition: all 0.2s ease !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.back-button:hover {
-    background-color: #4096ff !important;
-    color: #ffffff !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transform: translateY(-1px);
-}
-
-.back-button:active {
-    background-color: #0958d9 !important;
-    transform: translateY(1px);
-    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
-}
 
 /* Product Card Hover Effect */
 .product-card {
@@ -222,4 +129,14 @@ code {
 .delete-button-active:active {
     transform: scale(0.9) !important;
     transition: transform 0.1s ease;
+}
+
+/* Authentication Link Hover Effect */
+.auth-link {
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.auth-link:hover {
+    text-decoration: underline !important;
 }

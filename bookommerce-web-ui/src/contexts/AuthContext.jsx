@@ -26,6 +26,20 @@ export const AuthProvider = ({ children }) => {
         };
 
         checkAuth();
+
+        const handleRevalidate = () => {
+            if (document.visibilityState === 'visible') {
+                checkAuth();
+            }
+        };
+
+        window.addEventListener('focus', handleRevalidate);
+        document.addEventListener('visibilitychange', handleRevalidate);
+
+        return () => {
+            window.removeEventListener('focus', handleRevalidate);
+            document.removeEventListener('visibilitychange', handleRevalidate);
+        };
     }, []);
 
     const logout = async () => {

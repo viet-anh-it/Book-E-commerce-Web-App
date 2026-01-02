@@ -9,7 +9,7 @@ export default defineConfig({
   server: {
     host: 'admin.bookommerce.com',
     port: 7979,
-    open: true,
+    open: false,
     https: {
       pfx: fs.readFileSync(path.resolve(__dirname, 'bookommerce-ssl.p12')),
       passphrase: '123456'

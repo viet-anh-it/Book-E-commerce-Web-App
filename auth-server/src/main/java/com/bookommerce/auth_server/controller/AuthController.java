@@ -42,7 +42,7 @@ public class AuthController {
     }
 
     //@formatter:off
-    @PostMapping("/login")
+    @PostMapping(path = {"/login/customer", "/login/store"})
     public ResponseEntity<ApiSuccessResponse<Map<String, String>>> login(
         @RequestBody @Valid LoginRequestDto loginRequestDto,
         HttpServletRequest request,

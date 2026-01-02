@@ -178,7 +178,7 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                         <Space>
                             {user ? (
                                 <>
-                                    <span style={{ fontWeight: 500 }}>Welcome, {user}!</span>
+                                    <span style={{ fontWeight: 500 }}>Welcome, {user.username}!</span>
                                     <Button type="default" href='https://bff.bookommerce.com:8181/confirm-logout'>
                                         Logout
                                     </Button>

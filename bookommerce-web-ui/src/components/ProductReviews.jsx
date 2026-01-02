@@ -1,6 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { List, Rate, Avatar, Typography, Button, Space, Select, Radio, Row, Col, Card, theme } from 'antd';
-import { UpOutlined } from '@ant-design/icons';
+import { List, Rate, Avatar, Typography, Button, Space, Select, Radio, Row, Col, Card, theme, Modal, Form, Input } from 'antd';
+import { UpOutlined, StarOutlined, LoginOutlined } from '@ant-design/icons';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const { Text, Title, Paragraph } = Typography;
@@ -101,6 +101,7 @@ const ReviewItem = ({ item, index, limitOption, token }) => {
 };
 
 const ProductReviews = ({
+    user = null,
     reviews = [],
     meta = {},
     sortOption = 'newest',
@@ -111,9 +112,27 @@ const ProductReviews = ({
     onLoadMore,
     onLimitChange,
     onReset,
+    onSubmitReview,
+    submittingReview = false,
     disabled = false
 }) => {
     const { token } = theme.useToken();
+    const [isModalVisible, setIsModalVisible] = useState(false);
+    const [form] = Form.useForm();
+
+    const handleOpenModal = () => {
+        setIsModalVisible(true);
+    };
+
+    const handleCloseModal = () => {
+        setIsModalVisible(false);
+        form.resetFields();
+    };
+
+    const onFinish = (values) => {
+        console.log('Review values (offline):', values);
+        handleCloseModal();
+    };
     const handleSortChange = (value) => {
         if (onSortChange) onSortChange(value);
     };
@@ -181,6 +200,41 @@ const ProductReviews = ({
             {/* Sidebar - Sticky */}
             <Col xs={24} md={8} lg={6}>
                 <div style={{ position: 'sticky', top: 88 }}>
+                    <div style={{ marginBottom: 24 }}>
+                        {user ? (
+                            <Button
+                                type="primary"
+                                icon={<StarOutlined />}
+                                size="large"
+                                block
+                                onClick={handleOpenModal}
+                                style={{
+                                    height: '50px',
+                                    fontSize: '16px',
+                                    fontWeight: 'bold',
+                                    borderRadius: '8px',
+                                }}
+                            >
+                                Viết đánh giá của bạn
+                            </Button>
+                        ) : (
+                            <Button
+                                type="primary"
+                                icon={<LoginOutlined />}
+                                size="large"
+                                block
+                                href="https://auth.bookommerce.com:8282/page/login"
+                                style={{
+                                    height: '50px',
+                                    fontSize: '16px',
+                                    fontWeight: 'bold',
+                                    borderRadius: '8px',
+                                }}
+                            >
+                                Đăng nhập để đánh giá
+                            </Button>
+                        )}
+                    </div>
                     <Card title="Bộ lọc & Sắp xếp" size="small">
                         <Space direction="vertical" size="large" style={{ width: '100%' }}>
                             <div>
@@ -233,6 +287,58 @@ const ProductReviews = ({
                             </Button>
                         </div>
                     </Card>
+
+                    <Modal
+                        title={<Title level={3} style={{ margin: 0, textAlign: 'center' }}>Viết đánh giá của bạn</Title>}
+                        open={isModalVisible}
+                        onCancel={handleCloseModal}
+                        footer={null}
+                        centered
+                        destroyOnClose
+                        width={800}
+                        styles={{ body: { padding: '20px 40px' } }}
+                    >
+                        <Form
+                            form={form}
+                            layout="vertical"
+                            onFinish={onFinish}
+                            initialValues={{ point: 5 }}
+                            style={{ marginTop: 24 }}
+                        >
+                            <Form.Item
+                                name="point"
+                                label={<Title level={4}>Bạn đánh giá cuốn sách này thế nào?</Title>}
+                                rules={[{ required: true, message: 'Vui lòng chọn số sao!' }]}
+                            >
+                                <div style={{ textAlign: 'center', padding: '20px 0' }}>
+                                    <Rate style={{ fontSize: 64 }} />
+                                </div>
+                            </Form.Item>
+
+                            <Form.Item
+                                name="comment"
+                                label={<Title level={4}>Nhận xét của bạn</Title>}
+                            >
+                                <Input.TextArea
+                                    rows={8}
+                                    placeholder="Đôi lời chia sẻ về nội dung, chất lượng sách..."
+                                    style={{ fontSize: '16px' }}
+                                />
+                            </Form.Item>
+
+                            <Form.Item style={{ marginBottom: 0, textAlign: 'right', marginTop: 32 }}>
+                                <Space size="middle">
+                                    <Button onClick={handleCloseModal} size="large" style={{ width: 120 }}>
+                                        Hủy
+                                    </Button>
+                                    <Button type="primary" htmlType="submit" size="large" style={{ width: 180 }}>
+                                        Gửi đánh giá
+                                    </Button>
+                                </Space>
+                            </Form.Item>
+                        </Form>
+                    </Modal>
+
                     {showBackToTop && (
                         <div style={{ marginTop: 16, textAlign: 'center', animation: 'fadeIn 0.3s' }}>
                             <Button type="link" onClick={scrollToTop} icon={<UpOutlined />}>

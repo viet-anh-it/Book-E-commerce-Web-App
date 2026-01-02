@@ -1,6 +1,8 @@
 package com.bookommerce.be_for_fe.config;
 
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -11,13 +13,16 @@ import org.springframework.lang.NonNull;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
-import org.springframework.security.oauth2.client.oidc.web.logout.OidcClientInitiatedLogoutSuccessHandler;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.core.authority.mapping.GrantedAuthoritiesMapper;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.IdTokenClaimNames;
+import org.springframework.security.oauth2.core.oidc.user.OidcUserAuthority;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
@@ -25,6 +30,10 @@ import org.springframework.security.web.servlet.util.matcher.PathPatternRequestM
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
+import com.bookommerce.be_for_fe.custom.CustomAuthenticationSuccessHandler;
+import com.bookommerce.be_for_fe.custom.CustomLogoutSuccessHandler;
+
 import jakarta.servlet.DispatcherType;
 
 @Configuration
@@ -49,7 +58,8 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET, "/images/books/**").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
-            .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer.defaultSuccessUrl(FE_BASE_URL))
+            .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
+                .successHandler(new CustomAuthenticationSuccessHandler()))
             .logout(logoutConfigurer -> logoutConfigurer
                 .logoutSuccessHandler(this.oidcLogoutSuccessHandler(this.clientRegistrationRepository())))
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer
@@ -109,9 +119,21 @@ public class SecurityConfig {
 
     //@formatter:off
     private LogoutSuccessHandler oidcLogoutSuccessHandler(ClientRegistrationRepository clientRegistrationRepository) {
-        OidcClientInitiatedLogoutSuccessHandler oidcLogoutSuccessHandler = 
-            new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
-        oidcLogoutSuccessHandler.setPostLogoutRedirectUri(FE_BASE_URL);
-        return oidcLogoutSuccessHandler;
+        return new CustomLogoutSuccessHandler(clientRegistrationRepository);
     }
+
+    @Bean
+	public GrantedAuthoritiesMapper userAuthoritiesMapper() {
+		return (authorities) -> {
+			Set<GrantedAuthority> mappedAuthorities = new HashSet<>();
+			authorities.forEach(authority -> {
+                if (authority instanceof OidcUserAuthority oidcUserAuthority)  {
+				    oidcUserAuthority.getIdToken()
+                        .getClaimAsStringList("authorities")
+                        .forEach(auth -> mappedAuthorities.add(new SimpleGrantedAuthority(auth)));
+                }
+			});
+			return mappedAuthorities;
+		};
+	}
 }

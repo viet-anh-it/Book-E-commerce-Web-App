@@ -8,6 +8,10 @@ import java.security.cert.Certificate;
 import java.security.interfaces.RSAPrivateKey;
 import java.security.interfaces.RSAPublicKey;
 import java.time.Duration;
+import java.util.Collections;
+import java.util.HashSet;
+import java.util.Set;
+import java.util.stream.Collectors;
 
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -23,7 +27,9 @@ import org.springframework.security.config.annotation.authentication.configurati
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.http.SessionCreationPolicy;
+import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.AuthorityUtils;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetailsService;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;
 import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
@@ -36,8 +42,10 @@ import org.springframework.security.oauth2.client.userinfo.OAuth2UserService;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
 import org.springframework.security.oauth2.core.oidc.OidcScopes;
+import org.springframework.security.oauth2.core.oidc.endpoint.OidcParameterNames;
 import org.springframework.security.oauth2.core.oidc.user.OidcUser;
 import org.springframework.security.oauth2.jwt.JwtDecoder;
+import org.springframework.security.oauth2.server.authorization.OAuth2TokenType;
 import org.springframework.security.oauth2.server.authorization.client.InMemoryRegisteredClientRepository;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClient;
 import org.springframework.security.oauth2.server.authorization.client.RegisteredClientRepository;
@@ -47,11 +55,14 @@ import org.springframework.security.oauth2.server.authorization.settings.Authori
 import org.springframework.security.oauth2.server.authorization.settings.ClientSettings;
 import org.springframework.security.oauth2.server.authorization.settings.OAuth2TokenFormat;
 import org.springframework.security.oauth2.server.authorization.settings.TokenSettings;
+import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext;
+import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.security.web.context.SecurityContextRepository;
+import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
@@ -59,8 +70,10 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
 import com.bookommerce.auth_server.custom.CustomOAuth2AuthenticationSuccessHandler;
 import com.bookommerce.auth_server.custom.CustomOidcUserService;
+import com.bookommerce.auth_server.entity.Role;
 import com.bookommerce.auth_server.entity.User;
 import com.bookommerce.auth_server.interceptor.LoginSignupPageInterceptor;
+import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
@@ -70,6 +83,7 @@ import com.nimbusds.jose.proc.SecurityContext;
 
 import jakarta.servlet.DispatcherType;
 
+// @formatter:off
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -77,11 +91,11 @@ public class SecurityConfig {
     private static final String FE_BASE_URL = "https://app.bookommerce.com:8080";
     private static final String API_GATEWAY_BASE_URL = "https://bff.bookommerce.com:8181";
     private static final String AUTH_SERVER_BASE_URL = "https://auth.bookommerce.com:8282";
+    private static final String ADMIN_FE_BASE_URL = "https://admin.bookommerce.com:7979";
 
     @Bean
     @Order(1)
     public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
-        //@formatter:off
         OAuth2AuthorizationServerConfigurer authorizationServerConfigurer = 
             OAuth2AuthorizationServerConfigurer.authorizationServer();
         http
@@ -96,19 +110,19 @@ public class SecurityConfig {
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer
                 .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/page/login")));
         return http.build();
-        //@formatter:on
     }
 
     @Bean
     @Order(2)
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
-        //@formatter:off
         http
             .authorizeHttpRequests((authorize) -> authorize
                 .requestMatchers(HttpMethod.GET, "/page/signup").permitAll()                                                                
                 .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.GET, "/page/login").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/login").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/store-login").permitAll()
+                .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()
+                .requestMatchers(HttpMethod.GET, "/csrf").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
             .securityContext(securityContextConfigurer -> securityContextConfigurer
@@ -127,22 +141,26 @@ public class SecurityConfig {
                 .defaultSuccessUrl(API_GATEWAY_BASE_URL + "/oauth2/authorization/bff", true))
             .formLogin(formLoginConfigurer -> formLoginConfigurer.disable())
             .httpBasic(httpBasicConfigurer -> httpBasicConfigurer.disable())
-            .csrf(Customizer.withDefaults())
+            .csrf(csrfConfigurer -> csrfConfigurer.ignoringRequestMatchers(
+                PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.GET, "/csrf")
+            ))
             .cors(Customizer.withDefaults());
         return http.build();
-        //@formatter:on
     }
 
     @Bean
     public UserDetailsService userDetailsService(UserRepository userRepository) throws UsernameNotFoundException {
-        //@formatter:off
         return username -> {
             User user = userRepository.findByEmail(username)
                 .orElseThrow(() -> new UsernameNotFoundException("User not found"));
+            Set<Role> roles = user.getRoles();
+            Set<GrantedAuthority> authorities = new HashSet<>();
+            for (Role role : roles) {
+                authorities.add(new SimpleGrantedAuthority(role.getName()));
+            }
             return new org.springframework.security.core.userdetails.User(
-                user.getEmail(), user.getPassword(), AuthorityUtils.NO_AUTHORITIES);
+                user.getEmail(), user.getPasswordHash(), authorities);
         };
-        //@formatter:on
     }
 
     @Bean
@@ -150,7 +168,6 @@ public class SecurityConfig {
         return new BCryptPasswordEncoder();
     }
 
-    //@formatter:off
     @Bean
     public RegisteredClientRepository registeredClientRepository() {
         RegisteredClient bff = RegisteredClient.withId("bff")
@@ -161,6 +178,7 @@ public class SecurityConfig {
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
                 .redirectUri(API_GATEWAY_BASE_URL + "/login/oauth2/code/bff")
                 .postLogoutRedirectUri(FE_BASE_URL)
+                .postLogoutRedirectUri(AUTH_SERVER_BASE_URL + "/page/store-login")
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
                 .clientSettings(ClientSettings.builder()
@@ -227,7 +245,6 @@ public class SecurityConfig {
         return AuthorizationServerSettings.builder().build();
     }
 
-    //@formatter:off
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration authenticationConfiguration) throws Exception {
         return authenticationConfiguration.getAuthenticationManager();
@@ -245,13 +262,14 @@ public class SecurityConfig {
             public void addInterceptors(@NonNull InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginSignupPageInterceptor())
                     .addPathPatterns("/page/login")
+                    .addPathPatterns("/page/store-login")
                     .addPathPatterns("/page/signup");
             }
 
             @Override
             public void addCorsMappings(@NonNull CorsRegistry registry) {
                 registry.addMapping("/api/me")
-                    .allowedOrigins(FE_BASE_URL)
+                    .allowedOrigins(FE_BASE_URL, ADMIN_FE_BASE_URL)
                     .allowedMethods(HttpMethod.GET.name())
                     .allowedHeaders("*")
                     .allowCredentials(true);
@@ -282,7 +300,21 @@ public class SecurityConfig {
 	}
 
     @Bean
-    public OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService(UserRepository userRepository) {
-        return new CustomOidcUserService(userRepository);
+    public OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService(UserRepository userRepository, RoleRepository roleRepository) {
+        return new CustomOidcUserService(userRepository, roleRepository);
     }
+
+    @Bean
+	public OAuth2TokenCustomizer<JwtEncodingContext> jwtTokenCustomizer() { 
+		return (context) -> {
+			if (OAuth2TokenType.ACCESS_TOKEN.equals(context.getTokenType()) || OidcParameterNames.ID_TOKEN.equals(context.getTokenType().getValue())) { 
+				context.getClaims().claims((claims) -> { 
+					Set<String> authorities = AuthorityUtils.authorityListToSet(context.getPrincipal().getAuthorities())
+							.stream()
+							.collect(Collectors.collectingAndThen(Collectors.toSet(), Collections::unmodifiableSet)); 
+                    claims.put("authorities", authorities);
+				});
+			}
+		};
+	}
 }

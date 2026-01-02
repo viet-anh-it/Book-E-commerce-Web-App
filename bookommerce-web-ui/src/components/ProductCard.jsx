@@ -4,6 +4,7 @@ import { addToCart } from '../api/cart';
 import ToastProgressBar from './common/ToastProgressBar';
 import { ShoppingCartOutlined, CloseOutlined } from '@ant-design/icons';
 import { useNavigate, useLocation } from 'react-router-dom';
+import { useAuth } from '../contexts/AuthContext';
 
 const { Text, Title } = Typography;
 
@@ -14,6 +15,7 @@ const ProductCard = ({ product }) => {
 
     const navigate = useNavigate();
     const location = useLocation();
+    const { user } = useAuth();
     const [quantity, setQuantity] = useState(1);
     const [api, contextHolder] = notification.useNotification();
 
@@ -127,20 +129,28 @@ const ProductCard = ({ product }) => {
                 }
                 bodyStyle={{ flex: 1, display: 'flex', flexDirection: 'column', padding: 12 }}
                 actions={[
-                    <div key="add-to-cart" style={{ padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8, width: '100%' }} onClick={e => e.stopPropagation()}>
-                        <InputNumber
-                            min={1}
-                            max={99}
-                            value={quantity}
-                            onChange={handleQuantityChange}
-                            size="middle"
-                            style={{ width: 60 }}
-                            onPressEnter={handleAddToCart}
-                        />
-                        <Button type="primary" icon={<ShoppingCartOutlined />} size="middle" onClick={handleAddToCart}>
-                            Add
-                        </Button>
-                    </div>
+                    user ? (
+                        <div key="add-to-cart" style={{ padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', gap: 8, width: '100%' }} onClick={e => e.stopPropagation()}>
+                            <InputNumber
+                                min={1}
+                                max={99}
+                                value={quantity}
+                                onChange={handleQuantityChange}
+                                size="middle"
+                                style={{ width: 60 }}
+                                onPressEnter={handleAddToCart}
+                            />
+                            <Button type="primary" icon={<ShoppingCartOutlined />} size="middle" onClick={handleAddToCart}>
+                                Add
+                            </Button>
+                        </div>
+                    ) : (
+                        <div key="login-link" style={{ padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', width: '100%' }} onClick={e => e.stopPropagation()}>
+                            <a href="https://auth.bookommerce.com:8282/page/login" className="auth-link" style={{ fontSize: '14px', fontWeight: '500', color: '#1890ff' }}>
+                                Login for Shopping
+                            </a>
+                        </div>
+                    )
                 ]}
             >
                 <div style={{ flex: 1 }}>

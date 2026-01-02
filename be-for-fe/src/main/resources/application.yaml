@@ -36,18 +36,11 @@ spring:
     jdbc:
       initialize-schema: always
 
-# logging:
-#   level:
-#     org:
-#       zalando:
-#         logbook: TRACE
-
-# logbook:
-#   format:
-#     style: http
-
 logging:
   level:
     org:
       springframework:
         security: DEBUG
+  file:
+    name: logs/bff.log
+    max-size: 10MB
