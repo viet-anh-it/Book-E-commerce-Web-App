@@ -12,9 +12,8 @@ export const getBookById = async (id) => {
 
 export const getRatings = async (bookId, params) => {
     try {
-        const response = await axiosInstance.get('/api/ratings', {
+        const response = await axiosInstance.get(`/api/books/${bookId}/ratings`, {
             params: {
-                bookId,
                 ...params
             }
         });
@@ -33,3 +32,24 @@ export const createRating = async (ratingData) => {
         throw error;
     }
 };
+
+export const deleteRating = async (id) => {
+    try {
+        const response = await axiosInstance.delete(`/api/ratings/${id}`);
+        return response.data;
+    } catch (error) {
+        console.error('Error deleting rating:', error);
+        throw error;
+    }
+};
+
+export const updateRating = async (ratingData) => {
+    try {
+        const response = await axiosInstance.put('/api/ratings', ratingData);
+        return response.data;
+    } catch (error) {
+        console.error('Error updating rating:', error);
+        throw error;
+    }
+};
+

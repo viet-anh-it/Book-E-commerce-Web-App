@@ -9,14 +9,10 @@ import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
 
 // @formatter:off
-public record GetRatingsByBookIdRequestDto(
-    @Min(value = 0, message = "Book ID must be greater than or equal to 0")
-    long bookId,
-
+public record GetAllRatingsRequestDto(
     @Min(value = 0, message = "Page must be greater than or equal to 0")
     Integer page,
 
-    
     @AllowedPageSizes(value = { 5, 10 })
     Integer size,
 
@@ -27,7 +23,7 @@ public record GetRatingsByBookIdRequestDto(
     @Max(value = 5, message = "Point must be less than or equal to 5")
     Integer point
 ) {
-    public GetRatingsByBookIdRequestDto {
+    public GetAllRatingsRequestDto {
         if(page == null) page = 0;
         if(size == null) size = 5;
         if(sort == null) sort = RatingsSortCriteria.CREATED_AT;

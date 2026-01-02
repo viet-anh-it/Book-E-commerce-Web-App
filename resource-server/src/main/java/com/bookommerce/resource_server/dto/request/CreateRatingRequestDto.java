@@ -6,16 +6,13 @@ import jakarta.validation.constraints.Max;
 
 // @formatter:off
 public record CreateRatingRequestDto(
-        @NotBlank(message = "Rater must not be blank")
-        String rater,
-
-        @Min(value = 1, message = "Rating point must be greater than or equal to 1")
-        @Max(value = 5, message = "Rating point must be less than or equal to 5")
+        @Min(value = 1, message = "Rating point less than 1 is not allowed")
+        @Max(value = 5, message = "Rating point greater than 5 is not allowed")
         int point,
 
-        @NotBlank(message = "Comment must not be blank")
+        @NotBlank(message = "A blank comment is not allowed")
         String comment,
 
-        @Min(value = 0, message = "Book ID must be greater than or equal to 0")
+        @Min(value = 0, message = "Book ID less than 0 is not allowed")
         long bookId
 ) {}

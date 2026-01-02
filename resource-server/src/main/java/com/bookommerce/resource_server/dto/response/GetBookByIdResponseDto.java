@@ -48,6 +48,7 @@ public record GetBookByIdResponseDto(
     ) {
         @Builder
         public record Rating (
+            long id,
             String rater,
             int point,
             String comment,

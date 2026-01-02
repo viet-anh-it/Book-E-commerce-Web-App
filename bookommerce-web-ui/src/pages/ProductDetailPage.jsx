@@ -103,7 +103,6 @@ const ProductDetailPage = () => {
     const [filterOption, setFilterOption] = useState('all');
     const [limitOption, setLimitOption] = useState(5);
     const [currentPage, setCurrentPage] = useState(0);
-    const [submittingReview, setSubmittingReview] = useState(false);
 
     // Refs for height calculation
     const leftColumnRef = useRef(null);
@@ -146,7 +145,7 @@ const ProductDetailPage = () => {
 
                     // Initial reviews fetch from product data if available, otherwise fetch separately
                     if (data.data.ratings) {
-                        setReviews((data.data.ratings.data || []).map((r, i) => ({ ...r, id: r.id || i })));
+                        setReviews(data.data.ratings.data || []);
                         setReviewsMeta(data.data.ratings.meta || {});
                     } else {
                         fetchReviews(0, 5, 'newest', 'all');
@@ -191,13 +190,7 @@ const ProductDetailPage = () => {
 
             const data = await getRatings(id, params);
             if (data && data.data) {
-                // FIX: Ensure unique IDs
-                const newReviews = data.data.map((r, i) => ({ ...r, id: r.id || `generated-${page}-${i}` }));
-                if (append) {
-                    setReviews(prev => [...prev, ...newReviews]);
-                } else {
-                    setReviews(newReviews);
-                }
+                setReviews(prev => append ? [...prev, ...data.data] : data.data);
                 setReviewsMeta(data.meta || {});
             }
         } catch (error) {
@@ -205,45 +198,18 @@ const ProductDetailPage = () => {
         }
     };
 
-    const handleSubmitReview = async (values) => {
-        try {
-            setSubmittingReview(true);
-            const reviewData = {
-                bookId: parseInt(id),
-                point: values.point,
-                comment: values.comment
-            };
-            await createRating(reviewData);
-
-            api.success({
-                message: 'Đánh giá thành công',
-                description: 'Cảm ơn bạn đã để lại nhận xét!',
-                placement: 'topRight',
-            });
-
-            // Refresh reviews and product data to update statistics
-            fetchReviews(0, limitOption, sortOption, filterOption);
-            // Re-fetch product to get updated rating statistics
-            const data = await getBookById(id);
-            if (data && data.data) {
-                setProduct(prev => ({
-                    ...prev,
-                    rating: data.data.ratingStatistic?.averagePoint || 0,
-                    ratingCount: data.data.ratingStatistic?.ratingCount || 0,
-                    ratingStatistic: data.data.ratingStatistic
-                }));
-            }
-            return true;
-        } catch (error) {
-            console.error('Failed to submit review:', error);
-            api.error({
-                message: 'Đánh giá thất bại',
-                description: error.response?.data?.message || 'Có lỗi xảy ra khi gửi đánh giá.',
-                placement: 'topRight',
-            });
-            return false;
-        } finally {
-            setSubmittingReview(false);
+    const handleReviewSuccess = async () => {
+        // Refresh reviews and product data to update statistics
+        fetchReviews(0, limitOption, sortOption, filterOption);
+        // Re-fetch product to get updated rating statistics
+        const data = await getBookById(id);
+        if (data && data.data) {
+            setProduct(prev => ({
+                ...prev,
+                rating: data.data.ratingStatistic?.averagePoint || 0,
+                ratingCount: data.data.ratingStatistic?.ratingCount || 0,
+                ratingStatistic: data.data.ratingStatistic
+            }));
         }
     };
 
@@ -656,6 +622,7 @@ const ProductDetailPage = () => {
                     >
                         <ProductReviews
                             user={user}
+                            bookId={id}
                             reviews={reviews}
                             meta={reviewsMeta}
                             sortOption={sortOption}
@@ -666,8 +633,7 @@ const ProductDetailPage = () => {
                             onLoadMore={handleLoadMore}
                             onLimitChange={handleLimitChange}
                             onReset={handleReset}
-                            onSubmitReview={handleSubmitReview}
-                            submittingReview={submittingReview}
+                            onReviewSuccess={handleReviewSuccess}
                             disabled={isDefault}
                         />
                     </Card>

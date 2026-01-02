@@ -151,8 +151,9 @@ const BookDetail = () => {
                                     <Button
                                         icon={<ArrowLeftOutlined />}
                                         onClick={() => navigate('/books')}
+                                        type='primary'
                                     >
-                                        Back to Management
+                                        Back
                                     </Button>
                                 </div>
 

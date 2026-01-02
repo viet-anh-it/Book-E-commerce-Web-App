@@ -1,6 +1,7 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { List, Rate, Avatar, Typography, Button, Space, Select, Radio, Row, Col, Card, theme, Modal, Form, Input } from 'antd';
+import { List, Rate, Avatar, Typography, Button, Space, Select, Radio, Row, Col, Card, theme, Modal, Form, Input, notification, Popconfirm } from 'antd';
 import { UpOutlined, StarOutlined, LoginOutlined } from '@ant-design/icons';
+import { createRating, deleteRating, updateRating } from '../api/book';
 import { motion, AnimatePresence } from 'framer-motion';
 
 const { Text, Title, Paragraph } = Typography;
@@ -19,7 +20,9 @@ const styles = `
   }
 `;
 
-const ReviewItem = ({ item, index, limitOption, token }) => {
+const ReviewItem = ({ item, index, limitOption, token, currentUser, onDelete, onEdit }) => {
+    const isOwner = currentUser && currentUser.username === item.rater;
+
     const [expanded, setExpanded] = useState(false);
     const contentRef = useRef(null);
     const [isOverflowing, setIsOverflowing] = useState(false);
@@ -43,8 +46,23 @@ const ReviewItem = ({ item, index, limitOption, token }) => {
                 actions={[
                     <Space key="report">
                         <Text type="secondary" style={{ cursor: 'pointer' }}>Báo cáo</Text>
-                    </Space>
-                ]}
+                    </Space>,
+                    isOwner && (
+                        <Space key="owner-actions">
+                            <Button type="link" size="small" style={{ color: '#1890ff', padding: 0 }} onClick={() => onEdit(item)}>Sửa</Button>
+                            <Popconfirm
+                                title="Xóa đánh giá"
+                                description="Bạn có chắc chắn muốn xóa đánh giá này?"
+                                onConfirm={() => onDelete(item.id)}
+                                okText="Xóa"
+                                cancelText="Hủy"
+                                okButtonProps={{ danger: true }}
+                            >
+                                <Button type="link" size="small" danger style={{ padding: 0 }}>Xóa</Button>
+                            </Popconfirm>
+                        </Space>
+                    )
+                ].filter(Boolean)}
             >
                 <List.Item.Meta
                     avatar={<Avatar src={`https://api.dicebear.com/7.x/miniavs/svg?seed=${item.rater}`} size="large" />}
@@ -102,6 +120,7 @@ const ReviewItem = ({ item, index, limitOption, token }) => {
 
 const ProductReviews = ({
     user = null,
+    bookId,
     reviews = [],
     meta = {},
     sortOption = 'newest',
@@ -112,13 +131,18 @@ const ProductReviews = ({
     onLoadMore,
     onLimitChange,
     onReset,
-    onSubmitReview,
-    submittingReview = false,
+    onReviewSuccess,
     disabled = false
 }) => {
     const { token } = theme.useToken();
     const [isModalVisible, setIsModalVisible] = useState(false);
+    const [submitting, setSubmitting] = useState(false);
     const [form] = Form.useForm();
+    const [editForm] = Form.useForm();
+    const [isEditModalVisible, setIsEditModalVisible] = useState(false);
+    const [editingReview, setEditingReview] = useState(null);
+    const [notif, contextHolderNotif] = notification.useNotification();
+    const [modal, contextHolderModal] = Modal.useModal();
 
     const handleOpenModal = () => {
         setIsModalVisible(true);
@@ -129,10 +153,177 @@ const ProductReviews = ({
         form.resetFields();
     };
 
-    const onFinish = (values) => {
-        console.log('Review values (offline):', values);
-        handleCloseModal();
+    const handleEditOpen = (review) => {
+        setEditingReview(review);
+        editForm.setFieldsValue({
+            point: review.point,
+            comment: review.comment
+        });
+        setIsEditModalVisible(true);
     };
+
+    const handleEditClose = () => {
+        setIsEditModalVisible(false);
+        setEditingReview(null);
+        editForm.resetFields();
+    };
+
+    const onFinish = async (values) => {
+        try {
+            setSubmitting(true);
+            const reviewData = {
+                bookId: parseInt(bookId),
+                point: values.point,
+                comment: values.comment
+            };
+            const response = await createRating(reviewData);
+
+            notif.success({
+                message: 'Thông báo',
+                description: response.message || 'Đánh giá thành công',
+                placement: 'topRight',
+            });
+
+            if (onReviewSuccess) await onReviewSuccess();
+            handleCloseModal();
+        } catch (error) {
+            if (error.response) {
+                const { status, data } = error.response;
+                if (status === 400) {
+                    if (data.errors) {
+                        const { fieldErrors, globalErrors } = data.errors;
+                        if (fieldErrors && Object.keys(fieldErrors).length > 0) {
+                            const formFields = Object.keys(fieldErrors).map(field => ({
+                                name: field,
+                                errors: fieldErrors[field]
+                            }));
+                            form.setFields(formFields);
+                        }
+                        if (globalErrors && globalErrors.length > 0) {
+                            notif.error({
+                                message: 'Lỗi kiểm tra',
+                                description: globalErrors.join(', '),
+                                placement: 'topRight',
+                            });
+                        }
+                    } else {
+                        notif.error({
+                            message: 'Lỗi',
+                            description: data.message || 'Validation failed',
+                            placement: 'topRight',
+                        });
+                    }
+                } else if (status === 401 || status === 403 || status === 500) {
+                    notif.error({
+                        message: `Lỗi ${status}`,
+                        description: data.message || 'Có lỗi xảy ra',
+                        placement: 'topRight',
+                    });
+                } else {
+                    modal.error({
+                        title: 'Unexpected Error Occur',
+                        content: data.message || 'Something went wrong.',
+                    });
+                }
+            } else {
+                modal.error({
+                    title: 'Unexpected Error Occur',
+                    content: 'Network error or server unreachable.',
+                });
+            }
+        } finally {
+            setSubmitting(false);
+        }
+    };
+    const handleRatingDelete = async (id) => {
+        try {
+            const response = await deleteRating(id);
+            notif.success({
+                message: 'Thông báo',
+                description: response.message || 'Xóa đánh giá thành công',
+                placement: 'topRight',
+            });
+            if (onReviewSuccess) await onReviewSuccess();
+        } catch (error) {
+            if (error.response) {
+                const { status, data } = error.response;
+                notif.error({
+                    message: `Lỗi ${status}`,
+                    description: data.message || 'Có lỗi xảy ra khi xóa đánh giá',
+                    placement: 'topRight',
+                });
+            } else {
+                notif.error({
+                    message: 'Lỗi',
+                    description: 'Network error or server unreachable.',
+                    placement: 'topRight',
+                });
+            }
+        }
+    };
+
+    const onEditFinish = async (values) => {
+        try {
+            setSubmitting(true);
+            const response = await updateRating({
+                id: editingReview.id,
+                ...values
+            });
+
+            notif.success({
+                message: 'Thông báo',
+                description: response.message || 'Cập nhật đánh giá thành công',
+                placement: 'topRight',
+            });
+
+            if (onReviewSuccess) await onReviewSuccess();
+            handleEditClose();
+        } catch (error) {
+            if (error.response) {
+                const { status, data } = error.response;
+                if (status === 400) {
+                    if (data.errors) {
+                        const { fieldErrors, globalErrors } = data.errors;
+                        if (fieldErrors && Object.keys(fieldErrors).length > 0) {
+                            const formFields = Object.keys(fieldErrors).map(field => ({
+                                name: field,
+                                errors: fieldErrors[field]
+                            }));
+                            editForm.setFields(formFields);
+                        }
+                        if (globalErrors && globalErrors.length > 0) {
+                            notif.error({
+                                message: 'Lỗi kiểm tra',
+                                description: globalErrors.join(', '),
+                                placement: 'topRight',
+                            });
+                        }
+                    } else {
+                        notif.error({
+                            message: 'Lỗi',
+                            description: data.message || 'Validation failed',
+                            placement: 'topRight',
+                        });
+                    }
+                } else {
+                    notif.error({
+                        message: `Lỗi ${status}`,
+                        description: data.message || 'Có lỗi xảy ra',
+                        placement: 'topRight',
+                    });
+                }
+            } else {
+                notif.error({
+                    message: 'Lỗi',
+                    description: 'Network error hay server unreachable.',
+                    placement: 'topRight',
+                });
+            }
+        } finally {
+            setSubmitting(false);
+        }
+    };
+
     const handleSortChange = (value) => {
         if (onSortChange) onSortChange(value);
     };
@@ -196,6 +387,8 @@ const ProductReviews = ({
 
     return (
         <Row gutter={24}>
+            {contextHolderNotif}
+            {contextHolderModal}
             <style>{styles}</style>
             {/* Sidebar - Sticky */}
             <Col xs={24} md={8} lg={6}>
@@ -307,12 +500,11 @@ const ProductReviews = ({
                         >
                             <Form.Item
                                 name="point"
-                                label={<Title level={4}>Bạn đánh giá cuốn sách này thế nào?</Title>}
+                                label={<Title level={4} style={{ textAlign: 'center', display: 'block' }}>Bạn đánh giá cuốn sách này thế nào?</Title>}
                                 rules={[{ required: true, message: 'Vui lòng chọn số sao!' }]}
+                                style={{ textAlign: 'center' }}
                             >
-                                <div style={{ textAlign: 'center', padding: '20px 0' }}>
-                                    <Rate style={{ fontSize: 64 }} />
-                                </div>
+                                <Rate style={{ fontSize: 64 }} />
                             </Form.Item>
 
                             <Form.Item
@@ -331,8 +523,57 @@ const ProductReviews = ({
                                     <Button onClick={handleCloseModal} size="large" style={{ width: 120 }}>
                                         Hủy
                                     </Button>
-                                    <Button type="primary" htmlType="submit" size="large" style={{ width: 180 }}>
+                                    <Button type="primary" htmlType="submit" size="large" style={{ width: 180 }} loading={submitting}>
                                         Gửi đánh giá
+                                    </Button>
+                                </Space>
+                            </Form.Item>
+                        </Form>
+                    </Modal>
+
+                    <Modal
+                        title={<Title level={3} style={{ margin: 0, textAlign: 'center' }}>Cập nhật đánh giá của bạn</Title>}
+                        open={isEditModalVisible}
+                        onCancel={handleEditClose}
+                        footer={null}
+                        centered
+                        destroyOnClose
+                        width={800}
+                        styles={{ body: { padding: '20px 40px' } }}
+                    >
+                        <Form
+                            form={editForm}
+                            layout="vertical"
+                            onFinish={onEditFinish}
+                            style={{ marginTop: 24 }}
+                        >
+                            <Form.Item
+                                name="point"
+                                label={<Title level={4} style={{ textAlign: 'center', display: 'block' }}>Bạn đánh giá thế nào về cuốn sách này?</Title>}
+                                rules={[{ required: true, message: 'Vui lòng chọn số sao!' }]}
+                                style={{ textAlign: 'center' }}
+                            >
+                                <Rate style={{ fontSize: 64 }} />
+                            </Form.Item>
+
+                            <Form.Item
+                                name="comment"
+                                label={<Title level={4}>Nhận xét của bạn</Title>}
+                            >
+                                <Input.TextArea
+                                    rows={8}
+                                    placeholder="Đôi lời chia sẻ về nội dung, chất lượng sách..."
+                                    style={{ fontSize: '16px' }}
+                                />
+                            </Form.Item>
+
+                            <Form.Item style={{ marginBottom: 0, textAlign: 'right', marginTop: 32 }}>
+                                <Space size="middle">
+                                    <Button onClick={handleEditClose} size="large" style={{ width: 120 }}>
+                                        Hủy
+                                    </Button>
+                                    <Button type="primary" htmlType="submit" size="large" style={{ width: 180 }} loading={submitting}>
+                                        Cập nhật
                                     </Button>
                                 </Space>
                             </Form.Item>
@@ -370,6 +611,9 @@ const ProductReviews = ({
                                     index={index}
                                     limitOption={limitOption}
                                     token={token}
+                                    currentUser={user}
+                                    onDelete={handleRatingDelete}
+                                    onEdit={handleEditOpen}
                                 />
                             ))}
                         </AnimatePresence>

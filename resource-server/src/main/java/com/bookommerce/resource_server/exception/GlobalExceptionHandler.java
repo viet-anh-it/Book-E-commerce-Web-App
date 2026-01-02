@@ -14,7 +14,7 @@ import org.springframework.web.bind.annotation.RestControllerAdvice;
 
 import com.bookommerce.resource_server.dto.response.ApiErrorResponse;
 
-//@formatter:off
+// @formatter:off
 @RestControllerAdvice
 public class GlobalExceptionHandler {
 
@@ -26,7 +26,10 @@ public class GlobalExceptionHandler {
         EmptyCartException.class,
         InvalidImageContentTypeException.class,
         InvalidImageFileExtensionException.class,
-        BookImageEmptyException.class
+        BookImageEmptyException.class,
+        DuplicateRatingException.class,
+        ResourceNotFoundException.class,
+        IllegalResourceStateException.class
     })
     @SuppressWarnings("null")
     public ResponseEntity<ApiErrorResponse<Map<String, Object>>> handleValidationException(Exception ex) {
@@ -47,14 +50,18 @@ public class GlobalExceptionHandler {
             bindingResult = invalidImageFileExtensionException.getBindingResult();
         } else if (ex instanceof BookImageEmptyException bookImageEmptyException) {
             bindingResult = bookImageEmptyException.getBindingResult();
+        } else if (ex instanceof DuplicateRatingException duplicateRatingException) {
+            bindingResult = duplicateRatingException.getBindingResult();
+        } else if (ex instanceof ResourceNotFoundException resourceNotFoundException) {
+            bindingResult = resourceNotFoundException.getBindingResult();
+        } else if (ex instanceof IllegalResourceStateException illegalResourceStateException) {
+            bindingResult = illegalResourceStateException.getBindingResult();
         }
 
-        // Extract global errors
         Map<String, Object> error = new HashMap<>();
         List<String> globalErrors = bindingResult.getGlobalErrors().stream().map(globalError -> globalError.getDefaultMessage()).toList();
         error.put("globalErrors", globalErrors);
         
-        // Extract field errors
         Map<String, List<String>> fieldErrors = new HashMap<>();
         bindingResult.getFieldErrors().forEach(fieldError -> {
             fieldErrors.computeIfAbsent(fieldError.getField(), k -> new ArrayList<>()).add(fieldError.getDefaultMessage());

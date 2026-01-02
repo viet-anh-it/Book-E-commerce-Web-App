@@ -8,6 +8,7 @@ import AdminFooter from './components/Footer';
 import AdminDrawer from './components/Drawer';
 import BookPage from './pages/books/BookPage';
 import BookDetail from './pages/books/BookDetail';
+import RatingPage from './pages/ratings/RatingPage';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
 import ForbiddenPage from './pages/ForbiddenPage';
 import ProtectedRoute from './components/ProtectedRoute';
@@ -56,6 +57,7 @@ const AdminAppInner = ({ isDarkMode, toggleTheme, collapsed, setCollapsed }) => 
                         <Route path="/" element={<ProtectedRoute><div>Welcome to Bookommerce Admin Dashboard</div></ProtectedRoute>} />
                         <Route path="/books" element={<ProtectedRoute><BookPage /></ProtectedRoute>} />
                         <Route path="/books/:id" element={<ProtectedRoute><BookDetail /></ProtectedRoute>} />
+                        <Route path="/ratings" element={<ProtectedRoute><RatingPage /></ProtectedRoute>} />
                         {/* Add more routes as needed */}
                     </Routes>
                 </Content>

@@ -40,17 +40,6 @@ public class BookController {
 
         BookService bookService;
 
-        @PostMapping(path = "/books", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
-        public ResponseEntity<ApiSuccessResponse<Void>> createBook(
-                @ModelAttribute @Valid CreateBookRequestDto createBookRequestDto) throws IOException {
-                this.bookService.createBook(createBookRequestDto);
-                ApiSuccessResponse<Void> apiSuccessResponse = ApiSuccessResponse.<Void>builder()
-                                .status(HttpStatus.CREATED.value())
-                                .message("Book created successfully")
-                                .build();
-                return ResponseEntity.status(HttpStatus.CREATED).body(apiSuccessResponse);
-        }
-
         @GetMapping("/books")
         public ResponseEntity<ApiSuccessResponse<List<GetAllBooksResponseDto>>> getAllBooks(
                 @ModelAttribute @Valid BooksFilterRequestDto booksFilterRequestDto) {
@@ -77,6 +66,17 @@ public class BookController {
                                 .message("Book fetched successfully")
                                 .data(book)
                                 .build());
+        }
+
+        @PostMapping(path = "/books", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)
+        public ResponseEntity<ApiSuccessResponse<Void>> createBook(
+                @ModelAttribute @Valid CreateBookRequestDto createBookRequestDto) throws IOException {
+                this.bookService.createBook(createBookRequestDto);
+                ApiSuccessResponse<Void> apiSuccessResponse = ApiSuccessResponse.<Void>builder()
+                                .status(HttpStatus.CREATED.value())
+                                .message("Book created successfully")
+                                .build();
+                return ResponseEntity.status(HttpStatus.CREATED).body(apiSuccessResponse);
         }
 
         @PutMapping(path = "/books/{id}", consumes = MediaType.MULTIPART_FORM_DATA_VALUE)

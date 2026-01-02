@@ -50,11 +50,27 @@ public class SecurityConfig {
         //@formatter:off
         http
             .authorizeHttpRequests((authorize) -> authorize
-                .requestMatchers("/api/books/**").permitAll()
+                // authorization for book
+                .requestMatchers(HttpMethod.GET, "/api/books").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/books/{id}").permitAll()
+                .requestMatchers(HttpMethod.POST, "/api/books").hasRole("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.PUT, "/api/books/{id}").hasRole("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.DELETE, "/api/books/{id}").hasRole("ROLE_PRODUCT_MANAGER")
+                // authorization for genre
                 .requestMatchers("/api/genres/**").permitAll()
-                .requestMatchers("/api/ratings/**").permitAll()
+                // authorization for rating
+                .requestMatchers(HttpMethod.GET, "/api/ratings").hasRole("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.GET, "/api/books/{bookId}/ratings").permitAll()
+                .requestMatchers(HttpMethod.POST, "/api/ratings").hasRole("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PUT, "/api/ratings").hasRole("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/approve").hasRole("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/reject").hasRole("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.DELETE, "/api/ratings/{id}").hasAnyRole("ROLE_PRODUCT_MANAGER", "ROLE_CUSTOMER")
+                // authorization for csrf
                 .requestMatchers("/csrf").permitAll()
+                // authorization for confirm logout
                 .requestMatchers(HttpMethod.GET, "/confirm-logout").permitAll()
+                // authorization for image
                 .requestMatchers(HttpMethod.GET, "/images/books/**").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())

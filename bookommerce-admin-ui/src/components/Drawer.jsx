@@ -5,6 +5,7 @@ import {
     UserOutlined,
     ShoppingOutlined,
     OrderedListOutlined,
+    StarOutlined,
 } from '@ant-design/icons';
 
 const { Sider } = Layout;
@@ -54,6 +55,11 @@ const AdminDrawer = ({ collapsed }) => {
                         key: '/orders',
                         icon: <OrderedListOutlined />,
                         label: 'Orders',
+                    },
+                    {
+                        key: '/ratings',
+                        icon: <StarOutlined />,
+                        label: 'Reviews',
                     },
                     {
                         key: '/users',

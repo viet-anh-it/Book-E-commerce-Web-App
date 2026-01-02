@@ -17,6 +17,7 @@ public interface BookMapper {
     @Mapping(target = Book_.RATING_STATISTIC, ignore = true)
     @Mapping(target = Book_.RATINGS, ignore = true)
     @Mapping(target = Book_.THUMBNAIL_URL_PATH, ignore = true)
+    @Mapping(target = Book_.CART_ITEMS, ignore = true)
     Book toBook(CreateBookRequestDto createBookRequestDto);
 
     @Mapping(target = "rating", source = "ratingStatistic.averagePoint")
