@@ -75,6 +75,8 @@ import com.bookommerce.auth_server.entity.User;
 import com.bookommerce.auth_server.interceptor.LoginSignupPageInterceptor;
 import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
+import com.bookommerce.auth_server.repository.oauth2.ClientRepository;
+import com.bookommerce.auth_server.repository.oauth2.JpaRegisteredClientRepository;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
@@ -169,7 +171,7 @@ public class SecurityConfig {
     }
 
     @Bean
-    public RegisteredClientRepository registeredClientRepository() {
+    public RegisteredClientRepository registeredClientRepository(ClientRepository clientRepository) {
         RegisteredClient bff = RegisteredClient.withId("bff")
                 .clientId("bff")
                 .clientSecret("$2a$12$zBuKEpT5/7BJ/d7ZcoOGmepGXPdoZOx17VieNDn35cZMhnSMDlPT.")
@@ -191,8 +193,9 @@ public class SecurityConfig {
                     .reuseRefreshTokens(false)
                     .build())
                 .build();
-
-        return new InMemoryRegisteredClientRepository(bff);
+        JpaRegisteredClientRepository jpaRegisteredClientRepository = new JpaRegisteredClientRepository(clientRepository);
+        jpaRegisteredClientRepository.save(bff);
+        return jpaRegisteredClientRepository;
     }
 
     @Bean

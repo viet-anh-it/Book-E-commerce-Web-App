@@ -64,6 +64,7 @@ public class RouteConfig {
             .and(GatewayRouterFunctions.route()
                 .GET("/api/ratings", HandlerFunctions.http())
                 .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
+                .filter(TokenRelayFilterFunctions.tokenRelay())
                 .build())
             .and(GatewayRouterFunctions.route()
                 .POST("/api/ratings", HandlerFunctions.http())

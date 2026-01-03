@@ -35,12 +35,24 @@ spring:
   session:
     jdbc:
       initialize-schema: always
-
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        format_sql: true
+    show-sql: true
+    
 logging:
   level:
     org:
       springframework:
         security: DEBUG
+      hibernate:
+        tool:
+          schema: DEBUG
+        SQL: DEBUG
   file:
     name: logs/bff.log
     max-size: 10MB

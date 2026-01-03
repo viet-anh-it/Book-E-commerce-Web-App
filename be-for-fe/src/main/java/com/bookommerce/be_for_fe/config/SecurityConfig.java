@@ -9,6 +9,7 @@ import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
+import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.lang.NonNull;
 import org.springframework.security.config.Customizer;
 import org.springframework.security.config.annotation.web.builders.HttpSecurity;
@@ -16,6 +17,8 @@ import org.springframework.security.config.annotation.web.configuration.EnableWe
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.core.authority.mapping.GrantedAuthoritiesMapper;
+import org.springframework.security.oauth2.client.JdbcOAuth2AuthorizedClientService;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
 import org.springframework.security.oauth2.client.registration.ClientRegistration;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.oauth2.client.registration.InMemoryClientRegistrationRepository;
@@ -53,19 +56,19 @@ public class SecurityConfig {
                 // authorization for book
                 .requestMatchers(HttpMethod.GET, "/api/books").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/books/{id}").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/books").hasRole("ROLE_PRODUCT_MANAGER")
-                .requestMatchers(HttpMethod.PUT, "/api/books/{id}").hasRole("ROLE_PRODUCT_MANAGER")
-                .requestMatchers(HttpMethod.DELETE, "/api/books/{id}").hasRole("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.POST, "/api/books").hasAuthority("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.PUT, "/api/books/{id}").hasAuthority("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.DELETE, "/api/books/{id}").hasAuthority("ROLE_PRODUCT_MANAGER")
                 // authorization for genre
                 .requestMatchers("/api/genres/**").permitAll()
                 // authorization for rating
-                .requestMatchers(HttpMethod.GET, "/api/ratings").hasRole("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.GET, "/api/ratings").hasAuthority("ROLE_PRODUCT_MANAGER")
                 .requestMatchers(HttpMethod.GET, "/api/books/{bookId}/ratings").permitAll()
-                .requestMatchers(HttpMethod.POST, "/api/ratings").hasRole("ROLE_CUSTOMER")
-                .requestMatchers(HttpMethod.PUT, "/api/ratings").hasRole("ROLE_CUSTOMER")
-                .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/approve").hasRole("ROLE_PRODUCT_MANAGER")
-                .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/reject").hasRole("ROLE_PRODUCT_MANAGER")
-                .requestMatchers(HttpMethod.DELETE, "/api/ratings/{id}").hasAnyRole("ROLE_PRODUCT_MANAGER", "ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.POST, "/api/ratings").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PUT, "/api/ratings").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/approve").hasAuthority("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/reject").hasAuthority("ROLE_PRODUCT_MANAGER")
+                .requestMatchers(HttpMethod.DELETE, "/api/ratings/{id}").hasAnyAuthority("ROLE_PRODUCT_MANAGER", "ROLE_CUSTOMER")
                 // authorization for csrf
                 .requestMatchers("/csrf").permitAll()
                 // authorization for confirm logout
@@ -74,6 +77,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET, "/images/books/**").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
+            // .oauth2Client(null)
             .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
                 .successHandler(new CustomAuthenticationSuccessHandler()))
             .logout(logoutConfigurer -> logoutConfigurer
@@ -152,4 +156,9 @@ public class SecurityConfig {
 			return mappedAuthorities;
 		};
 	}
+
+    @Bean
+    public OAuth2AuthorizedClientService oAuth2AuthorizedClientService(JdbcTemplate jdbcTemplate, ClientRegistrationRepository clientRegistrationRepository) {
+        return new JdbcOAuth2AuthorizedClientService(jdbcTemplate, clientRegistrationRepository);
+    }
 }
