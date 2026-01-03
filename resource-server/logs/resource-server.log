@@ -1,21 +1,31 @@
-2026-01-03T15:38:46.741+07:00  INFO 13268 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : Starting BookommerceApplication using Java 21.0.3 with PID 13268 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
-2026-01-03T15:38:46.746+07:00  INFO 13268 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : No active profile set, falling back to 1 default profile: "default"
-2026-01-03T15:38:46.849+07:00  INFO 13268 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-03T15:38:46.850+07:00  INFO 13268 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-03T15:38:48.869+07:00  INFO 13268 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-03T15:38:49.019+07:00  INFO 13268 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 127 ms. Found 6 JPA repository interfaces.
-2026-01-03T15:38:50.512+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8383 (https)
-2026-01-03T15:38:50.537+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-03T15:38:50.538+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-03T15:38:50.614+07:00  INFO 13268 --- [Bookommerce] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3763 ms
-2026-01-03T15:38:51.189+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-03T15:38:51.272+07:00  INFO 13268 --- [Bookommerce] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-03T15:38:53.810+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-03T15:38:53.851+07:00  INFO 13268 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-03T15:38:54.330+07:00  INFO 13268 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1e0abe59
-2026-01-03T15:38:54.335+07:00  INFO 13268 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-03T15:38:54.429+07:00  WARN 13268 --- [Bookommerce] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-03T15:38:54.461+07:00  INFO 13268 --- [Bookommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+2026-01-03T20:20:11.091+07:00  INFO 10744 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : Starting BookommerceApplication using Java 21.0.3 with PID 10744 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+2026-01-03T20:20:11.103+07:00  INFO 10744 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : No active profile set, falling back to 1 default profile: "default"
+2026-01-03T20:20:11.258+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2026-01-03T20:20:11.260+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2026-01-03T20:20:13.197+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-03T20:20:13.201+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2026-01-03T20:20:13.847+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 627 ms. Found 6 JPA repository interfaces.
+2026-01-03T20:20:14.135+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Multiple Spring Data modules found, entering strict repository configuration mode
+2026-01-03T20:20:14.140+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+2026-01-03T20:20:14.300+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-03T20:20:14.309+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-03T20:20:14.317+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-03T20:20:14.323+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-03T20:20:14.343+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-03T20:20:14.350+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .RepositoryConfigurationExtensionSupport : Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+2026-01-03T20:20:14.354+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 135 ms. Found 0 Redis repository interfaces.
+2026-01-03T20:20:16.666+07:00  INFO 10744 --- [Bookommerce] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8383 (https)
+2026-01-03T20:20:16.700+07:00  INFO 10744 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2026-01-03T20:20:16.702+07:00  INFO 10744 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.15]
+2026-01-03T20:20:16.820+07:00  INFO 10744 --- [Bookommerce] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 5558 ms
+2026-01-03T20:20:17.496+07:00  INFO 10744 --- [Bookommerce] [restartedMain] org.hibernate.orm.jpa                    : HHH008540: Processing PersistenceUnitInfo [name: default]
+2026-01-03T20:20:17.663+07:00  INFO 10744 --- [Bookommerce] [restartedMain] org.hibernate.orm.core                   : HHH000001: Hibernate ORM core version 7.2.0.Final
+2026-01-03T20:20:19.796+07:00  INFO 10744 --- [Bookommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2026-01-03T20:20:20.170+07:00  INFO 10744 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2026-01-03T20:20:20.803+07:00  INFO 10744 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@2333fb68
+2026-01-03T20:20:20.808+07:00  INFO 10744 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2026-01-03T20:20:20.913+07:00  WARN 10744 --- [Bookommerce] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+2026-01-03T20:20:20.962+07:00  INFO 10744 --- [Bookommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
 	Database JDBC URL [jdbc:mysql://localhost:3806/bookommerce_dev_db]
 	Database driver: MySQL Connector/J
 	Database dialect: MySQLDialect
@@ -24,232 +34,98 @@
 	Autocommit mode: undefined/unknown
 	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
 	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
+	Pool: DataSourceConnectionProvider
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-2026-01-03T15:38:55.865+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-03T15:38:56.087+07:00  INFO 13268 --- [Bookommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-03T15:38:56.328+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-03T15:38:57.100+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-01-03T15:38:57.527+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : HTTP GET https://auth.bookommerce.com:8282/.well-known/openid-configuration
-2026-01-03T15:38:57.534+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Accept=[application/json, application/*+json]
-2026-01-03T15:38:57.850+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Response 200 OK
-2026-01-03T15:38:57.853+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Reading to [java.util.Map<java.lang.String, java.lang.Object>]
-2026-01-03T15:38:58.008+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : HTTP GET https://auth.bookommerce.com:8282/oauth2/jwks
-2026-01-03T15:38:58.009+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Accept=[text/plain, application/json, application/*+json, */*]
-2026-01-03T15:38:58.091+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Response 200 OK
-2026-01-03T15:38:58.092+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Reading to [java.lang.String] as "application/json;charset=ISO-8859-1"
-2026-01-03T15:38:58.307+07:00 DEBUG 13268 --- [Bookommerce] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-01-03T15:38:59.385+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-01-03T15:38:59.529+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\PC\.keystore] using alias [bookommerce_ssl] with trust store [null]
-2026-01-03T15:38:59.549+07:00  INFO 13268 --- [Bookommerce] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8383 (https) with context path '/'
-2026-01-03T15:38:59.563+07:00  INFO 13268 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : Started BookommerceApplication in 13.788 seconds (process running for 15.045)
-2026-01-03T15:39:01.275+07:00  INFO 13268 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-03T15:39:01.276+07:00  INFO 13268 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-03T15:39:01.278+07:00  INFO 13268 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
-2026-01-03T15:43:29.225+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /api/genres
-2026-01-03T15:43:29.225+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-2026-01-03T15:43:29.247+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:29.247+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:29.258+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /api/genres
-2026-01-03T15:43:29.258+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-2026-01-03T15:43:32.692+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8935212349208.jpg
-2026-01-03T15:43:32.692+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8936213491361.jpg
-2026-01-03T15:43:32.696+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.699+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.701+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8936213491361.jpg
-2026-01-03T15:43:32.703+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8935212349208.jpg
-2026-01-03T15:43:32.723+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-2026-01-03T15:43:32.726+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.727+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-2026-01-03T15:43:32.780+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8935212368209.jpg
-2026-01-03T15:43:32.784+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.785+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /images/books/image_195509_1_30127_1.jpg
-2026-01-03T15:43:32.785+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8936213491866.jpg
-2026-01-03T15:43:32.789+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8935212368209.jpg
-2026-01-03T15:43:32.791+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.794+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.798+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /images/books/image_195509_1_30127_1.jpg
-2026-01-03T15:43:32.814+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8936213491866.jpg
-2026-01-03T15:43:32.878+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-2026-01-03T15:43:32.881+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /images/books/image_217968.jpg
-2026-01-03T15:43:32.881+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.882+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.882+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-2026-01-03T15:43:32.883+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-2026-01-03T15:43:32.884+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /images/books/image_217968.jpg
-2026-01-03T15:43:32.885+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.892+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-2026-01-03T15:43:32.934+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-2026-01-03T15:43:32.937+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:43:32.939+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-2026-01-03T15:44:20.131+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-2026-01-03T15:44:20.140+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:20.150+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-2026-01-03T15:44:20.150+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /api/genres
-2026-01-03T15:44:20.163+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:20.171+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /api/genres
-2026-01-03T15:44:20.849+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-2026-01-03T15:44:20.854+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:20.870+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8936213491361.jpg
-2026-01-03T15:44:20.883+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:20.884+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-2026-01-03T15:44:20.897+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8936213491361.jpg
-2026-01-03T15:44:21.028+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8935212349208.jpg
-2026-01-03T15:44:21.077+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.077+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/books/image_195509_1_30127_1.jpg
-2026-01-03T15:44:21.085+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8936213491866.jpg
-2026-01-03T15:44:21.104+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8935212368209.jpg
-2026-01-03T15:44:21.106+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8935212349208.jpg
-2026-01-03T15:44:21.110+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.117+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.118+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.123+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-8] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8936213491866.jpg
-2026-01-03T15:44:21.135+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-10] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8935212368209.jpg
-2026-01-03T15:44:21.121+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/books/image_195509_1_30127_1.jpg
-2026-01-03T15:44:21.233+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/books/image_217968.jpg
-2026-01-03T15:44:21.290+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.323+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-2026-01-03T15:44:21.333+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/books/image_217968.jpg
-2026-01-03T15:44:21.342+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.361+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-2026-01-03T15:44:21.399+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.388+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-2026-01-03T15:44:21.422+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-2026-01-03T15:44:21.470+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-2026-01-03T15:44:21.507+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:44:21.539+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-2026-01-03T15:45:04.641+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.security.web.FilterChainProxy        : Securing GET /api/genres
-2026-01-03T15:45:04.662+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:04.666+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-2026-01-03T15:45:04.680+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-2] o.s.security.web.FilterChainProxy        : Secured GET /api/genres
-2026-01-03T15:45:04.693+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:04.704+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-2026-01-03T15:45:04.891+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-2026-01-03T15:45:04.894+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:04.896+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-2026-01-03T15:45:04.958+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8936213491361.jpg
-2026-01-03T15:45:04.975+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:04.981+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8936213491361.jpg
-2026-01-03T15:45:05.004+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8935212349208.jpg
-2026-01-03T15:45:05.012+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.020+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-5] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8935212349208.jpg
-2026-01-03T15:45:05.039+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /images/books/image_195509_1_30127_1.jpg
-2026-01-03T15:45:05.042+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.046+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /images/books/image_195509_1_30127_1.jpg
-2026-01-03T15:45:05.080+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8935212368209.jpg
-2026-01-03T15:45:05.088+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Securing GET /images/books/8936213491866.jpg
-2026-01-03T15:45:05.093+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.095+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.100+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-6] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8935212368209.jpg
-2026-01-03T15:45:05.100+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-7] o.s.security.web.FilterChainProxy        : Secured GET /images/books/8936213491866.jpg
-2026-01-03T15:45:05.131+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.security.web.FilterChainProxy        : Securing GET /images/books/image_217968.jpg
-2026-01-03T15:45:05.159+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.160+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.security.web.FilterChainProxy        : Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-2026-01-03T15:45:05.166+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-4] o.s.security.web.FilterChainProxy        : Secured GET /images/books/image_217968.jpg
-2026-01-03T15:45:05.193+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.security.web.FilterChainProxy        : Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-2026-01-03T15:45:05.179+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.205+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-9] o.s.security.web.FilterChainProxy        : Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-2026-01-03T15:45:05.196+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.224+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-3] o.s.security.web.FilterChainProxy        : Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-2026-01-03T15:45:05.252+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-2026-01-03T15:45:05.271+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.s.w.a.AnonymousAuthenticationFilter  : Set SecurityContextHolder to anonymous SecurityContext
-2026-01-03T15:45:05.279+07:00 DEBUG 13268 --- [Bookommerce] [https-jsse-nio-8383-exec-1] o.s.security.web.FilterChainProxy        : Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-2026-01-03T15:54:57.842+07:00  INFO 8772 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : Starting BookommerceApplication using Java 21.0.3 with PID 8772 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
-2026-01-03T15:54:57.852+07:00  INFO 8772 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : No active profile set, falling back to 1 default profile: "default"
-2026-01-03T15:54:57.954+07:00  INFO 8772 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-03T15:54:57.955+07:00  INFO 8772 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-03T15:55:01.264+07:00  INFO 8772 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-03T15:55:01.782+07:00  INFO 8772 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 385 ms. Found 6 JPA repository interfaces.
-2026-01-03T15:55:05.602+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8383 (https)
-2026-01-03T15:55:05.725+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-03T15:55:05.728+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-03T15:55:05.812+07:00  INFO 8772 --- [Bookommerce] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 7855 ms
-2026-01-03T15:55:06.282+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-03T15:55:06.389+07:00  INFO 8772 --- [Bookommerce] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-03T15:55:07.173+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-03T15:55:07.280+07:00  INFO 8772 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-03T15:55:07.795+07:00  INFO 8772 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@93c1aff
-2026-01-03T15:55:07.797+07:00  INFO 8772 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-03T15:55:07.885+07:00  WARN 8772 --- [Bookommerce] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-03T15:55:07.915+07:00  INFO 8772 --- [Bookommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3806/bookommerce_dev_db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.44
-	Default catalog/schema: bookommerce_dev_db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-03T15:55:12.365+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-03T15:55:12.864+07:00  INFO 8772 --- [Bookommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-03T15:55:13.289+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-03T15:55:16.708+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-01-03T15:55:17.864+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : HTTP GET https://auth.bookommerce.com:8282/.well-known/openid-configuration
-2026-01-03T15:55:17.884+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Accept=[application/json, application/*+json]
-2026-01-03T15:55:18.972+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Response 200 OK
-2026-01-03T15:55:18.978+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Reading to [java.util.Map<java.lang.String, java.lang.Object>]
-2026-01-03T15:55:19.196+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : HTTP GET https://auth.bookommerce.com:8282/oauth2/jwks
-2026-01-03T15:55:19.200+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Accept=[text/plain, application/json, application/*+json, */*]
-2026-01-03T15:55:19.372+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Response 200 OK
-2026-01-03T15:55:19.374+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Reading to [java.lang.String] as "application/json;charset=ISO-8859-1"
-2026-01-03T15:55:19.706+07:00 DEBUG 8772 --- [Bookommerce] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-01-03T15:55:21.817+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-01-03T15:55:22.245+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\PC\.keystore] using alias [bookommerce_ssl] with trust store [null]
-2026-01-03T15:55:22.306+07:00  INFO 8772 --- [Bookommerce] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8383 (https) with context path '/'
-2026-01-03T15:55:22.332+07:00  INFO 8772 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : Started BookommerceApplication in 25.299 seconds (process running for 26.539)
-2026-01-03T15:55:23.059+07:00  INFO 8772 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-03T15:55:23.061+07:00  INFO 8772 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-03T15:55:23.068+07:00  INFO 8772 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 4 ms
-2026-01-03T15:59:45.688+07:00  INFO 11984 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : Starting BookommerceApplication using Java 21.0.3 with PID 11984 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
-2026-01-03T15:59:45.694+07:00  INFO 11984 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : No active profile set, falling back to 1 default profile: "default"
-2026-01-03T15:59:45.780+07:00  INFO 11984 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-2026-01-03T15:59:45.780+07:00  INFO 11984 --- [Bookommerce] [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-2026-01-03T15:59:47.432+07:00  INFO 11984 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-2026-01-03T15:59:47.575+07:00  INFO 11984 --- [Bookommerce] [restartedMain] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 129 ms. Found 6 JPA repository interfaces.
-2026-01-03T15:59:48.995+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat initialized with port 8383 (https)
-2026-01-03T15:59:49.017+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
-2026-01-03T15:59:49.019+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/11.0.14]
-2026-01-03T15:59:49.084+07:00  INFO 11984 --- [Bookommerce] [restartedMain] b.w.c.s.WebApplicationContextInitializer : Root WebApplicationContext: initialization completed in 3304 ms
-2026-01-03T15:59:49.479+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
-2026-01-03T15:59:49.560+07:00  INFO 11984 --- [Bookommerce] [restartedMain] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 7.1.8.Final
-2026-01-03T15:59:50.250+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
-2026-01-03T15:59:50.300+07:00  INFO 11984 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
-2026-01-03T15:59:50.838+07:00  INFO 11984 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@6abab3ac
-2026-01-03T15:59:50.841+07:00  INFO 11984 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
-2026-01-03T15:59:50.914+07:00  WARN 11984 --- [Bookommerce] [restartedMain] org.hibernate.orm.deprecation            : HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-2026-01-03T15:59:50.936+07:00  INFO 11984 --- [Bookommerce] [restartedMain] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
-	Database JDBC URL [jdbc:mysql://localhost:3806/bookommerce_dev_db]
-	Database driver: MySQL Connector/J
-	Database dialect: MySQLDialect
-	Database version: 8.0.44
-	Default catalog/schema: bookommerce_dev_db/undefined
-	Autocommit mode: undefined/unknown
-	Isolation level: REPEATABLE_READ [default REPEATABLE_READ]
-	JDBC fetch size: none
-	Pool: DatasourceConnectionProviderImpl
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-2026-01-03T15:59:52.472+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-2026-01-03T15:59:52.696+07:00  INFO 11984 --- [Bookommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
-2026-01-03T15:59:52.932+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
-2026-01-03T15:59:53.573+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] swordEncoderAuthenticationManagerBuilder : No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-2026-01-03T15:59:53.952+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : HTTP GET https://auth.bookommerce.com:8282/.well-known/openid-configuration
-2026-01-03T15:59:53.963+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Accept=[application/json, application/*+json]
-2026-01-03T15:59:54.323+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Response 200 OK
-2026-01-03T15:59:54.325+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Reading to [java.util.Map<java.lang.String, java.lang.Object>]
-2026-01-03T15:59:54.403+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : HTTP GET https://auth.bookommerce.com:8282/oauth2/jwks
-2026-01-03T15:59:54.405+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Accept=[text/plain, application/json, application/*+json, */*]
-2026-01-03T15:59:54.507+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Response 200 OK
-2026-01-03T15:59:54.508+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] er$RestTemplateWithNimbusDefaultTimeouts : Reading to [java.lang.String] as "application/json;charset=ISO-8859-1"
-2026-01-03T15:59:54.696+07:00 DEBUG 11984 --- [Bookommerce] [restartedMain] o.s.s.web.DefaultSecurityFilterChain     : Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, OAuth2ProtectedResourceMetadataFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-2026-01-03T15:59:55.562+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.s.b.a.e.web.EndpointLinksResolver      : Exposing 1 endpoint beneath base path '/actuator'
-2026-01-03T15:59:55.727+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.a.t.util.net.NioEndpoint.certificate   : Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [C:\Users\PC\.keystore] using alias [bookommerce_ssl] with trust store [null]
-2026-01-03T15:59:55.766+07:00  INFO 11984 --- [Bookommerce] [restartedMain] o.s.boot.tomcat.TomcatWebServer          : Tomcat started on port 8383 (https) with context path '/'
-2026-01-03T15:59:55.789+07:00  INFO 11984 --- [Bookommerce] [restartedMain] c.b.r.BookommerceApplication             : Started BookommerceApplication in 10.937 seconds (process running for 12.038)
-2026-01-03T15:59:57.173+07:00  INFO 11984 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring DispatcherServlet 'dispatcherServlet'
-2026-01-03T15:59:57.173+07:00  INFO 11984 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Initializing Servlet 'dispatcherServlet'
-2026-01-03T15:59:57.176+07:00  INFO 11984 --- [Bookommerce] [RMI TCP Connection(2)-127.0.0.1] o.s.web.servlet.DispatcherServlet        : Completed initialization in 2 ms
+2026-01-03T20:20:22.708+07:00  INFO 10744 --- [Bookommerce] [restartedMain] org.hibernate.orm.core                   : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2026-01-03T20:20:22.977+07:00  INFO 10744 --- [Bookommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2026-01-03T20:20:23.219+07:00  INFO 10744 --- [Bookommerce] [restartedMain] o.s.d.j.r.query.QueryEnhancerFactories   : Hibernate is in classpath; If applicable, HQL parser will be used.
+2026-01-03T20:20:25.946+07:00  WARN 10744 --- [Bookommerce] [restartedMain] ConfigServletWebServerApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisTemplate' defined in class path resource [com/bookommerce/resource_server/config/RedisConfig.class]: Failed to instantiate [org.springframework.data.redis.core.RedisTemplate]: Factory method 'redisTemplate' threw exception with message: com/fasterxml/jackson/databind/jsontype/TypeResolverBuilder
+2026-01-03T20:20:26.992+07:00  INFO 10744 --- [Bookommerce] [restartedMain] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2026-01-03T20:20:27.004+07:00  INFO 10744 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2026-01-03T20:20:27.040+07:00  INFO 10744 --- [Bookommerce] [restartedMain] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2026-01-03T20:20:27.074+07:00  INFO 10744 --- [Bookommerce] [restartedMain] o.apache.catalina.core.StandardService   : Stopping service [Tomcat]
+2026-01-03T20:20:27.078+07:00 ERROR 10744 --- [Bookommerce] [SimpleAsyncTaskExecutor-1] ageListenerContainer$LoggingErrorHandler : Unexpected error occurred in scheduled task
+
+org.springframework.data.redis.RedisConnectionFailureException: Unable to connect to Redis
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.translateException(LettuceConnectionFactory.java:1868) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1799) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.doGetAsyncDedicatedConnection(LettuceConnection.java:968) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.getOrCreateDedicatedConnection(LettuceConnection.java:1022) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.getAsyncDedicatedConnection(LettuceConnection.java:953) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.getAsyncDedicatedConnection(LettuceStreamCommands.java:328) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xRead(LettuceStreamCommands.java:269) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:249) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:368) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$2(DefaultStreamMessageListenerContainer.java:248) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:147) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:128) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:113) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: java.lang.IllegalStateException: Cannot connect, Event executor group is terminated.
+	at io.lettuce.core.AbstractRedisClient.initializeChannelAsync(AbstractRedisClient.java:392) ~[lettuce-core-6.8.1.RELEASE.jar:6.8.1.RELEASE/ec0535e]
+	at io.lettuce.core.RedisClient.connectStatefulAsync(RedisClient.java:331) ~[lettuce-core-6.8.1.RELEASE.jar:6.8.1.RELEASE/ec0535e]
+	at io.lettuce.core.RedisClient.connectStandaloneAsync(RedisClient.java:292) ~[lettuce-core-6.8.1.RELEASE.jar:6.8.1.RELEASE/ec0535e]
+	at io.lettuce.core.RedisClient.connect(RedisClient.java:220) ~[lettuce-core-6.8.1.RELEASE.jar:6.8.1.RELEASE/ec0535e]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.lambda$getConnection$1(StandaloneConnectionProvider.java:113) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at java.base/java.util.Optional.orElseGet(Optional.java:364) ~[na:na]
+	at org.springframework.data.redis.connection.lettuce.StandaloneConnectionProvider.getConnection(StandaloneConnectionProvider.java:113) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnectionFactory$ExceptionTranslatingConnectionProvider.getConnection(LettuceConnectionFactory.java:1797) ~[spring-data-redis-4.0.1.jar:4.0.1]
+	... 14 common frames omitted
+
+2026-01-03T20:20:27.097+07:00  INFO 10744 --- [Bookommerce] [restartedMain] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2026-01-03T20:20:27.130+07:00 ERROR 10744 --- [Bookommerce] [restartedMain] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'redisTemplate' defined in class path resource [com/bookommerce/resource_server/config/RedisConfig.class]: Failed to instantiate [org.springframework.data.redis.core.RedisTemplate]: Factory method 'redisTemplate' threw exception with message: com/fasterxml/jackson/databind/jsontype/TypeResolverBuilder
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1362) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1194) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:565) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:525) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:333) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:371) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:331) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:196) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1218) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1184) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1121) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:993) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:620) ~[spring-context-7.0.2.jar:7.0.2]
+	at org.springframework.boot.web.server.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:143) ~[spring-boot-web-server-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:756) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:445) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:321) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1365) ~[spring-boot-4.0.1.jar:4.0.1]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1354) ~[spring-boot-4.0.1.jar:4.0.1]
+	at com.bookommerce.resource_server.BookommerceApplication.main(BookommerceApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:52) ~[spring-boot-devtools-4.0.1.jar:4.0.1]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.data.redis.core.RedisTemplate]: Factory method 'redisTemplate' threw exception with message: com/fasterxml/jackson/databind/jsontype/TypeResolverBuilder
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:183) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:72) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:152) ~[spring-beans-7.0.2.jar:7.0.2]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 24 common frames omitted
+Caused by: java.lang.NoClassDefFoundError: com/fasterxml/jackson/databind/jsontype/TypeResolverBuilder
+	at com.bookommerce.resource_server.config.RedisConfig.redisTemplate(RedisConfig.java:20) ~[classes/:na]
+	at com.bookommerce.resource_server.config.RedisConfig$$SpringCGLIB$$0.CGLIB$redisTemplate$0(<generated>) ~[classes/:na]
+	at com.bookommerce.resource_server.config.RedisConfig$$SpringCGLIB$$FastClass$$1.invoke(<generated>) ~[classes/:na]
+	at org.springframework.cglib.proxy.MethodProxy.invokeSuper(MethodProxy.java:258) ~[spring-core-7.0.2.jar:7.0.2]
+	at org.springframework.context.annotation.ConfigurationClassEnhancer$BeanMethodInterceptor.intercept(ConfigurationClassEnhancer.java:398) ~[spring-context-7.0.2.jar:7.0.2]
+	at com.bookommerce.resource_server.config.RedisConfig$$SpringCGLIB$$0.redisTemplate(<generated>) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:155) ~[spring-beans-7.0.2.jar:7.0.2]
+	... 27 common frames omitted
+Caused by: java.lang.ClassNotFoundException: com.fasterxml.jackson.databind.jsontype.TypeResolverBuilder
+	at java.base/jdk.internal.loader.BuiltinClassLoader.loadClass(BuiltinClassLoader.java:641) ~[na:na]
+	at java.base/jdk.internal.loader.ClassLoaders$AppClassLoader.loadClass(ClassLoaders.java:188) ~[na:na]
+	at java.base/java.lang.ClassLoader.loadClass(ClassLoader.java:526) ~[na:na]
+	... 36 common frames omitted
+

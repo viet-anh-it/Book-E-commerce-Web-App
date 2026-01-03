@@ -8,6 +8,8 @@ import org.springframework.data.jpa.domain.Specification;
 import org.springframework.data.jpa.repository.EntityGraph;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.JpaSpecificationExecutor;
+import org.springframework.lang.NonNull;
+import org.springframework.lang.Nullable;
 import org.springframework.stereotype.Repository;
 
 import com.bookommerce.resource_server.entity.Book;
@@ -17,7 +19,8 @@ import com.bookommerce.resource_server.entity.Book_;
 public interface BookRepository extends JpaRepository<Book, Long>, JpaSpecificationExecutor<Book> {
 
     @EntityGraph(attributePaths = { Book_.RATING_STATISTIC })
-    Page<Book> findAll(Specification<Book> spec, Pageable pageable);
+    @NonNull
+    Page<Book> findAll(@Nullable Specification<Book> spec, @NonNull Pageable pageable);
 
     @EntityGraph(attributePaths = { Book_.RATING_STATISTIC })
     Optional<Book> findById(long id);

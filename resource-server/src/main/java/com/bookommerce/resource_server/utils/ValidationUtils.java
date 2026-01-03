@@ -8,6 +8,7 @@ import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
+@SuppressWarnings("null")
 public final class ValidationUtils {
     //@formatter:off
     public static BindingResult createBindingResult(Object target, String objectName, String field, String defaultMessage) {

@@ -36,6 +36,7 @@ import org.springframework.util.StringUtils;
 
 // @formatter:off
 @Component
+@SuppressWarnings("null")
 public class JpaOAuth2AuthorizationService implements OAuth2AuthorizationService {
     private final AuthorizationRepository authorizationRepository;
     private final RegisteredClientRepository registeredClientRepository;

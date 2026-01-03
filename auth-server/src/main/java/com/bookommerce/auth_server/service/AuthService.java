@@ -22,6 +22,7 @@ import org.springframework.stereotype.Service;
 import org.springframework.validation.BeanPropertyBindingResult;
 
 import com.bookommerce.auth_server.constant.Roles;
+import com.bookommerce.auth_server.dto.event.UserCreatedEvent;
 import com.bookommerce.auth_server.dto.request.LoginRequestDto;
 import com.bookommerce.auth_server.dto.request.RegistrationRequestDto;
 import com.bookommerce.auth_server.entity.Role;
@@ -31,6 +32,7 @@ import com.bookommerce.auth_server.exception.EmailAlreadyExistedException;
 import com.bookommerce.auth_server.mapper.UserMapper;
 import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
+import com.bookommerce.auth_server.service.event.UserEventProducer;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -47,6 +49,7 @@ public class AuthService {
     AuthenticationManager authenticationManager;
     SecurityContextRepository securityContextRepository;
     RoleRepository roleRepository;
+    UserEventProducer userEventProducer;
 
     //@formatter:off
     public void register(RegistrationRequestDto registrationRequestDto) {
@@ -60,6 +63,7 @@ public class AuthService {
         Role role = this.roleRepository.findByName(Roles.ROLE_CUSTOMER.name());
         user.setRoles(Set.of(role));
         this.userRepository.save(user);
+        this.userEventProducer.sendUserCreatedEvent(new UserCreatedEvent(user.getEmail()));
     }
 
     //@formatter:off

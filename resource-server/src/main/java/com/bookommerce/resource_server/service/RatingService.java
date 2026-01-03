@@ -45,6 +45,7 @@ import lombok.experimental.FieldDefaults;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@SuppressWarnings("null")
 public class RatingService {
 
     RatingRepository ratingRepository;

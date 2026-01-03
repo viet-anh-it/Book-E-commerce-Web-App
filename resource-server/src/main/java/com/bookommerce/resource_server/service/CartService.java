@@ -3,7 +3,7 @@ package com.bookommerce.resource_server.service;
 import java.util.Optional;
 import java.util.Set;
 
-import org.jspecify.annotations.Nullable;
+import org.springframework.lang.Nullable;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;

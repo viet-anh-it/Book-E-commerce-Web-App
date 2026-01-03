@@ -50,6 +50,7 @@ import lombok.experimental.NonFinal;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@SuppressWarnings(value = {"null", "removal"})
 public class BookService {
 
     @NonFinal

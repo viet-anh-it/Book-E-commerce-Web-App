@@ -8,17 +8,16 @@ import com.bookommerce.resource_server.dto.response.GetAllRatingsResponseDto;
 import com.bookommerce.resource_server.dto.response.GetRatingsByBookIdResponseDto;
 import com.bookommerce.resource_server.entity.Book;
 import com.bookommerce.resource_server.entity.Rating;
-import com.bookommerce.resource_server.entity.Rating_;
 
 // @formatter:off
 @Mapper(componentModel = "spring")
 public interface RatingMapper {
 
-    @Mapping(target = Rating_.ID, ignore = true)
-    @Mapping(target = Rating_.CREATED_AT, ignore = true)
-    @Mapping(target = Rating_.BOOK, ignore = true)
-    @Mapping(target = Rating_.RATER, ignore = true)
-    @Mapping(target = Rating_.APPROVED, ignore = true)
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "createdAt", ignore = true)
+    @Mapping(target = "book", ignore = true)
+    @Mapping(target = "rater", ignore = true)
+    @Mapping(target = "approved", ignore = true)
     Rating toRating(CreateRatingRequestDto createRatingRequestDto);
 
     GetRatingsByBookIdResponseDto toGetRatingsByBookIdResponseDto(Rating rating);

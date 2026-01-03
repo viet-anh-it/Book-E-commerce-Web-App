@@ -1,0 +1,633 @@
+[INFO] Scanning for projects...
+[INFO] 
+[INFO] ------------------< com.bookommerce:resource-server >-------------------
+[INFO] Building Bookommerce 0.0.1-SNAPSHOT
+[INFO]   from pom.xml
+[INFO] --------------------------------[ jar ]---------------------------------
+[INFO] 
+[INFO] --- clean:3.5.0:clean (default-clean) @ resource-server ---
+[INFO] Deleting C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target
+[INFO] 
+[INFO] --- resources:3.3.1:resources (default-resources) @ resource-server ---
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] Copying 1 resource from src\main\resources to target\classes
+[INFO] 
+[INFO] --- compiler:3.13.0:compile (default-compile) @ resource-server ---
+[INFO] Recompiling the module because of changed source code.
+[INFO] Compiling 83 source files with javac [debug parameters release 21] to target\classes
+[INFO] -------------------------------------------------------------
+[WARNING] COMPILATION WARNING : 
+[INFO] -------------------------------------------------------------
+[WARNING] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/config/RedisConfig.java:[19,45] org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer in org.springframework.data.redis.serializer has been deprecated and marked for removal
+[WARNING] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/config/RedisConfig.java:[20,41] org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer in org.springframework.data.redis.serializer has been deprecated and marked for removal
+[INFO] 2 warnings 
+[INFO] -------------------------------------------------------------
+[INFO] -------------------------------------------------------------
+[ERROR] COMPILATION ERROR : 
+[INFO] -------------------------------------------------------------
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[3,46] cannot find symbol
+  symbol:   class Book_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/RatingsSortCriteria.java:[3,46] cannot find symbol
+  symbol:   class Rating_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[6,46] cannot find symbol
+  symbol:   class RatingStatistic_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/BookRepository.java:[14,46] cannot find symbol
+  symbol:   class Book_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[10,46] cannot find symbol
+  symbol:   class Book_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[29,46] cannot find symbol
+  symbol:   class Rating_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/RatingRepository.java:[12,46] cannot find symbol
+  symbol:   class Rating_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[11,46] cannot find symbol
+  symbol:   class Rating_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[8,46] cannot find symbol
+  symbol:   class Genre_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/specification/BookSpecification.java:[11,46] cannot find symbol
+  symbol:   class Book_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/specification/BookSpecification.java:[12,46] cannot find symbol
+  symbol:   class Genre_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/specification/BookSpecification.java:[13,46] cannot find symbol
+  symbol:   class RatingStatistic_
+  location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[28,31] cannot find symbol
+  symbol:   variable RatingStatistic_
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[31,31] cannot find symbol
+  symbol:   variable RatingStatistic_
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[34,31] cannot find symbol
+  symbol:   variable RatingStatistic_
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[37,31] cannot find symbol
+  symbol:   variable RatingStatistic_
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[40,31] cannot find symbol
+  symbol:   variable RatingStatistic_
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Cart.java:[36,27] cannot find symbol
+  symbol:   variable CartItem_
+  location: class com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Genre.java:[36,27] cannot find symbol
+  symbol:   variable Book_
+  location: class com.bookommerce.resource_server.entity.Genre
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[17,23] cannot find symbol
+  symbol:   variable Rating_
+  location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[18,23] cannot find symbol
+  symbol:   variable Rating_
+  location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[19,23] cannot find symbol
+  symbol:   variable Rating_
+  location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[20,23] cannot find symbol
+  symbol:   variable Rating_
+  location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[21,23] cannot find symbol
+  symbol:   variable Rating_
+  location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[17,5] expression not allowed as annotation value
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/RatingRepository.java:[17,37] cannot find symbol
+  symbol:   variable Rating_
+  location: interface com.bookommerce.resource_server.repository.RatingRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/RatingRepository.java:[20,37] cannot find symbol
+  symbol:   variable Rating_
+  location: interface com.bookommerce.resource_server.repository.RatingRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[15,23] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[16,23] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[17,23] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[18,23] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[19,23] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[20,23] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[15,5] expression not allowed as annotation value
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/BookRepository.java:[19,37] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.repository.BookRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/BookRepository.java:[22,37] cannot find symbol
+  symbol:   variable Book_
+  location: interface com.bookommerce.resource_server.repository.BookRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java:[53,27] cannot find symbol
+  symbol:   variable Rating_
+  location: class com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java:[57,26] cannot find symbol
+  symbol:   variable RatingStatistic_
+  location: class com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java:[61,27] cannot find symbol
+  symbol:   variable CartItem_
+  location: class com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[13,23] cannot find symbol
+  symbol:   variable Genre_
+  location: interface com.bookommerce.resource_server.dto.mapper.GenreMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[14,23] cannot find symbol
+  symbol:   variable Genre_
+  location: interface com.bookommerce.resource_server.dto.mapper.GenreMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[13,5] expression not allowed as annotation value
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/event/UserEventListener.java:[28,31] cannot find symbol
+  symbol:   method getUsername()
+  location: variable event of type com.bookommerce.resource_server.dto.event.UserCreatedEvent
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/ProfileService.java:[20,9] cannot find symbol
+  symbol:   variable log
+  location: class com.bookommerce.resource_server.service.ProfileService
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/ProfileService.java:[20,54] cannot find symbol
+  symbol:   method getEmail()
+  location: variable profile of type com.bookommerce.resource_server.entity.Profile
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[14,11] cannot find symbol
+  symbol:   variable Book_
+  location: class com.bookommerce.resource_server.constant.BooksSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[15,11] cannot find symbol
+  symbol:   variable Book_
+  location: class com.bookommerce.resource_server.constant.BooksSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[16,11] constructor BooksSortCriteria in enum com.bookommerce.resource_server.constant.BooksSortCriteria cannot be applied to given types;
+  required: no arguments
+  found:    java.lang.String
+  reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/RatingsSortCriteria.java:[14,11] cannot find symbol
+  symbol:   variable Rating_
+  location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/RatingsSortCriteria.java:[15,16] cannot find symbol
+  symbol:   variable Rating_
+  location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[47,105] cannot find symbol
+  symbol:   method <java.util.List<com.bookommerce.resource_server.dto.response.GetAllBooksResponseDto>>builder()
+  location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[51,63] cannot find symbol
+  symbol:   method builder()
+  location: class com.bookommerce.resource_server.dto.response.PagingAndSortingMetadata
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[64,84] cannot find symbol
+  symbol:   method <com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto>builder()
+  location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[75,81] cannot find symbol
+  symbol:   method <java.lang.Void>builder()
+  location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[87,81] cannot find symbol
+  symbol:   method <java.lang.Void>builder()
+  location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[98,81] cannot find symbol
+  symbol:   method <java.lang.Void>builder()
+  location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[69,44] cannot find symbol
+  symbol:   method getGenreId()
+  location: variable createBookRequestDto of type com.bookommerce.resource_server.dto.request.CreateBookRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[78,55] cannot find symbol
+  symbol:   method getImage()
+  location: variable createBookRequestDto of type com.bookommerce.resource_server.dto.request.CreateBookRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[85,13] cannot find symbol
+  symbol:   method setGenre(com.bookommerce.resource_server.entity.Genre)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[86,13] cannot find symbol
+  symbol:   method setThumbnailUrlPath(java.lang.String)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[94,24] cannot find symbol
+  symbol:   method setBook(com.bookommerce.resource_server.entity.Book)
+  location: variable ratingStatistic of type com.bookommerce.resource_server.entity.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[99,47] cannot find symbol
+  symbol:   method getPage()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[100,45] cannot find symbol
+  symbol:   method getSize()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[101,56] cannot find symbol
+  symbol:   method getOrder()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[102,46] cannot find symbol
+  symbol:   method getSort()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[105,48] cannot find symbol
+  symbol:   method getMinPrice()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[106,48] cannot find symbol
+  symbol:   method getMaxPrice()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[111,46] cannot find symbol
+  symbol:   method getSearch()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[119,53] cannot find symbol
+  symbol:   method getGenres()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[125,47] cannot find symbol
+  symbol:   method getRating()
+  location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[144,133] cannot find symbol
+  symbol:   method builder()
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.Ratings.PagingSortingMeta
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[150,80] cannot find symbol
+  symbol:   method builder()
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.Ratings
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[151,109] cannot find symbol
+  symbol:   method builder()
+  location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.Ratings.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[152,35] cannot find symbol
+  symbol:   method getId()
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[153,38] cannot find symbol
+  symbol:   method getRater()
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[154,38] cannot find symbol
+  symbol:   method getPoint()
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[155,40] cannot find symbol
+  symbol:   method getComment()
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[156,42] cannot find symbol
+  symbol:   method getCreatedAt()
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[185,87] cannot find symbol
+  symbol:   method getThumbnailUrlPath()
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[191,17] cannot find symbol
+  symbol:   method setThumbnailUrlPath(java.lang.String)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[194,13] cannot find symbol
+  symbol:   method setGenre(com.bookommerce.resource_server.entity.Genre)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[195,13] cannot find symbol
+  symbol:   method setTitle(@jakarta.validation.constraints.NotBlank(message="A blank title is not allowed") java.lang.String)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[196,13] cannot find symbol
+  symbol:   method setAuthor(@jakarta.validation.constraints.NotBlank(message="A blank author name is not allowed") java.lang.String)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[197,13] cannot find symbol
+  symbol:   method setPrice(double)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[198,13] cannot find symbol
+  symbol:   method setStock(int)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[199,13] cannot find symbol
+  symbol:   method setDescription(@jakarta.validation.constraints.NotBlank(message="A blank description is not allowed") java.lang.String)
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[220,13] cannot find symbol
+  symbol:   method getCartItems()
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[222,17] cannot find symbol
+  symbol:   method getCartItems()
+  location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[224,44] cannot find symbol
+  symbol:   method getTotalPrice()
+  location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[225,17] cannot find symbol
+  symbol:   method setTotalPrice(double)
+  location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[226,40] cannot find symbol
+  symbol:   method getItemCount()
+  location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[227,17] cannot find symbol
+  symbol:   method setItemCount(int)
+  location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[231,83] cannot find symbol
+  symbol:   method getThumbnailUrlPath()
+  location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[84,15] cannot find symbol
+  symbol:   method setBook(com.bookommerce.resource_server.entity.Book)
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[85,15] cannot find symbol
+  symbol:   method setRater(java.lang.String)
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[86,15] cannot find symbol
+  symbol:   method setCreatedAt(java.time.Instant)
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[87,15] cannot find symbol
+  symbol:   method setApproved(boolean)
+  location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[98,27] cannot find symbol
+  symbol:   variable Rating_
+  location: class com.bookommerce.resource_server.service.RatingService
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[121,62] cannot find symbol
+  symbol:   method getProperty()
+  location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[136,57] cannot find symbol
+  symbol:   method getProperty()
+  location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[INFO] 100 errors 
+[INFO] -------------------------------------------------------------
+[INFO] ------------------------------------------------------------------------
+[INFO] BUILD FAILURE
+[INFO] ------------------------------------------------------------------------
+[INFO] Total time:  4.927 s
+[INFO] Finished at: 2026-01-03T19:54:26+07:00
+[INFO] ------------------------------------------------------------------------
+[ERROR] Failed to execute goal org.apache.maven.plugins:maven-compiler-plugin:3.13.0:compile (default-compile) on project resource-server: Compilation failure: Compilation failure: 
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[3,46] cannot find symbol
+[ERROR]   symbol:   class Book_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/RatingsSortCriteria.java:[3,46] cannot find symbol
+[ERROR]   symbol:   class Rating_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[6,46] cannot find symbol
+[ERROR]   symbol:   class RatingStatistic_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/BookRepository.java:[14,46] cannot find symbol
+[ERROR]   symbol:   class Book_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[10,46] cannot find symbol
+[ERROR]   symbol:   class Book_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[29,46] cannot find symbol
+[ERROR]   symbol:   class Rating_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/RatingRepository.java:[12,46] cannot find symbol
+[ERROR]   symbol:   class Rating_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[11,46] cannot find symbol
+[ERROR]   symbol:   class Rating_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[8,46] cannot find symbol
+[ERROR]   symbol:   class Genre_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/specification/BookSpecification.java:[11,46] cannot find symbol
+[ERROR]   symbol:   class Book_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/specification/BookSpecification.java:[12,46] cannot find symbol
+[ERROR]   symbol:   class Genre_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/specification/BookSpecification.java:[13,46] cannot find symbol
+[ERROR]   symbol:   class RatingStatistic_
+[ERROR]   location: package com.bookommerce.resource_server.entity
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[28,31] cannot find symbol
+[ERROR]   symbol:   variable RatingStatistic_
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[31,31] cannot find symbol
+[ERROR]   symbol:   variable RatingStatistic_
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[34,31] cannot find symbol
+[ERROR]   symbol:   variable RatingStatistic_
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[37,31] cannot find symbol
+[ERROR]   symbol:   variable RatingStatistic_
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/response/GetBookByIdResponseDto.java:[40,31] cannot find symbol
+[ERROR]   symbol:   variable RatingStatistic_
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Cart.java:[36,27] cannot find symbol
+[ERROR]   symbol:   variable CartItem_
+[ERROR]   location: class com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Genre.java:[36,27] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: class com.bookommerce.resource_server.entity.Genre
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[17,23] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[18,23] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[19,23] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[20,23] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[21,23] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.RatingMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/RatingMapper.java:[17,5] expression not allowed as annotation value
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/RatingRepository.java:[17,37] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: interface com.bookommerce.resource_server.repository.RatingRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/RatingRepository.java:[20,37] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: interface com.bookommerce.resource_server.repository.RatingRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[15,23] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[16,23] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[17,23] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[18,23] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[19,23] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[20,23] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.BookMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/BookMapper.java:[15,5] expression not allowed as annotation value
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/BookRepository.java:[19,37] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.repository.BookRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/repository/BookRepository.java:[22,37] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: interface com.bookommerce.resource_server.repository.BookRepository
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java:[53,27] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: class com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java:[57,26] cannot find symbol
+[ERROR]   symbol:   variable RatingStatistic_
+[ERROR]   location: class com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/entity/Book.java:[61,27] cannot find symbol
+[ERROR]   symbol:   variable CartItem_
+[ERROR]   location: class com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[13,23] cannot find symbol
+[ERROR]   symbol:   variable Genre_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.GenreMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[14,23] cannot find symbol
+[ERROR]   symbol:   variable Genre_
+[ERROR]   location: interface com.bookommerce.resource_server.dto.mapper.GenreMapper
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/dto/mapper/GenreMapper.java:[13,5] expression not allowed as annotation value
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/event/UserEventListener.java:[28,31] cannot find symbol
+[ERROR]   symbol:   method getUsername()
+[ERROR]   location: variable event of type com.bookommerce.resource_server.dto.event.UserCreatedEvent
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/ProfileService.java:[20,9] cannot find symbol
+[ERROR]   symbol:   variable log
+[ERROR]   location: class com.bookommerce.resource_server.service.ProfileService
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/ProfileService.java:[20,54] cannot find symbol
+[ERROR]   symbol:   method getEmail()
+[ERROR]   location: variable profile of type com.bookommerce.resource_server.entity.Profile
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[14,11] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: class com.bookommerce.resource_server.constant.BooksSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[15,11] cannot find symbol
+[ERROR]   symbol:   variable Book_
+[ERROR]   location: class com.bookommerce.resource_server.constant.BooksSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/BooksSortCriteria.java:[16,11] constructor BooksSortCriteria in enum com.bookommerce.resource_server.constant.BooksSortCriteria cannot be applied to given types;
+[ERROR]   required: no arguments
+[ERROR]   found:    java.lang.String
+[ERROR]   reason: actual and formal argument lists differ in length
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/RatingsSortCriteria.java:[14,11] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/constant/RatingsSortCriteria.java:[15,16] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[47,105] cannot find symbol
+[ERROR]   symbol:   method <java.util.List<com.bookommerce.resource_server.dto.response.GetAllBooksResponseDto>>builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[51,63] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.PagingAndSortingMetadata
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[64,84] cannot find symbol
+[ERROR]   symbol:   method <com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto>builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[75,81] cannot find symbol
+[ERROR]   symbol:   method <java.lang.Void>builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[87,81] cannot find symbol
+[ERROR]   symbol:   method <java.lang.Void>builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/controller/BookController.java:[98,81] cannot find symbol
+[ERROR]   symbol:   method <java.lang.Void>builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.ApiSuccessResponse
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[69,44] cannot find symbol
+[ERROR]   symbol:   method getGenreId()
+[ERROR]   location: variable createBookRequestDto of type com.bookommerce.resource_server.dto.request.CreateBookRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[78,55] cannot find symbol
+[ERROR]   symbol:   method getImage()
+[ERROR]   location: variable createBookRequestDto of type com.bookommerce.resource_server.dto.request.CreateBookRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[85,13] cannot find symbol
+[ERROR]   symbol:   method setGenre(com.bookommerce.resource_server.entity.Genre)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[86,13] cannot find symbol
+[ERROR]   symbol:   method setThumbnailUrlPath(java.lang.String)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[94,24] cannot find symbol
+[ERROR]   symbol:   method setBook(com.bookommerce.resource_server.entity.Book)
+[ERROR]   location: variable ratingStatistic of type com.bookommerce.resource_server.entity.RatingStatistic
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[99,47] cannot find symbol
+[ERROR]   symbol:   method getPage()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[100,45] cannot find symbol
+[ERROR]   symbol:   method getSize()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[101,56] cannot find symbol
+[ERROR]   symbol:   method getOrder()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[102,46] cannot find symbol
+[ERROR]   symbol:   method getSort()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[105,48] cannot find symbol
+[ERROR]   symbol:   method getMinPrice()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[106,48] cannot find symbol
+[ERROR]   symbol:   method getMaxPrice()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[111,46] cannot find symbol
+[ERROR]   symbol:   method getSearch()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[119,53] cannot find symbol
+[ERROR]   symbol:   method getGenres()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[125,47] cannot find symbol
+[ERROR]   symbol:   method getRating()
+[ERROR]   location: variable booksFilterRequestDto of type com.bookommerce.resource_server.dto.request.BooksFilterRequestDto
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[144,133] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.Ratings.PagingSortingMeta
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[150,80] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.Ratings
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[151,109] cannot find symbol
+[ERROR]   symbol:   method builder()
+[ERROR]   location: class com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto.Ratings.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[152,35] cannot find symbol
+[ERROR]   symbol:   method getId()
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[153,38] cannot find symbol
+[ERROR]   symbol:   method getRater()
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[154,38] cannot find symbol
+[ERROR]   symbol:   method getPoint()
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[155,40] cannot find symbol
+[ERROR]   symbol:   method getComment()
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[156,42] cannot find symbol
+[ERROR]   symbol:   method getCreatedAt()
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[185,87] cannot find symbol
+[ERROR]   symbol:   method getThumbnailUrlPath()
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[191,17] cannot find symbol
+[ERROR]   symbol:   method setThumbnailUrlPath(java.lang.String)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[194,13] cannot find symbol
+[ERROR]   symbol:   method setGenre(com.bookommerce.resource_server.entity.Genre)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[195,13] cannot find symbol
+[ERROR]   symbol:   method setTitle(@jakarta.validation.constraints.NotBlank(message="A blank title is not allowed") java.lang.String)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[196,13] cannot find symbol
+[ERROR]   symbol:   method setAuthor(@jakarta.validation.constraints.NotBlank(message="A blank author name is not allowed") java.lang.String)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[197,13] cannot find symbol
+[ERROR]   symbol:   method setPrice(double)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[198,13] cannot find symbol
+[ERROR]   symbol:   method setStock(int)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[199,13] cannot find symbol
+[ERROR]   symbol:   method setDescription(@jakarta.validation.constraints.NotBlank(message="A blank description is not allowed") java.lang.String)
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[220,13] cannot find symbol
+[ERROR]   symbol:   method getCartItems()
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[222,17] cannot find symbol
+[ERROR]   symbol:   method getCartItems()
+[ERROR]   location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[224,44] cannot find symbol
+[ERROR]   symbol:   method getTotalPrice()
+[ERROR]   location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[225,17] cannot find symbol
+[ERROR]   symbol:   method setTotalPrice(double)
+[ERROR]   location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[226,40] cannot find symbol
+[ERROR]   symbol:   method getItemCount()
+[ERROR]   location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[227,17] cannot find symbol
+[ERROR]   symbol:   method setItemCount(int)
+[ERROR]   location: variable cart of type com.bookommerce.resource_server.entity.Cart
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/BookService.java:[231,83] cannot find symbol
+[ERROR]   symbol:   method getThumbnailUrlPath()
+[ERROR]   location: variable book of type com.bookommerce.resource_server.entity.Book
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[84,15] cannot find symbol
+[ERROR]   symbol:   method setBook(com.bookommerce.resource_server.entity.Book)
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[85,15] cannot find symbol
+[ERROR]   symbol:   method setRater(java.lang.String)
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[86,15] cannot find symbol
+[ERROR]   symbol:   method setCreatedAt(java.time.Instant)
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[87,15] cannot find symbol
+[ERROR]   symbol:   method setApproved(boolean)
+[ERROR]   location: variable rating of type com.bookommerce.resource_server.entity.Rating
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[98,27] cannot find symbol
+[ERROR]   symbol:   variable Rating_
+[ERROR]   location: class com.bookommerce.resource_server.service.RatingService
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[121,62] cannot find symbol
+[ERROR]   symbol:   method getProperty()
+[ERROR]   location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[ERROR] /C:/Users/PC/OneDrive/Desktop/bookommerce/resource-server/src/main/java/com/bookommerce/resource_server/service/RatingService.java:[136,57] cannot find symbol
+[ERROR]   symbol:   method getProperty()
+[ERROR]   location: class com.bookommerce.resource_server.constant.RatingsSortCriteria
+[ERROR] -> [Help 1]
+[ERROR] 
+[ERROR] To see the full stack trace of the errors, re-run Maven with the -e switch.
+[ERROR] Re-run Maven using the -X switch to enable full debug logging.
+[ERROR] 
+[ERROR] For more information about the errors and possible solutions, please read the following articles:
+[ERROR] [Help 1] http://cwiki.apache.org/confluence/display/MAVEN/MojoFailureException

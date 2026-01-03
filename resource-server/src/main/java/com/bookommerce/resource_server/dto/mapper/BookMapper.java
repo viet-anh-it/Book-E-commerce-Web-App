@@ -7,17 +7,16 @@ import com.bookommerce.resource_server.dto.request.CreateBookRequestDto;
 import com.bookommerce.resource_server.dto.response.GetAllBooksResponseDto;
 import com.bookommerce.resource_server.dto.response.GetBookByIdResponseDto;
 import com.bookommerce.resource_server.entity.Book;
-import com.bookommerce.resource_server.entity.Book_;
 
 @Mapper(componentModel = "spring")
 public interface BookMapper {
 
-    @Mapping(target = Book_.ID, ignore = true)
-    @Mapping(target = Book_.GENRE, ignore = true)
-    @Mapping(target = Book_.RATING_STATISTIC, ignore = true)
-    @Mapping(target = Book_.RATINGS, ignore = true)
-    @Mapping(target = Book_.THUMBNAIL_URL_PATH, ignore = true)
-    @Mapping(target = Book_.CART_ITEMS, ignore = true)
+    @Mapping(target = "id", ignore = true)
+    @Mapping(target = "genre", ignore = true)
+    @Mapping(target = "ratingStatistic", ignore = true)
+    @Mapping(target = "ratings", ignore = true)
+    @Mapping(target = "thumbnailUrlPath", ignore = true)
+    @Mapping(target = "cartItems", ignore = true)
     Book toBook(CreateBookRequestDto createBookRequestDto);
 
     @Mapping(target = "rating", source = "ratingStatistic.averagePoint")

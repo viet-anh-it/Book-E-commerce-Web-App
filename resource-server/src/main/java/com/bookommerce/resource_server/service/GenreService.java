@@ -14,26 +14,15 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
-/**
- * Service class for managing genres.
- * <p>
- * This class contains business logic for creating and retrieving genres.
- * </p>
- */
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
+@SuppressWarnings("null")
 public class GenreService {
 
     GenreRepository genreRepository;
     GenreMapper genreMapper;
 
-    /**
-     * Creates a new genre.
-     *
-     * @param createGenreRequestDto the DTO containing genre creation details.
-     * @throws RuntimeException if a genre with the same name already exists.
-     */
     @Transactional
     public void createGenre(CreateGenreRequestDto createGenreRequestDto) {
         if (this.genreRepository.existsByName(createGenreRequestDto.getName())) {
@@ -43,11 +32,6 @@ public class GenreService {
         this.genreRepository.save(genre);
     }
 
-    /**
-     * Retrieves all available genres.
-     *
-     * @return a list of all {@link Genre} entities.
-     */
     public List<Genre> getAllGenres() {
         return this.genreRepository.findAll();
     }
