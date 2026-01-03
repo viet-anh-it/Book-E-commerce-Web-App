@@ -53,6 +53,8 @@ logging:
         tool:
           schema: DEBUG
         SQL: DEBUG
+  logback:
+    rollingpolicy:
+      max-file-size: 10MB
   file:
     name: logs/bff.log
-    max-size: 10MB

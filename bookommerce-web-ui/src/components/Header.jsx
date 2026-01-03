@@ -8,6 +8,7 @@ const { Title } = Typography;
 const { useBreakpoint } = Grid;
 
 import { useNavigate, useLocation } from 'react-router-dom';
+import PropTypes from 'prop-types';
 
 const Header = ({ isDarkMode, onToggleTheme }) => {
     const { user, logout } = useAuth();
@@ -54,18 +55,23 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
             } else {
                 scrollToProductGrid();
             }
+        } else if (key === 'profile') {
+            navigate('/profile');
         }
     };
 
     React.useEffect(() => {
+        if (location.pathname === '/profile') {
+            setActiveKey('profile');
+            return;
+        }
+
         const handleScroll = () => {
             const element = document.getElementById('product-grid');
             if (element) {
                 const headerOffset = 100;
                 const elementPosition = element.getBoundingClientRect().top + window.scrollY;
-                // If current scroll position is greater than or equal to the product grid position (minus offset)
-                // then highlight the link.
-                if (window.scrollY >= elementPosition - headerOffset - 50) { // 50px buffer
+                if (window.scrollY >= elementPosition - headerOffset - 50) {
                     setActiveKey('home');
                 } else {
                     setActiveKey('');
@@ -74,13 +80,14 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
         };
 
         window.addEventListener('scroll', handleScroll);
-        handleScroll(); // Check initial state
+        handleScroll();
         return () => window.removeEventListener('scroll', handleScroll);
-    }, []);
+    }, [location.pathname]);
 
-    const menuItems = location.pathname === '/' ? [
-        { key: 'home', label: 'Shopping' },
-    ] : [];
+    const menuItems = [
+        ...(location.pathname === '/' ? [{ key: 'home', label: 'Shopping' }] : []),
+        ...(user ? [{ key: 'profile', label: 'Hồ sơ' }] : []),
+    ];
 
     return (
         <AntHeader
@@ -179,6 +186,9 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                             {user ? (
                                 <>
                                     <span style={{ fontWeight: 500 }}>Welcome, {user.username}!</span>
+                                    <Button type="link" onClick={() => navigate('/profile')}>
+                                        Hồ sơ
+                                    </Button>
                                     <Button type="default" href='https://bff.bookommerce.com:8181/confirm-logout'>
                                         Logout
                                     </Button>
@@ -199,6 +209,11 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
             </div>
         </AntHeader>
     );
+};
+
+Header.propTypes = {
+    isDarkMode: PropTypes.bool.isRequired,
+    onToggleTheme: PropTypes.func.isRequired,
 };
 
 export default Header;

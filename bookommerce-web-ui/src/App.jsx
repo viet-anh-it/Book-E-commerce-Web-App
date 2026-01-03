@@ -10,8 +10,10 @@ import ScrollToTop from './components/ScrollToTop';
 import ProtectedRoute from './components/ProtectedRoute';
 import { createRoot } from 'react-dom/client'
 import './css/index.css'
+import PropTypes from 'prop-types';
 import ForbiddenPage from './pages/ForbiddenPage';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import ProfilePage from './pages/ProfilePage';
 
 const App = () => {
   const [isDarkMode, setIsDarkMode] = useState(() => {
@@ -68,6 +70,11 @@ const AppInner = ({ isDarkMode, toggleTheme }) => {
               <CartPage />
             </ProtectedRoute>
           } />
+          <Route path="/profile" element={
+            <ProtectedRoute>
+              <ProfilePage />
+            </ProtectedRoute>
+          } />
         </Routes>
         <AppFooter />
       </Layout>
@@ -81,6 +88,16 @@ const AppContent = ({ isDarkMode, toggleTheme }) => {
       <AppInner isDarkMode={isDarkMode} toggleTheme={toggleTheme} />
     </AuthProvider>
   );
+};
+
+AppInner.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
+};
+
+AppContent.propTypes = {
+  isDarkMode: PropTypes.bool.isRequired,
+  toggleTheme: PropTypes.func.isRequired,
 };
 
 createRoot(document.getElementById('root')).render(
