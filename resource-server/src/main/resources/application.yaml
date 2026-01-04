@@ -49,9 +49,16 @@ logging:
     org:
       springframework:
         security: DEBUG
+        # data:
+        #   redis: DEBUG
+    #     redis:
+    #       connection: DEBUG
+    # io:
+    #   lettuce:
+    #     core: DEBUG
   file:
     name: logs/resource-server.log
-    max-size: 1000MB
+    max-size: 1024MB
 
 upload:
   image:

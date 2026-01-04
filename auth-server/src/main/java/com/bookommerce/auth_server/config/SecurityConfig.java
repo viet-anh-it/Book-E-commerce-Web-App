@@ -118,12 +118,15 @@ public class SecurityConfig {
     public SecurityFilterChain defaultSecurityFilterChain(HttpSecurity http) throws Exception {
         http
             .authorizeHttpRequests((authorize) -> authorize
+                // authorization for view
                 .requestMatchers(HttpMethod.GET, "/page/signup").permitAll()                                                                
-                .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.GET, "/page/login").permitAll()
                 .requestMatchers(HttpMethod.GET, "/page/store-login").permitAll()
+                // authorization for API
+                .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()
                 .requestMatchers(HttpMethod.GET, "/csrf").permitAll()
+                // authorization for internal dispatch
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
             .securityContext(securityContextConfigurer -> securityContextConfigurer

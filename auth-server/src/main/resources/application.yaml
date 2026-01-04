@@ -55,9 +55,16 @@ logging:
     org:
       springframework:
         security: DEBUG
+        # data:
+        #   redis: DEBUG
+    #     redis:
+    #       connection: DEBUG
+    # io:
+    #   lettuce:
+    #     core: DEBUG
   file:
     name: logs/auth-server.log
-    max-size: 100MB
+    max-size: 1024MB
 
 stream:
   key: user-events
