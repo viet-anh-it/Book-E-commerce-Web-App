@@ -57,6 +57,7 @@ import org.springframework.security.oauth2.server.authorization.settings.TokenSe
 import org.springframework.security.oauth2.server.authorization.token.JwtEncodingContext;
 import org.springframework.security.oauth2.server.authorization.token.OAuth2TokenCustomizer;
 import org.springframework.security.web.SecurityFilterChain;
+import org.springframework.security.web.authentication.AuthenticationSuccessHandler;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
@@ -76,6 +77,7 @@ import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
 import com.bookommerce.auth_server.repository.oauth2.ClientRepository;
 import com.bookommerce.auth_server.repository.oauth2.JpaRegisteredClientRepository;
+import com.bookommerce.auth_server.service.event.RegistrationSuccessEventPublisher;
 import com.nimbusds.jose.jwk.JWKSet;
 import com.nimbusds.jose.jwk.RSAKey;
 import com.nimbusds.jose.jwk.source.ImmutableJWKSet;
@@ -96,13 +98,17 @@ public class SecurityConfig {
 
     @Bean
     @Order(1)
-    public SecurityFilterChain authorizationServerSecurityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain authorizationServerSecurityFilterChain(
+        HttpSecurity http,
+        AuthenticationSuccessHandler authenticationSuccessHandler) throws Exception {
         OAuth2AuthorizationServerConfigurer authorizationServerConfigurer = 
             OAuth2AuthorizationServerConfigurer.authorizationServer();
         http
             .securityMatcher(authorizationServerConfigurer.getEndpointsMatcher())
             .with(authorizationServerConfigurer, (authorizationServer) -> authorizationServer
-                .oidc(Customizer.withDefaults())
+                .oidc(oidcConfigurer -> oidcConfigurer
+                    .logoutEndpoint(logoutEndpointConfigurer -> logoutEndpointConfigurer
+                        .logoutResponseHandler(authenticationSuccessHandler)))
                 .tokenEndpoint(oauth2TokenEndpointConfigurer -> oauth2TokenEndpointConfigurer
                     .accessTokenResponseHandler(new CustomOAuth2AuthenticationSuccessHandler())))
             .authorizeHttpRequests((authorize) -> authorize.anyRequest().authenticated())
@@ -181,12 +187,14 @@ public class SecurityConfig {
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
                 .redirectUri(API_GATEWAY_BASE_URL + "/login/oauth2/code/bff")
+                .redirectUri("https://oauth.pstmn.io/v1/callback")
                 .postLogoutRedirectUri(FE_BASE_URL)
                 .postLogoutRedirectUri(AUTH_SERVER_BASE_URL + "/page/store-login")
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
                 .clientSettings(ClientSettings.builder()
                     .requireAuthorizationConsent(false)
+                    .requireProofKey(false)
                     .build())
                 .tokenSettings(TokenSettings.builder()
                     .accessTokenFormat(OAuth2TokenFormat.SELF_CONTAINED)
@@ -195,8 +203,21 @@ public class SecurityConfig {
                     .reuseRefreshTokens(false)
                     .build())
                 .build();
+
+        RegisteredClient resourceServer = RegisteredClient.withId("resource-server")
+                .clientId("resource-server")
+                .clientSecret("$2a$12$zBuKEpT5/7BJ/d7ZcoOGmepGXPdoZOx17VieNDn35cZMhnSMDlPT.")
+                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+                .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+                .clientSettings(ClientSettings.builder()
+                    .requireAuthorizationConsent(false)
+                    .requireProofKey(false)
+                    .build())    
+                .build();
+
         JpaRegisteredClientRepository jpaRegisteredClientRepository = new JpaRegisteredClientRepository(clientRepository);
         jpaRegisteredClientRepository.save(bff);
+        jpaRegisteredClientRepository.save(resourceServer);
         return jpaRegisteredClientRepository;
     }
 
@@ -305,8 +326,11 @@ public class SecurityConfig {
 	}
 
     @Bean
-    public OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService(UserRepository userRepository, RoleRepository roleRepository) {
-        return new CustomOidcUserService(userRepository, roleRepository);
+    public OAuth2UserService<OidcUserRequest, OidcUser> oidcUserService(
+        UserRepository userRepository, 
+        RoleRepository roleRepository, 
+        RegistrationSuccessEventPublisher registrationSuccessEventPublisher) {
+        return new CustomOidcUserService(userRepository, roleRepository, registrationSuccessEventPublisher);
     }
 
     @Bean

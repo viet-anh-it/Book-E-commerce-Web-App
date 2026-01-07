@@ -1,9 +1,5 @@
 package com.bookommerce.auth_server.service;
 
-import lombok.AccessLevel;
-import lombok.RequiredArgsConstructor;
-import lombok.experimental.FieldDefaults;
-
 import java.util.HashSet;
 import java.util.Map;
 import java.util.Set;
@@ -37,7 +33,11 @@ import com.bookommerce.auth_server.service.event.RegistrationSuccessEventPublish
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import jakarta.servlet.http.HttpSession;
+import lombok.AccessLevel;
+import lombok.RequiredArgsConstructor;
+import lombok.experimental.FieldDefaults;
 
+// @formatter:off
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -51,7 +51,6 @@ public class AuthService {
     RoleRepository roleRepository;
     RegistrationSuccessEventPublisher registrationSuccessEventPublisher;
 
-    //@formatter:off
     public void register(RegistrationRequestDto registrationRequestDto) {
         if (this.userRepository.findByEmail(registrationRequestDto.email()).isPresent()) {
             BeanPropertyBindingResult bindingResult = new BeanPropertyBindingResult(registrationRequestDto, "registrationRequestDto");
@@ -66,7 +65,6 @@ public class AuthService {
         this.registrationSuccessEventPublisher.publishRegistrationSuccessEvent(new RegistrationSuccessEvent(user.getEmail()));
     }
 
-    //@formatter:off
     public Map<String, String> login(LoginRequestDto loginRequestDto, HttpServletRequest request, HttpServletResponse response) {
         UsernamePasswordAuthenticationToken usernamePasswordAuthenticationToken = 
             new UsernamePasswordAuthenticationToken(loginRequestDto.email(), loginRequestDto.password());

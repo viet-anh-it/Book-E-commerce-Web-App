@@ -3,8 +3,8 @@ package com.bookommerce.resource_server.dto.request;
 import org.springframework.data.domain.Sort.Direction;
 
 import com.bookommerce.resource_server.constant.BooksSortCriteria;
-import com.bookommerce.resource_server.validation.AllowedPageSizes;
-import com.bookommerce.resource_server.validation.ValidPriceRange;
+import com.bookommerce.resource_server.validation.annotation.ValidPriceRange;
+import com.bookommerce.resource_server.validation.validator.AllowedPageSizes;
 
 import java.util.List;
 

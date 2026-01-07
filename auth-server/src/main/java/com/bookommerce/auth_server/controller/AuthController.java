@@ -23,6 +23,7 @@ import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+// @formatter:off
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
@@ -33,15 +34,15 @@ public class AuthController {
 
     @PostMapping("/register")
     public ResponseEntity<ApiSuccessResponse<Void>> register(
-            @RequestBody @Validated(ValidationOrder.class) RegistrationRequestDto registrationRequestDto) {
+        @RequestBody @Validated(ValidationOrder.class) RegistrationRequestDto registrationRequestDto) {
         this.authService.register(registrationRequestDto);
         return ResponseEntity.status(HttpStatus.CREATED).body(ApiSuccessResponse.<Void>builder()
-                .status(HttpStatus.CREATED.value())
-                .message("User registered successfully")
-                .build());
+            .status(HttpStatus.CREATED.value())
+            .message("User registered successfully")
+            .build());
     }
 
-    //@formatter:off
+
     @PostMapping(path = {"/login/customer", "/login/store"})
     public ResponseEntity<ApiSuccessResponse<Map<String, String>>> login(
         @RequestBody @Valid LoginRequestDto loginRequestDto,
@@ -49,9 +50,9 @@ public class AuthController {
         HttpServletResponse response) {
         Map<String, String> responseData = this.authService.login(loginRequestDto, request, response);
         return ResponseEntity.status(HttpStatus.OK).body(ApiSuccessResponse.<Map<String, String>>builder()
-                .status(HttpStatus.OK.value())
-                .message("Login successful")
-                .data(responseData)
-                .build());
+            .status(HttpStatus.OK.value())
+            .message("Login successful")
+            .data(responseData)
+            .build());
     }
 }

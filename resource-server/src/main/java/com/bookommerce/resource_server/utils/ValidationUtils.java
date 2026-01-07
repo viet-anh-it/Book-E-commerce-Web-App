@@ -17,6 +17,13 @@ public final class ValidationUtils {
         return bindingResult;
     }
 
+
+    public static void buildGlobalValidationMessage(String message, ConstraintValidatorContext context) {
+        context.disableDefaultConstraintViolation();
+        context.buildConstraintViolationWithTemplate(message)
+            .addConstraintViolation();
+    }
+
     public static void buildValidationMessage(String field, String message, ConstraintValidatorContext context) {
         if (field == null) {
             field = "";

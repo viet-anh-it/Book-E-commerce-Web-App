@@ -1,5 +1,10 @@
 package com.bookommerce.resource_server.config;
 
+import java.time.Instant;
+import java.util.Collection;
+import java.util.Map;
+import java.util.stream.Collectors;
+
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.http.HttpMethod;
@@ -8,10 +13,14 @@ import org.springframework.security.config.annotation.web.builders.HttpSecurity;
 import org.springframework.security.config.annotation.web.configuration.EnableWebSecurity;
 import org.springframework.security.config.core.GrantedAuthorityDefaults;
 import org.springframework.security.config.http.SessionCreationPolicy;
-import org.springframework.security.oauth2.jwt.JwtDecoder;
-import org.springframework.security.oauth2.jwt.JwtDecoders;
-import org.springframework.security.oauth2.server.resource.authentication.JwtAuthenticationConverter;
-import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
+import org.springframework.security.core.GrantedAuthority;
+import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.oauth2.core.OAuth2AccessToken;
+import org.springframework.security.oauth2.core.OAuth2TokenIntrospectionClaimNames;
+import org.springframework.security.oauth2.server.resource.authentication.BearerTokenAuthentication;
+import org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenAuthenticationConverter;
+import org.springframework.security.oauth2.server.resource.introspection.OpaqueTokenIntrospector;
+import org.springframework.security.oauth2.server.resource.introspection.SpringOpaqueTokenIntrospector;
 import org.springframework.security.web.SecurityFilterChain;
 
 import jakarta.servlet.DispatcherType;
@@ -28,10 +37,16 @@ public class SecurityConfig {
     static String AUTH_SERVER_BASE_URL = "https://auth.bookommerce.com:8282";
 
     @Bean
-    public SecurityFilterChain securityFilterChain(HttpSecurity http) throws Exception {
+    public SecurityFilterChain securityFilterChain(
+        HttpSecurity http,
+        OpaqueTokenAuthenticationConverter opaqueTokenAuthenticationConverter) throws Exception {
 		http
-            .oauth2ResourceServer(oauth2 -> oauth2.jwt(jwtConfigurer -> jwtConfigurer
-                .jwtAuthenticationConverter(jwtAuthenticationConverter())))   
+            .oauth2ResourceServer(oauth2ResourceServerConfigurer -> oauth2ResourceServerConfigurer
+                .opaqueToken(opaqueTokenConfigurer -> opaqueTokenConfigurer
+                    .introspector(opaqueTokenIntrospector())
+                    .authenticationConverter(opaqueTokenAuthenticationConverter)))
+                // .jwt(jwtConfigurer -> jwtConfigurer
+                //     .jwtAuthenticationConverter(jwtAuthenticationConverter())))   
             .authorizeHttpRequests((authorize) -> authorize
                 // authorization for book
                 .requestMatchers(HttpMethod.GET, "/api/books").permitAll()
@@ -49,6 +64,14 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.DELETE, "/api/ratings/{id}").hasAnyAuthority("ROLE_PRODUCT_MANAGER", "ROLE_CUSTOMER")
                 // authorization for genre
                 .requestMatchers("/api/genres/**").permitAll()
+                // authorization for cart
+                .requestMatchers(HttpMethod.GET, "/api/carts").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.POST, "/api/carts/items").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PATCH, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.DELETE, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
+                // authorization for profile
+                .requestMatchers(HttpMethod.GET, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PATCH, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 // authorization for image
                 .requestMatchers(HttpMethod.GET, "/images/books/**").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
@@ -60,24 +83,47 @@ public class SecurityConfig {
         return http.build();
     }
 
-    @Bean
-    public JwtDecoder jwtDecoder() {
-        return JwtDecoders.fromIssuerLocation(AUTH_SERVER_BASE_URL);
-    }
+    // @Bean
+    // public JwtDecoder jwtDecoder() {
+    //     return JwtDecoders.fromIssuerLocation(AUTH_SERVER_BASE_URL);
+    // }
 
     @Bean
     public GrantedAuthorityDefaults grantedAuthorityDefaults() {
         return new GrantedAuthorityDefaults("");
     }
 
-    @Bean
-    public JwtAuthenticationConverter jwtAuthenticationConverter() {
-        JwtGrantedAuthoritiesConverter grantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
-        grantedAuthoritiesConverter.setAuthoritiesClaimName("authorities");
-        grantedAuthoritiesConverter.setAuthorityPrefix("");
+    // @Bean
+    // public JwtAuthenticationConverter jwtAuthenticationConverter() {
+    //     JwtGrantedAuthoritiesConverter grantedAuthoritiesConverter = new JwtGrantedAuthoritiesConverter();
+    //     grantedAuthoritiesConverter.setAuthoritiesClaimName("authorities");
+    //     grantedAuthoritiesConverter.setAuthorityPrefix("");
 
-        JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
-        jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(grantedAuthoritiesConverter);
-        return jwtAuthenticationConverter;
+    //     JwtAuthenticationConverter jwtAuthenticationConverter = new JwtAuthenticationConverter();
+    //     jwtAuthenticationConverter.setJwtGrantedAuthoritiesConverter(grantedAuthoritiesConverter);
+    //     return jwtAuthenticationConverter;
+    // }
+
+    @Bean
+    public OpaqueTokenIntrospector opaqueTokenIntrospector() {
+        return SpringOpaqueTokenIntrospector.withIntrospectionUri("https://auth.bookommerce.com:8282/oauth2/introspect")
+            .clientId("resource-server")
+            .clientSecret("secret")
+            .build();
+    }
+
+    @Bean
+    public OpaqueTokenAuthenticationConverter opaqueTokenAuthenticationConverter() {
+        return (introspectedToken, authenticatedPrincipal) -> {
+            Map<String, Object> attributes = authenticatedPrincipal.getAttributes();
+            Collection<String> authoritiesClaim = (Collection<String>) attributes.get("authorities");
+            Collection<GrantedAuthority> grantedAuthorities = authoritiesClaim.stream()
+                .map(authority -> new SimpleGrantedAuthority(authority))
+                .collect(Collectors.toList());
+            Instant iat = authenticatedPrincipal.getAttribute(OAuth2TokenIntrospectionClaimNames.IAT);
+		    Instant exp = authenticatedPrincipal.getAttribute(OAuth2TokenIntrospectionClaimNames.EXP);
+		    OAuth2AccessToken accessToken = new OAuth2AccessToken(OAuth2AccessToken.TokenType.BEARER, introspectedToken, iat, exp);
+		    return new BearerTokenAuthentication(authenticatedPrincipal, accessToken, grantedAuthorities);
+        };
     }
 }

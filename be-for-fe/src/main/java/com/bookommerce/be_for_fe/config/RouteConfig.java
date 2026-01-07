@@ -119,4 +119,20 @@ public class RouteConfig {
             .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
             .build();
     }
+
+    @Bean
+    public RouterFunction<ServerResponse> profileRouter() {
+        return GatewayRouterFunctions.route()
+            .GET("/api/me/profile", HandlerFunctions.http())
+            .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
+            .filter(TokenRelayFilterFunctions.tokenRelay())
+            .build()
+            .and(GatewayRouterFunctions.route()
+                .PATCH("/api/me/profile", HandlerFunctions.http())
+                .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
+                .filter(TokenRelayFilterFunctions.tokenRelay())
+                .build());
+    }
+
+
 }

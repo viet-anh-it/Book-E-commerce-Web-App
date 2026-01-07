@@ -8,38 +8,24 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
-    useEffect(() => {
-        const checkAuth = async () => {
-            try {
-                const response = await getAuthenticatedUser();
-                if (response.status === 200) {
-                    setUser(response.data);
-                } else {
-                    setUser(null);
-                }
-            } catch (error) {
-                // If 401 or network error, assume not logged in
+    const checkAuth = async () => {
+        try {
+            const response = await getAuthenticatedUser();
+            if (response.status === 200) {
+                setUser(response.data);
+            } else {
                 setUser(null);
-            } finally {
-                setLoading(false);
             }
-        };
+        } catch (error) {
+            // If 401 or network error, assume not logged in
+            setUser(null);
+        } finally {
+            setLoading(false);
+        }
+    };
 
+    useEffect(() => {
         checkAuth();
-
-        const handleRevalidate = () => {
-            if (document.visibilityState === 'visible') {
-                checkAuth();
-            }
-        };
-
-        window.addEventListener('focus', handleRevalidate);
-        document.addEventListener('visibilitychange', handleRevalidate);
-
-        return () => {
-            window.removeEventListener('focus', handleRevalidate);
-            document.removeEventListener('visibilitychange', handleRevalidate);
-        };
     }, []);
 
     const logout = async () => {
@@ -55,7 +41,7 @@ export const AuthProvider = ({ children }) => {
     };
 
     return (
-        <AuthContext.Provider value={{ user, loading, logout }}>
+        <AuthContext.Provider value={{ user, loading, logout, refreshUser: checkAuth }}>
             {!loading && children}
         </AuthContext.Provider>
     );

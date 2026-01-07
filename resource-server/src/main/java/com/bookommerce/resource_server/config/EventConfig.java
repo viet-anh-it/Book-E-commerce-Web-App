@@ -42,7 +42,8 @@ public class EventConfig {
     StreamListener<String, MapRecord<String, String, String>> streamListener;
 
     @Bean
-    public Subscription subscription(RedisConnectionFactory redisConnectionFactory) {
+    public StreamMessageListenerContainer<String, MapRecord<String, String, String>> streamMessageListenerContainer(
+            RedisConnectionFactory redisConnectionFactory) {
         log.info("Creating consumer group: [stream={}, group={}]", streamKey, group);
         createConsumerGroupIfNotExists(redisConnectionFactory, streamKey, group);
 
@@ -52,9 +53,11 @@ public class EventConfig {
                         .pollTimeout(Duration.ofSeconds(1))
                         .build();
 
-        StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer =
-            StreamMessageListenerContainer.create(redisConnectionFactory, options);
+        return StreamMessageListenerContainer.create(redisConnectionFactory, options);
+    }
 
+    @Bean
+    public Subscription subscription(StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer) {
         Subscription subscription = listenerContainer.register(
                 StreamMessageListenerContainer.StreamReadRequest
                         .builder(StreamOffset.create(streamKey, ReadOffset.lastConsumed()))
@@ -71,15 +74,19 @@ public class EventConfig {
 
     private void createConsumerGroupIfNotExists(RedisConnectionFactory redisConnectionFactory, String streamKey, String groupName) {
         try {
-            try {
-                redisConnectionFactory.getConnection()
-                    .streamCommands()
-                    .xGroupCreate(streamKey.getBytes(), groupName, ReadOffset.from("0-0"), true);
-            } catch (RedisSystemException exception) {
-                log.warn(exception.getCause().getMessage());
-            }
+            createConsumerGroup(redisConnectionFactory, streamKey, groupName);
         } catch (RedisSystemException ex) {
             log.error(ex.getMessage());
+        }
+    }
+
+    private void createConsumerGroup(RedisConnectionFactory redisConnectionFactory, String streamKey, String groupName) {
+        try {
+            redisConnectionFactory.getConnection()
+                .streamCommands()
+                .xGroupCreate(streamKey.getBytes(), groupName, ReadOffset.from("0-0"), true);
+        } catch (RedisSystemException exception) {
+            log.warn(exception.getCause().getMessage());
         }
     }
 }

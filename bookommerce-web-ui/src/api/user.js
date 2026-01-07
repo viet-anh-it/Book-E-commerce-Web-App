@@ -18,3 +18,34 @@ export const updateProfile = async (userData) => {
 export const getProfile = async () => {
     return axiosInstance.get('/api/me');
 };
+/**
+ * Change user email
+ * @param {string} newEmail
+ * @returns {Promise}
+ */
+export const changeEmail = async (newEmail) => {
+    // Note: This endpoint is assumed. Email change often requires verification.
+    return axiosInstance.post('/api/me/change-email', { newEmail });
+};
+/**
+ * Change user password
+ * @param {Object} passwordData - { currentPassword, newPassword }
+ * @returns {Promise}
+ */
+export const changePassword = async (passwordData) => {
+    return axiosInstance.post('/api/me/change-password', passwordData);
+};
+/**
+ * Upload user avatar
+ * @param {File} file - The image file to upload
+ * @returns {Promise}
+ */
+export const uploadAvatar = async (file) => {
+    const formData = new FormData();
+    formData.append('file', file);
+    return axiosInstance.post('/api/me/avatar', formData, {
+        headers: {
+            'Content-Type': 'multipart/form-data',
+        },
+    });
+};

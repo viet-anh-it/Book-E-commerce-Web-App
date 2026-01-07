@@ -3,7 +3,7 @@ package com.bookommerce.resource_server.dto.request;
 import org.springframework.data.domain.Sort.Direction;
 
 import com.bookommerce.resource_server.constant.RatingsSortCriteria;
-import com.bookommerce.resource_server.validation.AllowedPageSizes;
+import com.bookommerce.resource_server.validation.validator.AllowedPageSizes;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;

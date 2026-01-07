@@ -7,6 +7,8 @@ import java.util.Set;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
+import org.springframework.security.oauth2.client.OAuth2AuthorizedClientService;
+import org.springframework.security.oauth2.client.authentication.OAuth2AuthenticationToken;
 import org.springframework.security.oauth2.client.oidc.web.logout.OidcClientInitiatedLogoutSuccessHandler;
 import org.springframework.security.oauth2.client.registration.ClientRegistrationRepository;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
@@ -22,9 +24,11 @@ import lombok.experimental.FieldDefaults;
 public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
 
     OidcClientInitiatedLogoutSuccessHandler delegate;
+    OAuth2AuthorizedClientService oAuth2AuthorizedClientService;
 
-    public CustomLogoutSuccessHandler(ClientRegistrationRepository clientRegistrationRepository) {
+    public CustomLogoutSuccessHandler(ClientRegistrationRepository clientRegistrationRepository, OAuth2AuthorizedClientService oAuth2AuthorizedClientService) {
         this.delegate = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
+        this.oAuth2AuthorizedClientService = oAuth2AuthorizedClientService;
     }
 
     @Override
@@ -32,6 +36,10 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
         HttpServletRequest request,
         HttpServletResponse response,
         Authentication authentication) throws IOException, ServletException {
+        OAuth2AuthenticationToken oauth2AuthenticationToken = (OAuth2AuthenticationToken) authentication;
+        this.oAuth2AuthorizedClientService.removeAuthorizedClient(
+            oauth2AuthenticationToken.getAuthorizedClientRegistrationId(),
+            oauth2AuthenticationToken.getName());
         Set<GrantedAuthority> authorities = new HashSet<>(authentication.getAuthorities());
         SimpleGrantedAuthority roleCustomer = new SimpleGrantedAuthority("ROLE_CUSTOMER");
         if (authorities.contains(roleCustomer)) {

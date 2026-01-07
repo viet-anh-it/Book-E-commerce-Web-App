@@ -39,6 +39,7 @@ import com.bookommerce.be_for_fe.custom.CustomLogoutSuccessHandler;
 
 import jakarta.servlet.DispatcherType;
 
+// @formatter:off
 @Configuration
 @EnableWebSecurity
 public class SecurityConfig {
@@ -49,8 +50,7 @@ public class SecurityConfig {
     private static final String ADMIN_FE_BASE_URL = "https://admin.bookommerce.com:7979";
 
     @Bean
-    public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
-        //@formatter:off
+    public SecurityFilterChain filterChain(HttpSecurity http, LogoutSuccessHandler logoutSuccessHandler) throws Exception {
         http
             .authorizeHttpRequests((authorize) -> authorize
                 // authorization for book
@@ -69,6 +69,14 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/approve").hasAuthority("ROLE_PRODUCT_MANAGER")
                 .requestMatchers(HttpMethod.PATCH, "/api/ratings/{id}/reject").hasAuthority("ROLE_PRODUCT_MANAGER")
                 .requestMatchers(HttpMethod.DELETE, "/api/ratings/{id}").hasAnyAuthority("ROLE_PRODUCT_MANAGER", "ROLE_CUSTOMER")
+                // authorization for cart
+                .requestMatchers(HttpMethod.GET, "/api/carts").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.POST, "/api/carts/items").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PATCH, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.DELETE, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
+                // authorization for profile
+                .requestMatchers(HttpMethod.GET, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PATCH, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 // authorization for csrf
                 .requestMatchers("/csrf").permitAll()
                 // authorization for confirm logout
@@ -81,7 +89,7 @@ public class SecurityConfig {
             .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
                 .successHandler(new CustomAuthenticationSuccessHandler()))
             .logout(logoutConfigurer -> logoutConfigurer
-                .logoutSuccessHandler(this.oidcLogoutSuccessHandler(this.clientRegistrationRepository())))
+                .logoutSuccessHandler(logoutSuccessHandler))
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer
                 .defaultAuthenticationEntryPointFor(
                     new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED),
@@ -89,7 +97,6 @@ public class SecurityConfig {
             .csrf(csrfConfigurer -> csrfConfigurer.requireCsrfProtectionMatcher(
                 PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/logout")))
             .cors(Customizer.withDefaults());
-        //@formatter:on
         return http.build();
     }
 
@@ -98,7 +105,6 @@ public class SecurityConfig {
         return new InMemoryClientRegistrationRepository(this.googleClientRegistration());
     }
 
-    //@formatter:off
     private ClientRegistration googleClientRegistration() {
         return ClientRegistration.withRegistrationId("bff")
                 .clientId("bff")
@@ -137,9 +143,11 @@ public class SecurityConfig {
         };
     }
 
-    //@formatter:off
-    private LogoutSuccessHandler oidcLogoutSuccessHandler(ClientRegistrationRepository clientRegistrationRepository) {
-        return new CustomLogoutSuccessHandler(clientRegistrationRepository);
+    @Bean
+    public LogoutSuccessHandler oidcLogoutSuccessHandler(
+        ClientRegistrationRepository clientRegistrationRepository,
+        OAuth2AuthorizedClientService oAuth2AuthorizedClientService) {
+        return new CustomLogoutSuccessHandler(clientRegistrationRepository, oAuth2AuthorizedClientService);
     }
 
     @Bean
@@ -158,7 +166,9 @@ public class SecurityConfig {
 	}
 
     @Bean
-    public OAuth2AuthorizedClientService oAuth2AuthorizedClientService(JdbcTemplate jdbcTemplate, ClientRegistrationRepository clientRegistrationRepository) {
+    public OAuth2AuthorizedClientService oAuth2AuthorizedClientService(
+        JdbcTemplate jdbcTemplate,
+        ClientRegistrationRepository clientRegistrationRepository) {
         return new JdbcOAuth2AuthorizedClientService(jdbcTemplate, clientRegistrationRepository);
     }
 }

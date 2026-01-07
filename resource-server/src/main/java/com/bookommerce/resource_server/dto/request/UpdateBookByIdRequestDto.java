@@ -2,7 +2,7 @@ package com.bookommerce.resource_server.dto.request;
 
 import org.springframework.web.multipart.MultipartFile;
 
-import com.bookommerce.resource_server.validation.ValidUpdateBookImage;
+import com.bookommerce.resource_server.validation.annotation.ValidUpdateBookImage;
 
 import jakarta.validation.constraints.Max;
 import jakarta.validation.constraints.Min;
