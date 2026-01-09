@@ -29,6 +29,10 @@ import org.springframework.security.oauth2.core.oidc.user.OidcUserAuthority;
 import org.springframework.security.web.SecurityFilterChain;
 import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.logout.LogoutSuccessHandler;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+import org.springframework.security.web.csrf.CsrfTokenRepository;
+import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
+import org.springframework.security.web.csrf.CsrfTokenRequestHandler;
 import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -80,7 +84,7 @@ public class SecurityConfig {
                 // authorization for csrf
                 .requestMatchers("/csrf").permitAll()
                 // authorization for confirm logout
-                .requestMatchers(HttpMethod.GET, "/confirm-logout").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/confirm-logout").permitAll()
                 // authorization for image
                 .requestMatchers(HttpMethod.GET, "/images/books/**").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
@@ -94,8 +98,10 @@ public class SecurityConfig {
                 .defaultAuthenticationEntryPointFor(
                     new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED),
                     new MediaTypeRequestMatcher(MediaType.APPLICATION_JSON)))
-            .csrf(csrfConfigurer -> csrfConfigurer.requireCsrfProtectionMatcher(
-                PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/logout")))
+            .csrf(csrfConfigurer -> csrfConfigurer
+                .csrfTokenRepository(this.csrfTokenRepository())
+                .csrfTokenRequestHandler(this.csrfTokenRequestHandler())
+                .requireCsrfProtectionMatcher(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/logout")))
             .cors(Customizer.withDefaults());
         return http.build();
     }
@@ -170,5 +176,28 @@ public class SecurityConfig {
         JdbcTemplate jdbcTemplate,
         ClientRegistrationRepository clientRegistrationRepository) {
         return new JdbcOAuth2AuthorizedClientService(jdbcTemplate, clientRegistrationRepository);
+    }
+
+    @Bean
+    public CsrfTokenRepository csrfTokenRepository() {
+        CookieCsrfTokenRepository repository =  new CookieCsrfTokenRepository();
+        repository.setCookieName("XSRF-TOKEN");
+        repository.setHeaderName("X-XSRF-TOKEN");
+        repository.setParameterName("_csrf");
+        repository.setCookieCustomizer(cookie -> cookie
+            .domain("bookommerce.com")
+            .secure(true)
+            .sameSite("Lax")
+            .maxAge(-1)
+            .path("/")
+            .httpOnly(false));
+        return repository;
+    }
+
+    @Bean
+    public CsrfTokenRequestHandler csrfTokenRequestHandler() {
+        CsrfTokenRequestAttributeHandler handler = new CsrfTokenRequestAttributeHandler();
+        handler.setCsrfRequestAttributeName(null);
+        return handler;
     }
 }

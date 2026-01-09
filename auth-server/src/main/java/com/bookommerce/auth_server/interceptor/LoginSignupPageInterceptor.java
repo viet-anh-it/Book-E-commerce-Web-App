@@ -9,9 +9,9 @@ import org.springframework.web.servlet.HandlerInterceptor;
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 
+// @formatter:off
 public class LoginSignupPageInterceptor implements HandlerInterceptor {
-
-    //@formatter:off
+    
     @Override
     public boolean preHandle(
         @NonNull HttpServletRequest request,
@@ -31,5 +31,4 @@ public class LoginSignupPageInterceptor implements HandlerInterceptor {
         }
         return true;
     }
-    //@formatter:on
 }

@@ -1,16 +1,15 @@
 package com.bookommerce.be_for_fe.controller;
 
-import org.springframework.security.web.csrf.CsrfToken;
 import org.springframework.stereotype.Controller;
-import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
 
 @Controller
+@RequestMapping("/page")
 public class ViewController {
 
     @GetMapping("/confirm-logout")
-    public String renderLogoutConfirmationPage(Model model, CsrfToken csrfToken) {
-        model.addAttribute("_csrf", csrfToken);
+    public String renderLogoutConfirmationPage() {
         return "logout-confirmation";
     }
 }

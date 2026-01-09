@@ -1,6 +1,6 @@
-import React, { createContext, useContext, useState, useEffect } from 'react';
-import { getAuthenticatedUser } from '../api/auth';
 import { Spin } from 'antd';
+import { createContext, useContext, useEffect, useState } from 'react';
+import { getAuthenticatedUser } from '../api/auth';
 
 const AuthContext = createContext(null);
 
@@ -38,7 +38,7 @@ export const AuthProvider = ({ children }) => {
 
     const logout = () => {
         // Direct GET request to logout confirmation page
-        window.location.href = 'https://bff.bookommerce.com:8181/confirm-logout';
+        window.location.href = 'https://bff.bookommerce.com:8181/page/confirm-logout';
     };
 
     return (

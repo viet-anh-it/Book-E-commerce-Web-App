@@ -43,18 +43,25 @@ spring:
         dialect: org.hibernate.dialect.MySQLDialect
         format_sql: true
     show-sql: true
-    
+
 logging:
-  level:
-    org:
-      springframework:
-        security: DEBUG
-      hibernate:
-        tool:
-          schema: DEBUG
-        SQL: DEBUG
+  file:
+    name: logs/bff.log
   logback:
     rollingpolicy:
       max-file-size: 10MB
-  file:
-    name: logs/bff.log
+  level:
+    root: INFO
+    org:
+      hibernate:
+        SQL: DEBUG
+        tool:
+          schema: DEBUG
+      springframework:
+        security: DEBUG
+        session:
+          jdbc: DEBUG
+        jdbc:
+          core:
+            JdbcTemplate: DEBUG
+            StatementCreatorUtils: TRACE

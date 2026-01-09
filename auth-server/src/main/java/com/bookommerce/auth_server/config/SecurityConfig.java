@@ -62,6 +62,10 @@ import org.springframework.security.web.authentication.HttpStatusEntryPoint;
 import org.springframework.security.web.authentication.LoginUrlAuthenticationEntryPoint;
 import org.springframework.security.web.context.HttpSessionSecurityContextRepository;
 import org.springframework.security.web.context.SecurityContextRepository;
+import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
+import org.springframework.security.web.csrf.CsrfTokenRepository;
+import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
+import org.springframework.security.web.csrf.CsrfTokenRequestHandler;
 import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
@@ -131,14 +135,15 @@ public class SecurityConfig {
                 // authorization for API
                 .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()
-                .requestMatchers(HttpMethod.GET, "/csrf").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/csrf").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/me").authenticated()
                 // authorization for internal dispatch
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
             .securityContext(securityContextConfigurer -> securityContextConfigurer
                 .securityContextRepository(this.securityContextRepository()))
             .sessionManagement(sessionManagementConfigurer -> sessionManagementConfigurer
-                .sessionCreationPolicy(SessionCreationPolicy.ALWAYS))
+                .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer
                 .defaultAuthenticationEntryPointFor(
                     new LoginUrlAuthenticationEntryPoint("/page/login"),
@@ -151,9 +156,10 @@ public class SecurityConfig {
                 .defaultSuccessUrl(API_GATEWAY_BASE_URL + "/oauth2/authorization/bff", true))
             .formLogin(formLoginConfigurer -> formLoginConfigurer.disable())
             .httpBasic(httpBasicConfigurer -> httpBasicConfigurer.disable())
-            .csrf(csrfConfigurer -> csrfConfigurer.ignoringRequestMatchers(
-                PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.GET, "/csrf")
-            ))
+            .csrf(csrfConfigurer -> csrfConfigurer
+                .csrfTokenRepository(this.csrfTokenRepository())
+                .csrfTokenRequestHandler(this.csrfTokenRequestHandler())
+                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.GET, "/api/csrf")))
             .cors(Customizer.withDefaults());
         return http.build();
     }
@@ -346,4 +352,26 @@ public class SecurityConfig {
 			}
 		};
 	}
+
+    @Bean
+    public CsrfTokenRepository csrfTokenRepository() {
+        CookieCsrfTokenRepository repository =  new CookieCsrfTokenRepository();
+        repository.setCookieName("XSRF-TOKEN");
+        repository.setHeaderName("X-XSRF-TOKEN");
+        repository.setCookieCustomizer(cookie -> cookie
+            .domain("bookommerce.com")
+            .secure(true)
+            .sameSite("Lax")
+            .maxAge(-1)
+            .path("/")
+            .httpOnly(false));
+        return repository;
+    }
+
+    @Bean
+    public CsrfTokenRequestHandler csrfTokenRequestHandler() {
+        CsrfTokenRequestAttributeHandler handler = new CsrfTokenRequestAttributeHandler();
+        handler.setCsrfRequestAttributeName(null);
+        return handler;
+    }
 }

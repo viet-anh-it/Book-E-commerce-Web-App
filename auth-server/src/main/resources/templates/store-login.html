@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn1.fahasa.com/media/favicon/default/favicon4.ico" type="image/x-icon">
     <title>Store Login - Bookommerce</title>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -674,9 +674,6 @@
                 </div>
 
                 <form id="loginForm" novalidate>
-                    <!-- CSRF Token (Spring Security) -->
-                    <input type="hidden" th:name="${_csrf.parameterName}" th:value="${_csrf.token}" />
-
                     <div class="form-item" id="emailGroup">
                         <label class="form-label" for="email">Email<span class="required">*</span></label>
                         <div class="input-wrapper">
@@ -756,6 +753,13 @@
         }
 
         setTheme(getPreferredTheme());
+
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+            return null;
+        }
 
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
@@ -882,15 +886,15 @@
                 password: passwordInput.value,
             };
 
-            const csrfToken = document.querySelector('input[name="_csrf"]').value;
-
             try {
+                const csrfToken = getCookie('XSRF-TOKEN');
+
                 const response = await fetch('/api/login/store', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'X-CSRF-TOKEN': csrfToken
+                        'X-XSRF-TOKEN': csrfToken
                     },
                     body: JSON.stringify(payload)
                 });

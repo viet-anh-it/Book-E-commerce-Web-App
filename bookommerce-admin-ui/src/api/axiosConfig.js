@@ -1,7 +1,6 @@
 import axios from 'axios';
 import NProgress from 'nprogress';
 import 'nprogress/nprogress.css';
-import Cookies from 'js-cookie';
 
 NProgress.configure({ showSpinner: false });
 
@@ -13,11 +12,6 @@ const axiosInstance = axios.create({
 // Thêm một bộ đón chặn request
 axiosInstance.interceptors.request.use(function (config) {
     // Làm gì đó trước khi request dược gửi đi
-    const csrfToken = Cookies.get('XSRF-TOKEN');
-    const unsafeHttpMethod = ['POST', 'PUT', 'DELETE', 'PATCH'];
-    if (csrfToken && unsafeHttpMethod.includes(config.method.toUpperCase())) {
-        config.headers['X-CSRF-TOKEN'] = csrfToken;
-    }
     NProgress.start();
     return config;
 }, function (error) {

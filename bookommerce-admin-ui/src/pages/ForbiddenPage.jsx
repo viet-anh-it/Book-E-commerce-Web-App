@@ -1,7 +1,5 @@
-import React from 'react';
-import { Result, Button, theme } from 'antd';
 import { HomeOutlined } from '@ant-design/icons';
-import { redirectToLogin } from '../api/auth';
+import { Button, Result, theme } from 'antd';
 
 const ForbiddenPage = () => {
     const {
@@ -26,7 +24,7 @@ const ForbiddenPage = () => {
                         icon={<HomeOutlined />}
                         onClick={() => {
                             // Redirect to logout then login
-                            window.location.href = 'https://bff.bookommerce.com:8181/confirm-logout';
+                            window.location.href = 'https://bff.bookommerce.com:8181/page/confirm-logout';
                         }}
                     >
                         Logout & Switch Account

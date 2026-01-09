@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="#" type="image/x-icon">
+    <link rel="shortcut icon" href="https://cdn1.fahasa.com/media/favicon/default/favicon4.ico" type="image/x-icon">
     <title>Logout - Bookommerce</title>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -276,7 +276,7 @@
 
                 <div class="btn-group">
                     <form action="/logout" method="post" style="width: 100%;">
-                        <input type="hidden" name="_csrf" th:value="${_csrf.token}">
+                        <input type="hidden" name="_csrf" value="">
                         <button type="submit" class="btn btn-primary">Logout</button>
                     </form>
                 </div>
@@ -306,6 +306,24 @@
         themeToggle.addEventListener('click', () => {
             const currentTheme = document.documentElement.getAttribute('data-theme');
             setTheme(currentTheme === 'dark' ? 'light' : 'dark');
+        });
+
+        // --- CSRF Handling ---
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return parts.pop().split(';').shift();
+        }
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const csrfToken = getCookie('XSRF-TOKEN');
+            window.alert(csrfToken);
+            if (csrfToken) {
+                const csrfInput = document.querySelector('input[name="_csrf"]');
+                if (csrfInput) {
+                    csrfInput.value = csrfToken;
+                }
+            }
         });
     </script>
 </body>

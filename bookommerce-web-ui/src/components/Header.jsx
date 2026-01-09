@@ -1,14 +1,14 @@
+import { BookOutlined, MenuOutlined, MoonOutlined, ShoppingCartOutlined, SunOutlined } from '@ant-design/icons';
+import { Badge, Button, Drawer, Grid, Layout, Menu, Space, Switch, Typography, theme } from 'antd';
 import React, { useState } from 'react';
-import { Layout, Menu, Badge, Avatar, Button, Space, Typography, theme, Switch, Grid, Drawer } from 'antd';
-import { ShoppingCartOutlined, UserOutlined, BookOutlined, MenuOutlined, SunOutlined, MoonOutlined } from '@ant-design/icons';
 import { useAuth } from '../contexts/AuthContext';
 
 const { Header: AntHeader } = Layout;
 const { Title } = Typography;
 const { useBreakpoint } = Grid;
 
-import { useNavigate, useLocation } from 'react-router-dom';
 import PropTypes from 'prop-types';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 const Header = ({ isDarkMode, onToggleTheme }) => {
     const { user, logout } = useAuth();
@@ -189,7 +189,7 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                                     <Button type="link" onClick={() => navigate('/profile')}>
                                         Hồ sơ
                                     </Button>
-                                    <Button type="default" href='https://bff.bookommerce.com:8181/confirm-logout'>
+                                    <Button type="default" href='https://bff.bookommerce.com:8181/page/confirm-logout'>
                                         Logout
                                     </Button>
                                 </>

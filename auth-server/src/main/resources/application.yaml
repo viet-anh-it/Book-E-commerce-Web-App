@@ -33,7 +33,7 @@ spring:
     password: ${DB_PASSWORD}
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
-    defer-datasource-initialization: true # Chạy data.sql SAU KHI Hibernate tạo bảng xong
+    defer-datasource-initialization: true
     hibernate:
       ddl-auto: update
     properties:
@@ -52,21 +52,22 @@ spring:
 
 logging:
   level:
+    root: INFO
     org:
       springframework:
         security: DEBUG
-        # data:
-        #   redis: DEBUG
-    #     redis:
-    #       connection: DEBUG
-    # io:
-    #   lettuce:
-    #     core: DEBUG
+        session:
+          jdbc: DEBUG
+        jdbc:
+          core:
+            JdbcTemplate: DEBUG
+            StatementCreatorUtils: TRACE
   file:
     name: logs/auth-server.log
-    max-size: 1024MB
+  logback:
+    rollingpolicy:
+      max-file-size: 1024MB
 
 stream:
   key: user-events
   group: user-group
-      
