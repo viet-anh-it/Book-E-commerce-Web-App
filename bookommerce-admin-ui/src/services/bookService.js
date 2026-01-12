@@ -12,7 +12,7 @@ export const getBooks = async (params) => {
 
 export const createBook = async (formData) => {
     try {
-        const response = await axiosInstance.post('/api/books', formData, {
+        const response = await axiosInstance.post('/protected/api/books', formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -26,7 +26,7 @@ export const createBook = async (formData) => {
 
 export const updateBook = async (id, formData) => {
     try {
-        const response = await axiosInstance.put(`/api/books/${id}`, formData, {
+        const response = await axiosInstance.put(`/protected/api/books/${id}`, formData, {
             headers: {
                 'Content-Type': 'multipart/form-data',
             },
@@ -40,7 +40,7 @@ export const updateBook = async (id, formData) => {
 
 export const deleteBook = async (id) => {
     try {
-        const response = await axiosInstance.delete(`/api/books/${id}`);
+        const response = await axiosInstance.delete(`/protected/api/books/${id}`);
         return response.data;
     } catch (error) {
         console.error('Error deleting book:', error);

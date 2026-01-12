@@ -4,17 +4,22 @@ server:
     bundle: web-server-bundle
 
 spring:
+  output:
+    ansi:
+      enabled: always
+  main:
+    banner-mode: off
   ssl:
     bundle:
       jks:
-        web-server-bundle:
+        web-server-bundle: #user-defined name
           key:
             alias: bookommerce_ssl
           keystore:
             location: classpath:bookommerce-ssl.p12
             password: 123456
             type: PKCS12
-        client-trust-bundle:
+        client-trust-bundle: #user-defined name
           key:
             alias: bookommerce_ssl
           keystore:
@@ -49,16 +54,14 @@ logging:
     org:
       springframework:
         security: DEBUG
-        # data:
-        #   redis: DEBUG
-    #     redis:
-    #       connection: DEBUG
-    # io:
-    #   lettuce:
-    #     core: DEBUG
   file:
-    name: logs/resource-server.log
+    name: ./logs/resource-server.log
     max-size: 1024MB
+    max-history: 0
+    clean-history-on-start: true
+  pattern:
+    console: "%d{HH:mm:ss.SSS} | %clr(%level) | %clr(%logger{0}){green}: %msg%n"
+    file: "%d{HH:mm:ss.SSS} | %level | %logger{0}: %msg%n"
 
 upload:
   image:

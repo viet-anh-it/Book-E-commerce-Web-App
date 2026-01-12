@@ -13,6 +13,7 @@ import java.util.HashSet;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.core.annotation.Order;
@@ -66,9 +67,7 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
 import org.springframework.security.web.csrf.CsrfTokenRequestHandler;
-import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
-import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
 
@@ -89,22 +88,30 @@ import com.nimbusds.jose.jwk.source.JWKSource;
 import com.nimbusds.jose.proc.SecurityContext;
 
 import jakarta.servlet.DispatcherType;
+import lombok.AccessLevel;
+import lombok.experimental.FieldDefaults;
 
 // @formatter:off
 @Configuration
 @EnableWebSecurity
+@FieldDefaults(level = AccessLevel.PRIVATE)
 public class SecurityConfig {
 
-    private static final String FE_BASE_URL = "https://app.bookommerce.com:8080";
-    private static final String API_GATEWAY_BASE_URL = "https://bff.bookommerce.com:8181";
-    private static final String AUTH_SERVER_BASE_URL = "https://auth.bookommerce.com:8282";
-    private static final String ADMIN_FE_BASE_URL = "https://admin.bookommerce.com:7979";
+    @Value("${bookommerce.urls.web-base-url}")
+    String webBaseUrl;
+
+    @Value("${bookommerce.urls.api-gateway-base-url}")
+    String apiGatewayBaseUrl;
+
+    @Value("${bookommerce.urls.auth-server-base-url}")
+    String authServerBaseUrl;
 
     @Bean
     @Order(1)
     public SecurityFilterChain authorizationServerSecurityFilterChain(
         HttpSecurity http,
-        AuthenticationSuccessHandler authenticationSuccessHandler) throws Exception {
+        AuthenticationSuccessHandler authenticationSuccessHandler,
+        AuthorizationServerSettings authorizationServerSettings) throws Exception {
         OAuth2AuthorizationServerConfigurer authorizationServerConfigurer = 
             OAuth2AuthorizationServerConfigurer.authorizationServer();
         http
@@ -129,14 +136,12 @@ public class SecurityConfig {
         http
             .authorizeHttpRequests((authorize) -> authorize
                 // authorization for view
-                .requestMatchers(HttpMethod.GET, "/page/signup").permitAll()                                                                
+                .requestMatchers(HttpMethod.GET, "/page/signup").permitAll()                                                              
                 .requestMatchers(HttpMethod.GET, "/page/login").permitAll()
                 .requestMatchers(HttpMethod.GET, "/page/store-login").permitAll()
                 // authorization for API
                 .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/csrf").permitAll()
-                .requestMatchers(HttpMethod.GET, "/api/me").authenticated()
                 // authorization for internal dispatch
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
@@ -153,13 +158,12 @@ public class SecurityConfig {
                     new MediaTypeRequestMatcher(MediaType.APPLICATION_JSON)))
             .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
                 .loginPage("/page/login")
-                .defaultSuccessUrl(API_GATEWAY_BASE_URL + "/oauth2/authorization/bff", true))
+                .defaultSuccessUrl(apiGatewayBaseUrl + "/protected/oauth2/authorization/bff", true))
             .formLogin(formLoginConfigurer -> formLoginConfigurer.disable())
             .httpBasic(httpBasicConfigurer -> httpBasicConfigurer.disable())
             .csrf(csrfConfigurer -> csrfConfigurer
                 .csrfTokenRepository(this.csrfTokenRepository())
-                .csrfTokenRequestHandler(this.csrfTokenRequestHandler())
-                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.GET, "/api/csrf")))
+                .csrfTokenRequestHandler(this.csrfTokenRequestHandler()))
             .cors(Customizer.withDefaults());
         return http.build();
     }
@@ -192,10 +196,10 @@ public class SecurityConfig {
                 .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
                 .authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
                 .authorizationGrantType(AuthorizationGrantType.REFRESH_TOKEN)
-                .redirectUri(API_GATEWAY_BASE_URL + "/login/oauth2/code/bff")
+                .redirectUri(apiGatewayBaseUrl + "/protected/login/oauth2/code/bff")
                 .redirectUri("https://oauth.pstmn.io/v1/callback")
-                .postLogoutRedirectUri(FE_BASE_URL)
-                .postLogoutRedirectUri(AUTH_SERVER_BASE_URL + "/page/store-login")
+                .postLogoutRedirectUri(webBaseUrl)
+                .postLogoutRedirectUri(authServerBaseUrl + "/page/store-login")
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
                 .clientSettings(ClientSettings.builder()
@@ -204,8 +208,8 @@ public class SecurityConfig {
                     .build())
                 .tokenSettings(TokenSettings.builder()
                     .accessTokenFormat(OAuth2TokenFormat.SELF_CONTAINED)
-                    .accessTokenTimeToLive(Duration.ofDays(365))
-                    .refreshTokenTimeToLive(Duration.ofDays(365))
+                    .accessTokenTimeToLive(Duration.ofSeconds(30))
+                    .refreshTokenTimeToLive(Duration.ofMinutes(5))
                     .reuseRefreshTokens(false)
                     .build())
                 .build();
@@ -297,15 +301,6 @@ public class SecurityConfig {
                     .addPathPatterns("/page/store-login")
                     .addPathPatterns("/page/signup");
             }
-
-            @Override
-            public void addCorsMappings(@NonNull CorsRegistry registry) {
-                registry.addMapping("/api/me")
-                    .allowedOrigins(FE_BASE_URL, ADMIN_FE_BASE_URL)
-                    .allowedMethods(HttpMethod.GET.name())
-                    .allowedHeaders("*")
-                    .allowCredentials(true);
-            }
         };
     }
 
@@ -320,7 +315,7 @@ public class SecurityConfig {
 			.clientSecret("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")
 			.clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
 			.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-			.redirectUri(AUTH_SERVER_BASE_URL + "/login/oauth2/code/google")
+			.redirectUri(authServerBaseUrl + "/login/oauth2/code/google")
 			.scope(OidcScopes.OPENID, OidcScopes.PROFILE, OidcScopes.EMAIL, OidcScopes.ADDRESS, OidcScopes.PHONE)
 			.authorizationUri("https://accounts.google.com/o/oauth2/v2/auth")
 			.tokenUri("https://www.googleapis.com/oauth2/v4/token")
@@ -361,7 +356,7 @@ public class SecurityConfig {
         repository.setCookieCustomizer(cookie -> cookie
             .domain("bookommerce.com")
             .secure(true)
-            .sameSite("Lax")
+            .sameSite("Strict")
             .maxAge(-1)
             .path("/")
             .httpOnly(false));

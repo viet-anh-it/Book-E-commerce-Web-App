@@ -13,7 +13,7 @@ const ProtectedRoute = ({ children }) => {
     }
 
     if (!user) {
-        window.location.href = 'https://bff.bookommerce.com:8181/oauth2/authorization/bff';
+        window.location.href = 'https://bff.bookommerce.com:8181/protected/oauth2/authorization/bff';
         return null;
     }
 

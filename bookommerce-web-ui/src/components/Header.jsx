@@ -1,5 +1,5 @@
-import { BookOutlined, MenuOutlined, MoonOutlined, ShoppingCartOutlined, SunOutlined } from '@ant-design/icons';
-import { Badge, Button, Drawer, Grid, Layout, Menu, Space, Switch, Typography, theme } from 'antd';
+import { BookOutlined, LogoutOutlined, MenuOutlined, MoonOutlined, ShoppingCartOutlined, SunOutlined, UserOutlined } from '@ant-design/icons';
+import { Avatar, Badge, Button, Drawer, Dropdown, Grid, Layout, Menu, Space, Switch, Typography, theme } from 'antd';
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -55,10 +55,15 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
             } else {
                 scrollToProductGrid();
             }
-        } else if (key === 'profile') {
-            navigate('/profile');
         }
     };
+
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
 
     React.useEffect(() => {
         if (location.pathname === '/profile') {
@@ -84,9 +89,56 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [location.pathname]);
 
+    const userMenuItems = [
+        {
+            key: 'header',
+            label: (
+                <div style={{ padding: '4px 12px', textAlign: 'center' }}>
+                    <Avatar
+                        size={64}
+                        src={user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
+                        style={{ marginBottom: 8, backgroundColor: colorPrimary }}
+                    />
+                    <div style={{ fontWeight: 600, fontSize: '16px' }}>{user?.username}</div>
+                </div>
+            ),
+            disabled: true,
+        },
+        {
+            type: 'divider',
+        },
+        {
+            key: 'profile',
+            label: 'Hồ sơ',
+            icon: <UserOutlined />,
+            onClick: () => navigate('/profile'),
+        },
+        {
+            type: 'divider',
+        },
+        {
+            key: 'logout',
+            label: 'Logout',
+            icon: <LogoutOutlined />,
+            danger: true,
+            onClick: () => {
+                const csrfToken = getCookie('XSRF-TOKEN');
+                window.alert(csrfToken);
+                const form = document.createElement('form');
+                form.method = 'POST';
+                form.action = 'https://bff.bookommerce.com:8181/protected/logout';
+                const input = document.createElement('input');
+                input.name = '_csrf';
+                input.value = csrfToken;
+                form.appendChild(input);
+                document.body.appendChild(form);
+                form.submit();
+            },
+        },
+    ];
+
     const menuItems = [
         ...(location.pathname === '/' ? [{ key: 'home', label: 'Shopping' }] : []),
-        ...(user ? [{ key: 'profile', label: 'Hồ sơ' }] : []),
     ];
 
     return (
@@ -181,29 +233,31 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                         </Badge>
                     )}
 
-                    {screens.md && (
-                        <Space>
-                            {user ? (
-                                <>
-                                    <span style={{ fontWeight: 500 }}>Welcome, {user.username}!</span>
-                                    <Button type="link" onClick={() => navigate('/profile')}>
-                                        Hồ sơ
-                                    </Button>
-                                    <Button type="default" href='https://bff.bookommerce.com:8181/page/confirm-logout'>
-                                        Logout
-                                    </Button>
-                                </>
-                            ) : (
-                                <>
-                                    <Button type="text" onClick={() => window.location.href = 'https://bff.bookommerce.com:8181/oauth2/authorization/bff'}>
-                                        Log in
-                                    </Button>
-                                    <Button type="primary" onClick={() => window.location.href = 'https://auth.bookommerce.com:8282/page/signup'}>
-                                        Sign up
-                                    </Button>
-                                </>
-                            )}
-                        </Space>
+                    {user ? (
+                        <Dropdown
+                            menu={{ items: userMenuItems }}
+                            placement="bottomRight"
+                            trigger={['hover', 'click']}
+                        >
+                            <div style={{ cursor: 'pointer', marginLeft: 8 }}>
+                                <Avatar
+                                    icon={<UserOutlined />}
+                                    src={user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
+                                    style={{ backgroundColor: colorPrimary }}
+                                />
+                            </div>
+                        </Dropdown>
+                    ) : (
+                        screens.md && (
+                            <Space>
+                                <Button type="text" onClick={() => window.location.href = 'https://bff.bookommerce.com:8181/protected/oauth2/authorization/bff'}>
+                                    Log in
+                                </Button>
+                                <Button type="primary" onClick={() => window.location.href = 'https://auth.bookommerce.com:8282/page/signup'}>
+                                    Sign up
+                                </Button>
+                            </Space>
+                        )
                     )}
                 </Space>
             </div>

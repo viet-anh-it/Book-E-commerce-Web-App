@@ -26,6 +26,7 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
     OidcClientInitiatedLogoutSuccessHandler delegate;
     OAuth2AuthorizedClientService oAuth2AuthorizedClientService;
 
+ 
     public CustomLogoutSuccessHandler(ClientRegistrationRepository clientRegistrationRepository, OAuth2AuthorizedClientService oAuth2AuthorizedClientService) {
         this.delegate = new OidcClientInitiatedLogoutSuccessHandler(clientRegistrationRepository);
         this.oAuth2AuthorizedClientService = oAuth2AuthorizedClientService;
@@ -48,7 +49,7 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
         } else {
             this.delegate.setPostLogoutRedirectUri("https://auth.bookommerce.com:8282/page/store-login");
             this.delegate.onLogoutSuccess(request, response, authentication);
+            
         }
     }
-    
 }

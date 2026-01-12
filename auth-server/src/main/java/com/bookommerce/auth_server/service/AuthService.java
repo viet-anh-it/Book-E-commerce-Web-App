@@ -94,7 +94,7 @@ public class AuthService {
         securityContextHolderStrategy.setContext(securityContext);
         securityContextRepository.saveContext(securityContext, request, response);
 
-        String redirectUrl = "https://bff.bookommerce.com:8181/oauth2/authorization/bff";
+        String redirectUrl = "https://bff.bookommerce.com:8181/protected/oauth2/authorization/bff";
         return Map.of("redirect", redirectUrl);
     }
 }

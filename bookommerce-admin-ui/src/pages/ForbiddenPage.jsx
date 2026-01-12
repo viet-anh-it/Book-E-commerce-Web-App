@@ -24,7 +24,7 @@ const ForbiddenPage = () => {
                         icon={<HomeOutlined />}
                         onClick={() => {
                             // Redirect to logout then login
-                            window.location.href = 'https://bff.bookommerce.com:8181/page/confirm-logout';
+                            window.location.href = 'https://bff.bookommerce.com:8181/protected/page/confirm-logout';
                         }}
                     >
                         Logout & Switch Account

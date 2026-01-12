@@ -7,7 +7,7 @@ import axiosInstance from '../api/axiosConfig';
  */
 
 export const getRatings = async (params) => {
-    return axiosInstance.get('/api/ratings', { params });
+    return axiosInstance.get('/protected/api/ratings', { params });
 };
 
 export const approveRating = async (id) => {
@@ -15,9 +15,9 @@ export const approveRating = async (id) => {
 };
 
 export const rejectRating = async (id) => {
-    return axiosInstance.patch(`/api/ratings/${id}/reject`);
+    return axiosInstance.patch(`/protected/api/ratings/${id}/reject`);
 };
 
 export const deleteRating = async (id) => {
-    return axiosInstance.delete(`/api/ratings/${id}`);
+    return axiosInstance.delete(`/protected/api/ratings/${id}`);
 };

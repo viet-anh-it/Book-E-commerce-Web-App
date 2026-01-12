@@ -1,10 +1,8 @@
-import axios from 'axios';
-
-const AUTH_URL = 'https://auth.bookommerce.com:8282';
+import axiosInstance from './axiosInstance.js';
 
 export const getAuthenticatedUser = async () => {
     try {
-        const response = await axios.get(`${AUTH_URL}/api/me`, {
+        const response = await axiosInstance.get(`/protected/api/me`, {
             withCredentials: true,
             headers: {
                 Accept: 'application/json',

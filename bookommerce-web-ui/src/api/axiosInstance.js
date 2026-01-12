@@ -6,7 +6,10 @@ NProgress.configure({ showSpinner: false });
 
 const axiosInstance = axios.create({
     baseURL: 'https://bff.bookommerce.com:8181',
-    withCredentials: true
+    withCredentials: true,
+    headers: {
+        'Accept': 'application/json'
+    }
 });
 
 // Thêm một bộ đón chặn request

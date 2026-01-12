@@ -15,6 +15,13 @@ export const AuthProvider = ({ children }) => {
     const [user, setUser] = useState(null);
     const [loading, setLoading] = useState(true);
 
+    function getCookie(name) {
+        const value = `; ${document.cookie}`;
+        const parts = value.split(`; ${name}=`);
+        if (parts.length === 2) return parts.pop().split(';').shift();
+        return null;
+    }
+
     useEffect(() => {
         const checkAuth = async () => {
             try {
@@ -37,9 +44,37 @@ export const AuthProvider = ({ children }) => {
     }, []);
 
     const logout = () => {
-        // Direct GET request to logout confirmation page
-        window.location.href = 'https://bff.bookommerce.com:8181/page/confirm-logout';
+        const csrfToken = getCookie('XSRF-TOKEN');
+        window.alert(csrfToken);
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://bff.bookommerce.com:8181/protected/logout';
+        const input = document.createElement('input');
+        input.name = '_csrf';
+        input.value = csrfToken;
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
     };
+
+    // const logout = async () => {
+    //     const csrfToken = getCookie('XSRF-TOKEN');
+    //     window.alert(`csrfToken: ${csrfToken}`);
+    //     const response = await fetch('https://bff.bookommerce.com:8181/protected/logout', {
+    //         method: 'POST',
+    //         headers: {
+    //             'X-XSRF-TOKEN': csrfToken,
+    //             'Content-Type': 'application/json',
+    //             'Accept': 'application/json'
+    //         },
+    //         credentials: 'include'
+    //     });
+    //     const json = await response.json();
+    //     window.alert(`body: ${json}`);
+    //     if (json.status === 200) {
+    //         window.location.href = json.data.redirectUrl;
+    //     }
+    // }
 
     return (
         <AuthContext.Provider value={{ user, loading, logout }}>

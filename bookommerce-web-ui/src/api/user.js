@@ -6,9 +6,8 @@ import axiosInstance from './axiosInstance';
  * @returns {Promise}
  */
 export const updateProfile = async (userData) => {
-    // Note: This endpoint is assumed based on standard REST practices.
-    // The actual endpoint should be implemented in the Resource Server.
-    return axiosInstance.put('/api/me', userData);
+    // Note: This endpoint is updated to match the profile path
+    return axiosInstance.patch('/api/me/profile', userData);
 };
 
 /**
@@ -16,7 +15,7 @@ export const updateProfile = async (userData) => {
  * @returns {Promise}
  */
 export const getProfile = async () => {
-    return axiosInstance.get('/api/me');
+    return axiosInstance.get('/api/me/profile');
 };
 /**
  * Change user email

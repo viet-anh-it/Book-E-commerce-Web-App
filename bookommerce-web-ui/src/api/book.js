@@ -25,7 +25,7 @@ export const getRatings = async (bookId, params) => {
 };
 export const createRating = async (ratingData) => {
     try {
-        const response = await axiosInstance.post('/api/ratings', ratingData);
+        const response = await axiosInstance.post('/protected/api/ratings', ratingData);
         return response.data;
     } catch (error) {
         console.error('Error creating rating:', error);
@@ -35,7 +35,7 @@ export const createRating = async (ratingData) => {
 
 export const deleteRating = async (id) => {
     try {
-        const response = await axiosInstance.delete(`/api/ratings/${id}`);
+        const response = await axiosInstance.delete(`/protected/api/ratings/${id}`);
         return response.data;
     } catch (error) {
         console.error('Error deleting rating:', error);
@@ -45,7 +45,7 @@ export const deleteRating = async (id) => {
 
 export const updateRating = async (ratingData) => {
     try {
-        const response = await axiosInstance.put('/api/ratings', ratingData);
+        const response = await axiosInstance.put('/protected/api/ratings', ratingData);
         return response.data;
     } catch (error) {
         console.error('Error updating rating:', error);

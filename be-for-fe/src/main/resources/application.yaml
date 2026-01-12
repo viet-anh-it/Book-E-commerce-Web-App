@@ -4,17 +4,22 @@ server:
     bundle: web-server-bundle
 
 spring:
+  output:
+    ansi:
+      enabled: always
+  main:
+    banner-mode: off
   ssl:
     bundle:
       jks:
-        web-server-bundle:
+        web-server-bundle: #user-defined name
           key:
             alias: bookommerce_ssl
           keystore:
             location: classpath:bookommerce-ssl.p12
             password: 123456
             type: PKCS12
-        client-trust-bundle:
+        client-trust-bundle: #user-defined name
           key:
             alias: bookommerce_ssl
           keystore:
@@ -46,10 +51,12 @@ spring:
 
 logging:
   file:
-    name: logs/bff.log
+    name: ./logs/bff.log
   logback:
     rollingpolicy:
-      max-file-size: 10MB
+      max-file-size: 1024MB
+      max-history: 0
+      clean-history-on-start: true
   level:
     root: INFO
     org:
@@ -65,3 +72,6 @@ logging:
           core:
             JdbcTemplate: DEBUG
             StatementCreatorUtils: TRACE
+  pattern:
+    console: "%d{HH:mm:ss.SSS} | %clr(%level) | %clr(%logger{0}){green}: %msg%n"
+    file: "%d{HH:mm:ss.SSS} | %level | %logger{0}: %msg%n"

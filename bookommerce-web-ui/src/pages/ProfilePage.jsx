@@ -1,42 +1,41 @@
-import React, { useState, useEffect } from 'react';
 import {
-    Layout,
-    Typography,
-    Card,
-    Form,
-    Input,
-    Button,
-    Radio,
-    DatePicker,
-    Row,
-    Col,
-    Avatar,
-    message,
-    Breadcrumb,
-    theme,
-    Space,
-    Divider,
-    Modal,
-    Upload,
-} from 'antd';
-import {
-    UserOutlined,
-    MailOutlined,
-    PhoneOutlined,
-    CalendarOutlined,
-    ManOutlined,
-    WomanOutlined,
-    SaveOutlined,
     ArrowLeftOutlined,
+    CalendarOutlined,
+    CameraOutlined,
     EditOutlined,
     LockOutlined,
-    CameraOutlined,
-    LoadingOutlined,
+    MailOutlined,
+    ManOutlined,
+    PhoneOutlined,
+    SaveOutlined,
+    UserOutlined,
+    WomanOutlined
 } from '@ant-design/icons';
-import { useAuth } from '../contexts/AuthContext';
-import { useNavigate } from 'react-router-dom';
+import {
+    Avatar,
+    Breadcrumb,
+    Button,
+    Card,
+    Col,
+    DatePicker,
+    Divider,
+    Form,
+    Input,
+    Layout,
+    message,
+    Modal,
+    Radio,
+    Row,
+    Space,
+    theme,
+    Typography,
+    Upload,
+} from 'antd';
 import dayjs from 'dayjs';
-import { updateProfile, changeEmail, changePassword, uploadAvatar } from '../api/user';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import { changeEmail, changePassword, getProfile, updateProfile, uploadAvatar } from '../api/user';
+import { useAuth } from '../contexts/AuthContext';
 
 const { Content } = Layout;
 const { Title, Text, Paragraph } = Typography;
@@ -62,32 +61,96 @@ const ProfilePage = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewUrl, setPreviewUrl] = useState(null);
 
-    useEffect(() => {
-        if (user) {
+    const [profileData, setProfileData] = useState(null);
+
+    const fetchProfile = async () => {
+        form.setFields(Object.keys(form.getFieldsValue()).map(key => ({ name: key, errors: [] })));
+        setLoading(true);
+        try {
+            const response = await getProfile();
+            const data = response.data.data;
+            setProfileData(data);
             form.setFieldsValue({
-                firstName: user.firstName || '',
-                lastName: user.lastName || '',
-                phoneNumber: user.phoneNumber || '',
-                gender: user.gender || 'MALE',
-                dateOfBirth: user.dateOfBirth ? dayjs(user.dateOfBirth) : null,
+                firstName: data.firstName || '',
+                lastName: data.lastName || '',
+                phoneNumber: data.phone || '',
+                gender: data.gender || 'MALE',
+                dateOfBirth: data.dob ? dayjs(data.dob) : null,
             });
+        } catch (error) {
+            console.error('Fetch profile error:', error);
+            const status = error.response?.status;
+            const errorMsg = error.response?.data?.message || error.message || 'Lỗi không xác định';
+
+            if ([401, 403, 500].includes(status)) {
+                message.error(errorMsg);
+            } else {
+                Modal.error({
+                    title: 'Lỗi không xác định',
+                    content: errorMsg,
+                    centered: true,
+                });
+            }
+        } finally {
+            setLoading(false);
         }
-    }, [user, form]);
+    };
+
+    useEffect(() => {
+        fetchProfile();
+    }, [form]);
 
     const onFinish = async (values) => {
+        form.setFields(Object.keys(form.getFieldsValue()).map(key => ({ name: key, errors: [] })));
         setLoading(true);
         try {
             const payload = {
-                ...values,
-                dateOfBirth: values.dateOfBirth ? values.dateOfBirth.format('YYYY-MM-DD') : null,
+                firstName: values.firstName,
+                lastName: values.lastName,
+                phone: values.phoneNumber,
+                gender: values.gender,
+                dob: values.dateOfBirth ? values.dateOfBirth.format('YYYY-MM-DD') : null,
             };
 
             await updateProfile(payload);
 
             message.success('Cập nhật hồ sơ thành công!');
+            await fetchProfile();
         } catch (error) {
             console.error('Update profile error:', error);
-            message.error('Cập nhật hồ sơ thất bại: ' + (error.response?.data?.message || error.message || 'Lỗi không xác định'));
+            const status = error.response?.status;
+            const errorData = error.response?.data;
+            const errorMsg = errorData?.message || error.message || 'Lỗi không xác định';
+
+            if (status === 400 && errorData?.errors?.fieldErrors) {
+                const fieldErrors = errorData.errors.fieldErrors;
+                const formErrors = [];
+
+                // Map backend field names to frontend form names
+                const fieldMapping = {
+                    phone: 'phoneNumber',
+                    dob: 'dateOfBirth'
+                };
+
+                Object.keys(fieldErrors).forEach(backendField => {
+                    const frontendField = fieldMapping[backendField] || backendField;
+                    formErrors.push({
+                        name: frontendField,
+                        errors: fieldErrors[backendField],
+                    });
+                });
+
+                form.setFields(formErrors);
+                message.error('Vui lòng kiểm tra lại thông tin nhập vào!');
+            } else if ([401, 403, 500].includes(status)) {
+                message.error(errorMsg);
+            } else {
+                Modal.error({
+                    title: 'Cập nhật hồ sơ thất bại',
+                    content: errorMsg,
+                    centered: true,
+                });
+            }
         } finally {
             setLoading(false);
         }
@@ -192,7 +255,7 @@ const ProfilePage = () => {
                                     <Avatar
                                         size={100}
                                         icon={<UserOutlined />}
-                                        src={user?.avatarUrl}
+                                        src={user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
                                         style={{
                                             backgroundColor: colorPrimary,
                                             border: `4px solid ${colorBgContainer}`,
@@ -219,13 +282,13 @@ const ProfilePage = () => {
                                 </div>
                             </div>
                             <Title level={4} style={{ marginBottom: 4 }}>
-                                {user?.lastName && user?.firstName
-                                    ? `${user.lastName} ${user.firstName}`
+                                {profileData?.lastName && profileData?.firstName
+                                    ? `${profileData.lastName} ${profileData.firstName}`
                                     : user?.username || 'Người dùng'}
                             </Title>
                             <div style={{ marginBottom: 16 }}>
                                 <Text type="secondary" style={{ display: 'block', marginBottom: 8 }}>
-                                    {user?.email || 'Chưa cập nhật email'}
+                                    {user?.email || user?.username}
                                 </Text>
                                 <Space direction="vertical" style={{ width: '100%' }}>
                                     <Button
@@ -506,7 +569,7 @@ const ProfilePage = () => {
                     <div style={{ marginBottom: 32 }}>
                         <Avatar
                             size={300}
-                            src={previewUrl || user?.avatarUrl}
+                            src={previewUrl || user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
                             icon={<UserOutlined style={{ fontSize: 100 }} />}
                             style={{
                                 border: `6px solid ${colorPrimary}`,

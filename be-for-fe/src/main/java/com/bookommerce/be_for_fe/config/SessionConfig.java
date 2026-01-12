@@ -7,19 +7,19 @@ import org.springframework.session.web.http.CookieSerializer;
 import org.springframework.session.web.http.DefaultCookieSerializer;
 
 @Configuration
-@EnableJdbcHttpSession(maxInactiveIntervalInSeconds = 1800, cleanupCron = "-")
+@EnableJdbcHttpSession(maxInactiveIntervalInSeconds = 60 * 3)
 public class SessionConfig {
 
     @Bean
     public CookieSerializer cookieSerializer() {
         DefaultCookieSerializer serializer = new DefaultCookieSerializer();
         serializer.setCookieName("BFF-SESSION");
-        serializer.setCookiePath("/");
+        serializer.setCookiePath("/protected");
         serializer.setDomainName("bff.bookommerce.com");
         serializer.setUseHttpOnlyCookie(true);
         serializer.setUseSecureCookie(true);
-        serializer.setSameSite("None");
-        serializer.setCookieMaxAge(1800);
+        serializer.setSameSite("Strict");
+        serializer.setCookieMaxAge(60 * 3);
         serializer.setUseBase64Encoding(false);
         return serializer;
     }

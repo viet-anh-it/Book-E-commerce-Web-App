@@ -1,6 +1,5 @@
-import React from 'react';
-import { Layout, Switch, Flex, Typography, theme as antTheme, Button } from 'antd';
-import { SunOutlined, MoonOutlined, MenuFoldOutlined, MenuUnfoldOutlined, LogoutOutlined } from '@ant-design/icons';
+import { LogoutOutlined, MenuFoldOutlined, MenuUnfoldOutlined, MoonOutlined, SunOutlined } from '@ant-design/icons';
+import { theme as antTheme, Button, Flex, Layout, Switch, Typography } from 'antd';
 import { useAuth } from '../contexts/AuthContext';
 
 const { Header } = Layout;
