@@ -1,12 +1,11 @@
-import React from 'react';
-import { Layout, Menu } from 'antd';
 import {
     DashboardOutlined,
-    UserOutlined,
-    ShoppingOutlined,
     OrderedListOutlined,
+    ShoppingOutlined,
     StarOutlined,
+    UserOutlined,
 } from '@ant-design/icons';
+import { Layout, Menu } from 'antd';
 
 const { Sider } = Layout;
 
@@ -44,27 +43,27 @@ const AdminDrawer = ({ collapsed }) => {
                     {
                         key: '/',
                         icon: <DashboardOutlined />,
-                        label: 'Dashboard',
+                        label: 'Bảng điều khiển',
                     },
                     {
                         key: '/books',
                         icon: <ShoppingOutlined />,
-                        label: 'Books',
+                        label: 'Sách',
                     },
                     {
                         key: '/orders',
                         icon: <OrderedListOutlined />,
-                        label: 'Orders',
+                        label: 'Đơn hàng',
                     },
                     {
                         key: '/ratings',
                         icon: <StarOutlined />,
-                        label: 'Reviews',
+                        label: 'Đánh giá',
                     },
                     {
                         key: '/users',
                         icon: <UserOutlined />,
-                        label: 'Users',
+                        label: 'Người dùng',
                     },
                 ]}
             />

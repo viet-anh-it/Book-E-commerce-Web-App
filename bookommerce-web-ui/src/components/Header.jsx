@@ -1,4 +1,4 @@
-import { BookOutlined, LogoutOutlined, MenuOutlined, MoonOutlined, ShoppingCartOutlined, SunOutlined, UserOutlined } from '@ant-design/icons';
+import { LogoutOutlined, MenuOutlined, MoonOutlined, ShoppingCartOutlined, SunOutlined, UserOutlined } from '@ant-design/icons';
 import { Avatar, Badge, Button, Drawer, Dropdown, Grid, Layout, Menu, Space, Switch, Typography, theme } from 'antd';
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
@@ -137,9 +137,7 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
         },
     ];
 
-    const menuItems = [
-        ...(location.pathname === '/' ? [{ key: 'home', label: 'Mua sắm' }] : []),
-    ];
+    const menuItems = [];
 
     return (
         <AntHeader
@@ -162,9 +160,7 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                     display: 'flex',
                     alignItems: 'center',
                     marginRight: screens.md ? 48 : 16,
-                    cursor: 'pointer'
                 }}
-                onClick={() => navigate('/')}
             >
                 {!screens.md && (
                     <Button
@@ -177,7 +173,6 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                         style={{ marginRight: 8 }}
                     />
                 )}
-                <BookOutlined style={{ fontSize: 24, color: colorPrimary, marginRight: 8 }} />
                 <Title level={4} style={{ margin: 0, color: colorPrimary, whiteSpace: 'nowrap' }}>
                     Bookommerce
                 </Title>

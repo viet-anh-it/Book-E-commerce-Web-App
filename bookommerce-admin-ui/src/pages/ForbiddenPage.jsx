@@ -17,7 +17,7 @@ const ForbiddenPage = () => {
             <Result
                 status="403"
                 title="403"
-                subTitle="Sorry, access to the Store Interface is not allowed for customer accounts."
+                subTitle="Xin lỗi, tài khoản khách hàng không được phép truy cập Giao diện cửa hàng."
                 extra={
                     <Button
                         type="primary"
@@ -27,7 +27,7 @@ const ForbiddenPage = () => {
                             window.location.href = 'https://bff.bookommerce.com:8181/protected/page/confirm-logout';
                         }}
                     >
-                        Logout & Switch Account
+                        Đăng xuất & Chuyển tài khoản
                     </Button>
                 }
             />

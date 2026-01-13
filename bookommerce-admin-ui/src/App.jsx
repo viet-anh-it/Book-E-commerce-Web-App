@@ -1,18 +1,18 @@
-import { StrictMode } from 'react';
-import { createRoot } from 'react-dom/client';
-import { useState, useEffect } from 'react';
 import { ConfigProvider, Layout, theme } from 'antd';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import AdminHeader from './components/Header';
-import AdminFooter from './components/Footer';
+import viVN from 'antd/locale/vi_VN';
+import { useEffect, useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { Route, BrowserRouter as Router, Routes } from 'react-router-dom';
 import AdminDrawer from './components/Drawer';
-import BookPage from './pages/books/BookPage';
-import BookDetail from './pages/books/BookDetail';
-import RatingPage from './pages/ratings/RatingPage';
-import { AuthProvider, useAuth } from './contexts/AuthContext';
-import ForbiddenPage from './pages/ForbiddenPage';
+import AdminFooter from './components/Footer';
+import AdminHeader from './components/Header';
 import ProtectedRoute from './components/ProtectedRoute';
+import { AuthProvider, useAuth } from './contexts/AuthContext';
 import './index.css';
+import BookDetail from './pages/books/BookDetail';
+import BookPage from './pages/books/BookPage';
+import ForbiddenPage from './pages/ForbiddenPage';
+import RatingPage from './pages/ratings/RatingPage';
 
 const { Content } = Layout;
 
@@ -93,6 +93,7 @@ function App() {
                 // Select algorithm based on isDarkMode state
                 algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
             }}
+            locale={viVN}
         >
             <Router>
                 <AuthProvider>

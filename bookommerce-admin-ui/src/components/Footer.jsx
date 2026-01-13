@@ -1,4 +1,3 @@
-import React from 'react';
 import { Layout, Typography } from 'antd';
 
 const { Footer } = Layout;
@@ -13,7 +12,7 @@ const AdminFooter = () => {
     return (
         <Footer style={{ textAlign: 'center' }}>
             <Text type="secondary">
-                Bookommerce Admin ©{new Date().getFullYear()} Created by Bookommerce Team
+                Bookommerce Admin ©{new Date().getFullYear()} Được tạo bởi Bookommerce Team
             </Text>
         </Footer>
     );

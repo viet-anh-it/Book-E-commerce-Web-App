@@ -1,8 +1,8 @@
-import React, { useEffect, useState } from 'react';
+import { DeleteOutlined, EditOutlined, EyeOutlined, PlusOutlined, SearchOutlined } from '@ant-design/icons';
+import { Button, Image, Input, message, Modal, Popconfirm, Space, Table, Typography } from 'antd';
+import { useEffect, useState } from 'react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
-import { Table, Button, Space, Input, Modal, message, Typography, Popconfirm, Image } from 'antd';
-import { PlusOutlined, EditOutlined, DeleteOutlined, SearchOutlined, EyeOutlined } from '@ant-design/icons';
-import { getBooks, deleteBook, createBook, updateBook, getBookById } from '../../services/bookService';
+import { createBook, deleteBook, getBookById, getBooks, updateBook } from '../../services/bookService';
 import { getGenres } from '../../services/genreService';
 import BookFormModal from './BookFormModal';
 
@@ -48,7 +48,7 @@ const BookPage = () => {
                 }
             } else {
                 Modal.error({
-                    title: 'Unexpected Error Occur!',
+                    title: 'Đã xảy ra lỗi không mong muốn!',
                 });
             }
         } catch (error) {
@@ -56,7 +56,7 @@ const BookPage = () => {
                 const { globalErrors = [], fieldErrors = {} } = error.response.data.errors || {};
                 const errorMessages = [...globalErrors, ...Object.values(fieldErrors).flat()];
                 Modal.error({
-                    title: 'Validation failed',
+                    title: 'Lỗi xác thực',
                     content: (
                         <ul>
                             {errorMessages.map((msg, index) => (
@@ -67,7 +67,7 @@ const BookPage = () => {
                 });
             } else {
                 Modal.error({
-                    title: 'Unexpected Error Occur!',
+                    title: 'Đã xảy ra lỗi không mong muốn!',
                 });
             }
         } finally {
@@ -95,11 +95,11 @@ const BookPage = () => {
     const handleDelete = async (id) => {
         try {
             await deleteBook(id);
-            message.success('Book deleted successfully');
+            message.success('Xóa sách thành công');
             fetchBooks(pagination.page, pagination.size, searchText);
         } catch (error) {
             Modal.error({
-                title: 'Unexpected Error Occur!',
+                title: 'Đã xảy ra lỗi không mong muốn!',
             });
         }
     };
@@ -113,13 +113,13 @@ const BookPage = () => {
                 return true;
             } else {
                 Modal.error({
-                    title: 'Unexpected Error Occur!',
+                    title: 'Đã xảy ra lỗi không mong muốn!',
                 });
                 return false;
             }
         } catch (error) {
             Modal.error({
-                title: 'Unexpected Error Occur!',
+                title: 'Đã xảy ra lỗi không mong muốn!',
             });
             return false;
         } finally {
@@ -160,12 +160,12 @@ const BookPage = () => {
                 }
             } else {
                 Modal.error({
-                    title: 'Unexpected Error Occur!',
+                    title: 'Đã xảy ra lỗi không mong muốn!',
                 });
             }
         } catch (error) {
             Modal.error({
-                title: 'Unexpected Error Occur!',
+                title: 'Đã xảy ra lỗi không mong muốn!',
             });
         } finally {
             setLoading(false);
@@ -185,23 +185,23 @@ const BookPage = () => {
             if (editingBook) {
                 const response = await updateBook(editingBook.id, values);
                 if (response && (response.status === 200 || response.status === 201)) {
-                    message.success('Book updated successfully');
+                    message.success('Cập nhật sách thành công');
                     setIsModalOpen(false);
                     fetchBooks(pagination.page, pagination.size, searchText);
                 } else {
                     Modal.error({
-                        title: 'Unexpected Error Occur!',
+                        title: 'Đã xảy ra lỗi không mong muốn!',
                     });
                 }
             } else {
                 const response = await createBook(values);
                 if (response && (response.status === 200 || response.status === 201)) {
-                    message.success('Book added successfully');
+                    message.success('Thêm sách thành công');
                     setIsModalOpen(false);
                     fetchBooks(pagination.page, pagination.size, searchText);
                 } else {
                     Modal.error({
-                        title: 'Unexpected Error Occur!',
+                        title: 'Đã xảy ra lỗi không mong muốn!',
                     });
                 }
             }
@@ -232,7 +232,7 @@ const BookPage = () => {
                     // Show global errors in modal
                     if (globalErrors.length > 0) {
                         Modal.error({
-                            title: 'Validation failed',
+                            title: 'Lỗi xác thực',
                             content: (
                                 <ul>
                                     {globalErrors.map((msg, index) => (
@@ -244,12 +244,12 @@ const BookPage = () => {
                     }
                 } else {
                     Modal.error({
-                        title: 'Unexpected Error Occur!',
+                        title: 'Đã xảy ra lỗi không mong muốn!',
                     });
                 }
             } else {
                 Modal.error({
-                    title: 'Unexpected Error Occur!',
+                    title: 'Đã xảy ra lỗi không mong muốn!',
                 });
             }
         } finally {
@@ -259,7 +259,7 @@ const BookPage = () => {
 
     const columns = [
         {
-            title: 'Thumbnail',
+            title: 'Ảnh bìa',
             dataIndex: 'thumbnailUrlPath',
             key: 'thumbnailUrlPath',
             render: (text) => (
@@ -271,31 +271,31 @@ const BookPage = () => {
             ),
         },
         {
-            title: 'Title',
+            title: 'Tiêu đề',
             dataIndex: 'title',
             key: 'title',
             sorter: (a, b) => a.title.localeCompare(b.title),
         },
         {
-            title: 'Author',
+            title: 'Tác giả',
             dataIndex: 'author',
             key: 'author',
         },
         {
-            title: 'Price',
+            title: 'Giá',
             dataIndex: 'price',
             key: 'price',
             render: (price) => `đ${price?.toLocaleString()}`,
             sorter: (a, b) => a.price - b.price,
         },
         {
-            title: 'Rating',
+            title: 'Đánh giá',
             dataIndex: 'rating',
             key: 'rating',
             render: (rating) => rating?.toFixed(1) || 'N/A',
         },
         {
-            title: 'Action',
+            title: 'Hành động',
             key: 'action',
             render: (_, record) => (
                 <Space size="middle">
@@ -309,11 +309,11 @@ const BookPage = () => {
                         onClick={() => handleEdit(record)}
                     />
                     <Popconfirm
-                        title="Delete the book"
-                        description="Are you sure to delete this book?"
+                        title="Xóa sách"
+                        description="Bạn có chắc chắn muốn xóa cuốn sách này không?"
                         onConfirm={() => handleDelete(record.id)}
-                        okText="Yes"
-                        cancelText="No"
+                        okText="Có"
+                        cancelText="Không"
                     >
                         <Button type="primary" danger icon={<DeleteOutlined />} />
                     </Popconfirm>
@@ -325,14 +325,14 @@ const BookPage = () => {
     return (
         <div style={{ padding: '0px' }}>
             <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: 16 }}>
-                <Title level={2} style={{ margin: 0 }}>Book Management</Title>
+                <Title level={2} style={{ margin: 0 }}>Quản lý sách</Title>
                 <Button type="primary" icon={<PlusOutlined />} onClick={handleAdd}>
-                    Add Book
+                    Thêm sách
                 </Button>
             </div>
 
             <Input
-                placeholder="Search by title or author"
+                placeholder="Tìm kiếm theo tiêu đề hoặc tác giả"
                 prefix={<SearchOutlined />}
                 style={{ marginBottom: 16, maxWidth: 300 }}
                 onChange={(e) => handleSearch(e.target.value)}

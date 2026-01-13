@@ -1,7 +1,7 @@
-import { ArrowLeftOutlined, CloseOutlined, DownOutlined, ShoppingCartOutlined, UpOutlined } from '@ant-design/icons';
-import { Button, Card, Col, Image, InputNumber, Progress, Rate, Row, Spin, Typography, notification, theme } from 'antd';
+import { CloseOutlined, DownOutlined, ShoppingCartOutlined, UpOutlined } from '@ant-design/icons';
+import { Breadcrumb, Button, Card, Col, Image, InputNumber, Progress, Rate, Row, Spin, Typography, notification, theme } from 'antd';
 import { useEffect, useRef, useState } from 'react';
-import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { Link, useLocation, useNavigate, useParams } from 'react-router-dom';
 import { getBookById, getRatings } from '../api/book';
 import { addToCart } from '../api/cart';
 import BackToTopButton from '../components/BackToTopButton';
@@ -489,15 +489,17 @@ const ProductDetailPage = () => {
                 {/* Left Panel - Sticky Wrapper */}
                 <Col xs={24} md={10} lg={8}>
                     <div ref={leftColumnRef} style={{ position: 'sticky', top: 88 }}>
-                        <Button
-                            type="text"
-                            className="back-button"
-                            icon={<ArrowLeftOutlined />}
-                            onClick={() => navigate(-1)}
-                            style={{ marginBottom: '16px', paddingLeft: '12px', paddingRight: '12px' }}
-                        >
-                            Quay lại
-                        </Button>
+                        <Breadcrumb
+                            style={{ marginBottom: '16px' }}
+                            items={[
+                                {
+                                    title: <Link to="/">Trang chủ</Link>,
+                                },
+                                {
+                                    title: 'Chi tiết sách',
+                                },
+                            ]}
+                        />
 
                         <Card bordered={false} bodyStyle={{ padding: 24, display: 'flex', justifyContent: 'center' }}>
                             <Image

@@ -69,7 +69,7 @@ const AdminHeader = ({ isDarkMode, onThemeChange, collapsed, setCollapsed }) => 
                     icon={<LogoutOutlined />}
                     onClick={logout}
                 >
-                    Logout
+                    Đăng xuất
                 </Button>
             </Flex>
         </Header>

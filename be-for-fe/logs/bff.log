@@ -237,3 +237,162 @@ WHERE EXPIRY_TIME < ?
 ]
 15:01:00.014 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291260012], value class [java.lang.Long], SQL type unknown
 15:01:00.020 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:02:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:02:00.009 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:02:00.011 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291320006], value class [java.lang.Long], SQL type unknown
+15:02:00.017 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:03:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:03:00.009 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:03:00.010 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291380008], value class [java.lang.Long], SQL type unknown
+15:03:00.021 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 1 expired sessions
+15:04:00.006 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:04:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:04:00.009 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291440006], value class [java.lang.Long], SQL type unknown
+15:04:00.016 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:05:00.017 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:05:00.018 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:05:00.019 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291500017], value class [java.lang.Long], SQL type unknown
+15:05:00.023 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:06:00.041 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:06:00.061 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:06:00.069 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291560040], value class [java.lang.Long], SQL type unknown
+15:06:00.091 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:06:23.350 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+15:06:23.350 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+15:06:23.437 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:23.437 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:23.504 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@2c89ee0a, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]
+15:06:23.504 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@2c89ee0a, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]
+15:06:23.505 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@6e35cce7, matchingMediaTypes=[application/json], useEquals=false, ignoredMediaTypes=[]]
+15:06:23.506 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@6e35cce7, matchingMediaTypes=[application/json], useEquals=false, ignoredMediaTypes=[]]
+15:06:23.509 | DEBUG | DelegatingAuthenticationEntryPoint: Match found! Executing org.springframework.security.web.authentication.HttpStatusEntryPoint@22b4a4e4
+15:06:23.511 | DEBUG | DelegatingAuthenticationEntryPoint: Match found! Executing org.springframework.security.web.authentication.HttpStatusEntryPoint@22b4a4e4
+15:06:25.893 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+15:06:25.898 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:25.904 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@2c89ee0a, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]
+15:06:25.906 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@6e35cce7, matchingMediaTypes=[application/json], useEquals=false, ignoredMediaTypes=[]]
+15:06:25.909 | DEBUG | DelegatingAuthenticationEntryPoint: Match found! Executing org.springframework.security.web.authentication.HttpStatusEntryPoint@22b4a4e4
+15:06:29.422 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:06:29.433 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:29.437 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:06:29.439 | DEBUG | FilterChainProxy: Securing GET /api/genres
+15:06:29.442 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:29.449 | DEBUG | FilterChainProxy: Secured GET /api/genres
+15:06:32.015 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:06:32.015 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+15:06:32.017 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.018 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.020 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+15:06:32.020 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:06:32.038 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+15:06:32.039 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.040 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+15:06:32.134 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+15:06:32.136 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.138 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+15:06:32.149 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+15:06:32.151 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+15:06:32.153 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.153 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.154 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+15:06:32.154 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+15:06:32.203 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+15:06:32.203 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+15:06:32.204 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.205 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.205 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+15:06:32.206 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+15:06:32.206 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+15:06:32.207 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.209 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+15:06:32.263 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+15:06:32.265 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.267 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+15:07:00.022 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:07:00.024 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:07:00.029 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291620022], value class [java.lang.Long], SQL type unknown
+15:07:00.052 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:08:00.067 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:08:00.076 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:08:00.081 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291680065], value class [java.lang.Long], SQL type unknown
+15:08:00.120 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:08:35.443 | DEBUG | FilterChainProxy: Securing GET /api/genres
+15:08:35.480 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:08:35.485 | DEBUG | FilterChainProxy: Secured GET /api/genres
+15:09:00.081 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:09:00.093 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:09:00.113 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291740078], value class [java.lang.Long], SQL type unknown
+15:09:00.205 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:09:18.972 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:09:18.998 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:09:19.002 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:10:00.105 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:10:00.120 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:10:00.133 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291800103], value class [java.lang.Long], SQL type unknown
+15:10:00.197 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:10:40.005 | DEBUG | FilterChainProxy: Securing GET /api/books/45
+15:10:40.034 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:40.038 | DEBUG | FilterChainProxy: Secured GET /api/books/45
+15:10:42.689 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:10:42.693 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:42.695 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:10:57.354 | DEBUG | FilterChainProxy: Securing GET /api/genres
+15:10:57.356 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.359 | DEBUG | FilterChainProxy: Secured GET /api/genres
+15:10:57.372 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:10:57.375 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.377 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:10:57.544 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:10:57.545 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.547 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:10:57.716 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+15:10:57.717 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.719 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+15:10:57.719 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+15:10:57.726 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.742 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+15:10:57.753 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+15:10:57.760 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.762 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+15:10:57.753 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+15:10:57.759 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+15:10:57.775 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.772 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+15:10:57.775 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.778 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+15:10:57.780 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.782 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+15:10:57.783 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+15:10:57.790 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+15:10:57.792 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.793 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+15:10:57.796 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+15:10:57.817 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.852 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+15:10:57.878 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+15:10:57.879 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:10:57.910 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+15:11:00.013 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:11:00.014 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:11:00.019 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291860013], value class [java.lang.Long], SQL type unknown
+15:11:00.034 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions

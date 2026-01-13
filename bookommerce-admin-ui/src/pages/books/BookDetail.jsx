@@ -1,28 +1,28 @@
-import React, { useEffect, useState } from 'react';
-import { useParams, useNavigate } from 'react-router-dom';
-import {
-    Card,
-    Row,
-    Col,
-    Typography,
-    Divider,
-    Tag,
-    Rate,
-    Descriptions,
-    Table,
-    Button,
-    Space,
-    Progress,
-    Avatar,
-    Spin,
-    Modal,
-    Image,
-    Breadcrumb
-} from 'antd';
 import {
     ArrowLeftOutlined,
     UserOutlined
 } from '@ant-design/icons';
+import {
+    Avatar,
+    Breadcrumb,
+    Button,
+    Card,
+    Col,
+    Descriptions,
+    Divider,
+    Image,
+    Modal,
+    Progress,
+    Rate,
+    Row,
+    Space,
+    Spin,
+    Table,
+    Tag,
+    Typography
+} from 'antd';
+import { useEffect, useState } from 'react';
+import { useNavigate, useParams } from 'react-router-dom';
 import { getBookById } from '../../services/bookService';
 
 const { Title, Text, Paragraph } = Typography;
@@ -42,13 +42,13 @@ const BookDetail = () => {
                     setBook(response.data);
                 } else {
                     Modal.error({
-                        title: 'Unexpected Error Occur!',
+                        title: 'Đã xảy ra lỗi không mong muốn!',
                     });
                 }
             } catch (error) {
                 console.error('Error fetching book details:', error);
                 Modal.error({
-                    title: 'Unexpected Error Occur!',
+                    title: 'Đã xảy ra lỗi không mong muốn!',
                 });
             } finally {
                 setLoading(false);
@@ -62,8 +62,8 @@ const BookDetail = () => {
 
     if (loading) {
         return (
-            <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100%' }}>
-                <Spin size="large" tip="Loading book details..." />
+            <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', height: '100%' }}>
+                <Spin size="large" tip="Đang tải chi tiết sách..." />
             </div>
         );
     }
@@ -71,8 +71,8 @@ const BookDetail = () => {
     if (!book) {
         return (
             <div style={{ textAlign: 'center', marginTop: 50 }}>
-                <Title level={4}>Book not found</Title>
-                <Button type="primary" onClick={() => navigate('/books')}>Back to List</Button>
+                <Title level={4}>Không tìm thấy sách</Title>
+                <Button type="primary" onClick={() => navigate('/books')}>Quay lại danh sách</Button>
             </div>
         );
     }
@@ -87,30 +87,30 @@ const BookDetail = () => {
 
     const ratingColumns = [
         {
-            title: 'Rater',
+            title: 'Người đánh giá',
             dataIndex: 'rater',
             key: 'rater',
             render: (text) => (
                 <Space>
                     <Avatar icon={<UserOutlined />} />
-                    <Text strong>{text || 'Anonymous User'}</Text>
+                    <Text strong>{text || 'Người dùng ẩn danh'}</Text>
                 </Space>
             ),
         },
         {
-            title: 'Rating',
+            title: 'Đánh giá',
             dataIndex: 'point',
             key: 'point',
             render: (point) => <Rate disabled defaultValue={point} style={{ fontSize: 14 }} />,
         },
         {
-            title: 'Comment',
+            title: 'Bình luận',
             dataIndex: 'comment',
             key: 'comment',
             render: (text) => <Paragraph ellipsis={{ rows: 2, expandable: true }}>{text}</Paragraph>,
         },
         {
-            title: 'Date',
+            title: 'Ngày',
             dataIndex: 'createdAt',
             key: 'createdAt',
             render: (date) => new Date(date).toLocaleDateString(),
@@ -122,9 +122,9 @@ const BookDetail = () => {
             <div style={{ marginBottom: 16 }}>
                 <Breadcrumb
                     items={[
-                        { title: <Button type="link" style={{ padding: 0, height: 'auto' }} onClick={() => navigate('/')}>Dashboard</Button> },
-                        { title: <Button type="link" style={{ padding: 0, height: 'auto' }} onClick={() => navigate('/books')}>Books</Button> },
-                        { title: 'Book Detail' },
+                        { title: <Button type="link" style={{ padding: 0, height: 'auto' }} onClick={() => navigate('/')}>Bảng điều khiển</Button> },
+                        { title: <Button type="link" style={{ padding: 0, height: 'auto' }} onClick={() => navigate('/books')}>Sách</Button> },
+                        { title: 'Chi tiết sách' },
                     ]}
                 />
             </div>
@@ -145,7 +145,7 @@ const BookDetail = () => {
                                 <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'flex-start' }}>
                                     <div>
                                         <Title level={2}>{book.title}</Title>
-                                        <Text type="secondary" style={{ fontSize: 16 }}>by </Text>
+                                        <Text type="secondary" style={{ fontSize: 16 }}>tác giả </Text>
                                         <Text strong style={{ fontSize: 16 }}>{book.author}</Text>
                                     </div>
                                     <Button
@@ -153,7 +153,7 @@ const BookDetail = () => {
                                         onClick={() => navigate('/books')}
                                         type='primary'
                                     >
-                                        Back
+                                        Quay lại
                                     </Button>
                                 </div>
 
@@ -161,21 +161,21 @@ const BookDetail = () => {
                                     <Col span={12}>
                                         <Card type="inner">
                                             <Descriptions column={1}>
-                                                <Descriptions.Item label="Price">
+                                                <Descriptions.Item label="Giá">
                                                     <Text type="danger" style={{ fontSize: 24, fontWeight: 'bold' }}>
                                                         đ{book.price?.toLocaleString()}
                                                     </Text>
                                                 </Descriptions.Item>
-                                                <Descriptions.Item label="Stock Status">
+                                                <Descriptions.Item label="Tình trạng kho">
                                                     {book.stock > 10 ? (
-                                                        <Tag color="green">{book.stock} in stock</Tag>
+                                                        <Tag color="green">{book.stock} trong kho</Tag>
                                                     ) : book.stock > 0 ? (
-                                                        <Tag color="orange">{book.stock} low stock</Tag>
+                                                        <Tag color="orange">{book.stock} sắp hết</Tag>
                                                     ) : (
-                                                        <Tag color="red">Out of stock</Tag>
+                                                        <Tag color="red">Hết hàng</Tag>
                                                     )}
                                                 </Descriptions.Item>
-                                                <Descriptions.Item label="Product ID">
+                                                <Descriptions.Item label="Mã sản phẩm">
                                                     <Text code>{book.id}</Text>
                                                 </Descriptions.Item>
                                             </Descriptions>
@@ -184,18 +184,18 @@ const BookDetail = () => {
                                     <Col span={12}>
                                         <Card type="inner">
                                             <div style={{ textAlign: 'center' }}>
-                                                <Text type="secondary">Average Rating</Text>
+                                                <Text type="secondary">Đánh giá trung bình</Text>
                                                 <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 8 }}>
                                                     <Title level={1} style={{ margin: 0 }}>{book.ratingStatistic?.averagePoint.toFixed(1)}</Title>
                                                     <Rate disabled allowHalf defaultValue={book.ratingStatistic?.averagePoint} />
                                                 </div>
-                                                <Text type="secondary">{book.ratingStatistic?.ratingCount} global ratings</Text>
+                                                <Text type="secondary">{book.ratingStatistic?.ratingCount} đánh giá toàn cầu</Text>
                                             </div>
                                         </Card>
                                     </Col>
                                 </Row>
 
-                                <Divider orientation="left">Description</Divider>
+                                <Divider orientation="left">Mô tả</Divider>
                                 <Paragraph style={{ fontSize: 16, lineHeight: '1.6' }}>
                                     {book.description}
                                 </Paragraph>
@@ -206,10 +206,10 @@ const BookDetail = () => {
 
                 <Row gutter={24}>
                     <Col xs={24} lg={8}>
-                        <Card title="Rating Analysis">
+                        <Card title="Phân tích đánh giá">
                             {ratingDistribution.map((item) => (
                                 <div key={item.star} style={{ display: 'flex', alignItems: 'center', marginBottom: 8, gap: 12 }}>
-                                    <Text style={{ minWidth: 50 }}>{item.star} Stars</Text>
+                                    <Text style={{ minWidth: 50 }}>{item.star} Sao</Text>
                                     <Progress
                                         percent={book.ratingStatistic?.ratingCount ? Math.round((item.count / book.ratingStatistic.ratingCount) * 100) : 0}
                                         strokeColor="#fadb14"
@@ -220,13 +220,13 @@ const BookDetail = () => {
                         </Card>
                     </Col>
                     <Col xs={24} lg={16}>
-                        <Card title="Latest Customer Reviews">
+                        <Card title="Đánh giá khách hàng mới nhất">
                             <Table
                                 dataSource={book.ratings?.data}
                                 columns={ratingColumns}
                                 rowKey={(record) => record.createdAt}
                                 pagination={false}
-                                locale={{ emptyText: 'No reviews yet' }}
+                                locale={{ emptyText: 'Chưa có đánh giá nào' }}
                             />
                         </Card>
                     </Col>

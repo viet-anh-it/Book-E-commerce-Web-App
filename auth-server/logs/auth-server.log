@@ -252,3 +252,644 @@ WHERE EXPIRY_TIME < ?
 ]
 15:09:00.233 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291740186], value class [java.lang.Long], SQL type unknown
 15:09:00.267 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:10:00.107 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:10:00.123 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:10:00.133 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291800105], value class [java.lang.Long], SQL type unknown
+15:10:00.196 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:11:00.018 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:11:00.029 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:11:00.037 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291860018], value class [java.lang.Long], SQL type unknown
+15:11:00.049 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:12:00.004 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:12:00.005 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:12:00.008 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291920004], value class [java.lang.Long], SQL type unknown
+15:12:00.012 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:13:00.014 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:13:00.015 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:13:00.016 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768291980014], value class [java.lang.Long], SQL type unknown
+15:13:00.021 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:14:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:14:00.009 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:14:00.011 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292040008], value class [java.lang.Long], SQL type unknown
+15:14:00.014 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:15:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:15:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:15:00.009 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292100007], value class [java.lang.Long], SQL type unknown
+15:15:00.015 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:16:00.002 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:16:00.003 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:16:00.004 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292160002], value class [java.lang.Long], SQL type unknown
+15:16:00.007 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:17:00.010 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:17:00.010 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:17:00.011 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292220009], value class [java.lang.Long], SQL type unknown
+15:17:00.016 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:18:00.012 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:18:00.013 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:18:00.014 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292280012], value class [java.lang.Long], SQL type unknown
+15:18:00.018 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:19:00.017 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:19:00.018 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:19:00.019 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292340017], value class [java.lang.Long], SQL type unknown
+15:19:00.022 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:20:00.024 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:20:00.026 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:20:00.028 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292400022], value class [java.lang.Long], SQL type unknown
+15:20:00.052 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:21:00.005 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:21:00.010 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:21:00.011 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292460005], value class [java.lang.Long], SQL type unknown
+15:21:00.016 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:22:00.109 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:22:00.137 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:22:00.148 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292520100], value class [java.lang.Long], SQL type unknown
+15:22:00.165 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:23:00.017 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:23:00.020 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:23:00.023 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292580016], value class [java.lang.Long], SQL type unknown
+15:23:00.028 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:24:00.018 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:24:00.020 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:24:00.021 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292640018], value class [java.lang.Long], SQL type unknown
+15:24:00.025 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:25:00.016 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:25:00.017 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:25:00.018 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292700016], value class [java.lang.Long], SQL type unknown
+15:25:00.021 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:26:00.024 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:26:00.026 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:26:00.028 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292760024], value class [java.lang.Long], SQL type unknown
+15:26:00.038 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:27:00.016 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:27:00.017 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:27:00.017 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292820016], value class [java.lang.Long], SQL type unknown
+15:27:00.021 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:28:00.009 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:28:00.011 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:28:00.011 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292880009], value class [java.lang.Long], SQL type unknown
+15:28:00.016 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:29:00.015 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:29:00.016 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:29:00.017 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768292940014], value class [java.lang.Long], SQL type unknown
+15:29:00.023 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:30:00.017 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:30:00.019 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:30:00.021 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293000017], value class [java.lang.Long], SQL type unknown
+15:30:00.025 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:30:11.795 | DEBUG | FilterChainProxy: Securing GET /page/login
+15:30:11.806 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:30:11.810 | DEBUG | FilterChainProxy: Secured GET /page/login
+15:31:00.006 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:31:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:31:00.008 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293060006], value class [java.lang.Long], SQL type unknown
+15:31:00.011 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:32:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:32:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:32:00.009 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293120006], value class [java.lang.Long], SQL type unknown
+15:32:00.014 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:32:11.706 | DEBUG | FilterChainProxy: Securing GET /page/login
+15:32:11.710 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:32:11.712 | DEBUG | FilterChainProxy: Secured GET /page/login
+15:33:00.014 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:33:00.015 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:33:00.016 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293180012], value class [java.lang.Long], SQL type unknown
+15:33:00.020 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:34:00.006 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:34:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:34:00.013 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293240006], value class [java.lang.Long], SQL type unknown
+15:34:00.017 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:34:58.946 | DEBUG | FilterChainProxy: Securing GET /page/login
+15:34:58.947 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:34:58.947 | DEBUG | FilterChainProxy: Secured GET /page/login
+15:35:00.004 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:35:00.004 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:35:00.005 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293300004], value class [java.lang.Long], SQL type unknown
+15:35:00.009 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:35:07.565 | DEBUG | FilterChainProxy: Securing GET /page/store-login
+15:35:07.566 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:35:07.569 | DEBUG | FilterChainProxy: Secured GET /page/store-login
+15:35:16.701 | DEBUG | FilterChainProxy: Securing GET /page/login
+15:35:16.703 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:35:16.704 | DEBUG | FilterChainProxy: Secured GET /page/login
+15:35:23.637 | DEBUG | FilterChainProxy: Securing POST /api/login/customer
+15:35:23.643 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:35:23.644 | DEBUG | FilterChainProxy: Secured POST /api/login/customer
+15:35:23.926 | DEBUG | DaoAuthenticationProvider: Authenticated user
+15:35:23.932 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=nguyenvietanh.personal@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@6378c3ec]
+15:35:23.957 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:35:23.957 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION (PRIMARY_ID, SESSION_ID, CREATION_TIME, LAST_ACCESS_TIME, MAX_INACTIVE_INTERVAL, EXPIRY_TIME, PRINCIPAL_NAME)
+VALUES (?, ?, ?, ?, ?, ?, ?)
+]
+15:35:23.979 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:35:23.979 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION_ATTRIBUTES (SESSION_PRIMARY_ID, ATTRIBUTE_NAME, ATTRIBUTE_BYTES)
+VALUES (?, ?, ?)
+]
+15:35:25.130 | DEBUG | FilterChainProxy: Securing GET /oauth2/authorize?response_type=code&client_id=bff&scope=openid%20profile&state=prXQeAOx1zyNoiEkRvnbFn34N-yMrCg8KZ2n5nribJY%3D&redirect_uri=https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff&nonce=FEYBR0Ceu_Ui5mgH8Yl1iHiU_tHuLcF8EP6SUexjiSQ
+15:35:25.140 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:35:25.140 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:35:25.156 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=nguyenvietanh.personal@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]]
+15:35:25.213 | DEBUG | SessionRegistryImpl: Registering session c89b158f-b046-44ca-b41a-e762ec0a0e56, for principal org.springframework.security.core.userdetails.User [Username=nguyenvietanh.personal@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]]
+15:35:25.215 | DEBUG | DefaultRedirectStrategy: Redirecting to https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff?code=7b38JUGS3DwWX7tqbxsbZ8UhEoldiF0rSDPPdM68dXS1a5YMaCRkWLCHBv3OaUHGknPQpSAeJ1_NxAQF2qYSVD0OmB_MiU33GXgGqxZwKk7kFBzcYK7Mv2hV-nd52Qhn&state=prXQeAOx1zyNoiEkRvnbFn34N-yMrCg8KZ2n5nribJY%3D
+15:35:25.216 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:35:25.217 | DEBUG | JdbcTemplate: Executing prepared SQL statement [UPDATE SPRING_SESSION
+SET SESSION_ID = ?, LAST_ACCESS_TIME = ?, MAX_INACTIVE_INTERVAL = ?, EXPIRY_TIME = ?, PRINCIPAL_NAME = ?
+WHERE PRIMARY_ID = ?
+]
+15:35:25.230 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:35:25.230 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:35:25.317 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:35:25.664 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzMyNSwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTMzNTUsImlhdCI6MTc2ODI5MzMyNSwianRpIjoiNjNmZDhhNzYtNjk2Ni00ZDg4LWE5N2ItN2NhMzM0ZDE2ZDBkIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.XPXM4j0E-j2wvEBG17tGt7JKFHeNEyXRs-aB5RkVQ3VtjYY795w6QLIsOL2-LXQWWG8pzKOWPvm7gn6Q0VBGhXDsI2oQzHhqjRSfGWDWjFF9WkIH2RiJAwaUSselu43tixZN91QOhCaIsJNLORpB2qPv58SN4M4v-3GGjCA-r_fcWhYvX6Wt5OoY9-zJHo7XnrlUQDb0LWu5NS0AoCxXWeEW6QysZvooP0WvNuzbzQ5T08GtPjpgd1Bz65nVC0KG-H4ziMB2StP6PW-__8FN8DLO4teVxyiR65F5Ysh_EclGI3NblivJFKheLs1BVhkOUfjUxYufInqCbChayGA9Gw
+15:35:25.665 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MTI1LCJpYXQiOjE3NjgyOTMzMjUsIm5vbmNlIjoiRkVZQlIwQ2V1X1VpNW1nSDhZbDFpSGlVX3RIdUxjRjhFUDZTVWV4amlTUSIsImp0aSI6IjE0YjY2M2I0LTliZWYtNDhkMS04ZTkzLTUyMWM2YTIxNGRiYyIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.QqPK9jB-D2_vQCaOpN4sH9_jbAvZMkqIwg2PE3NJQmPhQf_6NW-AIHIeowjIKHkjIxxa56buKWByDnmOljI89Vr2BicRfWAmWYMNjDAYqYO9V-KFyMJdZm87Pq7HcTG1C3JLtuSQZZcRERf-354r6RaqTzKiCwH5JSTQF5yQOW97s1tK6Ju0IlFmvEEHC6tMFD9OHzGVpjsc3VlALNB_kmtJODaTBNvBC-kDM4R6Hp6kF-qW1d7rPPQUwgvaXBgKgzDkd_hXz4PWkUHKIco1nG1gvJp4Q8Cb6CjHf3C8JH7IuUhcROAB0GXbi1-yHxrSLdnsn2oZdBkHfpygL-FwKA
+15:35:25.665 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: BDzbHZonfl7Z22qy7rFlc0r3qg6Xobc2sbucLsnsFHMFIglmm1b124NBdVNas_JJ5L9OiJi5DEGVXhHrLScyWE1e6xurRhKp5Lgvw-i9D2xiHNfLI3fABBXUMVQXFqeT
+15:35:25.729 | DEBUG | FilterChainProxy: Securing GET /oauth2/jwks
+15:35:25.745 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:35:25.750 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:35:25.751 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@dbd09487, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:35:34.946 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:35:35.297 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzMzNSwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTMzNjUsImlhdCI6MTc2ODI5MzMzNSwianRpIjoiZWVjMWIzNzAtNWFlNi00NzJkLTljZDItNGZkZjYyZGZlYzdiIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.Q27vretX0zelVGpwGYmRdxtWEYutC9_p9Ju4pkFsHlna9Y2Sam77j4WFnRzjha2q1OsDyC-s1CZ6i1paHNeIvmHZ1sxaHPpETl49vp93Kt5PfgJBB7tx80S3FnaQTRk6UzJcApaDPsMpTMbzwATNUM8DWwMDLqW0gkgm7twz5nTM0YzB_Gaaqa4ISbxr5fNIXEMQ52-7317QVXFxR2CngAi3ZKIMWyww-iG_XpvAyTISAqFCK4CbVmb2jTvcHORGOW-5zsEku9udBkFMWlUZhSNbu5SMQ9qHLGldBa6-UeaNFwop5fwKIb1Pm32QH6Cauz-uqLeohngKKFOXWPMu8w
+15:35:35.297 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MTM1LCJpYXQiOjE3NjgyOTMzMzUsImp0aSI6ImI1Y2VjMmY0LWQwNWItNDI0Zi04NTdjLTAyZjA4NmY0ZjRiYSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.WB6rRF8aeEJWsSiDCODJltSAyIum7EtkEXOsZ7ZECRxJOmdowq02xSGS3wWpMq1236-n870u3cNL9B990l5kBMPndNsyAYP2MhiKjQvyrWUO81_p8f8i4whcRWX8_YIgxmX56sZ5zkj5aaG0mKgXgDAZXlYqzEo_TKyNIaffSPA_Uzhdm3PwIVweqWUj3bUjykdmS0uFs6oGj7nINAxDeMD8RzEbjA30eSxmgJUoztoI9ZW7MLegPohBekjCGC4mZ90BcuE1zlhB4XMpcou7kTEk_gKbgWN_R37G3MzC0IVVFYQzMM4qiGkELy64r0YA5Z68jj0sB59ud6FAyHe9tw
+15:35:35.298 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: n7mgPphn839yEgUmGoFWr119P1kOCu2l1kJtOrBnNokSz6ICuKdv5YEWD0-ci5f9b5qoxNsTNngJUDKGeqiHTLXi6EDXk5HqtW8My4iso1VpnMtpk6nAhQLYb3XbRW2M
+15:35:35.344 | DEBUG | FilterChainProxy: Securing GET /oauth2/jwks
+15:35:35.356 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:35:35.358 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:35:35.359 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@6fe0dad2, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:35:35.795 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:35:45.842 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:35:46.140 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzM0Niwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTMzNzYsImlhdCI6MTc2ODI5MzM0NiwianRpIjoiMzdjMjQ0MTItMjYyYS00MTQ3LTkzOTMtZGQ2MzY1ZGQ2Y2U0IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.NfEVNMlJR0gUNEYsQ6H11tVhCXkrWnpzaZSOFXntCSBTba4GQMFyeeqLfkNdAQElYrU6sstK4X8Qwjnsf12tNJ4-ILJXUnJS8LXKUVNkbgE9GGwpVpEhEjwJ4meoyfmFhzZ3mk5R2xCPIYX_TADW7_5kZTxwzo41CwZHTJILfQgjSnC7aKdLyCBhzWrvlYP0DaKF3XnYPbhsfSQZ-oVUzGxCzRitwDniF0ULG8e40QeqWiGHcvJ3daiXM386hGSjuccGmSRFO-pqIxceGhP6JIeHzH3VURQLJsc9PxV1SmkmTZQ8GPdlHXxJdUYnrMzt1iBqd1D44yDWYL9Ajjhpvw
+15:35:46.140 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MTQ2LCJpYXQiOjE3NjgyOTMzNDYsImp0aSI6IjMwMzc4YWQ1LTk2YmYtNDI1Ni04NGExLWU5Zjg3YmU2YWIzNiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.eI4CWRAU6yc1oPtvaErYT5UUD0I2aF7Q0UtUKFfow6eTHMxDURsiD4NcvED0fmvaeodQmPl7QNXi6IVd4plw0llpawU4jNJKp1CljSEt8Bo3S4SzMmhcK6DXcu1xRFJPf20tmTiGkc0yNfgGhRVQaHeM3Bq8qHcPreYyTU3_iAWW2znRROSNUhaR2u-eRsmXIwI5wD51Z9shCMs97QraIKcvqJ5c8dQQsEM6cNhz2ntvKIuELcdr01tSbwiFcDTwOIJciiFdhXOieRLythxNbTfMoH1S6bhMRksxyhqikCG8cqe76_LDSFh22CEZ9YC_XxE2aVzH0_68y5pHJmugBQ
+15:35:46.140 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: mvCMX8y-inRc3RpjnYEZWvB29_1cU9HXU-cd-99_xaojyjhkSzUhskw92scrhpXE3LnkulUsKGPamAMcIcLWe1rwko1Rjobck4lsyxC4ztbN0X6SmNPghdLwbzXUuTS6
+15:35:46.149 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:35:46.151 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:35:46.152 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@48d67daf, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:35:46.182 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:35:46.680 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:35:46.971 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzM0Niwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTMzNzYsImlhdCI6MTc2ODI5MzM0NiwianRpIjoiZGFjMjFhNmMtMDIyZi00ZjBjLWJkZmEtNTNiYTQzNTAyMTc5IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.ipvqyw0WvLvV4Xjmx5Oh-bn4RU3AEOCLyL_aTJNVoutj-D0fbLAJ6dnTcl3-AjCzZ1sj2zpugJq_sxg5fkzg2g1IifwWhpUaNR3Xy_x_KeeIB2gaRazgLxikwfK_CttjaTlcFDTWJCyP4JnLx3lTj3WTVHEixI9rgd5QdAzVJEF2Ncvqk_r87mRmfaXjzYbShNUvab5jqtCv5NgvyhaZA_2VH4JfhO6Eb7QR5PJc8t0u3yYWa1hZAWP9_cuOb7P0sJjQmLqQS6gM15aqJAIaAoRZnnpE4hHsZUA4YIZZyxPR10GcbMPtBNb7J1e9yMRvzqb6_L1sH8ZlgbVqPszg7w
+15:35:46.972 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MTQ2LCJpYXQiOjE3NjgyOTMzNDYsImp0aSI6IjEzYmRiOTk3LTRjOGItNGNlNi1iNDIxLTY5MjQyYjE5MDFkNSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.HcK8cealqrZKdKQ0BHVG0OSw5s7mw9WA98IyhXZuJImdVj45yYVAW-cyOC4MgORApIU2EM4USW2L5UVJdcdq_okmhzACDaqVWu3YxY-Z6MreCf2mL21viLKERV3midwIcVd6xeK7Z5cKehFjZLVgWvl06wd4TrnggoVa6VHOwIH6vVWGNozD-FcQ6Xmq4sIAC6p1n4Yt15dvDaMs1pb4JCuSXATek3BNdIS5LStf8AkP6-9pBEODSIEL__udzEiQ5i_Umgd929GSMw4VTjXfFo1IMhf8RRhCU_rozknqBpA9D2Pn1EeOhjXpb5D5J0LrLyxEL-WVOXCtJ0K07lZITA
+15:35:46.972 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: vTPE9hGBBapGT7-WMjFrVHrkH6FH9hJF8dJyOEgSdT95vOpSItQqWvlfmHFhAUKFtjCkRbwUwrkBpeHAjJyt0tvqeVr8ZzDUV3FwWZ9IModdWK4jCjizQVnWFVBYb61-
+15:35:46.979 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:35:46.982 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:35:46.982 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@14d285c1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:35:47.019 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:35:48.621 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:35:48.898 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzM0OCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTMzNzgsImlhdCI6MTc2ODI5MzM0OCwianRpIjoiNWQyMzdlZGUtZjgyNC00NzhjLWIzYmItNmExYTU0MzNkYTFiIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.K0fmWPl3kB1ptaZnxJ7fvYlUbKcIpkmSO8jGMNLeKcDCMRLRQGzfdS8STBJ0-kip4t7yjH-OFZdc3XolAaEdgF4NnlTifo99hn8zLSddkoDBZE6U07KTZ-_gFcCcEiMO99BobgSCACgTtsEGWC03aPyp8KspruJSk6Rr74DVoxKB2_z3N5Kl89IekWJw_-aVuqlw6uLm6A6wPPHWEsK1YkeC3EWJ2DI1MGAW5sO-v31d6P2P1UoPmB-v3JAI_sSk4ojTu12gAeQkNgmxhkBu29WaEunVdFTceveua-x5l2UqlG7W29zV-BMI240TCJF1tN5_kT7dxIvjhD5R_tHHsQ
+15:35:48.898 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MTQ4LCJpYXQiOjE3NjgyOTMzNDgsImp0aSI6ImIxZDVhNTRmLWYyMGYtNDNiZi1hZWJhLWE3N2ZhMTM2NzgyOSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.kyASrpZdXj06KdWzZvnt_zX5cd33ZquhkrU74IKlU6owU0FnRtowZgjKWxCwrnvURazMdrod1oK7usWNFaeiTmnK9ycs5GYaQgbDxV1LCOLvPt7nRHiVLvnzujzBaWmxWMUGrzhzlth23ome8anwiRMI2eUufIOPkZS2tmoCJUEXLMoAscYpQbCMcKzoLeoAZDsbKNY2DJNOeqvHv37gH0U4h9bjTRuEQHUwZ3yQt1oOxwaBZ0gsvIhrR6YOc-LOOeZacZBxuJaGaY8YsndWSGRwR73dh9y45jIONxP0VAEWCLgZZA7UTHeghQGYpRoHjO9hsr87O1vrig0J3enzKA
+15:35:48.898 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: GGRn7jjvpea34EoKQF7wKbCocaENPUQMe_6qIkT4_6WCa_ynJ-tH7WtAGsCCkeJRVIM0ts_m7d0BF16EYyZqchW_XKRks7s5K3PcdyHaJEqK8hYjybxAJMTrLzETwL_I
+15:35:48.905 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:35:48.911 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:35:48.911 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fede9cf4, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:35:48.950 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:35:49.294 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:35:49.585 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzM0OSwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTMzNzksImlhdCI6MTc2ODI5MzM0OSwianRpIjoiMDU3OWNmZGYtMjY4MS00ZDE5LTk2OGUtMzE3NzIwNWY2YTMyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.QH6aD3YyPN22_f4q7-dE41YIO44K7Fa_BgpOybb5OhSOhyfkUOnn5c778m7lc3JyimkBsdsfQsHunDJI9iw6Ef1BwBbsQUA9xehBB_WG_2H4Ie1974Uk-EHGzIQu-zTfSlxvcHwo2yV5QVji71v_ZAjlkX1OXi4EERb3bagmGNbOIEA8nhyY2SPELI_bHdAIuFZaCcd8WuzCqbZqL9vZSaduUqiDmYYMOTM5J5kn3k3F8-q30mBu997uktG7gRy3fiEzCB5rbCYoOhaM9cQE1kHjFHeZsvgZLbdBXyG33rONV8CQNXHQ62O4rfT5PE9q0vnc8IPv0M0fWHbDR9Neyg
+15:35:49.586 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MTQ5LCJpYXQiOjE3NjgyOTMzNDksImp0aSI6IjE1YmUxZjMyLWI0MjgtNGJiOS05YmVhLTViNTg0YmJmMzQ4YSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.Nci_7IiL5cnNgN8Sxem3YinGEmK5TYFV1H-VDYKI2fP52NWQhySRxgMSQa6KGqVsrENLeushTCjS9GcLF59vzxsf30fuEAIZ2w1ZUon4rP9u7KpPZOSHIqGppLao2WGW28w-wR6gNccKkU-EPocgQFaIT3dLQyOKeczq3XOtZO7nkdpAeUSPHfQDUcyzQCwFxwlgTy9-I60jEn1lk4tGwTkvyTdsikQaZtSYkTG4lBEq7UIiM4LgugxeBM5ESDDnDHLA5U_UtvG0N2DKPQuyoLbDG7lgDCDbyVDPWtXnoCD8o4QS8jNTuoz0i-KAzLDRwzoqVO-kbx1QcR3wT4vE2Q
+15:35:49.586 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: eXBxIGXM5i66_7ACyvB_28Y1VCS2FYJP4pACbXTPmtxobByW8sUdEgPDAPHS-c6sZ2FydJLRcB5Ao8JhVK0doT1MDrnrXIva2r3L70Q3zKITRRlvcsoU54yd8gOHVBDx
+15:35:49.597 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:35:49.599 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:35:49.600 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@d03dc279, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:35:49.642 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:35:53.860 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:35:54.294 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzM1NCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTMzODQsImlhdCI6MTc2ODI5MzM1NCwianRpIjoiYjVkYTY5ZmEtZGIxYi00MmM1LTgxN2ItZjRmMGI0MWY1MjZlIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.BuTL6pBiyHVkEyp5i_cKx7K3z7CJ1vM1cxH6jsav5-d2h0gj3MYQqhRBNCODRFNGcUfaPhXcIDikBfjGurySXl6UfyL-w-Wg02eFr5wZ14hoBLVtNs_NIC7qYYuzhvEzrs6C1sYBSc9VqPDTwycb1s2PrRWT-MlCqmuicnio2HWiEJXFuK8Y_UsjmN2kimUTciE7mnvd1xjHupgmO2MjRY4PLQn5I2mnNE1XaXUItBmig0Bi58fwm588fXUmotNXT_fd6yyERcjU79-8DuhDMhN-eVEg_yDPOfI4r6eZNmTR77gfr88Lbtqnu6Xtcrh9zdKjE2MITQTjrAydRS30fg
+15:35:54.295 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MTU0LCJpYXQiOjE3NjgyOTMzNTQsImp0aSI6IjI0MDc1YThjLTQ1ZTYtNDRkZC1hODgxLTAzMmEwYjRhYmQwNyIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.qbp92O92cMNcYeqaRwdOvMD0lZzpFIpZP7OqZUDlIEz1h8TazAgekYTJYIfgm11JlQZgqNiW_Nq3h9QORGKGI3pkeW1-h915Wy0iXhgw5SbRYEhIhW0o6WZ75kg_4iDaZprKI7KP-U6xxLkc2wImLs3VEgtjcjwfdcujVeiGoScDjGi8cqTb_bXjK5vMFFXYM9_R2OPANP1E8PrkrmbPwpVlYBcecvHseBt2ZJGqH_rwDeuDHWhjZbvNp_IZA5CXQ0n0hnWpVoCVQb7tvPy3f4NNWHqQfV627H4GG1jRzPaQoiqf58YtT7-rjedpI9k83C2IEy8QwtQmG7h0LoF9pw
+15:35:54.295 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: fBPBbqeywcpdmKk-CVV5sH3KbyQ9WUiqmj9J2-FmAqVhmYUADAPrRd4G9r76DrOWwouTIi7jtLq1pNpG_Y3SS0FzMULezboe7EDTf1uG_1TN8w53woEwwym5zpqkcWSH
+15:35:54.308 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:35:54.311 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:35:54.312 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@97c334ce, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:35:54.370 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:36:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:36:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:36:00.009 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293360007], value class [java.lang.Long], SQL type unknown
+15:36:00.015 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 1 expired sessions
+15:37:00.017 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:37:00.018 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:37:00.020 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293420017], value class [java.lang.Long], SQL type unknown
+15:37:00.026 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:37:28.801 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:37:29.288 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzQ0OSwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM0NzksImlhdCI6MTc2ODI5MzQ0OSwianRpIjoiMzc4NDUwYzAtNGUzMi00MmQ5LTk2YmMtNzY1Yzc0M2EyYzU2IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.wT_sUCkJRc9WIRZdHr3gYIOrg4aOSB8IxhY6Vw4bDQidH6VJbzcbNloitPH7b85CCddBhZQr1K4L7Wn8Ij0iXOpBQb2vI7KKK6l8iYcu3avrMXIaFuE7vKUz9yTJ8vSHN5B3V_ApmgEnvJThI2PvTiIruD5b4gA6Mx3JAIIl6NU4hHF6ZbrhSPA-AzBozOLOXAq5SvDHawwzxs5n0NMvv6ED3oF51Nk0vZFH96sHportA60OKx26oe4VqWTAWkiSLlrA4cELWREIx7cJkKRUeSMZLhPeSXW8dfgO22dmkEGHajRugTyfukf86HZcva5S0SCOIdbQ41TxXwmKE7QJsw
+15:37:29.289 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MjQ5LCJpYXQiOjE3NjgyOTM0NDksImp0aSI6IjBkZmUxMjFlLTUwMTMtNDQxNi05ZGFiLTgzYzM4MGI4NGUwZSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.QpZq9ZkNMnMU-osYKoDZ1rop-LINchOZjAiayqPp47ypyrq2Sg6erAxyuZ-dVzSbZZrR2UmpOysOY8wVDCbM_M_YjF1yTSwXouEXkLYxn6mlxYBwtkAf78YV1iQPDS-ONztsAZLxQDYktZO2CXXE6md8QsJd3dSkilW1yJ9_q0gpfXE-nOeSv2am_Po2UCdUCHWisN7RcJh0OaqcR7_akYosxLgohkZp92lWZ9N8Ut24b70uyi-drn-e9DQDPoFhjdLTLLCIyuG7nUwp3YezFEBJ6M2fLCR15ugcQBUy9AHVkM3HJr8vfc8zm_EIgle_hQKWojCgAgaDS9c7qMO4WA
+15:37:29.289 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: AWHJSRczjOP22hvrylLg8UTlqph5t7SnyXpYVnQm_R5co9cUlewmo1gGngLVfJZcFIpy5dhsonnHaXsG5S_RG-voJT862rv4aUR3Bmvz2CwEN2N6mbPGFmAh8spqmraB
+15:37:29.343 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:37:29.351 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:37:29.352 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@4211df18, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:37:29.787 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:38:00.007 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:38:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:38:00.009 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293480007], value class [java.lang.Long], SQL type unknown
+15:38:00.025 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:38:06.341 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:38:07.171 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzQ4Nywic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM1MTcsImlhdCI6MTc2ODI5MzQ4NywianRpIjoiNzhlNTliZmMtMWMxYi00OGI0LTkwYTUtYWM3ODc4YjQ5NTIwIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.dLBJiTlwujRtKm_A6OdhtMPvlin8R8wXXCDg9JVuI8OS4gYSaffvy44cqbjMz6G2YZCRxBc9eCHDt757ZP5RAoTwycsjWTOiF5lldBrfRZvUg5L2FebAgK3dBAj2nLXXd694IzyHmdYmksd8EZX14-TNqodGGqTGCuSDCXEb4AMzbg5xkGlwvgEw54xrRpUlxdzsgY5hxSP5KKMOUy9N-8VO745kuUkkM1Jnl_usTLVlMWPlXhZITOz7eDfGdV7FibvlDLLUnI4TCLaqScjcuIA-ITsKtGNMbF84iFyQww3FfE7PgHFutGyoOXqfuXPTWAydt8tu9c-W_1X_XgLbwA
+15:38:07.186 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1Mjg3LCJpYXQiOjE3NjgyOTM0ODcsImp0aSI6ImIzYjQ2NDFmLTU4N2UtNDdmMi05ZjEzLTc0MmViNzJlOTg1YSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.psEGMjbgGdgqpwAvpUgsSPnh8UAXfWOznP32yJZSGnQSJvM1qt2ZJltl5zclDxZAe0xbKhjHcya76Yp_dpJnLxLOSVVFQqYMSnmTi1WApZrFu1V7NFKl9p7DwV0o0kff36XDD5BOsozaKewzsfMTdgww4x6A4ci3WSWp4zuZ-dHlBCWyyd4jUFa6DGoFllYLB1l0Ulh9uEhn7ayJet4dE8G7QPoZsplF7vwRb1ngY-nEsO0oH7ZQeggZpZmvDgGBSweM6dD3byIZBja4Kf5EIgY6_biYilivLQLWCTpzQdEZAYK5vqH2HOgJPJCagO-rClhWK-Wqf7NphgVYM8oAcQ
+15:38:07.188 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: zB0EcIscF8uc4_aM_WuUKh3hT_qYZRQzZqgaY8IhmyewEUDmDNKWDfyo4LaGTgqxYsCyA45IDPcyUjmRizrTrVchgRPWdZt76g1koyxK3J10Kp6FS_6g5dpbh0lLZR_x
+15:38:07.245 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:38:07.261 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:38:07.268 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@2a50b33f, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:38:08.328 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:38:25.889 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:38:26.427 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzUwNiwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM1MzYsImlhdCI6MTc2ODI5MzUwNiwianRpIjoiN2M2NzhkZjEtZjM4Ni00ZGIxLWFkNDYtMzA0MTgwNmE1NTc2IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.wR1QuQmUui2qHWfIBIzt3ZoGVr6YGR0u07zdSTL9LB6sEusD-o353Am-7EuuadzsLaKYXE7qOweHBjObwDAcsKpMCt3WiEcI6rcys94cTNVgKzwq12UVszrFP_39NpM9YSahKUfAmT8YuJGzb87jQwiqkW1R9jzTmdNFc5uSi97SlKNtlVI3bUweeE5dOGbOqrYQTD8afYgX8rfBRYVLfhciKyimuro_RfyPzw6GvI0ji5Jj-5mSucVqk1y0TCth7sofbdSqYqMv3N571I1eiYzs27hBxBTMRPfo7QsTDLYNJZJ-OYpX9-VcBfaDlMk3jnspapewkR_uzgSrBrtChQ
+15:38:26.429 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MzA2LCJpYXQiOjE3NjgyOTM1MDYsImp0aSI6IjE0NTRhYWMwLWNhNzItNGQ3NC1hN2NlLWY5YjZmOWNmZDkyZCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.CbXYjqhMMU72VW46lyr2eyr96TItc2M65wniXKzFplSWK8YJx0jrXfNzAUxopRFkrrfNVAkDY9e8uSMAIFjUukzeFP-bBbz26PtR03A3RGjYJtOBg63tIRbt4t9TMWp-9H8cSX9izh2TvsoWKb8q0TugG88uDrLQp-OYAvGQf4w6FICVosLBOWx3ec7SXGAwWqiISDjWwy2AfQ3QgmcwbZwZMPbFYWV1GFbZRm9HeNwfeXvEBjysZEc7FJSn1gTlHEn7F-o6Rbd3XXySqKoAQQvF-zjpo2_nV60JqntEIRCXp4eHQPv6qt4fAMyW7fNs0ppJ7KGU5w1C50gyCO49Zg
+15:38:26.432 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: tLQVICYf-G7JKNSCOzeUZHYg4a-hU3ojVV1RgC9QW6uEF7sPOSL1z485Btl7G-RIj0eWWXd5DXA3E6_1Ib44ptHftnqtY-GVnakOXIXfOuthDKEpZrLA5XqOlFd9UorI
+15:38:26.447 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:38:26.452 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:38:26.457 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@d782a4e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:38:26.589 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:38:37.160 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:38:37.736 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzUxNywic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM1NDcsImlhdCI6MTc2ODI5MzUxNywianRpIjoiMDYzNWJmZGYtNTFkNS00ZTRmLWFmOGUtYTViZGYwZDdiMmU5IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.RFO2tvBr648bEhGktyl1rg8-yu1bxUW02Tz1fA6Nk8I0bPzqTlx6Dk632_3bmCUwvgfDIDuUOLzDrafSIkzIN6Hm9VQN9Pu5oILilPorsNeICvASRGQ2lZVJOr4VPx3Dyi_V55Zi3xmQJEwHTUmKXu2coK6XrcYJ2hHXiH_cUP7o75hoMqrUl3aa9ulWNJCkjAkM5Qmz21yvZsJhhQSFL8GaL6u1S_BS1oQTCDM6c9C0cBc5DIvBczb4ts9fHKOjRUNx5Aly5veEu_VehkhnzdJRnZRkPC5QiCzZQrphdi8S5D0J-wJy6RMdXEzIkCHg6SM4zscyNtAROt9JpwFskQ
+15:38:37.744 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MzE3LCJpYXQiOjE3NjgyOTM1MTcsImp0aSI6Ijk1ZmExYzQzLTc0MDAtNDMzMy1iZDY5LTQ2YzU1NzZkMzVkZCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.T16R3X93U3520pqztW9WJIM1pK55PHJuwNwa8wTeT7gDcPhrk80EqNSjyD3veIV-CkRf1VGe0YGqeVyeLb4AT-TZajwMuawbE1TfbVR99iwRGd8Tjt-wprsZybKmgfFpD1eC055hGIaiVfktZW9yGJK-GJ3ISQPue5g3bsMhyYwG88jwc6MkDpi2O-y0OuEZhB3cVM22ts4-RIdUAZ6wZpVeepl25hGeDCSR3QtRpjEBvwBjaCE96iOt1dTMOR-G30gbT8ES5VT3Yj6Yc8PX9Qki0Yl6V6qHWFCTRGRvGgU8qh2Uxeu7sJMkEgAe60Ahp3-bYebpzdoODbOf0jaPbA
+15:38:37.747 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: H39oCMtv20duL-90oNP0kP1vqJnwuUljLIjG4pB0a36imwmZ64F3yBCqi__QFmuuIn0OHwNK9aPZcOOh4uCtWjGVY440LJuadhVeVB3aF_1hqBiZpvj1_LkOp8F539B2
+15:38:37.762 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:38:37.769 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:38:37.771 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@6d6fc27e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:38:38.054 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:38:42.068 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:38:42.513 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzUyMiwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM1NTIsImlhdCI6MTc2ODI5MzUyMiwianRpIjoiYjU2YTViNGYtMWNiYy00NThkLWE1ZTAtYTIzOGNmMmJiZTgyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.nPij4-4pUbbltMAH8dYrj2dFBFJ_BzckwHWIcAypyfz5I3J_5MqzpYI9ZgCgoybl4e9m0fhLlB0Nf6vJs9xh4MA39o1Hc5C6ApRW12LCoSj8Kdm51w9ycSuV79iYODrySIe2Y-fwNPxPi9_ACbaycGlx8EJpSoJls15bz9ga4FUnXfB7pgtlIW14lngKoduZ2lJRl6_uCalWiFmflb3mcqpdztv2Xm7JUmOXsFIPdfWLLFkXEb-saDyFXLA6HSX7SENN-382Vb2RGK_HrFDD6IXQ5URFDH594UedgrZtKjTz5DO3rwglOhclQjsTLOMyB7LT-uZDE24c8iupqh4QGQ
+15:38:42.514 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MzIyLCJpYXQiOjE3NjgyOTM1MjIsImp0aSI6ImM4MmE4NTdjLTYzOGUtNDg3My04NTUwLWRlYzllYWQ0NTkzNyIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.r-BXz0-2udB2VGRHcuhhkZmbLyexy_K-ueUKqts81ad-5QeYBMA6KYuHd8LGo-Dq6rlNqUqwcfQPu7duZYzmL1WFAg3nElf2X9yt9Fly8RWjzvcoRR5vdxmd5-9voVqvr_qUNSfw7bMRRW-gAEbGKQ5KQhmFjqK7OW7KH_IFDrKvx2ksE2SnKlMWpLRYln0tBQOKFpTOi5xL51791CMeZ7LKP4OZQbe6C_mBzEppiUlSSha6U-OYH0CpRJ-vKXNrqBPtVdQ2lhpztYrT7dZFDT21Ze-AKcx0cvRrHTUVNl0DrRXGUiYzwROo6N6R3Ov9SQ-0tg2UKjncg4XWQ4Mfeg
+15:38:42.514 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: q_Zzpl_37Nud3tDuuOXiVV9tdWNpZvyNInveNQ_tdOcUK8k5NVxi4at7QPs7EcR7dOdNSwYRpHR1LHmRchHjzAd_PlFfIRUZlMK8nsT_UTpjLZeEU0TBvCP85pzWD8xZ
+15:38:42.524 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:38:42.530 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:38:42.530 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@d362c1b8, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:38:42.592 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:38:46.261 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:38:46.568 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzUyNiwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM1NTYsImlhdCI6MTc2ODI5MzUyNiwianRpIjoiYmMxNzBkNTgtOTMwYi00ODA1LTlhMjEtODc2MmRlNWVlNzAxIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.mKGquB8HBY48eq9R5AsKXDR5OLKZ-rJMYz4DTHeSTarWNwdRCMjMpyWYtAT3tYZQUh6SuPKGN38SpvKl4TWEinJ3TQYFIGehiqtDu1TslgIDSgMmo-tfIz0TgFJXJumBBSU5e_yN51ETtdnz5QVyUFj7YrUn1GTDJWF2n3XRQV7xXUZW76ZX3viwbdqrdIWJeskpbdbRxHpcq7CYpGBekorxNBablTGePTrUbC63mOiwe2wUx1x-8In9OnydUoOLLWDG1Z6sJamEWJsCO5ARkhaxqxTzWJ4eDzlq39cFyduODpkERZjWkKOSfCrGEYhK4W0YnU7aczoMA5RMMTjTHQ
+15:38:46.568 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MzI2LCJpYXQiOjE3NjgyOTM1MjYsImp0aSI6IjFlNTYzNDhlLTdmNmItNDdlOS1iYWQ1LWY1ZjExZTAwZjg1YSIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.mNE3FsNz45mpr9YG0-11aUm4b9yi0_cSfZxIg7y53Gf5fvGt4MmptULLLDtZHUr9VN64PT6MLDCwMCVM_s_uVCdO_ywl4BAcVu3lgLtgnR1Ge-JejLRN6qaRdFlanzjV0FZEthh-qlvUkmBl5WPrtjLs90_OsFsqZGMKTXWq8L_jboDtu_EftqiUJ-gjibMyAFXPTvlMtfcVnVwn4JKjSi4tTE7ySR5stn-jTHRuar1EgujMFUETOEYy6608ewpOejsrTlAkMlKcfxzb6VOY4yaA04VNSglBROomUQ44M7cSrgmX_siJJf-6o-qL9mOMmSdYZ7BLRGlWLc2dtE1EpA
+15:38:46.568 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: H7Qg3qhBibiF5XK57oN7HG74kFoqN4e_0mXrpBzobUlceqmPwTdRTqBSMm2j7j8AlLskbDvOSIKwAx2FAjM94R1rq1ueaXSvB7VEiQGrOG5yQp_u-5Flpu4dqoQMPOdG
+15:38:46.574 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:38:46.576 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:38:46.577 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@73c09685, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:38:46.628 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:38:47.006 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:38:47.297 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzUyNywic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM1NTcsImlhdCI6MTc2ODI5MzUyNywianRpIjoiOWZjMmRmMTAtYzM1Yi00NjRlLWJjYTItOTNiNGFhMDMyZmUyIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.SwZoV6VLsnSxNY5edTzTpli01hw09O1dq_KNwuUQCO9tU9-lRuAHsWHuspnHkA5DKnC27WOz1yKdXSOqNx_fhL3FeXa6nux_781ceB8DF0XEL_8TPr4NfGDwaJvbhsXbXO0Pj6r_iKhivU7YV7MCZ-xYWT4cDvO2JnI2lVvU9PLgisb8hPsMtYXwwKjHgrO5vHYuXetPZQNkVL08it3Mi4-G5v4tjsJT3OSQAT5qVIkj3kKPCGsd2S9WrNJpWojzunEHarsFH0ZAc-l8ABhMZpAqAXKm7M7LDr8hvd-Ya8HPqrqNOLo_uaLZGM_QRJCFMdD8XXtFvsyU2t4kN76xCg
+15:38:47.297 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MzI3LCJpYXQiOjE3NjgyOTM1MjcsImp0aSI6IjQ2Y2FmMzcyLWU3M2QtNDk2Yi1hNTQ4LTMzYTE3YjdkMDZiOCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.PsXq0Y12qLuN0hK8otbIoILH1BP7HIS8_Jtw-8B1S7TDAq9uBjoUPB8m43WVFfcahsSEIwWxoTcGPPAZhs-Kufp1E4bTs4JMlJY5ab2ds6tQ03Vi0K6g4vcuo2wpBbTD0QtC_l7Vfsn98-JOtuBxnxC1BEJe-mEdK6-_o7Fp9EpINg9OohzWB4Y8s4FU4xBey1KnN1EHeXsFasl3dawUpTd8Uz3Pu-X00YNjyyfDPsBU1_fko2m47NMsw1fe0JeP7o2Uvbg7Y1UetO1QLdv24na8X5YxIfZmF4slQb5VUAo2kTUzFdGWXSFPvMRgk_o8U0tYRdZuw8sa4hiW3BZu5w
+15:38:47.298 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: 5r38bmsK068Ilv6eLdhgPO15dPOSp434V5c1Nzk3jm2DiptLSNt5RYDmklyY9bKvc3fSjhbxkG9XjGxx204d1inZEOHe44_o04LkgcauHU5oD9hvnG4XiSfZJsvcHZYG
+15:38:47.304 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:38:47.309 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:38:47.310 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@557f4aa8, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:38:47.363 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:39:00.022 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:39:00.025 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:39:00.028 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293540022], value class [java.lang.Long], SQL type unknown
+15:39:00.038 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:39:10.028 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:39:10.521 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzU1MCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM1ODAsImlhdCI6MTc2ODI5MzU1MCwianRpIjoiODBkZWQ5ODUtYjZiNy00YzZkLWI2MDktN2I4ZjQ5MmU3MjdiIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.ajVQJUGdO696eVmEGdaM1IC440-dc1cSEOTWOjw_TdKw3uxGREN_5VrWXBaxWaZEedpmxRhYo7fKs31IQECyeCvEc9eKr_ZU6t1tRCYTRTwDrZfRETkTHyM7yrxFcbYS9sPRrTo6F8wze7Rj6kyDRbBk549tFMvYxwzpHE0297xCr1QBaMSn-7OPKvok96Oapv3Ntgjvy60mYSSWM2jab-DcijuhdbcLhHfVnuPVw5PZfZ8wpd0M1ua7faFtgvjMH4JpSe4TvYXdEcX_00lIaf5UQqvEprwi7uRlh85cWCKTjqRxFhulksCE4yy-rbA-H8_QJXwetj-70_rwLHRKbQ
+15:39:10.528 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MzUwLCJpYXQiOjE3NjgyOTM1NTAsImp0aSI6IjY1YWY4YmI4LTE4NzYtNDU0NC04Zjc3LTRiMmFkNjk0ODVmNiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.alznkAQGUujgDqkHbHN8I9a9agUaA3qRx1oloiVHenT7HFStnC-TZnpjZtkPmptiGRGIjwVpO3--RNeOiBxvdDndLqkD963gwz_7PzxX1uecNZQln3jI6tGI3zl9ugpgIylmwj5fggLNsGGKi_x7ZUS62kqWizJM9EFdVjb7c8k8E2_Dj3mp5Y0FtuQOuNlOu4uYy4tln1KVCzd11SgGYzKNGsmeNEeZj5PiRGFt9TqgD4yM-ZGE3JDCwnG0MJOD3Q28FdDdflGd1cCRV7LPiMcLjyum8jAKSgyA7chQcn1xCVImqAFTPdG36lJ4_SWqOdx9lFUsUPm1S0Ft1RLu4Q
+15:39:10.528 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: R-LQ9kBZvOWBAVn2D4utsqvXpkvZ3yE__NSibVURT5_S68iZbDK3oGwqEzTwGiBgv7ENslgndLHzpab3RBIGgG1MAwCJ51Slld4MVjzXb5nQzgKWjiIRJk4oA06XQHbD
+15:39:10.541 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:39:10.547 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:39:10.548 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@938f743a, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:39:10.604 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:39:45.842 | DEBUG | FilterChainProxy: Securing GET /connect/logout?id_token_hint=eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzMyNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1MzUwLCJpYXQiOjE3NjgyOTM1NTAsImp0aSI6IjY1YWY4YmI4LTE4NzYtNDU0NC04Zjc3LTRiMmFkNjk0ODVmNiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiM3BObmJkZUhPRXRUejJzd2NuZl8zWXpmQTNZY0ZiUThYSlc3dDlxZ3lhYyJ9.alznkAQGUujgDqkHbHN8I9a9agUaA3qRx1oloiVHenT7HFStnC-TZnpjZtkPmptiGRGIjwVpO3--RNeOiBxvdDndLqkD963gwz_7PzxX1uecNZQln3jI6tGI3zl9ugpgIylmwj5fggLNsGGKi_x7ZUS62kqWizJM9EFdVjb7c8k8E2_Dj3mp5Y0FtuQOuNlOu4uYy4tln1KVCzd11SgGYzKNGsmeNEeZj5PiRGFt9TqgD4yM-ZGE3JDCwnG0MJOD3Q28FdDdflGd1cCRV7LPiMcLjyum8jAKSgyA7chQcn1xCVImqAFTPdG36lJ4_SWqOdx9lFUsUPm1S0Ft1RLu4Q&post_logout_redirect_uri=https://app.bookommerce.com:8080
+15:39:46.130 | DEBUG | DefaultRedirectStrategy: Redirecting to https://app.bookommerce.com:8080
+15:39:50.836 | DEBUG | FilterChainProxy: Securing GET /page/signup
+15:39:50.841 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:39:50.844 | DEBUG | FilterChainProxy: Secured GET /page/signup
+15:39:56.568 | DEBUG | FilterChainProxy: Securing GET /page/login
+15:39:56.568 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:39:56.569 | DEBUG | FilterChainProxy: Secured GET /page/login
+15:39:58.359 | DEBUG | FilterChainProxy: Securing GET /page/store-login
+15:39:58.360 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:39:58.360 | DEBUG | FilterChainProxy: Secured GET /page/store-login
+15:40:00.004 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:40:00.005 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:40:00.007 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293600004], value class [java.lang.Long], SQL type unknown
+15:40:00.012 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:40:02.628 | DEBUG | FilterChainProxy: Securing POST /api/login/store
+15:40:02.631 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:40:02.631 | DEBUG | FilterChainProxy: Secured POST /api/login/store
+15:40:02.743 | DEBUG | DaoAuthenticationProvider: Authenticated user
+15:40:02.745 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=prodman@bookommerce.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PRODUCT_MANAGER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_PRODUCT_MANAGER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@2ca37404]
+15:40:02.757 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:40:02.758 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION (PRIMARY_ID, SESSION_ID, CREATION_TIME, LAST_ACCESS_TIME, MAX_INACTIVE_INTERVAL, EXPIRY_TIME, PRINCIPAL_NAME)
+VALUES (?, ?, ?, ?, ?, ?, ?)
+]
+15:40:02.762 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:40:02.762 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION_ATTRIBUTES (SESSION_PRIMARY_ID, ATTRIBUTE_NAME, ATTRIBUTE_BYTES)
+VALUES (?, ?, ?)
+]
+15:40:03.821 | DEBUG | FilterChainProxy: Securing GET /oauth2/authorize?response_type=code&client_id=bff&scope=openid%20profile&state=o0sf9qyq1kBMtLpoqxZaiECN8gpg0f3wXWXvUwTVYVk%3D&redirect_uri=https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff&nonce=x0KN8EmdjVm8OQb7I8P3OD468eSE8scNX4K22PySlJQ
+15:40:03.824 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:40:03.825 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:40:03.830 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=prodman@bookommerce.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PRODUCT_MANAGER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+15:40:03.869 | DEBUG | SessionRegistryImpl: Registering session 9fdf36f8-f80e-43d8-95fd-a20fbff0cfcd, for principal org.springframework.security.core.userdetails.User [Username=prodman@bookommerce.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PRODUCT_MANAGER]]
+15:40:03.870 | DEBUG | DefaultRedirectStrategy: Redirecting to https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff?code=jivMx2uv_h6DT2j_7NCxsaOPrfuwvzQbp7f1SPgFAeF-q-TDXJo8QZglM5Pcp4Dg2ElpuMbKW2BHlZxvhuO8EPAa2E2daB2OUDKy_w95TFhAvQDuL2uSOP6FAR7UHLk3&state=o0sf9qyq1kBMtLpoqxZaiECN8gpg0f3wXWXvUwTVYVk%3D
+15:40:03.872 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:40:03.872 | DEBUG | JdbcTemplate: Executing prepared SQL statement [UPDATE SPRING_SESSION
+SET SESSION_ID = ?, LAST_ACCESS_TIME = ?, MAX_INACTIVE_INTERVAL = ?, EXPIRY_TIME = ?, PRINCIPAL_NAME = ?
+WHERE PRIMARY_ID = ?
+]
+15:40:03.875 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:40:03.876 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:40:03.912 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:40:04.207 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzYwNCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM2MzQsImlhdCI6MTc2ODI5MzYwNCwianRpIjoiNDNhOTk5YTctNDVhOS00YWYxLWFjMDAtMDhlNDQzNzVkN2VmIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QUk9EVUNUX01BTkFHRVIiXX0.Sd0lwIIHxl4OUoIzE8mQAcnSGMeI00ppqUV8Faj_kB6Itw-V39MYJkCm4LTkgVJJ-tIv2zb5N9Dzkx1jsuQwHk4rCbA81jgrMW0rcEtqLJooCpwEGWSEHwv-wHifzkEX7BxwenMeWh-PMgoU6svsxUkyggyJ1RufpIPhABeUn0BxxFQOfYka0iSAyrHpNpsoha9iFPe8DVHd2e7ht7csPjArjpfmnXi2fgODofe5iNfmiXIKgE-upbVHoWNImMPaxIYzRArXGlo1qOlzI2H75FNcDlHsUGr-fJwJCekCepfPJ5MJjmRMzcbGnXesWbHP9bZSKEekcH269dT25cY9TQ
+15:40:04.209 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzYwMywiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NDA0LCJpYXQiOjE3NjgyOTM2MDQsIm5vbmNlIjoieDBLTjhFbWRqVm04T1FiN0k4UDNPRDQ2OGVTRThzY05YNEsyMlB5U2xKUSIsImp0aSI6IjBjN2ZjOGVlLWUwMDgtNDc1ZC05OGFmLTQ3ZjM5YjNmN2NmYiIsImF1dGhvcml0aWVzIjpbIlJPTEVfUFJPRFVDVF9NQU5BR0VSIl0sInNpZCI6IlduNmVmOHNlZVJ5ZHNtYk1fVEtoRDhvUmV1Rml5Ql9UeHkxSFJzcVROUkkifQ.PJ88J7SDAXJqJGPdIjF6RtiEZJFum25CBJxdzN9nqvmF4XrQbFNBzMddMh01UWZD5or7GIyRyPM8kF4XgSrfEIa_JD1WEcFWN4O_bQshCfr_MyVWu4Bz6J6VEOPVCg6Z5-dozMSJbae1kJzWZlGOaHgFckQ82Zi1I6kuYn31Yp3auNd09JZcXyLqV66u8jPkc1jY50a5xePRsfq7eUgJoWQjHHbRgofFiBRqztE103FoAFdKKK1tWej7ZpTk6eu4KqM9lqKqL6fGmC_LNHdz1_YHUzr34udRLdLhngjElEn0kmgLDK7jsUm23b00WIhDjzgKZTP0pQcuU_1aWNfimw
+15:40:04.209 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: eK5ygQVsiVCGPiAVQZ-xQzxS9IIL1Vt8i4luWz4aRgi3iyVyeubN-tjRLnAv99ytKNSS-pAiSzYQwTmRTO99U-TqtfDSbGvGQaw_cXg0PPQU0bNK9dDSdXmQ7qF-dbZd
+15:40:04.219 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:40:04.222 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:40:04.223 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@a5f45c48, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:40:46.472 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:40:46.761 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzY0Niwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM2NzYsImlhdCI6MTc2ODI5MzY0NiwianRpIjoiZmExMTViYTMtMzdhMS00Y2I3LTkwOGMtMmM3Mzk1OWVmOGQ4IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QUk9EVUNUX01BTkFHRVIiXX0.ug3LzZ8qmDsdM-VKkZC9Rd76GoYx4RlzN_6AEQww9hDSTfpp3JY21jE3hwZk1fTYmC8wwlsENTkP-XSkA_klHEkNuoIqO7n1qtIvhL5rg07lSi4vMTntkqKcVVlNW15pdYbZEjVb-JAgnWGkMo6IRnLUh8LT_EQtTZSqD4tNyr8t9N7Vs0CcBAr2o1cGhyW0vDrbUxCpOqxE2gnTyT5uPTaJcd4j5jjGmynUeuS8xvy4LkhZPDQ8Di3mPiK-cd7UtG6QDIV3J3iWv7pbRLu1u4EejMZ1yLSUXRfK9pydy5mE0avqCqhLy-Exf2yQ3Dh0vcUI6Xw5a6w8KkHeQpHYQQ
+15:40:46.762 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzYwMywiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NDQ2LCJpYXQiOjE3NjgyOTM2NDYsImp0aSI6ImNhYWNhYjU4LTA5MDktNGRmNi04ZWI4LTdhODJjYTM0MThjMSIsImF1dGhvcml0aWVzIjpbIlJPTEVfUFJPRFVDVF9NQU5BR0VSIl0sInNpZCI6IlduNmVmOHNlZVJ5ZHNtYk1fVEtoRDhvUmV1Rml5Ql9UeHkxSFJzcVROUkkifQ.DOhliyEr4aNKqweRGaNhVp1VWClplTSjaX8ftRe7QmkrUUCmuxJSTNMoVggtkWP2tYJ2fvofcNr7dAdInpI08u4EYyjk7YnPmXE8XKoFj8IwJCZB2zLxrr0_0JHqLzbmwbTHm69R6df5QFCl2-n2VTBSzgGteeOMBsJXa05f1QiegUMvzpJSF4-EOstRHiTPSDgpxfLYoZQo-Za4smN-VBe6Blhx6H-29icyPCER_PNtiuVCF_o8w442ACQraG_8tjsvUy4tZTqUSzdszxrSLDVJiGkJ2vyDgeTsr2cUeNR3mVDU98hENpG2nLDAQ67OpXCI8sNgDlbSEC5f0ihpiQ
+15:40:46.762 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: JoON6Sl3AFErWG2L93V5N8TBaerNbZHXKMIe7MalWcRu5IcteL5f-NrPb6o5XlObKqzVeRDCXTrgaKCxYK0GDWLpzz3E2_E4mVSRsSwfD-HZUBhKnokNYGIjbZp1coaY
+15:40:46.773 | DEBUG | FilterChainProxy: Securing GET /oauth2/jwks
+15:40:46.789 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:40:46.792 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:40:46.793 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@93ec9c7e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:40:46.920 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:40:53.435 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:40:53.856 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzY1Mywic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM2ODMsImlhdCI6MTc2ODI5MzY1MywianRpIjoiMDhlYWNjMGItOTNjYi00NzZlLWI2NzEtNGNkYjA2NWIyYzNmIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QUk9EVUNUX01BTkFHRVIiXX0.Ae961UPtFkqTXeJ6sSKtajHtssnITR6t7nI4AoiKUqs3M2gteNtPbTAQbEaDcEA-dxRmptocNO-sJgmHtBDCyDAeroRju62zY3n2ZN3SJt6r_P5f5nOhJbfUE69N8IvzID7r8bDsBhqj8xBW2EMhVYB8CsEUOw-Y6rp1SQ545WXzEPG3a5XDH-bBi1wzjyr2DmGBg2f9Qbph1xCRmj-dtlSEbVL0-4IaR2cWf4ggztcgor8P3D3ZCeqwUEQ9QsuGHQIFIIKfWTswzvAWqooFEcQnx0nQD_qQn1iuuYwSypZ91d-gSyjgm0ZBS2y9uPly9IxMriMVE4SO4bykNlaD7g
+15:40:53.857 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzYwMywiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NDUzLCJpYXQiOjE3NjgyOTM2NTMsImp0aSI6IjY5Y2I5NTE5LTUwZGItNGZjYS1hNDQzLTQ0YzlmYmI1ZDFhMSIsImF1dGhvcml0aWVzIjpbIlJPTEVfUFJPRFVDVF9NQU5BR0VSIl0sInNpZCI6IlduNmVmOHNlZVJ5ZHNtYk1fVEtoRDhvUmV1Rml5Ql9UeHkxSFJzcVROUkkifQ.mM64Jowvh1Fv3X0MMc8qYAUnssP5RcdTU0O9If-4KxPfLzPMBVXK3Xe19J8qmfZpsimlEkrB4dnD4r_nrFwbJqOVS_Cu4c1OS-WhSedAHi0sPoNX0pS0A9Ke0oZ9GRI2tyxAubkVSIeSpxWZcNEiNGViVxyg_1wvVKufFji9dOt55fXQcBPeWEFeEKq3QnbdmUIAk8ggZ_CYxpPZgV-vYwvIy843DIUzx1i4plOYAHT8u3kizyBdb839I2ZHGVaU2k_AWqaxoS91imFhbZF55uo8_Mi_wAhsBf3S5K_F9EvQottWh7BABzVE3KdBHpwqgzppEstkZgE_ngamSU5QPQ
+15:40:53.857 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: r_JBp01AUrkbNuJ4t6tv_5cJ_7GSCDCWhu5RrO1GPtYfo0icI51x-zDCFibu6AV8tT9qI06VkPwOi-_4V9K0c8Q-rZGWgjONg1_mLitRcWDM6bCnL_TPOTao5_hTMLMx
+15:40:53.863 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:40:53.866 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:40:53.866 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c33d1ff1, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:40:53.930 | DEBUG | FilterChainProxy: Securing POST /oauth2/introspect
+15:41:00.002 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:41:00.003 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:41:00.004 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293660002], value class [java.lang.Long], SQL type unknown
+15:41:00.012 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 1 expired sessions
+15:42:00.012 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:42:00.013 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:42:00.013 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293720012], value class [java.lang.Long], SQL type unknown
+15:42:00.016 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:42:04.595 | DEBUG | FilterChainProxy: Securing GET /connect/logout?id_token_hint=eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzYwMywiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NDUzLCJpYXQiOjE3NjgyOTM2NTMsImp0aSI6IjY5Y2I5NTE5LTUwZGItNGZjYS1hNDQzLTQ0YzlmYmI1ZDFhMSIsImF1dGhvcml0aWVzIjpbIlJPTEVfUFJPRFVDVF9NQU5BR0VSIl0sInNpZCI6IlduNmVmOHNlZVJ5ZHNtYk1fVEtoRDhvUmV1Rml5Ql9UeHkxSFJzcVROUkkifQ.mM64Jowvh1Fv3X0MMc8qYAUnssP5RcdTU0O9If-4KxPfLzPMBVXK3Xe19J8qmfZpsimlEkrB4dnD4r_nrFwbJqOVS_Cu4c1OS-WhSedAHi0sPoNX0pS0A9Ke0oZ9GRI2tyxAubkVSIeSpxWZcNEiNGViVxyg_1wvVKufFji9dOt55fXQcBPeWEFeEKq3QnbdmUIAk8ggZ_CYxpPZgV-vYwvIy843DIUzx1i4plOYAHT8u3kizyBdb839I2ZHGVaU2k_AWqaxoS91imFhbZF55uo8_Mi_wAhsBf3S5K_F9EvQottWh7BABzVE3KdBHpwqgzppEstkZgE_ngamSU5QPQ&post_logout_redirect_uri=https://auth.bookommerce.com:8282/page/store-login
+15:42:04.638 | DEBUG | DefaultRedirectStrategy: Redirecting to https://auth.bookommerce.com:8282/page/store-login
+15:42:04.647 | DEBUG | FilterChainProxy: Securing GET /page/store-login
+15:42:04.684 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:42:04.687 | DEBUG | FilterChainProxy: Secured GET /page/store-login
+15:42:29.042 | DEBUG | FilterChainProxy: Securing POST /api/login/store
+15:42:29.044 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:42:29.044 | DEBUG | FilterChainProxy: Secured POST /api/login/store
+15:42:29.111 | DEBUG | DaoAuthenticationProvider: Authenticated user
+15:42:29.113 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=prodman@bookommerce.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PRODUCT_MANAGER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_PRODUCT_MANAGER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@2d861f7c]
+15:42:29.116 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:42:29.117 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION (PRIMARY_ID, SESSION_ID, CREATION_TIME, LAST_ACCESS_TIME, MAX_INACTIVE_INTERVAL, EXPIRY_TIME, PRINCIPAL_NAME)
+VALUES (?, ?, ?, ?, ?, ?, ?)
+]
+15:42:29.119 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:42:29.119 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION_ATTRIBUTES (SESSION_PRIMARY_ID, ATTRIBUTE_NAME, ATTRIBUTE_BYTES)
+VALUES (?, ?, ?)
+]
+15:42:30.174 | DEBUG | FilterChainProxy: Securing GET /oauth2/authorize?response_type=code&client_id=bff&scope=openid%20profile&state=X4CDVIRAy_4LtSkf3Y7VNk_vIT1l1mfezY40-11gvn0%3D&redirect_uri=https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff&nonce=4yGShGh8BjvAsVWi69Gd8MW-dbSdwFz87sOIijemNvQ
+15:42:30.176 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:42:30.176 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:42:30.178 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=prodman@bookommerce.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PRODUCT_MANAGER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+15:42:30.209 | DEBUG | SessionRegistryImpl: Registering session 4b6d6e66-c1ee-4b59-a1e8-a680feb88d61, for principal org.springframework.security.core.userdetails.User [Username=prodman@bookommerce.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PRODUCT_MANAGER]]
+15:42:30.210 | DEBUG | DefaultRedirectStrategy: Redirecting to https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff?code=LI72m22_sp5vW7RIIhzqRXcugoSgGbCgNaRQuIF3QhQdYRzMEYvCpv8MpzRbsETiTUGA5EOrQHyY7mSwuazaI7r3tqLEZiugqb7txbfZ5PiDtRffM_FUPyAp-Yc3Zy5Z&state=X4CDVIRAy_4LtSkf3Y7VNk_vIT1l1mfezY40-11gvn0%3D
+15:42:30.224 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:42:30.224 | DEBUG | JdbcTemplate: Executing prepared SQL statement [UPDATE SPRING_SESSION
+SET SESSION_ID = ?, LAST_ACCESS_TIME = ?, MAX_INACTIVE_INTERVAL = ?, EXPIRY_TIME = ?, PRINCIPAL_NAME = ?
+WHERE PRIMARY_ID = ?
+]
+15:42:30.230 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:42:30.230 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:42:30.272 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:42:30.567 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5Mzc1MCwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM3ODAsImlhdCI6MTc2ODI5Mzc1MCwianRpIjoiNzk3ZjA0NWYtZGQ1OS00OWVmLTk3ZjEtNTAwMTU3ZWQxM2E1IiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9QUk9EVUNUX01BTkFHRVIiXX0.BCKZ9NiUrPIEd5hCLAhsBN3YrQKlLCPlGp-pkAV9hieJgHd7857EnpDxzK7wa15Gnau9yDGL3ScTKSB8zk0mAio_GqGrLdI-FkaiMA_tJKmxhSqf_HlbJTviue1LTqrdEjC8SqKQwjvz2uAp6o3XYsgiGwQVbvnQKVhVlCZ8WA6yfoplaK-RI6pZ0YweX-11E6JgAvpnbGvh0E2lRiso2iXzcFfKdlhLD2qC7RmOtR5OAk47W78Xg_fbbnNVRLsY0HBaSOb2eFePrs3v3eoirA4RxfZlMsbVT2hHY5XoPEhcsYjfR01uZjCjDH_Pk5xkKtRfqHC1LyZMapLxrOL9ng
+15:42:30.567 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5Mzc1MCwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NTUwLCJpYXQiOjE3NjgyOTM3NTAsIm5vbmNlIjoiNHlHU2hHaDhCanZBc1ZXaTY5R2Q4TVctZGJTZHdGejg3c09JaWplbU52USIsImp0aSI6IjFkNTg1NmJiLTQ2OWItNDdjMy1hODZmLTJjYjk1Yjg0ZjRjYyIsImF1dGhvcml0aWVzIjpbIlJPTEVfUFJPRFVDVF9NQU5BR0VSIl0sInNpZCI6IkhDV3VZN0t1M0pEbnBQbm1VZzl6NHpWakpCNnJrYWR6QVptMF9MZnI3OUkifQ.bmkPYlBz9BTjNMIyCI7OCURy1IK3YfzTu5PKyYi5Qn8R_-GPV6xoW-jsB9onfXKtDQr668TvGPDmGSHtg1JZCOQ6o-3lMHY1yNR7EqT57K4gANg62W74RVTkLV2oJ2ZbZt6xg7FGFMd8dajoIVIXWOCk4DbTsYX0E896cBZHXN1dKtXNxLkE5rdKVanhq8QWUF2eI9gmLB3PPONm8WhGfkLrBnwPAd1uiMdDjFqAC-Fd1QwwsCkbQkk0zwsLT9CZTvBXa8MyNW8tzUSNNl0j3A8k1ILHTu6ety_peQbli2Ie2h_SIk_DkTHBTsmSZF3_-HHVk0eaK_xqBgTinLQbfA
+15:42:30.568 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: CtQsZrYt82IgA3vCSuxpbWmUei9ZEQbgpRAIuNG26hI5ZDK13xyHGE7zlrRWgZ91D9alJAKtYBOx0hR_c6BfbVmviFaKbhAuAjhwX68dTLj-Vo4BOFlNC4FZeJyCpy2t
+15:42:30.573 | DEBUG | FilterChainProxy: Securing GET /oauth2/jwks
+15:42:30.580 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:42:30.583 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:42:30.584 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@fb0e3d60, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:42:41.861 | DEBUG | FilterChainProxy: Securing GET /connect/logout?id_token_hint=eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5Mzc1MCwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NTUwLCJpYXQiOjE3NjgyOTM3NTAsIm5vbmNlIjoiNHlHU2hHaDhCanZBc1ZXaTY5R2Q4TVctZGJTZHdGejg3c09JaWplbU52USIsImp0aSI6IjFkNTg1NmJiLTQ2OWItNDdjMy1hODZmLTJjYjk1Yjg0ZjRjYyIsImF1dGhvcml0aWVzIjpbIlJPTEVfUFJPRFVDVF9NQU5BR0VSIl0sInNpZCI6IkhDV3VZN0t1M0pEbnBQbm1VZzl6NHpWakpCNnJrYWR6QVptMF9MZnI3OUkifQ.bmkPYlBz9BTjNMIyCI7OCURy1IK3YfzTu5PKyYi5Qn8R_-GPV6xoW-jsB9onfXKtDQr668TvGPDmGSHtg1JZCOQ6o-3lMHY1yNR7EqT57K4gANg62W74RVTkLV2oJ2ZbZt6xg7FGFMd8dajoIVIXWOCk4DbTsYX0E896cBZHXN1dKtXNxLkE5rdKVanhq8QWUF2eI9gmLB3PPONm8WhGfkLrBnwPAd1uiMdDjFqAC-Fd1QwwsCkbQkk0zwsLT9CZTvBXa8MyNW8tzUSNNl0j3A8k1ILHTu6ety_peQbli2Ie2h_SIk_DkTHBTsmSZF3_-HHVk0eaK_xqBgTinLQbfA&post_logout_redirect_uri=https://auth.bookommerce.com:8282/page/store-login
+15:42:41.864 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:42:41.865 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:42:41.868 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=prodman@bookommerce.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_PRODUCT_MANAGER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+15:42:41.930 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:42:41.930 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE SESSION_ID = ?
+AND MAX_INACTIVE_INTERVAL >= 0
+]
+15:42:41.930 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [4b6d6e66-c1ee-4b59-a1e8-a680feb88d61], value class [java.lang.String], SQL type unknown
+15:42:41.934 | DEBUG | SecurityContextLogoutHandler: Invalidated session 4b6d6e66-c1ee-4b59-a1e8-a680feb88d61
+15:42:41.936 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:42:41.936 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:42:41.942 | DEBUG | DefaultRedirectStrategy: Redirecting to https://auth.bookommerce.com:8282/page/store-login
+15:42:41.947 | DEBUG | FilterChainProxy: Securing GET /page/store-login
+15:42:41.948 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:42:41.948 | DEBUG | FilterChainProxy: Secured GET /page/store-login
+15:43:00.015 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:43:00.015 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:43:00.016 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293780015], value class [java.lang.Long], SQL type unknown
+15:43:00.018 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:43:01.879 | DEBUG | FilterChainProxy: Securing GET /page/login
+15:43:01.881 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:43:01.882 | DEBUG | FilterChainProxy: Secured GET /page/login
+15:43:03.296 | DEBUG | FilterChainProxy: Securing GET /page/signup
+15:43:03.297 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:43:03.298 | DEBUG | FilterChainProxy: Secured GET /page/signup
+15:43:11.870 | DEBUG | FilterChainProxy: Securing GET /page/login
+15:43:11.871 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:43:11.872 | DEBUG | FilterChainProxy: Secured GET /page/login
+15:43:23.937 | DEBUG | FilterChainProxy: Securing POST /api/login/customer
+15:43:23.940 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:43:23.941 | DEBUG | FilterChainProxy: Secured POST /api/login/customer
+15:43:24.017 | DEBUG | DaoAuthenticationProvider: Authenticated user
+15:43:24.018 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=nguyenvietanh.personal@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@691d0fdf]
+15:43:24.020 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:43:24.020 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION (PRIMARY_ID, SESSION_ID, CREATION_TIME, LAST_ACCESS_TIME, MAX_INACTIVE_INTERVAL, EXPIRY_TIME, PRINCIPAL_NAME)
+VALUES (?, ?, ?, ?, ?, ?, ?)
+]
+15:43:24.022 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:43:24.022 | DEBUG | JdbcTemplate: Executing prepared SQL statement [INSERT INTO SPRING_SESSION_ATTRIBUTES (SESSION_PRIMARY_ID, ATTRIBUTE_NAME, ATTRIBUTE_BYTES)
+VALUES (?, ?, ?)
+]
+15:43:25.078 | DEBUG | FilterChainProxy: Securing GET /oauth2/authorize?response_type=code&client_id=bff&scope=openid%20profile&state=IwcQSczBxc9SvTiWC6KaXSgdRux6xLUXPL6CFyvKF8s%3D&redirect_uri=https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff&nonce=D4HYDB9Cy-FxtyCPHxio7CeNoQS3_fwFqu34Am1wnfI
+15:43:25.081 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:43:25.081 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:43:25.085 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=nguyenvietanh.personal@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]]
+15:43:25.110 | DEBUG | SessionRegistryImpl: Registering session ddb9b373-f197-4e6b-ac92-52b4d92c4d44, for principal org.springframework.security.core.userdetails.User [Username=nguyenvietanh.personal@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]]
+15:43:25.113 | DEBUG | DefaultRedirectStrategy: Redirecting to https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff?code=Ycq1wQ5MvakOXf8bRKHRpOt1rtBMTjAJrqSgczJxbzYBmn3dHcAFxvakM1QyGoRdxMLh11-us4QHpc2hOW-_NiCt1m-sbQKL64ZAp7VHT_GI7OzWd34GxsPrmoNOfg0z&state=IwcQSczBxc9SvTiWC6KaXSgdRux6xLUXPL6CFyvKF8s%3D
+15:43:25.118 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:43:25.118 | DEBUG | JdbcTemplate: Executing prepared SQL statement [UPDATE SPRING_SESSION
+SET SESSION_ID = ?, LAST_ACCESS_TIME = ?, MAX_INACTIVE_INTERVAL = ?, EXPIRY_TIME = ?, PRINCIPAL_NAME = ?
+WHERE PRIMARY_ID = ?
+]
+15:43:25.122 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:43:25.122 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:43:25.145 | DEBUG | FilterChainProxy: Securing POST /oauth2/token
+15:43:25.505 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Access token value: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsIm5iZiI6MTc2ODI5MzgwNSwic2NvcGUiOlsib3BlbmlkIiwicHJvZmlsZSJdLCJpc3MiOiJodHRwczovL2F1dGguYm9va29tbWVyY2UuY29tOjgyODIiLCJleHAiOjE3NjgyOTM4MzUsImlhdCI6MTc2ODI5MzgwNSwianRpIjoiMzY3NzQ4ZDEtNzVmMi00MTA4LTk1NmMtNmQ1ODQzYjMyZDIzIiwiYXV0aG9yaXRpZXMiOlsiUk9MRV9DVVNUT01FUiJdfQ.JZ3mCDKqzqYqSMLDGMskG3a8lTPDt540QjaSwL7OKGMamWrr_O0oxq0ZyDz6yDjgHXtGE7i8uDQUJWD212VR4etf_AdK_QkYrPcT-ZHwMpEAcwQksfDTBGGIVgALkklU-cW72E1bDc1-bYVoF-SGf_DtD9U-683A2vjoX3w16lRizMhvS7r0Go89H4Lir1Xq2Fv0_Bb4uFk4whjb9wlIDiSuY7YdzinCLcdF7L867kHibrdP_zAqLedeJA2IWfFyXp1noQb1Q_Jt_vEwI0F7qc9a12dJYQTKybTMf7L6HIqu5faDqwsOlxJtozru7WCInw9h9H5wcUdI7fqCS3NTbA
+15:43:25.506 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>> ID Token: eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzgwNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NjA1LCJpYXQiOjE3NjgyOTM4MDUsIm5vbmNlIjoiRDRIWURCOUN5LUZ4dHlDUEh4aW83Q2VOb1FTM19md0ZxdTM0QW0xd25mSSIsImp0aSI6IjkyODM3NzM2LTg3ODItNDhmZi05MmM2LWFmNzI4ZjM0ZGQ5OCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiRlRkVmZhLVVBRmtDcGFYTF9oNDEzT3ZMWTBhQTdvRjRTQ1A4RjlrbDVWNCJ9.DDXqfFljnf47krZzjXrZCFSy-mfkH1mtsdFLGRZDpomyIWJZ7hrFEKeyLs__lU0-a3smT1jXOmGtLlq4UeF0UaoPMwpQQDL-1DIkzDv-9DIlz6OB1qyAdITMaT-daHxcC3o0OSMoDzBkQu-4Ic2wtLLdirKu9BOonI2qQ15xaj1dJ57if27JG9D_YoRPisJUN9drEKnIaX2dnggWDDBu8jq9BqDlkAyVa3fmNu0Ugne2Ume8JAKtPq5c4sZ3XLHYpUJXSHXGrq2jtA7WCLmzD0mA2XetT6giu8Tnlc0ZFpNAuKdhhGIEyMM62H0EUgyFpL7XVIcdixYv1iNWXtJPRA
+15:43:25.506 | INFO | CustomOAuth2AuthenticationSuccessHandler: >>>>>>>>>>>>>>>>>>>> Refresh token value: i1ym4MmD5VXhg9cPrWV0T6ek2GzRbzJ2smb6SlPLB8bdGaGVeUW6Zfyh1Y47edtcPerXDbToV7c5VarFAKNpkNnR7a3ird2Xxg_15K2eCPrfmdDV7sd7ifDNj0Ub_6QR
+15:43:25.516 | DEBUG | FilterChainProxy: Securing GET /userinfo
+15:43:25.518 | DEBUG | JwtAuthenticationProvider: Authenticated token
+15:43:25.518 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to JwtAuthenticationToken [Principal=org.springframework.security.oauth2.jwt.Jwt@c7c16ead, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[SCOPE_openid, SCOPE_profile]]
+15:43:32.829 | DEBUG | FilterChainProxy: Securing GET /connect/logout?id_token_hint=eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODI5MzgwNSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4Mjk1NjA1LCJpYXQiOjE3NjgyOTM4MDUsIm5vbmNlIjoiRDRIWURCOUN5LUZ4dHlDUEh4aW83Q2VOb1FTM19md0ZxdTM0QW0xd25mSSIsImp0aSI6IjkyODM3NzM2LTg3ODItNDhmZi05MmM2LWFmNzI4ZjM0ZGQ5OCIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiRlRkVmZhLVVBRmtDcGFYTF9oNDEzT3ZMWTBhQTdvRjRTQ1A4RjlrbDVWNCJ9.DDXqfFljnf47krZzjXrZCFSy-mfkH1mtsdFLGRZDpomyIWJZ7hrFEKeyLs__lU0-a3smT1jXOmGtLlq4UeF0UaoPMwpQQDL-1DIkzDv-9DIlz6OB1qyAdITMaT-daHxcC3o0OSMoDzBkQu-4Ic2wtLLdirKu9BOonI2qQ15xaj1dJ57if27JG9D_YoRPisJUN9drEKnIaX2dnggWDDBu8jq9BqDlkAyVa3fmNu0Ugne2Ume8JAKtPq5c4sZ3XLHYpUJXSHXGrq2jtA7WCLmzD0mA2XetT6giu8Tnlc0ZFpNAuKdhhGIEyMM62H0EUgyFpL7XVIcdixYv1iNWXtJPRA&post_logout_redirect_uri=https://app.bookommerce.com:8080
+15:43:32.831 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:43:32.832 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:43:32.834 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=UsernamePasswordAuthenticationToken [Principal=org.springframework.security.core.userdetails.User [Username=nguyenvietanh.personal@gmail.com, Password=[PROTECTED], Enabled=true, AccountNonExpired=true, CredentialsNonExpired=true, AccountNonLocked=true, Granted Authorities=[ROLE_CUSTOMER]], Credentials=[PROTECTED], Authenticated=true, Details=null, Granted Authorities=[ROLE_CUSTOMER]]]
+15:43:32.898 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:43:32.898 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE SESSION_ID = ?
+AND MAX_INACTIVE_INTERVAL >= 0
+]
+15:43:32.898 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [ddb9b373-f197-4e6b-ac92-52b4d92c4d44], value class [java.lang.String], SQL type unknown
+15:43:32.905 | DEBUG | SecurityContextLogoutHandler: Invalidated session ddb9b373-f197-4e6b-ac92-52b4d92c4d44
+15:43:32.909 | DEBUG | JdbcTemplate: Executing prepared SQL query
+15:43:32.913 | DEBUG | JdbcTemplate: Executing prepared SQL statement [SELECT S.PRIMARY_ID, S.SESSION_ID, S.CREATION_TIME, S.LAST_ACCESS_TIME, S.MAX_INACTIVE_INTERVAL, SA.ATTRIBUTE_NAME, SA.ATTRIBUTE_BYTES
+FROM SPRING_SESSION S
+LEFT JOIN SPRING_SESSION_ATTRIBUTES SA ON S.PRIMARY_ID = SA.SESSION_PRIMARY_ID
+WHERE S.SESSION_ID = ?
+]
+15:43:32.916 | DEBUG | DefaultRedirectStrategy: Redirecting to https://app.bookommerce.com:8080
+15:44:00.012 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:44:00.013 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:44:00.013 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293840012], value class [java.lang.Long], SQL type unknown
+15:44:00.016 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:45:00.003 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:45:00.004 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:45:00.007 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293900003], value class [java.lang.Long], SQL type unknown
+15:45:00.014 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:46:00.015 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:46:00.019 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:46:00.022 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768293960013], value class [java.lang.Long], SQL type unknown
+15:46:00.066 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:47:00.006 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:47:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:47:00.008 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768294020006], value class [java.lang.Long], SQL type unknown
+15:47:00.022 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:48:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:48:00.008 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:48:00.008 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768294080006], value class [java.lang.Long], SQL type unknown
+15:48:00.017 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:49:00.061 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:49:00.155 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:49:00.173 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768294140060], value class [java.lang.Long], SQL type unknown
+15:49:00.216 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:50:00.024 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:50:00.027 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:50:00.030 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768294200023], value class [java.lang.Long], SQL type unknown
+15:50:00.058 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:51:00.027 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:51:00.033 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:51:00.039 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768294260026], value class [java.lang.Long], SQL type unknown
+15:51:00.077 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions
+15:52:00.013 | DEBUG | JdbcTemplate: Executing prepared SQL update
+15:52:00.020 | DEBUG | JdbcTemplate: Executing prepared SQL statement [DELETE FROM SPRING_SESSION
+WHERE EXPIRY_TIME < ?
+]
+15:52:00.024 | TRACE | StatementCreatorUtils: Setting SQL statement parameter value: column index 1, parameter value [1768294320013], value class [java.lang.Long], SQL type unknown
+15:52:00.037 | DEBUG | JdbcIndexedSessionRepository: Cleaned up 0 expired sessions

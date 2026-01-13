@@ -1,5 +1,5 @@
-import { ArrowLeftOutlined, CloseOutlined } from '@ant-design/icons';
-import { Button, Col, Empty, Row, Spin, Typography, message, notification, theme } from 'antd';
+import { CloseOutlined } from '@ant-design/icons';
+import { Breadcrumb, Button, Col, Empty, Row, Spin, Typography, message, notification, theme } from 'antd';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import BackToTopButton from '../components/BackToTopButton';
@@ -239,15 +239,17 @@ const CartPage = () => {
     return (
         <div style={{ padding: '24px' }}>
             {contextHolder}
-            <Button
-                type="text"
-                className="back-button"
-                icon={<ArrowLeftOutlined />}
-                onClick={() => navigate(-1)}
-                style={{ marginBottom: '16px', paddingLeft: '12px', paddingRight: '12px' }}
-            >
-                Quay lại
-            </Button>
+            <Breadcrumb
+                style={{ marginBottom: '16px' }}
+                items={[
+                    {
+                        title: <Link to="/">Trang chủ</Link>,
+                    },
+                    {
+                        title: 'Giỏ hàng',
+                    },
+                ]}
+            />
             <Title level={2} style={{ marginBottom: '24px', marginTop: 0 }}>
                 Giỏ hàng ({totalItems} sản phẩm)
             </Title>

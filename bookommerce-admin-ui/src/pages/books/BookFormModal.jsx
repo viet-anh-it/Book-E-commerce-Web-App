@@ -1,6 +1,6 @@
-import React, { useEffect, useState } from 'react';
-import { Modal, Form, Input, InputNumber, Select, Row, Col, Upload } from 'antd';
 import { PlusOutlined } from '@ant-design/icons';
+import { Col, Form, Input, InputNumber, Modal, Row, Select, Upload } from 'antd';
+import { useEffect, useState } from 'react';
 
 const getBase64 = (file) =>
     new Promise((resolve, reject) => {
@@ -91,7 +91,7 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
 
     return (
         <Modal
-            title={initialValues ? "Edit Book" : "Add New Book"}
+            title={initialValues ? "Chỉnh sửa sách" : "Thêm sách mới"}
             open={open}
             onOk={handleOk}
             onCancel={onCancel}
@@ -107,7 +107,7 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
                 <Row gutter={24}>
                     <Col span={8}>
                         <Form.Item
-                            label="Cover Image"
+                            label="Ảnh bìa"
                             name="thumbnail" // Although we manage fileList separately, keeping name for validation if needed (but complex with Upload)
                         >
                             <div className="custom-upload-wrapper">
@@ -129,7 +129,7 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
                             <Col span={24}>
                                 <Form.Item
                                     name="title"
-                                    label="Title"
+                                    label="Tiêu đề"
                                 >
                                     <Input />
                                 </Form.Item>
@@ -137,7 +137,7 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
                             <Col span={12}>
                                 <Form.Item
                                     name="author"
-                                    label="Author"
+                                    label="Tác giả"
                                 >
                                     <Input />
                                 </Form.Item>
@@ -145,7 +145,7 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
                             <Col span={12}>
                                 <Form.Item
                                     name="category"
-                                    label="Category"
+                                    label="Thể loại"
                                 >
                                     <Select
                                         loading={genresLoading}
@@ -153,14 +153,14 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
                                             value: genre.id,
                                             label: genre.name
                                         }))}
-                                        placeholder="Select a category"
+                                        placeholder="Chọn thể loại"
                                     />
                                 </Form.Item>
                             </Col>
                             <Col span={12}>
                                 <Form.Item
                                     name="price"
-                                    label="Price ($)"
+                                    label="Giá ($)"
                                 >
                                     <InputNumber min={0} style={{ width: '100%' }} precision={2} />
                                 </Form.Item>
@@ -168,7 +168,7 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
                             <Col span={12}>
                                 <Form.Item
                                     name="quantity"
-                                    label="Quantity"
+                                    label="Số lượng"
                                 >
                                     <InputNumber min={0} style={{ width: '100%' }} precision={0} />
                                 </Form.Item>
@@ -176,7 +176,7 @@ const BookFormModal = ({ open, onCancel, onOk, initialValues, loading, genres, g
                             <Col span={24}>
                                 <Form.Item
                                     name="description"
-                                    label="Description"
+                                    label="Mô tả"
                                 >
                                     <Input.TextArea rows={4} />
                                 </Form.Item>

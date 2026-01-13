@@ -1,21 +1,36 @@
-import React, { useState, useEffect, useCallback } from 'react';
-import {
-    Table, Button, Space, Typography, Tag, Rate, Modal,
-    message, Popconfirm, Tooltip, Card, Row, Col, Statistic,
-    Input, Badge, Avatar, theme
-} from 'antd';
 import {
     CheckCircleOutlined,
+    ClockCircleOutlined,
     CloseCircleOutlined,
     DeleteOutlined,
     EyeOutlined,
-    StarFilled,
     MessageOutlined,
-    ClockCircleOutlined,
     SearchOutlined,
+    StarFilled,
     UserOutlined
 } from '@ant-design/icons';
-import { getRatings, approveRating, deleteRating, rejectRating } from '../../services/ratingService';
+import {
+    Avatar,
+    Badge,
+    Button,
+    Card,
+    Col,
+    Input,
+    message,
+    Modal,
+    Popconfirm,
+    Rate,
+    Row,
+    Space,
+    Statistic,
+    Table,
+    Tag,
+    theme,
+    Tooltip,
+    Typography
+} from 'antd';
+import { useCallback, useEffect, useState } from 'react';
+import { approveRating, deleteRating, getRatings, rejectRating } from '../../services/ratingService';
 
 const { Title, Text, Paragraph } = Typography;
 const { Search } = Input;
@@ -62,8 +77,8 @@ const RatingPage = () => {
                 }
             } else {
                 Modal.error({
-                    title: 'Unexpected Error Occur!',
-                    content: response.data?.message || 'Something went wrong while fetching reviews.'
+                    title: 'Đã xảy ra lỗi không mong muốn!',
+                    content: response.data?.message || 'Có lỗi xảy ra khi tải đánh giá.'
                 });
             }
         } catch (error) {
@@ -82,7 +97,7 @@ const RatingPage = () => {
 
                     if (fieldErrorList.length > 0) {
                         Modal.error({
-                            title: 'Validation Errors',
+                            title: 'Lỗi xác thực',
                             content: (
                                 <ul>
                                     {fieldErrorList.map((err, idx) => <li key={idx}>{err}</li>)}
@@ -135,7 +150,7 @@ const RatingPage = () => {
         try {
             const response = await approveRating(id);
             if (response.status === 200) {
-                message.success(response.data?.message || 'Review approved successfully');
+                message.success(response.data?.message || 'Đã duyệt đánh giá thành công');
                 fetchRatings(pagination.current - 1, pagination.pageSize, sorter.field, sorter.order);
             }
         } catch (error) {
@@ -154,7 +169,7 @@ const RatingPage = () => {
 
                     if (fieldErrorList.length > 0) {
                         Modal.error({
-                            title: 'Validation Errors',
+                            title: 'Lỗi xác thực',
                             content: (
                                 <ul>
                                     {fieldErrorList.map((err, idx) => <li key={idx}>{err}</li>)}
@@ -186,7 +201,7 @@ const RatingPage = () => {
         try {
             const response = await rejectRating(id);
             if (response.status === 200) {
-                message.success(response.data?.message || 'Review rejected successfully');
+                message.success(response.data?.message || 'Đã từ chối đánh giá thành công');
                 fetchRatings(pagination.current - 1, pagination.pageSize, sorter.field, sorter.order);
             }
         } catch (error) {
@@ -200,7 +215,7 @@ const RatingPage = () => {
                     );
                     if (fieldErrorList.length > 0) {
                         Modal.error({
-                            title: 'Validation Errors',
+                            title: 'Lỗi xác thực',
                             content: (<ul>{fieldErrorList.map((err, idx) => <li key={idx}>{err}</li>)}</ul>)
                         });
                     }
@@ -228,7 +243,7 @@ const RatingPage = () => {
         try {
             const response = await deleteRating(id);
             if (response.status === 200) {
-                message.success(response.data?.message || 'Review deleted successfully');
+                message.success(response.data?.message || 'Đã xóa đánh giá thành công');
                 fetchRatings(pagination.current - 1, pagination.pageSize, sorter.field, sorter.order);
             }
         } catch (error) {
@@ -263,7 +278,7 @@ const RatingPage = () => {
 
     const columns = [
         {
-            title: 'Book Info',
+            title: 'Thông tin sách',
             key: 'bookInfo',
             width: 250,
             render: (_, record) => (
@@ -274,7 +289,7 @@ const RatingPage = () => {
             ),
         },
         {
-            title: 'Reviewer',
+            title: 'Người đánh giá',
             key: 'rater',
             render: (_, record) => (
                 <Space>
@@ -284,7 +299,7 @@ const RatingPage = () => {
             ),
         },
         {
-            title: 'Rating',
+            title: 'Đánh giá',
             key: 'point',
             dataIndex: ['rating', 'point'],
             render: (point) => (
@@ -296,7 +311,7 @@ const RatingPage = () => {
             sorter: true,
         },
         {
-            title: 'Comment',
+            title: 'Bình luận',
             key: 'comment',
             render: (_, record) => (
                 <Tooltip title={record.rating.comment}>
@@ -305,23 +320,23 @@ const RatingPage = () => {
             ),
         },
         {
-            title: 'Status',
+            title: 'Trạng thái',
             key: 'approved',
             render: (_, record) => (
                 <Badge
                     status={record.rating.approved ? 'success' : 'processing'}
-                    text={record.rating.approved ? 'Approved' : 'Pending Approval'}
+                    text={record.rating.approved ? 'Đã duyệt' : 'Chờ duyệt'}
                 />
             ),
         },
         {
-            title: 'Actions',
+            title: 'Hành động',
             key: 'action',
             fixed: 'right',
             width: 150,
             render: (_, record) => (
                 <Space size="middle">
-                    <Tooltip title="View Details">
+                    <Tooltip title="Xem chi tiết">
                         <Button
                             type="text"
                             icon={<EyeOutlined style={{ color: '#1890ff' }} />}
@@ -330,7 +345,7 @@ const RatingPage = () => {
                     </Tooltip>
 
                     {!record.rating.approved ? (
-                        <Tooltip title="Approve">
+                        <Tooltip title="Duyệt">
                             <Button
                                 type="text"
                                 icon={<CheckCircleOutlined style={{ color: '#52c41a' }} />}
@@ -338,7 +353,7 @@ const RatingPage = () => {
                             />
                         </Tooltip>
                     ) : (
-                        <Tooltip title="Set to Pending">
+                        <Tooltip title="Chuyển về chờ duyệt">
                             <Button
                                 type="text"
                                 icon={<CloseCircleOutlined style={{ color: '#faad14' }} />}
@@ -348,14 +363,14 @@ const RatingPage = () => {
                     )}
 
                     <Popconfirm
-                        title="Delete Review"
-                        description="Are you sure you want to delete this review? This cannot be undone."
+                        title="Xóa đánh giá"
+                        description="Bạn có chắc chắn muốn xóa đánh giá này không? Hành động này không thể hoàn tác."
                         onConfirm={() => handleDelete(record.rating.id)}
-                        okText="Delete"
-                        cancelText="Cancel"
+                        okText="Xóa"
+                        cancelText="Hủy"
                         okButtonProps={{ danger: true }}
                     >
-                        <Tooltip title="Delete">
+                        <Tooltip title="Xóa">
                             <Button
                                 type="text"
                                 danger
@@ -372,8 +387,8 @@ const RatingPage = () => {
         <div style={{ background: 'transparent' }}>
             {/* Header Section */}
             <div style={{ marginBottom: 24 }}>
-                <Title level={2}>Review Management</Title>
-                <Text type="secondary">Monitor and manage customer feedback for your books.</Text>
+                <Title level={2}>Quản lý đánh giá</Title>
+                <Text type="secondary">Theo dõi và quản lý phản hồi của khách hàng về sách của bạn.</Text>
             </div>
 
             {/* Statistics Cards - Note: These might need a dedicated API or total counts from meta */}
@@ -381,7 +396,7 @@ const RatingPage = () => {
                 <Col xs={24} sm={12} lg={6}>
                     <Card bordered={false} className="stat-card">
                         <Statistic
-                            title="Total Reviews"
+                            title="Tổng số đánh giá"
                             value={pagination.total}
                             prefix={<MessageOutlined style={{ color: '#1890ff' }} />}
                         />
@@ -392,8 +407,8 @@ const RatingPage = () => {
                 <Col xs={24} sm={12} lg={6}>
                     <Card bordered={false} className="stat-card" style={{ opacity: 0.8 }}>
                         <Statistic
-                            title="Status"
-                            value="API Live"
+                            title="Trạng thái"
+                            value="API Hoạt động"
                             valueStyle={{ fontSize: '18px', color: '#52c41a' }}
                             prefix={<ClockCircleOutlined />}
                         />
@@ -402,7 +417,7 @@ const RatingPage = () => {
                 <Col xs={24} sm={12} lg={6}>
                     <Card bordered={false} className="stat-card" style={{ opacity: 0.8 }}>
                         <Statistic
-                            title="Page Info"
+                            title="Thông tin trang"
                             value={`${pagination.current} / ${Math.ceil(pagination.total / pagination.pageSize) || 1}`}
                             prefix={<StarFilled style={{ color: '#fadb14' }} />}
                         />
@@ -411,8 +426,8 @@ const RatingPage = () => {
                 <Col xs={24} sm={12} lg={6}>
                     <Card bordered={false} className="stat-card" style={{ opacity: 0.8 }}>
                         <Statistic
-                            title="System Health"
-                            value="Active"
+                            title="Sức khỏe hệ thống"
+                            value="Hoạt động"
                             valueStyle={{ color: '#52c41a' }}
                             prefix={<CheckCircleOutlined />}
                         />
@@ -424,14 +439,14 @@ const RatingPage = () => {
             <Card bordered={false}>
                 <div style={{ marginBottom: 16, display: 'flex', justifyContent: 'space-between', alignItems: 'center' }}>
                     <Search
-                        placeholder="Search functionality coming soon..."
+                        placeholder="Tính năng tìm kiếm sắp ra mắt..."
                         allowClear
                         enterButton={<SearchOutlined />}
                         size="large"
                         disabled
                         style={{ maxWidth: 400 }}
                     />
-                    <Text type="secondary">Total {pagination.total} reviews</Text>
+                    <Text type="secondary">Tổng {pagination.total} đánh giá</Text>
                 </div>
 
                 <Table
@@ -456,14 +471,14 @@ const RatingPage = () => {
                 title={
                     <Space>
                         <MessageOutlined />
-                        <span>Review Details</span>
+                        <span>Chi tiết đánh giá</span>
                     </Space>
                 }
                 open={isDetailModalOpen}
                 onCancel={() => setIsDetailModalOpen(false)}
                 footer={[
                     <Button key="close" onClick={() => setIsDetailModalOpen(false)}>
-                        Close
+                        Đóng
                     </Button>,
                     <Button
                         key="delete"
@@ -473,7 +488,7 @@ const RatingPage = () => {
                             setIsDetailModalOpen(false);
                         }}
                     >
-                        Delete Review
+                        Xóa đánh giá
                     </Button>,
                     selectedRatingEntry?.rating?.approved ? (
                         <Button
@@ -484,7 +499,7 @@ const RatingPage = () => {
                                 setIsDetailModalOpen(false);
                             }}
                         >
-                            Set to Pending
+                            Chuyển về chờ duyệt
                         </Button>
                     ) : (
                         <Button
@@ -495,7 +510,7 @@ const RatingPage = () => {
                                 setIsDetailModalOpen(false);
                             }}
                         >
-                            Approve Now
+                            Duyệt ngay
                         </Button>
                     )
                 ]}
@@ -507,18 +522,18 @@ const RatingPage = () => {
                         <Row gutter={[24, 24]}>
                             <Col span={16}>
                                 <div style={{ marginBottom: 20 }}>
-                                    <Text type="secondary">Reviewer</Text>
+                                    <Text type="secondary">Người đánh giá</Text>
                                     <div style={{ display: 'flex', alignItems: 'center', gap: '12px', marginTop: '4px' }}>
                                         <Avatar icon={<UserOutlined />} size="large" />
                                         <div>
                                             <Text strong style={{ fontSize: '16px', display: 'block' }}>{selectedRatingEntry.rating.rater}</Text>
-                                            <Text type="secondary" style={{ fontSize: '12px' }}>Reviewed on {new Date(selectedRatingEntry.rating.createdAt).toLocaleString()}</Text>
+                                            <Text type="secondary" style={{ fontSize: '12px' }}>Đánh giá lúc {new Date(selectedRatingEntry.rating.createdAt).toLocaleString()}</Text>
                                         </div>
                                     </div>
                                 </div>
 
                                 <div style={{ marginBottom: 20 }}>
-                                    <Text type="secondary">Rating</Text>
+                                    <Text type="secondary">Đánh giá</Text>
                                     <div style={{ marginTop: '4px' }}>
                                         <Rate disabled defaultValue={selectedRatingEntry.rating.point} />
                                         <Text strong style={{ marginLeft: '8px', fontSize: '18px' }}>{selectedRatingEntry.rating.point}/5</Text>
@@ -526,7 +541,7 @@ const RatingPage = () => {
                                 </div>
 
                                 <div>
-                                    <Text type="secondary">Comment</Text>
+                                    <Text type="secondary">Bình luận</Text>
                                     <Paragraph style={{
                                         marginTop: '8px',
                                         padding: '16px',
@@ -543,7 +558,7 @@ const RatingPage = () => {
 
                             <Col span={8} style={{ borderLeft: `1px solid ${token.colorBorderSecondary}` }}>
                                 <div style={{ marginBottom: 20 }}>
-                                    <Text type="secondary">Book</Text>
+                                    <Text type="secondary">Sách</Text>
                                     <Card
                                         size="small"
                                         style={{ marginTop: '8px', background: token.colorFillAlter }}
@@ -555,10 +570,10 @@ const RatingPage = () => {
                                 </div>
 
                                 <div>
-                                    <Text type="secondary">Status</Text>
+                                    <Text type="secondary">Trạng thái</Text>
                                     <div style={{ marginTop: '8px' }}>
                                         <Tag color={selectedRatingEntry.rating.approved ? 'green' : 'gold'} style={{ padding: '4px 12px', fontSize: '14px' }}>
-                                            {selectedRatingEntry.rating.approved ? 'Approved' : 'Pending Approval'}
+                                            {selectedRatingEntry.rating.approved ? 'Đã duyệt' : 'Chờ duyệt'}
                                         </Tag>
                                     </div>
                                 </div>

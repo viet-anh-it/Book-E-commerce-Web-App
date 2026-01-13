@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://cdn1.fahasa.com/media/favicon/default/favicon4.ico" type="image/x-icon">
-    <title>Login - Bookommerce</title>
+    <title>Đăng nhập - Bookommerce</title>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -621,8 +621,8 @@
         <div id="toast" class="toast">
             <div class="toast-icon" id="toastIcon"></div>
             <div class="toast-content">
-                <div class="toast-title" id="toastTitle">Notification</div>
-                <div class="toast-message" id="toastMessage">Message goes here</div>
+                <div class="toast-title" id="toastTitle">Thông báo</div>
+                <div class="toast-message" id="toastMessage">Nội dung thông báo</div>
             </div>
             <button class="toast-close" id="toastClose">✕</button>
             <div class="toast-progress-bar">
@@ -650,9 +650,9 @@
                         <line x1="12" y1="17" x2="12.01" y2="17"></line>
                     </svg>
                 </div>
-                <div class="modal-title">Oops!</div>
-                <div class="modal-message" id="modalMessage">Unexpected Error Occur!</div>
-                <button class="modal-close-btn" onclick="hideErrorModal()">Close</button>
+                <div class="modal-title">Rất tiếc!</div>
+                <div class="modal-message" id="modalMessage">Đã xảy ra lỗi không mong muốn!</div>
+                <button class="modal-close-btn" onclick="hideErrorModal()">Đóng</button>
             </div>
         </div>
 
@@ -661,8 +661,8 @@
             <!-- Left Side: Visual -->
             <div class="auth-visual">
                 <div class="visual-content">
-                    <h2>Welcome Back to Bookommerce</h2>
-                    <p>Login to continue shopping today.</p>
+                    <h2>Chào mừng trở lại với Bookommerce</h2>
+                    <p>Đăng nhập để tiếp tục mua sắm ngay hôm nay.</p>
                 </div>
             </div>
 
@@ -674,7 +674,7 @@
 
                 <div class="auth-header">
                     <h1 class="app-logo"><span>Book</span>ommerce</h1>
-                    <p class="auth-title">Welcome back! Please login to continue.</p>
+                    <p class="auth-title">Chào mừng trở lại! Vui lòng đăng nhập để tiếp tục.</p>
                 </div>
 
                 <form id="loginForm" novalidate>
@@ -682,16 +682,16 @@
                         <label class="form-label" for="email">Email<span class="required">*</span></label>
                         <div class="input-wrapper">
                             <input type="email" id="email" name="email" class="input-field"
-                                placeholder="Enter your email">
+                                placeholder="Nhập email của bạn">
                         </div>
                         <div class="error-message" id="error-email"></div>
                     </div>
 
                     <div class="form-item" id="passwordGroup">
-                        <label class="form-label" for="password">Password<span class="required">*</span></label>
+                        <label class="form-label" for="password">Mật khẩu<span class="required">*</span></label>
                         <div class="input-wrapper">
                             <input type="password" name="password" id="password" class="input-field"
-                                placeholder="Enter your password">
+                                placeholder="Nhập mật khẩu của bạn">
                             <button type="button" class="password-toggle" onclick="togglePassword('password', this)">
                                 <!-- Eye Icon -->
                                 <svg fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -705,11 +705,11 @@
                         <div class="error-message" id="error-password"></div>
                     </div>
 
-                    <button type="submit" class="btn btn-primary" id="submitBtn">Login</button>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Đăng nhập</button>
                 </form>
 
                 <div class="divider">
-                    <span>Or</span>
+                    <span>Hoặc</span>
                 </div>
 
                 <a href="/oauth2/authorization/google" class="btn btn-google">
@@ -727,13 +727,13 @@
                             d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.04l3.66 2.84c.87-2.6 3.3-4.5 6.16-4.5z"
                             fill="#EA4335" />
                     </svg>
-                    Login with Google
+                    Đăng nhập bằng Google
                 </a>
 
                 <div class="auth-footer">
-                    Don't have an account? <a href="/page/signup">Sign Up</a>
+                    Bạn chưa có tài khoản? <a href="/page/signup">Đăng ký</a>
                     <div style="margin-top: 12px; font-size: 13px;">
-                        Are you a seller? <a href="/page/store-login">Login to Store Portal</a>
+                        Bạn là người bán? <a href="/page/store-login">Đăng nhập Kênh người bán</a>
                     </div>
                 </div>
             </div>
@@ -809,7 +809,7 @@
             if (title) {
                 toastTitle.textContent = title;
             } else {
-                toastTitle.textContent = type === 'error' ? 'Error' : 'Success';
+                toastTitle.textContent = type === 'error' ? 'Lỗi' : 'Thành công';
             }
 
             // Set icon
@@ -841,7 +841,7 @@
         const errorModal = document.getElementById('errorModal');
         const modalMessage = document.getElementById('modalMessage');
 
-        function showErrorModal(message = 'Unexpected Error Occur!') {
+        function showErrorModal(message = 'Đã xảy ra lỗi không mong muốn!') {
             modalMessage.textContent = message;
             errorModal.classList.add('show');
         }
@@ -906,7 +906,7 @@
 
             // Submit to API
             submitBtn.disabled = true;
-            submitBtn.textContent = 'Logging in...';
+            submitBtn.textContent = 'Đang đăng nhập...';
 
             const payload = {
                 email: emailInput.value,
@@ -928,16 +928,16 @@
 
                 // Status 401 has NO BODY
                 if (response.status === 401) {
-                    showToast('Bad credentials', 'error');
+                    showToast('Thông tin đăng nhập không chính xác', 'error');
                     submitBtn.disabled = false;
-                    submitBtn.textContent = 'Login';
+                    submitBtn.textContent = 'Đăng nhập';
                     return;
                 }
 
                 if (response.status === 403) {
-                    showToast('Access denied', 'error');
+                    showToast('Truy cập bị từ chối', 'error');
                     submitBtn.disabled = false;
-                    submitBtn.textContent = 'Login';
+                    submitBtn.textContent = 'Đăng nhập';
                     return;
                 }
 
@@ -949,7 +949,7 @@
                     // Signup success: { status: 201, message: "..." }. Login might have data/redirect.
                     // Previous JS had: window.location.href = data.data.redirect || '/';
 
-                    showToast('Login successful', 'success');
+                    showToast('Đăng nhập thành công', 'success');
                     setTimeout(() => {
                         window.location.href = (data.data && data.data.redirect) ? data.data.redirect : '/';
                     }, 1000);
@@ -974,25 +974,25 @@
                         if (globalMsg.includes(':')) {
                             globalMsg = globalMsg.substring(globalMsg.indexOf(':') + 1);
                         }
-                        showToast(globalMsg, 'error', 'Login Failed');
+                        showToast(globalMsg, 'error', 'Đăng nhập thất bại');
                     } else if (data.message && !data.error.fieldErrors) {
-                        showToast(data.message, 'error', 'Error');
+                        showToast(data.message, 'error', 'Lỗi');
                     }
 
                     submitBtn.disabled = false;
-                    submitBtn.textContent = 'Login';
+                    submitBtn.textContent = 'Đăng nhập';
                 } else {
                     // Other errors
                     console.error('Login failed:', data);
-                    showErrorModal('Unexpected Error Occur!');
+                    showErrorModal('Đã xảy ra lỗi không mong muốn!');
                     submitBtn.disabled = false;
-                    submitBtn.textContent = 'Login';
+                    submitBtn.textContent = 'Đăng nhập';
                 }
             } catch (error) {
                 console.error('Error:', error);
-                showErrorModal('Unexpected Error Occur!');
+                showErrorModal('Đã xảy ra lỗi không mong muốn!');
                 submitBtn.disabled = false;
-                submitBtn.textContent = 'Login';
+                submitBtn.textContent = 'Đăng nhập';
             }
         });
     </script>
