@@ -1,8 +1,8 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { List, Rate, Avatar, Typography, Button, Space, Select, Radio, Row, Col, Card, theme, Modal, Form, Input, notification, Popconfirm } from 'antd';
-import { UpOutlined, StarOutlined, LoginOutlined } from '@ant-design/icons';
+import { LoginOutlined, StarOutlined, UpOutlined } from '@ant-design/icons';
+import { Avatar, Button, Card, Col, Form, Input, List, Modal, notification, Popconfirm, Radio, Rate, Row, Select, Space, theme, Typography } from 'antd';
+import { AnimatePresence, motion } from 'framer-motion';
+import { useEffect, useRef, useState } from 'react';
 import { createRating, deleteRating, updateRating } from '../api/book';
-import { motion, AnimatePresence } from 'framer-motion';
 
 const { Text, Title, Paragraph } = Typography;
 const { Option } = Select;
@@ -221,14 +221,14 @@ const ProductReviews = ({
                     });
                 } else {
                     modal.error({
-                        title: 'Unexpected Error Occur',
-                        content: data.message || 'Something went wrong.',
+                        title: 'Đã xảy ra lỗi!',
+                        content: data.message || 'Có lỗi xảy ra.',
                     });
                 }
             } else {
                 modal.error({
-                    title: 'Unexpected Error Occur',
-                    content: 'Network error or server unreachable.',
+                    title: 'Đã xảy ra lỗi!',
+                    content: 'Lỗi mạng hoặc không thể kết nối máy chủ.',
                 });
             }
         } finally {
@@ -255,7 +255,7 @@ const ProductReviews = ({
             } else {
                 notif.error({
                     message: 'Lỗi',
-                    description: 'Network error or server unreachable.',
+                    description: 'Lỗi mạng hoặc không thể kết nối máy chủ.',
                     placement: 'topRight',
                 });
             }
@@ -315,7 +315,7 @@ const ProductReviews = ({
             } else {
                 notif.error({
                     message: 'Lỗi',
-                    description: 'Network error hay server unreachable.',
+                    description: 'Lỗi mạng hoặc không thể kết nối máy chủ.',
                     placement: 'topRight',
                 });
             }

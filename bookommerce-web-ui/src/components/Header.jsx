@@ -118,7 +118,7 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
         },
         {
             key: 'logout',
-            label: 'Logout',
+            label: 'Đăng xuất',
             icon: <LogoutOutlined />,
             danger: true,
             onClick: () => {
@@ -138,7 +138,7 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
     ];
 
     const menuItems = [
-        ...(location.pathname === '/' ? [{ key: 'home', label: 'Shopping' }] : []),
+        ...(location.pathname === '/' ? [{ key: 'home', label: 'Mua sắm' }] : []),
     ];
 
     return (
@@ -196,7 +196,7 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
 
             {/* Mobile Menu Drawer */}
             <Drawer
-                title="Menu"
+                title="Danh mục"
                 placement="left"
                 onClose={() => setMenuOpen(false)}
                 open={menuOpen}
@@ -251,10 +251,10 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                         screens.md && (
                             <Space>
                                 <Button type="text" onClick={() => window.location.href = 'https://bff.bookommerce.com:8181/protected/oauth2/authorization/bff'}>
-                                    Log in
+                                    Đăng nhập
                                 </Button>
                                 <Button type="primary" onClick={() => window.location.href = 'https://auth.bookommerce.com:8282/page/signup'}>
-                                    Sign up
+                                    Đăng ký
                                 </Button>
                             </Space>
                         )

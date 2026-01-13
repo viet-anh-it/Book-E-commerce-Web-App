@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { List, Button, Typography, theme } from 'antd';
-import { useSearchParams, useLocation } from 'react-router-dom';
-import ProductCard from './ProductCard';
+import { Button, List, Typography, theme } from 'antd';
+import React, { useEffect, useState } from 'react';
+import { useLocation, useSearchParams } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
+import ProductCard from './ProductCard';
 
 
 const ProductList = ({ onProductsChange }) => {
@@ -274,10 +274,10 @@ const ProductList = ({ onProductsChange }) => {
                                 >
                                     {hasMore ? (
                                         <div style={{ height: 32, lineHeight: '32px' }}>
-                                            <Button onClick={handleLoadMore}>Load More</Button>
+                                            <Button onClick={handleLoadMore}>Xem thêm</Button>
                                         </div>
                                     ) : (
-                                        <Typography.Text type="secondary">No more products to load</Typography.Text>
+                                        <Typography.Text type="secondary">Không còn sản phẩm nào</Typography.Text>
                                     )}
 
                                     {products.length > 4 && (
@@ -286,7 +286,7 @@ const ProductList = ({ onProductsChange }) => {
                                                 type="link"
                                                 onClick={scrollToTop}
                                             >
-                                                Back to top
+                                                Về đầu trang
                                             </Button>
                                         </div>
                                     )}

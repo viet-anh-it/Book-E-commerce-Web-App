@@ -1,12 +1,12 @@
-import React, { useState, useRef, useEffect } from 'react';
-import { useParams, useNavigate, useLocation } from 'react-router-dom';
-import { Button, Row, Col, Image, Typography, Rate, InputNumber, Card, Progress, Spin, notification, theme } from 'antd';
-import { ArrowLeftOutlined, ShoppingCartOutlined, DownOutlined, UpOutlined, CloseOutlined } from '@ant-design/icons';
+import { ArrowLeftOutlined, CloseOutlined, DownOutlined, ShoppingCartOutlined, UpOutlined } from '@ant-design/icons';
+import { Button, Card, Col, Image, InputNumber, Progress, Rate, Row, Spin, Typography, notification, theme } from 'antd';
+import { useEffect, useRef, useState } from 'react';
+import { useLocation, useNavigate, useParams } from 'react-router-dom';
+import { getBookById, getRatings } from '../api/book';
 import { addToCart } from '../api/cart';
+import BackToTopButton from '../components/BackToTopButton';
 import ToastProgressBar from '../components/common/ToastProgressBar';
 import ProductReviews from '../components/ProductReviews';
-import { getBookById, getRatings, createRating } from '../api/book';
-import BackToTopButton from '../components/BackToTopButton';
 import { useAuth } from '../contexts/AuthContext';
 
 const { Title, Text } = Typography;
@@ -30,7 +30,7 @@ const ProductDetailPage = () => {
             const duration = 3;
 
             api.success({
-                message: 'Added to cart successfully',
+                message: 'Thêm vào giỏ hàng thành công',
                 description: (
                     <div style={{ position: 'relative', paddingBottom: 10 }}>
                         <ToastProgressBar duration={duration} onClose={() => api.destroy(key)} />
@@ -68,12 +68,12 @@ const ProductDetailPage = () => {
                     message = 'Unauthorized';
                     description = 'Please login to continue.';
                 } else {
-                    message = 'Unexpected Error Occur!';
-                    description = data.message || 'Something went wrong.';
+                    message = 'Đã xảy ra lỗi!';
+                    description = data.message || 'Có lỗi xảy ra.';
                 }
             } else {
-                message = 'Unexpected Error Occur!';
-                description = 'Network error or server unreachable.';
+                message = 'Đã xảy ra lỗi!';
+                description = 'Lỗi mạng hoặc không thể kết nối máy chủ.';
             }
 
             api.error({
@@ -395,8 +395,8 @@ const ProductDetailPage = () => {
     if (!product) {
         return (
             <div style={{ padding: '24px', textAlign: 'center' }}>
-                <Title level={3}>Product not found</Title>
-                <Button onClick={() => navigate(-1)}>Back</Button>
+                <Title level={3}>Không tìm thấy sản phẩm</Title>
+                <Button onClick={() => navigate(-1)}>Quay lại</Button>
             </div>
         );
     }
@@ -496,7 +496,7 @@ const ProductDetailPage = () => {
                             onClick={() => navigate(-1)}
                             style={{ marginBottom: '16px', paddingLeft: '12px', paddingRight: '12px' }}
                         >
-                            Back
+                            Quay lại
                         </Button>
 
                         <Card bordered={false} bodyStyle={{ padding: 24, display: 'flex', justifyContent: 'center' }}>
@@ -508,7 +508,7 @@ const ProductDetailPage = () => {
                             />
                         </Card>
 
-                        <Card bordered={false} title={<Title level={3}>Rating</Title>} bodyStyle={{ padding: 24 }} style={{ marginTop: 24 }}>
+                        <Card bordered={false} title={<Title level={3}>Đánh giá</Title>} bodyStyle={{ padding: 24 }} style={{ marginTop: 24 }}>
                             <div style={{ display: 'flex', gap: 24 }}>
                                 <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', minWidth: 120 }}>
                                     <span style={{ fontSize: 48, fontWeight: 'bold' }}>{product.rating}<span style={{ fontSize: 24, color: '#888' }}>/5</span></span>
@@ -518,7 +518,7 @@ const ProductDetailPage = () => {
                                 <div style={{ flex: 1, display: 'flex', flexDirection: 'column', gap: 8 }}>
                                     {ratingData.map(item => (
                                         <div key={item.star} style={{ display: 'flex', alignItems: 'center', gap: 12 }}>
-                                            <Text style={{ whiteSpace: 'nowrap' }}>{item.star} star</Text>
+                                            <Text style={{ whiteSpace: 'nowrap' }}>{item.star} sao</Text>
                                             <Progress percent={item.percent} strokeColor="#faad14" showInfo={true} format={percent => `${percent}%`} />
                                         </div>
                                     ))}
@@ -536,7 +536,7 @@ const ProductDetailPage = () => {
                                 <Title level={1} style={{ margin: 0 }}>{product.title}</Title>
 
                                 <Text style={{ fontSize: '18px', color: 'text.secondary' }}>
-                                    Author: <Text strong>{product.author}</Text>
+                                    Tác giả: <Text strong>{product.author}</Text>
                                 </Text>
 
                                 <div style={{ display: 'flex', alignItems: 'center', gap: '8px' }}>
@@ -551,7 +551,7 @@ const ProductDetailPage = () => {
                                 <div style={{ marginTop: 24, display: 'flex', gap: 16, alignItems: 'center' }}>
                                     {user ? (
                                         <>
-                                            <Text>Quantity:</Text>
+                                            <Text>Số lượng:</Text>
                                             <InputNumber
                                                 min={1}
                                                 defaultValue={1}
@@ -560,14 +560,14 @@ const ProductDetailPage = () => {
                                                 onPressEnter={handleAddToCart}
                                             />
                                             <Button type="primary" icon={<ShoppingCartOutlined />} size="large" onClick={handleAddToCart}>
-                                                Add to Cart
+                                                Thêm vào giỏ
                                             </Button>
                                         </>
                                     ) : (
                                         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
-                                            <Text style={{ fontSize: '16px' }}>Want to buy this book?</Text>
+                                            <Text style={{ fontSize: '16px' }}>Bạn muốn mua sách này?</Text>
                                             <a href="https://auth.bookommerce.com:8282/page/login" className="auth-link" style={{ fontSize: '16px', fontWeight: 'bold', color: '#1890ff' }}>
-                                                Login for Shopping
+                                                Đăng nhập để mua sắm
                                             </a>
                                         </div>
                                     )}
@@ -578,7 +578,7 @@ const ProductDetailPage = () => {
 
                     <Card
                         bordered={false}
-                        title={<Title level={3}>Description</Title>}
+                        title={<Title level={3}>Mô tả</Title>}
                         bodyStyle={{ padding: 24 }}
                         style={{ marginTop: 24, minHeight: descriptionMinHeight }}
                     >
@@ -617,7 +617,7 @@ const ProductDetailPage = () => {
                 <Col span={24}>
                     <Card
                         bordered={false}
-                        title={<Title level={3}>Reviews</Title>}
+                        title={<Title level={3}>Đánh giá</Title>}
                         bodyStyle={{ padding: 24 }}
                     >
                         <ProductReviews

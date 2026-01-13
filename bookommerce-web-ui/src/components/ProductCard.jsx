@@ -1,10 +1,10 @@
+import { CloseOutlined, ShoppingCartOutlined } from '@ant-design/icons';
+import { Button, Card, InputNumber, notification, Rate, theme, Typography } from 'antd';
 import React, { useState } from 'react';
-import { Card, Typography, Button, theme, Rate, InputNumber, notification } from 'antd';
+import { useLocation, useNavigate } from 'react-router-dom';
 import { addToCart } from '../api/cart';
-import ToastProgressBar from './common/ToastProgressBar';
-import { ShoppingCartOutlined, CloseOutlined } from '@ant-design/icons';
-import { useNavigate, useLocation } from 'react-router-dom';
 import { useAuth } from '../contexts/AuthContext';
+import ToastProgressBar from './common/ToastProgressBar';
 
 const { Text, Title } = Typography;
 
@@ -29,7 +29,7 @@ const ProductCard = ({ product }) => {
             const duration = 3;
 
             api.success({
-                message: 'Added to cart successfully',
+                message: 'Thêm vào giỏ hàng thành công',
                 description: (
                     <div style={{ position: 'relative', paddingBottom: 10 }}>
                         <ToastProgressBar duration={duration} onClose={() => api.destroy(key)} />
@@ -68,12 +68,12 @@ const ProductCard = ({ product }) => {
                     message = 'Unauthorized';
                     description = 'Please login to continue.';
                 } else {
-                    message = 'Unexpected Error Occur!';
-                    description = data.message || 'Something went wrong.';
+                    message = 'Đã xảy ra lỗi!';
+                    description = data.message || 'Có lỗi xảy ra.';
                 }
             } else {
-                message = 'Unexpected Error Occur!';
-                description = 'Network error or server unreachable.';
+                message = 'Đã xảy ra lỗi!';
+                description = 'Lỗi mạng hoặc không thể kết nối máy chủ.';
             }
 
             api.error({
@@ -141,13 +141,13 @@ const ProductCard = ({ product }) => {
                                 onPressEnter={handleAddToCart}
                             />
                             <Button type="primary" icon={<ShoppingCartOutlined />} size="middle" onClick={handleAddToCart}>
-                                Add
+                                Thêm
                             </Button>
                         </div>
                     ) : (
                         <div key="login-link" style={{ padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', width: '100%' }} onClick={e => e.stopPropagation()}>
                             <a href="https://auth.bookommerce.com:8282/page/login" className="auth-link" style={{ fontSize: '14px', fontWeight: '500', color: '#1890ff' }}>
-                                Login for Shopping
+                                Đăng nhập để mua sắm
                             </a>
                         </div>
                     )

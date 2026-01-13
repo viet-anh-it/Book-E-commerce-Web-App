@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react';
-import { Layout, theme, Drawer, Grid } from 'antd';
+import { Drawer, Grid, Layout, theme } from 'antd';
+import { useState } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
+import BackToTopButton from '../components/BackToTopButton';
+import ProductControls from '../components/ProductControls';
 import ProductFilter from '../components/ProductFilter';
 import ProductList from '../components/ProductList';
-import ProductControls from '../components/ProductControls';
 import PromotionCarousel from '../components/PromotionCarousel';
-import BackToTopButton from '../components/BackToTopButton';
 
 const { Content, Sider } = Layout;
 const { useBreakpoint } = Grid;
@@ -80,7 +80,7 @@ const ProductDiscoveryPage = () => {
 
                 {isMobile && (
                     <Drawer
-                        title="Filters"
+                        title="Bộ lọc"
                         placement="left"
                         onClose={() => setFilterOpen(false)}
                         open={filterOpen}

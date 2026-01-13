@@ -201,7 +201,7 @@ const ProfilePage = () => {
 
     const handleAvatarSubmit = async () => {
         if (!selectedFile) {
-            message.error('Vui lòng chọn một tầm ảnh!');
+            message.error('Vui lòng chọn một tấm ảnh!');
             return;
         }
 

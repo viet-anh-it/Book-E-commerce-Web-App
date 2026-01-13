@@ -1,6 +1,5 @@
-import React from 'react';
-import { Layout, Row, Col, Typography, Space, theme } from 'antd';
-import { FacebookFilled, TwitterSquareFilled, InstagramFilled, LinkedinFilled } from '@ant-design/icons';
+import { FacebookFilled, InstagramFilled, LinkedinFilled, TwitterSquareFilled } from '@ant-design/icons';
+import { Col, Layout, Row, Space, theme, Typography } from 'antd';
 
 const { Footer } = Layout;
 const { Title, Text, Link } = Typography;
@@ -17,7 +16,7 @@ const AppFooter = () => {
                         <Space direction="vertical" size="middle">
                             <Title level={4} style={{ color: '#fff', margin: 0 }}>Bookommerce</Title>
                             <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>
-                                Your premier destination for discovering and buying books. We offer a vast collection of titles across all genres.
+                                Điểm đến hàng đầu của bạn để khám phá và mua sách. Chúng tôi cung cấp một bộ sưu tập lớn các đầu sách thuộc mọi thể loại.
                             </Text>
                         </Space>
                     </Col>
@@ -25,12 +24,12 @@ const AppFooter = () => {
                     {/* Quick Links */}
                     <Col xs={24} sm={12} md={6}>
                         <Space direction="vertical" size="middle">
-                            <Title level={5} style={{ color: '#fff', margin: 0 }}>Quick Links</Title>
+                            <Title level={5} style={{ color: '#fff', margin: 0 }}>Liên kết nhanh</Title>
                             <Space direction="vertical" size="small">
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Home</Link>
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Best Sellers</Link>
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>New Arrivals</Link>
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Contact Us</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Trang chủ</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Bán chạy nhất</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Sách mới</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Liên hệ</Link>
                             </Space>
                         </Space>
                     </Col>
@@ -38,12 +37,12 @@ const AppFooter = () => {
                     {/* Customer Service */}
                     <Col xs={24} sm={12} md={6}>
                         <Space direction="vertical" size="middle">
-                            <Title level={5} style={{ color: '#fff', margin: 0 }}>Customer Service</Title>
+                            <Title level={5} style={{ color: '#fff', margin: 0 }}>Chăm sóc khách hàng</Title>
                             <Space direction="vertical" size="small">
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>FAQ</Link>
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Shipping & Returns</Link>
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Order Tracking</Link>
-                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Privacy Policy</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Câu hỏi thường gặp</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Vận chuyển & Đổi trả</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Theo dõi đơn hàng</Link>
+                                <Link href="#" style={{ color: 'rgba(255, 255, 255, 0.65)' }}>Chính sách bảo mật</Link>
                             </Space>
                         </Space>
                     </Col>
@@ -51,7 +50,7 @@ const AppFooter = () => {
                     {/* Stay Connected */}
                     <Col xs={24} sm={12} md={6}>
                         <Space direction="vertical" size="middle">
-                            <Title level={5} style={{ color: '#fff', margin: 0 }}>Stay Connected</Title>
+                            <Title level={5} style={{ color: '#fff', margin: 0 }}>Kết nối với chúng tôi</Title>
                             <Space size="large">
                                 <Link href="#" style={{ color: '#fff', fontSize: '24px' }}><FacebookFilled /></Link>
                                 <Link href="#" style={{ color: '#fff', fontSize: '24px' }}><TwitterSquareFilled /></Link>
@@ -59,7 +58,7 @@ const AppFooter = () => {
                                 <Link href="#" style={{ color: '#fff', fontSize: '24px' }}><LinkedinFilled /></Link>
                             </Space>
                             <Text style={{ color: 'rgba(255, 255, 255, 0.65)' }}>
-                                Subscribe to our newsletter for updates and exclusive offers.
+                                Đăng ký nhận bản tin để cập nhật thông tin và ưu đãi độc quyền.
                             </Text>
                         </Space>
                     </Col>
@@ -67,7 +66,7 @@ const AppFooter = () => {
 
                 <div style={{ marginTop: 48, paddingTop: 24, borderTop: '1px solid rgba(255, 255, 255, 0.1)', textAlign: 'center' }}>
                     <Text style={{ color: 'rgba(255, 255, 255, 0.45)' }}>
-                        Bookommerce ©{new Date().getFullYear()} Created with Ant Design
+                        Bookommerce ©{new Date().getFullYear()} Được tạo bởi Ant Design
                     </Text>
                 </div>
             </div>

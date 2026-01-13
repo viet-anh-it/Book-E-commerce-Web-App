@@ -17,14 +17,14 @@ const ForbiddenPage = () => {
             <Result
                 status="403"
                 title="403"
-                subTitle="Sorry, you are not authorized to access this page."
+                subTitle="Xin lỗi, bạn không có quyền truy cập trang này."
                 extra={
                     <Button
                         type="primary"
                         icon={<HomeOutlined />}
                         onClick={() => window.location.href = 'https://bff.bookommerce.com:8181/protected/page/confirm-logout'}
                     >
-                        Logout & Switch Account
+                        Đăng xuất & Chuyển tài khoản
                     </Button>
                 }
             />

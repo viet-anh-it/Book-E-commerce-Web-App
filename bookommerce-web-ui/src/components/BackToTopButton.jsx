@@ -3,7 +3,7 @@ import { FloatButton } from 'antd';
 const BackToTopButton = () => {
     return (
         <FloatButton.BackTop
-            tooltip="Scroll to Top"
+            tooltip="Cuộn lên đầu trang"
             type="primary"
             style={{ right: 24, bottom: 24 }}
         />

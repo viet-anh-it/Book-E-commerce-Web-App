@@ -1,10 +1,10 @@
-import React, { useState, useEffect } from 'react';
-import { Row, Col, Typography, Empty, Button, Spin, message, notification, theme } from 'antd';
-import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeftOutlined, CloseOutlined } from '@ant-design/icons';
+import { Button, Col, Empty, Row, Spin, Typography, message, notification, theme } from 'antd';
+import { useEffect, useState } from 'react';
+import { Link, useNavigate } from 'react-router-dom';
+import BackToTopButton from '../components/BackToTopButton';
 import CartItem from '../components/CartItem';
 import CartSummary from '../components/CartSummary';
-import BackToTopButton from '../components/BackToTopButton';
 
 import { getCart, removeCartItem, updateCartItem } from '../api/cart';
 import ToastProgressBar from '../components/common/ToastProgressBar';
@@ -80,7 +80,7 @@ const CartPage = () => {
             const duration = 5;
 
             api.success({
-                message: 'Cart item quantity updated successfully',
+                message: 'Cập nhật số lượng thành công',
                 description: (
                     <div style={{ position: 'relative', paddingBottom: 10 }}>
                         <ToastProgressBar duration={duration} onClose={() => api.destroy(key)} />
@@ -158,7 +158,7 @@ const CartPage = () => {
             const duration = 5;
 
             api.success({
-                message: 'Removed from cart successfully',
+                message: 'Xóa sản phẩm thành công',
                 description: (
                     <div style={{ position: 'relative', paddingBottom: 10 }}>
                         <ToastProgressBar duration={duration} onClose={() => api.destroy(key)} />
@@ -231,7 +231,7 @@ const CartPage = () => {
     if (loading) {
         return (
             <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', height: '100vh', padding: '24px' }}>
-                <Spin size="large" tip="Loading cart..." />
+                <Spin size="large" tip="Đang tải giỏ hàng..." />
             </div>
         );
     }
@@ -246,19 +246,19 @@ const CartPage = () => {
                 onClick={() => navigate(-1)}
                 style={{ marginBottom: '16px', paddingLeft: '12px', paddingRight: '12px' }}
             >
-                Back
+                Quay lại
             </Button>
             <Title level={2} style={{ marginBottom: '24px', marginTop: 0 }}>
-                Shopping Cart ({totalItems} {totalItems === 1 ? 'item' : 'items'})
+                Giỏ hàng ({totalItems} sản phẩm)
             </Title>
 
             {cartItems.length === 0 ? (
                 <Empty
-                    description="Your cart is empty"
+                    description="Giỏ hàng trống"
                     image={Empty.PRESENTED_IMAGE_SIMPLE}
                 >
                     <Link to="/">
-                        <Button type="primary">Continue Shopping</Button>
+                        <Button type="primary">Tiếp tục mua sắm</Button>
                     </Link>
                 </Empty>
             ) : (

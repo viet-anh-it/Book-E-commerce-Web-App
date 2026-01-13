@@ -1,18 +1,19 @@
-import { useState } from 'react';
-import { Layout, theme, ConfigProvider } from 'antd';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
-import Header from './components/Header';
-import ProductDiscoveryPage from './pages/ProductDiscoveryPage';
-import ProductDetailPage from './pages/ProductDetailPage';
-import CartPage from './pages/CartPage';
-import AppFooter from './components/Footer';
-import ScrollToTop from './components/ScrollToTop';
-import ProtectedRoute from './components/ProtectedRoute';
-import { createRoot } from 'react-dom/client'
-import './css/index.css'
+import { ConfigProvider, Layout, theme } from 'antd';
+import viVN from 'antd/locale/vi_VN';
 import PropTypes from 'prop-types';
-import ForbiddenPage from './pages/ForbiddenPage';
+import { useState } from 'react';
+import { createRoot } from 'react-dom/client';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import AppFooter from './components/Footer';
+import Header from './components/Header';
+import ProtectedRoute from './components/ProtectedRoute';
+import ScrollToTop from './components/ScrollToTop';
 import { AuthProvider, useAuth } from './contexts/AuthContext';
+import './css/index.css';
+import CartPage from './pages/CartPage';
+import ForbiddenPage from './pages/ForbiddenPage';
+import ProductDetailPage from './pages/ProductDetailPage';
+import ProductDiscoveryPage from './pages/ProductDiscoveryPage';
 import ProfilePage from './pages/ProfilePage';
 
 const App = () => {
@@ -29,6 +30,7 @@ const App = () => {
 
   return (
     <ConfigProvider
+      locale={viVN}
       theme={{
         algorithm: isDarkMode ? theme.darkAlgorithm : theme.defaultAlgorithm,
       }}

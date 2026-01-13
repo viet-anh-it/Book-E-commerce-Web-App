@@ -1,34 +1,34 @@
-08:03:23.205 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 19420 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
-08:03:23.218 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
-08:03:23.414 | INFO | DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-08:03:23.435 | INFO | DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-08:03:35.802 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-08:03:35.813 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-08:03:36.987 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 1094 ms. Found 7 JPA repository interfaces.
-08:03:37.053 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-08:03:37.057 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-08:03:37.136 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-08:03:37.150 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-08:03:37.153 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-08:03:37.155 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-08:03:37.162 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-08:03:37.169 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-08:03:37.194 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-08:03:37.196 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 98 ms. Found 0 Redis repository interfaces.
-08:03:41.511 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
-08:03:41.598 | INFO | StandardService: Starting service [Tomcat]
-08:03:41.612 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
-08:03:41.922 | INFO | [/]: Initializing Spring embedded WebApplicationContext
-08:03:41.925 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 18486 ms
-08:03:42.529 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
-08:03:42.761 | INFO | Version: HHH000412: Hibernate ORM core version 6.6.39.Final
-08:03:42.888 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
-08:03:44.730 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-08:03:44.856 | INFO | HikariDataSource: HikariPool-1 - Starting...
-08:03:46.542 | INFO | HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@3db7c6f3
-08:03:46.611 | INFO | HikariDataSource: HikariPool-1 - Start completed.
-08:03:46.819 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-08:03:46.901 | INFO | pooling: HHH10001005: Database info:
+14:57:51.749 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 16640 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+14:57:51.809 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+14:57:52.013 | INFO | DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+14:57:52.015 | INFO | DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+14:58:00.555 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+14:58:00.603 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+14:58:01.994 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 1353 ms. Found 7 JPA repository interfaces.
+14:58:02.058 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+14:58:02.064 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+14:58:02.476 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+14:58:02.671 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+14:58:02.765 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+14:58:02.869 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+14:58:02.891 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+14:58:02.939 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+14:58:02.957 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+14:58:03.051 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 965 ms. Found 0 Redis repository interfaces.
+14:58:06.080 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+14:58:06.115 | INFO | StandardService: Starting service [Tomcat]
+14:58:06.119 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+14:58:06.280 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+14:58:06.281 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 14263 ms
+14:58:06.822 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+14:58:06.947 | INFO | Version: HHH000412: Hibernate ORM core version 6.6.39.Final
+14:58:07.039 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+14:58:09.313 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+14:58:09.403 | INFO | HikariDataSource: HikariPool-1 - Starting...
+14:58:10.474 | INFO | HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7847b1b0
+14:58:10.478 | INFO | HikariDataSource: HikariPool-1 - Start completed.
+14:58:10.604 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+14:58:10.665 | INFO | pooling: HHH10001005: Database info:
 	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
 	Database driver: undefined/unknown
 	Database version: 8.0.44
@@ -36,925 +36,131 @@
 	Isolation level: undefined/unknown
 	Minimum pool size: undefined/unknown
 	Maximum pool size: undefined/unknown
-08:03:50.373 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-08:03:50.753 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-08:03:53.130 | INFO | EventConfig: Creating consumer group: [stream=user-events, group=user-group]
-08:03:54.854 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
-08:03:55.009 | INFO | EventConfig: Starting listener container: [stream=user-events, group=user-group]
-08:03:56.032 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-08:03:57.272 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-08:03:58.298 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
-08:03:58.481 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [null]
-08:03:58.552 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
-08:03:58.613 | INFO | BookommerceApplication: Started BookommerceApplication in 36.901 seconds (process running for 39.35)
-08:04:44.184 | INFO | [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
-08:04:44.186 | INFO | DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-08:04:44.190 | INFO | DispatcherServlet: Completed initialization in 1 ms
-08:04:44.242 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:04:44.270 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:44.276 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:04:45.944 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-08:04:45.957 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:45.977 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-08:04:46.073 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:04:46.087 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.110 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:04:46.193 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-08:04:46.232 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.265 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-08:04:46.279 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-08:04:46.316 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-08:04:46.323 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.331 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-08:04:46.340 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-08:04:46.327 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.360 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-08:04:46.355 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.348 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-08:04:46.381 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-08:04:46.382 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.393 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-08:04:46.582 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:04:46.624 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.633 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:04:46.641 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:04:46.644 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.644 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:04:46.675 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:04:46.694 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:04:46.698 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:33:13.914 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:33:13.988 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:14.009 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:33:15.473 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-08:33:15.484 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.509 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-08:33:15.581 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-08:33:15.599 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.615 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-08:33:15.612 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-08:33:15.619 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.619 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.607 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-08:33:15.619 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-08:33:15.621 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-08:33:15.645 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:33:15.698 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.695 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-08:33:15.704 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-08:33:15.706 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:33:15.721 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.714 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.734 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-08:33:15.736 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:33:15.742 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.742 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-08:33:15.753 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:33:15.846 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:33:15.862 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.862 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:33:15.862 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:33:15.865 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:33:15.869 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:43:07.268 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:43:07.303 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:07.307 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:43:08.655 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:43:08.666 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:08.679 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:43:08.727 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-08:43:08.745 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:08.764 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-08:43:08.828 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-08:43:08.874 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:08.861 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-08:43:08.891 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-08:43:08.897 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:08.904 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-08:43:08.947 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-08:43:08.995 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:08.998 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-08:43:09.027 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-08:43:09.052 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:09.059 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:43:09.069 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:43:09.070 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-08:43:09.077 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:09.078 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:09.081 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:43:09.082 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:43:09.085 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:43:09.085 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-08:43:09.090 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:09.100 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:43:09.097 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:43:09.111 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-08:45:50.606 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:45:50.649 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:50.659 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:45:51.398 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:45:51.451 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.464 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:45:51.594 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-08:45:51.596 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.598 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-08:45:51.721 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-08:45:51.752 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.729 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-08:45:51.788 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.770 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-08:45:51.778 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-08:45:51.815 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.803 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-08:45:51.838 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.803 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-08:45:51.811 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-08:45:51.821 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-08:45:51.867 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.850 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-08:45:51.867 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-08:45:51.909 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:45:51.912 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:51.914 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:45:52.084 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:45:52.127 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:52.129 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:45:52.144 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:45:52.142 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:45:52.152 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:48:43.394 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:48:43.427 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:43.427 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:48:44.372 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-08:48:44.383 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.387 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-08:48:44.497 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-08:48:44.517 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.531 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-08:48:44.540 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-08:48:44.571 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:48:44.571 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-08:48:44.591 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.591 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-08:48:44.593 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-08:48:44.604 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.604 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.606 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.615 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-08:48:44.621 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.624 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:48:44.626 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:48:44.642 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-08:48:44.650 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-08:48:44.651 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-08:48:44.664 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.743 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:48:44.869 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:48:44.862 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:48:44.885 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.887 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:44.891 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:48:44.892 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:48:52.713 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:48:52.729 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:52.733 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-08:48:53.161 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:48:53.179 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.184 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-08:48:53.205 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-08:48:53.219 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.226 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-08:48:53.249 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-08:48:53.267 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.271 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-08:48:53.279 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-08:48:53.282 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.283 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-08:48:53.348 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-08:48:53.357 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-08:48:53.359 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.364 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.366 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-08:48:53.369 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-08:48:53.383 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-08:48:53.394 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.398 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:48:53.400 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-08:48:53.402 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:48:53.420 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.424 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-08:48:53.405 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.407 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-08:48:53.436 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-08:48:53.407 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-08:48:53.442 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:09:08.653 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:09:08.679 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:08.680 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:09:09.123 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-09:09:09.125 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.128 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-09:09:09.163 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:09:09.165 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.182 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:09:09.227 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-09:09:09.232 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:09:09.233 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.241 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.242 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:09:09.233 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-09:09:09.282 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.283 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:09:09.283 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-09:09:09.283 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-09:09:09.283 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.312 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:09:09.323 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-09:09:09.330 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.332 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-09:09:09.336 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-09:09:09.338 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.340 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-09:09:09.348 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:09:09.348 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-09:09:09.348 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.348 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:09:09.351 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-09:09:09.351 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:10:57.102 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:10:57.105 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.105 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:10:57.364 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:10:57.367 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.368 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:10:57.411 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-09:10:57.412 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.419 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-09:10:57.439 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-09:10:57.443 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.445 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-09:10:57.455 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-09:10:57.468 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.470 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-09:10:57.528 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-09:10:57.530 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.541 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-09:10:57.544 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-09:10:57.557 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.557 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-09:10:57.561 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:10:57.581 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-09:10:57.603 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.605 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-09:10:57.563 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:10:57.586 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.610 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:10:57.607 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.612 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:10:57.610 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:10:57.624 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:10:57.627 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:11:48.356 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:11:48.358 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.359 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:11:48.600 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:11:48.602 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.609 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:11:48.640 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-09:11:48.649 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-09:11:48.701 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-09:11:48.701 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.701 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.705 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-09:11:48.710 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-09:11:48.723 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-09:11:48.748 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.749 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.752 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-09:11:48.755 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-09:11:48.760 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-09:11:48.773 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.776 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-09:11:48.785 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-09:11:48.789 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.790 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-09:11:48.825 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:11:48.836 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.837 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:11:48.830 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:11:48.839 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.840 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:11:48.854 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:11:48.858 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:11:48.865 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:18:04.503 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:18:04.556 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:04.560 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:18:05.239 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-09:18:05.241 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.243 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-09:18:05.340 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:18:05.340 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.341 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:18:05.378 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:18:05.392 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.393 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-09:18:05.393 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:18:05.398 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.404 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:18:05.430 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.394 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:18:05.435 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-09:18:05.447 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.446 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-09:18:05.455 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-09:18:05.456 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-09:18:05.456 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.456 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-09:18:05.548 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-09:18:05.561 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.564 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-09:18:05.564 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:18:05.570 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.574 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:18:05.574 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-09:18:05.594 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:18:05.602 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-09:26:55.497 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:26:55.537 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:55.541 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:26:56.172 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:26:56.184 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.190 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:26:56.203 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:26:56.212 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.216 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:26:56.224 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:26:56.229 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:26:56.228 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.233 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.235 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-09:26:56.236 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:26:56.236 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:26:56.237 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.247 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-09:26:56.250 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-09:26:56.251 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.251 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-09:26:56.337 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-09:26:56.348 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.348 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-09:26:56.433 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-09:26:56.440 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.449 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-09:26:56.472 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-09:26:56.484 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.490 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-09:26:56.497 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-09:26:56.498 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:26:56.498 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-09:29:15.431 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:29:15.440 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.441 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-09:29:15.803 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:29:15.805 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.807 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-09:29:15.896 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:29:15.896 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-09:29:15.896 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-09:29:15.899 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.899 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.899 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.900 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-09:29:15.900 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-09:29:15.900 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-09:29:15.911 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:29:15.922 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-09:29:15.920 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:29:15.922 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.925 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-09:29:15.925 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.925 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.927 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-09:29:15.930 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-09:29:15.933 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-09:29:15.934 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:15.937 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-09:29:16.002 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-09:29:16.024 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:16.041 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-09:29:16.041 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-09:29:16.044 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-09:29:16.044 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-10:31:07.884 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 11124 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
-10:31:07.995 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
-10:31:08.170 | INFO | DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-10:31:08.171 | INFO | DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-10:31:12.055 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-10:31:12.064 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-10:31:12.733 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 648 ms. Found 7 JPA repository interfaces.
-10:31:12.772 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-10:31:12.775 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-10:31:12.819 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-10:31:12.827 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-10:31:12.831 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-10:31:12.835 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-10:31:12.840 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-10:31:12.844 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-10:31:12.846 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-10:31:12.847 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 52 ms. Found 0 Redis repository interfaces.
-10:31:16.577 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
-10:31:16.626 | INFO | StandardService: Starting service [Tomcat]
-10:31:16.635 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
-10:31:16.860 | INFO | [/]: Initializing Spring embedded WebApplicationContext
-10:31:16.877 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 8704 ms
-10:31:17.896 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
-10:31:19.109 | INFO | Version: HHH000412: Hibernate ORM core version 6.6.39.Final
-10:31:19.209 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
-10:31:20.078 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-10:31:20.172 | INFO | HikariDataSource: HikariPool-1 - Starting...
-10:31:21.547 | INFO | HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5ebcdd15
-10:31:21.559 | INFO | HikariDataSource: HikariPool-1 - Start completed.
-10:31:21.746 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-10:31:21.810 | INFO | pooling: HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.44
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-10:31:25.091 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-10:31:25.503 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-10:31:28.747 | INFO | EventConfig: Creating consumer group: [stream=user-events, group=user-group]
-10:31:29.584 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
-10:31:29.698 | INFO | EventConfig: Starting listener container: [stream=user-events, group=user-group]
-10:31:30.497 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-10:31:31.063 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-10:31:32.143 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
-10:31:32.465 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [null]
-10:31:32.537 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
-10:31:32.597 | INFO | BookommerceApplication: Started BookommerceApplication in 26.759 seconds (process running for 28.078)
-10:32:27.610 | INFO | [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
-10:32:27.611 | INFO | DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-10:32:27.615 | INFO | DispatcherServlet: Completed initialization in 3 ms
-10:32:27.653 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-10:32:27.671 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:27.677 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-10:32:28.507 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-10:32:28.530 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.556 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-10:32:28.628 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-10:32:28.647 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.712 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-10:32:28.692 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-10:32:28.726 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-10:32:28.727 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.729 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.728 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-10:32:28.733 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-10:32:28.743 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-10:32:28.746 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-10:32:28.753 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.753 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.761 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-10:32:28.762 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-10:32:28.767 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-10:32:28.769 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.777 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-10:32:28.872 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-10:32:28.877 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.882 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-10:32:28.903 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-10:32:28.907 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.913 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-10:32:28.918 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-10:32:28.920 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:28.924 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-10:32:46.988 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:32:47.577 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:32:47.578 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@787b4984, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:32:47.579 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:32:59.162 | DEBUG | FilterChainProxy: Securing GET /api/genres
-10:32:59.163 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:32:59.164 | DEBUG | FilterChainProxy: Secured GET /api/genres
-10:33:23.025 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:33:23.435 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:33:23.436 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@7ec52943, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:33:23.437 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:33:57.726 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:33:58.125 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:33:58.126 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@5ac929e7, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:33:58.128 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:36:12.795 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:36:13.227 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:36:13.228 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@462d3eb2, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:36:13.229 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:40:33.660 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:40:34.047 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:40:34.048 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@41cd04e5, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:40:34.049 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:40:49.514 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:40:49.897 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:40:49.898 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@2bb386c5, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:40:49.898 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:41:52.666 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:41:53.080 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:41:53.081 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@48220353, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:41:53.081 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:43:31.000 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:43:31.419 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:43:31.420 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@155c198b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:43:31.421 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:53:55.949 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:53:56.410 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:53:56.413 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@30cd66b5, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:53:56.415 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:55:59.151 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-10:55:59.535 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:55:59.536 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@5306b830, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:55:59.537 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-10:59:11.397 | DEBUG | FilterChainProxy: Securing GET /api/carts
-10:59:11.753 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:11.754 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@2fc1bbac, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:11.755 | DEBUG | FilterChainProxy: Secured GET /api/carts
-10:59:12.255 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-10:59:12.261 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:12.267 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-10:59:12.303 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-10:59:12.311 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:12.315 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-10:59:12.344 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-10:59:12.344 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-10:59:12.351 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:12.348 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:12.356 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-10:59:12.356 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-10:59:12.358 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-10:59:12.364 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:12.376 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-10:59:12.383 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-10:59:12.392 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:12.396 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-10:59:24.983 | DEBUG | FilterChainProxy: Securing DELETE /api/carts/items/32
-10:59:25.494 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:25.494 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@556c8b60, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:25.497 | DEBUG | FilterChainProxy: Secured DELETE /api/carts/items/32
-10:59:25.725 | DEBUG | FilterChainProxy: Securing GET /api/carts
-10:59:26.224 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:26.224 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@4769ff31, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:26.232 | DEBUG | FilterChainProxy: Secured GET /api/carts
-10:59:27.181 | DEBUG | FilterChainProxy: Securing DELETE /api/carts/items/34
-10:59:27.580 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:27.581 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@1570a30, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:27.582 | DEBUG | FilterChainProxy: Secured DELETE /api/carts/items/34
-10:59:27.670 | DEBUG | FilterChainProxy: Securing GET /api/carts
-10:59:28.105 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:28.105 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@677ee2c3, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:28.105 | DEBUG | FilterChainProxy: Secured GET /api/carts
-10:59:30.870 | DEBUG | FilterChainProxy: Securing DELETE /api/carts/items/35
-10:59:31.258 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:31.259 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@40e60343, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:31.259 | DEBUG | FilterChainProxy: Secured DELETE /api/carts/items/35
-10:59:31.329 | DEBUG | FilterChainProxy: Securing GET /api/carts
-10:59:31.700 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:31.701 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@6a542669, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:31.702 | DEBUG | FilterChainProxy: Secured GET /api/carts
-10:59:32.902 | DEBUG | FilterChainProxy: Securing DELETE /api/carts/items/36
-10:59:33.319 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:33.319 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@11574fe0, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:33.320 | DEBUG | FilterChainProxy: Secured DELETE /api/carts/items/36
-10:59:33.389 | DEBUG | FilterChainProxy: Securing GET /api/carts
-10:59:33.716 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:33.716 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@28c2532, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:33.716 | DEBUG | FilterChainProxy: Secured GET /api/carts
-10:59:35.767 | DEBUG | FilterChainProxy: Securing DELETE /api/carts/items/33
-10:59:36.226 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:36.227 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@3e1e740e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:36.228 | DEBUG | FilterChainProxy: Secured DELETE /api/carts/items/33
-10:59:36.300 | DEBUG | FilterChainProxy: Securing GET /api/carts
-10:59:36.720 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:36.721 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@18231c76, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:36.722 | DEBUG | FilterChainProxy: Secured GET /api/carts
-10:59:40.597 | DEBUG | FilterChainProxy: Securing DELETE /api/carts/items/31
-10:59:40.980 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:40.981 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@2a8300a, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:40.982 | DEBUG | FilterChainProxy: Secured DELETE /api/carts/items/31
-10:59:41.048 | DEBUG | FilterChainProxy: Securing GET /api/carts
-10:59:41.505 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-10:59:41.506 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@7451c5fb, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-10:59:41.507 | DEBUG | FilterChainProxy: Secured GET /api/carts
-10:59:44.048 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-10:59:44.050 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.054 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-10:59:44.314 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-10:59:44.334 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-10:59:44.337 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.338 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.339 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-10:59:44.339 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-10:59:44.339 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-10:59:44.341 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.346 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-10:59:44.400 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-10:59:44.400 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-10:59:44.412 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.420 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-10:59:44.421 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.422 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-10:59:44.423 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-10:59:44.426 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-10:59:44.427 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.427 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-10:59:44.427 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.429 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-10:59:44.431 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-10:59:44.449 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.480 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-10:59:44.487 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-10:59:44.489 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.490 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-10:59:44.505 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-10:59:44.509 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-10:59:44.510 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-11:05:44.474 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-11:05:44.995 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-11:05:44.995 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@2fa2e495, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-11:05:44.997 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-11:06:10.400 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-11:06:10.790 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-11:06:10.790 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@3eb2442e, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-11:06:10.791 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-11:16:52.538 | DEBUG | FilterChainProxy: Securing POST /api/carts/items
-11:16:52.960 | DEBUG | OpaqueTokenAuthenticationProvider: Authenticated token
-11:16:52.963 | DEBUG | BearerTokenAuthenticationFilter: Set SecurityContextHolder to BearerTokenAuthentication [Principal=org.springframework.security.oauth2.server.resource.introspection.OAuth2IntrospectionAuthenticatedPrincipal@13909a5b, Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=null], Granted Authorities=[ROLE_CUSTOMER]]
-11:16:52.966 | DEBUG | FilterChainProxy: Secured POST /api/carts/items
-16:17:39.352 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 5408 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
-16:17:39.359 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
-16:17:39.570 | INFO | DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-16:17:39.577 | INFO | DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-16:17:46.649 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-16:17:46.685 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-16:17:49.014 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 2232 ms. Found 7 JPA repository interfaces.
-16:17:49.222 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-16:17:49.245 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-16:17:49.302 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:17:49.319 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:17:49.330 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:17:49.338 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:17:49.348 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:17:49.354 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:17:49.362 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:17:49.369 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 92 ms. Found 0 Redis repository interfaces.
-16:17:54.336 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
-16:17:54.388 | INFO | StandardService: Starting service [Tomcat]
-16:17:54.408 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
-16:17:54.646 | INFO | [/]: Initializing Spring embedded WebApplicationContext
-16:17:54.652 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 15073 ms
-16:17:55.385 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
-16:17:55.578 | INFO | Version: HHH000412: Hibernate ORM core version 6.6.39.Final
-16:17:55.706 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
-16:17:56.449 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-16:17:56.517 | INFO | HikariDataSource: HikariPool-1 - Starting...
-16:17:58.549 | INFO | HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@41e1a353
-16:17:58.607 | INFO | HikariDataSource: HikariPool-1 - Start completed.
-16:17:59.228 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-16:17:59.282 | INFO | pooling: HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.44
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-16:18:01.669 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-16:18:01.925 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-16:18:03.888 | INFO | EventConfig: Creating consumer group: [stream=user-events, group=user-group]
-16:18:06.105 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
-16:18:06.202 | INFO | EventConfig: Starting listener container: [stream=user-events, group=user-group]
-16:18:06.869 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-16:18:07.134 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-16:18:07.687 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
-16:18:07.811 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [null]
-16:18:07.829 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
-16:18:07.844 | INFO | BookommerceApplication: Started BookommerceApplication in 32.052 seconds (process running for 37.97)
-16:19:06.706 | INFO | [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
-16:19:06.711 | INFO | DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-16:19:06.736 | INFO | DispatcherServlet: Completed initialization in 23 ms
-16:19:06.810 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-16:19:06.845 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:06.854 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-16:19:08.819 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-16:19:08.874 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:08.910 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-16:19:08.924 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-16:19:08.927 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:08.949 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-16:19:09.009 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-16:19:09.013 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-16:19:09.046 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-16:19:09.062 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-16:19:09.079 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.082 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.092 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.098 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.102 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-16:19:09.110 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-16:19:09.112 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-16:19:09.114 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-16:19:09.149 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-16:19:09.163 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.165 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-16:19:09.271 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-16:19:09.273 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.274 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-16:19:09.276 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-16:19:09.288 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.276 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-16:19:09.295 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-16:19:09.300 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-16:19:09.318 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-16:53:49.660 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 12676 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
-16:53:49.820 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
-16:53:51.543 | INFO | DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
-16:53:51.760 | INFO | DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
-16:54:02.132 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-16:54:02.253 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
-16:54:02.958 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 565 ms. Found 7 JPA repository interfaces.
-16:54:03.204 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
-16:54:03.225 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
-16:54:03.522 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:54:03.631 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:54:03.686 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:54:03.725 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:54:03.747 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:54:03.769 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:54:03.793 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
-16:54:03.823 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 379 ms. Found 0 Redis repository interfaces.
-16:54:12.365 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
-16:54:12.431 | INFO | StandardService: Starting service [Tomcat]
-16:54:12.521 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
-16:54:12.778 | INFO | [/]: Initializing Spring embedded WebApplicationContext
-16:54:12.790 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 20871 ms
-16:54:13.568 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
-16:54:13.925 | INFO | Version: HHH000412: Hibernate ORM core version 6.6.39.Final
-16:54:14.411 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
-16:54:16.658 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
-16:54:16.824 | INFO | HikariDataSource: HikariPool-1 - Starting...
-16:54:19.968 | INFO | HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@47e7bc4c
-16:54:20.151 | INFO | HikariDataSource: HikariPool-1 - Start completed.
-16:54:20.448 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
-16:54:20.664 | INFO | pooling: HHH10001005: Database info:
-	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
-	Database driver: undefined/unknown
-	Database version: 8.0.44
-	Autocommit mode: undefined/unknown
-	Isolation level: undefined/unknown
-	Minimum pool size: undefined/unknown
-	Maximum pool size: undefined/unknown
-16:54:27.193 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
-16:54:28.114 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
-16:54:34.766 | INFO | EventConfig: Creating consumer group: [stream=user-events, group=user-group]
-16:54:36.621 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
-16:54:36.877 | INFO | EventConfig: Starting listener container: [stream=user-events, group=user-group]
-16:54:38.311 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
-16:54:38.912 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
-16:54:40.423 | INFO | OptionalLiveReloadServer: LiveReload server is running on port 35729
-16:54:41.896 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [null]
-16:54:42.660 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
-16:54:42.819 | INFO | BookommerceApplication: Started BookommerceApplication in 54.481 seconds (process running for 63.063)
-17:01:30.264 | INFO | [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
-17:01:30.280 | INFO | DispatcherServlet: Initializing Servlet 'dispatcherServlet'
-17:01:30.333 | INFO | DispatcherServlet: Completed initialization in 53 ms
-17:01:30.417 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-17:01:30.449 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:30.458 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-17:01:32.310 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-17:01:32.316 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.320 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-17:01:32.481 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-17:01:32.498 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.501 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-17:01:32.509 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-17:01:32.512 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-17:01:32.534 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-17:01:32.537 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.539 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.554 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-17:01:32.564 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.569 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-17:01:32.582 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-17:01:32.584 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-17:01:32.584 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.586 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-17:01:32.613 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.631 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-17:01:32.653 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-17:01:32.735 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-17:01:32.737 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-17:01:32.745 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-17:01:32.765 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.777 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.784 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-17:01:32.790 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-17:01:32.796 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-17:01:32.838 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-19:14:28.025 | WARN | HikariPool: HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h5m43s283ms393µs).
-19:14:27.963 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
-org.springframework.dao.QueryTimeoutException: Redis command timed out
-	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:68)
-	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
-	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40)
-	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012)
-	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447)
-	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673)
-	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618)
-	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282)
-	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380)
-	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367)
-	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233)
-	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145)
-	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126)
-	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111)
-	at java.base/java.lang.Thread.run(Thread.java:1583)
-Caused by: io.lettuce.core.RedisCommandTimeoutException: XREADGROUP. Command timed out after 1 minute(s)
-	at io.lettuce.core.internal.ExceptionFactory.createTimeoutException(ExceptionFactory.java:75)
-	at io.lettuce.core.protocol.CommandExpiryWriter.lambda$null$0(CommandExpiryWriter.java:183)
-	at io.netty.util.concurrent.PromiseTask.runTask(PromiseTask.java:96)
-	at io.netty.util.concurrent.PromiseTask.run(PromiseTask.java:106)
-	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
-	at io.netty.util.concurrent.DefaultEventExecutor.run(DefaultEventExecutor.java:66)
-	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
-	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
-	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
-	... 1 common frames omitted
-19:14:52.408 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-19:14:52.416 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:52.422 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
-19:14:52.885 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-19:14:52.899 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:52.908 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-19:14:52.930 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-19:14:52.938 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:52.954 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-19:14:52.999 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-19:14:53.043 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-19:14:53.058 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.062 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-19:14:53.050 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-19:14:53.059 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.110 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-19:14:53.126 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.114 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.125 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-19:14:53.126 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-19:14:53.135 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-19:14:53.142 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-19:14:53.145 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.191 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-19:14:53.206 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-19:14:53.210 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-19:14:53.223 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.214 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-19:14:53.221 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.226 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-19:14:53.226 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:14:53.227 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-19:14:53.227 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-19:26:03.607 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
-19:26:03.625 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:03.627 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
-19:26:04.229 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
-19:26:04.232 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.236 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
-19:26:04.326 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
-19:26:04.330 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-19:26:04.332 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.336 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
-19:26:04.334 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.340 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
-19:26:04.358 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
-19:26:04.394 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.400 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
-19:26:04.395 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
-19:26:04.408 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.400 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-19:26:04.409 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
-19:26:04.454 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.424 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
-19:26:04.429 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
-19:26:04.435 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-19:26:04.463 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.442 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.470 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
-19:26:04.458 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
-19:26:04.459 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.480 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
-19:26:04.471 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
-19:26:04.558 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
-19:26:04.560 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
-19:26:04.561 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+14:58:16.602 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+14:58:16.948 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+14:58:21.456 | INFO | EventConfig: Creating consumer group: [stream=user-events, group=user-group]
+14:58:24.802 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+14:58:25.022 | INFO | EventConfig: Starting listener container: [stream=user-events, group=user-group]
+14:58:26.239 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+14:58:26.909 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+14:58:28.515 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+14:58:28.854 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [null]
+14:58:28.898 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+14:58:28.941 | INFO | BookommerceApplication: Started BookommerceApplication in 39.195 seconds (process running for 43.594)
+14:58:51.053 | INFO | [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+14:58:51.055 | INFO | DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+14:58:51.060 | INFO | DispatcherServlet: Completed initialization in 4 ms
+14:58:51.131 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+14:58:51.131 | DEBUG | FilterChainProxy: Securing GET /api/genres
+14:58:51.161 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:51.161 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:51.169 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+14:58:51.169 | DEBUG | FilterChainProxy: Secured GET /api/genres
+14:58:52.697 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+14:58:52.698 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+14:58:52.710 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:52.715 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:52.718 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+14:58:52.729 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+14:58:52.797 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+14:58:52.814 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:52.854 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+14:58:52.897 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+14:58:52.838 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+14:58:52.913 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:52.914 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+14:58:52.915 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:52.918 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+14:58:52.922 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:52.927 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+14:58:52.937 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+14:58:53.079 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+14:58:53.090 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+14:58:53.092 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+14:58:53.110 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:53.111 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+14:58:53.113 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:53.131 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+14:58:53.128 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:53.129 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+14:58:53.131 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:58:53.156 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+14:58:53.141 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+14:59:27.381 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+14:59:27.384 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:27.385 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+14:59:27.394 | DEBUG | FilterChainProxy: Securing GET /api/genres
+14:59:27.422 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:27.426 | DEBUG | FilterChainProxy: Secured GET /api/genres
+14:59:28.012 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+14:59:28.014 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.016 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+14:59:28.056 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+14:59:28.069 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.077 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+14:59:28.080 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+14:59:28.098 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.107 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+14:59:28.119 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+14:59:28.141 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.147 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+14:59:28.185 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+14:59:28.205 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.207 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+14:59:28.225 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+14:59:28.256 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+14:59:28.267 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.272 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+14:59:28.280 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.281 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.281 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+14:59:28.283 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+14:59:28.284 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+14:59:28.322 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+14:59:28.332 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.333 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+14:59:28.339 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+14:59:28.342 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+14:59:28.352 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+15:06:29.963 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:06:29.963 | DEBUG | FilterChainProxy: Securing GET /api/genres
+15:06:30.009 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:30.009 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:30.014 | DEBUG | FilterChainProxy: Secured GET /api/genres
+15:06:30.014 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:06:32.044 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:06:32.044 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+15:06:32.051 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.053 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.055 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+15:06:32.055 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+15:06:32.102 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+15:06:32.104 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.107 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+15:06:32.147 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+15:06:32.147 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.148 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+15:06:32.164 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+15:06:32.164 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+15:06:32.166 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.166 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.170 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+15:06:32.171 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+15:06:32.217 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+15:06:32.217 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+15:06:32.221 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.221 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.223 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+15:06:32.223 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+15:06:32.225 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+15:06:32.226 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.227 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+15:06:32.278 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+15:06:32.283 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:06:32.284 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+15:08:36.054 | DEBUG | FilterChainProxy: Securing GET /api/genres
+15:08:36.123 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:08:36.128 | DEBUG | FilterChainProxy: Secured GET /api/genres
+15:09:19.216 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+15:09:19.231 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+15:09:19.232 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC

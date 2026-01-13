@@ -1,6 +1,4 @@
-import React from 'react';
-import { Button, Select, Typography, Space, Input, theme } from 'antd';
-import { FilterOutlined } from '@ant-design/icons';
+import { Button, Input, Select, Space, theme, Typography } from 'antd';
 import { useSearchParams } from 'react-router-dom';
 
 const { Text } = Typography;
@@ -60,14 +58,14 @@ const ProductControls = ({ totalItems, onOpenFilter }) => {
             gap: 16
         }}>
             <div style={{ borderBottom: `1px solid ${token.colorBorderSecondary}`, paddingBottom: 16 }}>
-                <Text strong style={{ fontSize: 16 }}>Controls</Text>
+                <Text strong style={{ fontSize: 16 }}>Điều khiển</Text>
             </div>
 
             <Space direction="vertical" style={{ width: '100%' }}>
-                <Text strong>Search</Text>
+                <Text strong>Tìm kiếm</Text>
                 <Search
                     key={search || 'empty'}
-                    placeholder="Search..."
+                    placeholder="Tìm kiếm..."
                     allowClear
                     onSearch={handleSearch}
                     defaultValue={search}
@@ -75,42 +73,42 @@ const ProductControls = ({ totalItems, onOpenFilter }) => {
             </Space>
 
             <Space direction="vertical" style={{ width: '100%' }}>
-                <Text strong>Show</Text>
+                <Text strong>Hiển thị</Text>
                 <Select
                     defaultValue={10}
                     value={pageSize}
                     style={{ width: '100%' }}
                     onChange={handlePageSizeChange}
                     options={[
-                        { value: 10, label: '10 items' },
-                        { value: 20, label: '20 items' },
+                        { value: 10, label: '10 mục' },
+                        { value: 20, label: '20 mục' },
                     ]}
                 />
             </Space>
 
             <Space direction="vertical" style={{ width: '100%' }}>
-                <Text strong>Sort by</Text>
+                <Text strong>Sắp xếp theo</Text>
                 <Select
                     defaultValue="TITLE&order=ASC"
                     value={sortOption}
                     style={{ width: '100%' }}
                     onChange={handleSortChange}
                     options={[
-                        { value: 'PRICE&order=ASC', label: 'Price: Low to High' },
-                        { value: 'PRICE&order=DESC', label: 'Price: High to Low' },
-                        { value: 'TITLE&order=ASC', label: 'Title: A to Z' },
-                        { value: 'TITLE&order=DESC', label: 'Title: Z to A' },
-                        { value: 'RATING&order=DESC', label: 'Rating: High to Low' },
-                        { value: 'RATING&order=ASC', label: 'Rating: Low to High' },
+                        { value: 'PRICE&order=ASC', label: 'Giá: Thấp đến Cao' },
+                        { value: 'PRICE&order=DESC', label: 'Giá: Cao đến Thấp' },
+                        { value: 'TITLE&order=ASC', label: 'Tên: A đến Z' },
+                        { value: 'TITLE&order=DESC', label: 'Tên: Z đến A' },
+                        { value: 'RATING&order=DESC', label: 'Đánh giá: Cao đến Thấp' },
+                        { value: 'RATING&order=ASC', label: 'Đánh giá: Thấp đến Cao' },
                     ]}
                 />
             </Space>
 
             <div style={{ marginTop: 'auto', paddingTop: 16, borderTop: `1px solid ${token.colorBorderSecondary}` }}>
                 <Button block onClick={handleReset} style={{ marginBottom: 16 }} disabled={isDefault}>
-                    Reset
+                    Đặt lại
                 </Button>
-                <Text type="secondary">{totalItems} Items found</Text>
+                <Text type="secondary">Tìm thấy {totalItems} sản phẩm</Text>
             </div>
         </div>
     );

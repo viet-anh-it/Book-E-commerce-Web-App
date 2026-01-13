@@ -1,8 +1,8 @@
-import React, { useState, useEffect } from 'react';
-import { Collapse, Typography, Slider, Checkbox, Radio, Rate, Button, Space, theme, InputNumber, Tag } from 'antd';
+import { Button, Checkbox, Collapse, InputNumber, Radio, Rate, Slider, Space, Tag, theme, Typography } from 'antd';
+import React, { useEffect, useState } from 'react';
 
-import { useSearchParams } from 'react-router-dom';
 import { ReloadOutlined } from '@ant-design/icons';
+import { useSearchParams } from 'react-router-dom';
 import axiosInstance from '../api/axiosInstance';
 
 const { Text } = Typography;
@@ -233,7 +233,7 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
                     }}
                     style={{ margin: '4px' }}
                 >
-                    Price: {Number(minPrice).toLocaleString()} - {Number(maxPrice).toLocaleString()}
+                    Giá: {Number(minPrice).toLocaleString()} - {Number(maxPrice).toLocaleString()}
                 </Tag>
             );
         }
@@ -251,7 +251,7 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
                     }}
                     style={{ margin: '4px' }}
                 >
-                    Rating: {ratingParam} Stars & Up
+                    Đánh giá: {ratingParam} Sao trở lên
                 </Tag>
             );
         }
@@ -262,7 +262,7 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
             const genreIds = genresParam.split(',');
             genreIds.forEach(id => {
                 const genre = genreOptions.find(g => String(g.value) === id);
-                const label = genre ? genre.label : `Genre ${id}`;
+                const label = genre ? genre.label : `Thể loại ${id}`;
                 tags.push(
                     <Tag
                         key={`genre-${id}`}
@@ -306,7 +306,7 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
     const items = [
         {
             key: '1',
-            label: 'Price Range',
+            label: 'Khoảng giá',
             extra: genExtra(handleResetPrice, !searchParams.get('minPrice') && !searchParams.get('maxPrice')),
             children: (
                 <div>
@@ -337,14 +337,14 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
                         />
                     </div>
                     <Button type="primary" size="small" style={{ marginTop: 8, width: '100%' }} onClick={handleApplyPrice}>
-                        Apply Price
+                        Áp dụng
                     </Button>
                 </div>
             ),
         },
         {
             key: '2',
-            label: 'Genres',
+            label: 'Thể loại',
             extra: genExtra(handleResetGenres, !searchParams.get('genres')),
             children: (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -355,14 +355,14 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
                         style={{ display: 'flex', flexDirection: 'column', gap: 8 }}
                     />
                     <Button type="primary" size="small" style={{ marginTop: 8 }} onClick={handleApplyGenres}>
-                        Apply Genres
+                        Áp dụng
                     </Button>
                 </div>
             ),
         },
         {
             key: '3',
-            label: 'Rating',
+            label: 'Đánh giá',
             extra: genExtra(handleResetRating, !searchParams.get('rating')),
             children: (
                 <div style={{ display: 'flex', flexDirection: 'column', gap: 8 }}>
@@ -371,31 +371,31 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
                             <Radio value={4}>
                                 <Space>
                                     <Rate disabled defaultValue={4} style={{ fontSize: 14 }} />
-                                    <Text>& Up</Text>
+                                    <Text>trở lên</Text>
                                 </Space>
                             </Radio>
                             <Radio value={3}>
                                 <Space>
                                     <Rate disabled defaultValue={3} style={{ fontSize: 14 }} />
-                                    <Text>& Up</Text>
+                                    <Text>trở lên</Text>
                                 </Space>
                             </Radio>
                             <Radio value={2}>
                                 <Space>
                                     <Rate disabled defaultValue={2} style={{ fontSize: 14 }} />
-                                    <Text>& Up</Text>
+                                    <Text>trở lên</Text>
                                 </Space>
                             </Radio>
                             <Radio value={1}>
                                 <Space>
                                     <Rate disabled defaultValue={1} style={{ fontSize: 14 }} />
-                                    <Text>& Up</Text>
+                                    <Text>trở lên</Text>
                                 </Space>
                             </Radio>
                         </Space>
                     </Radio.Group>
                     <Button type="primary" size="small" style={{ marginTop: 8 }} onClick={handleApplyRating}>
-                        Apply Rating
+                        Áp dụng
                     </Button>
                 </div>
             ),
@@ -410,7 +410,7 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
             flexDirection: 'column'
         }}>
             <div style={{ padding: '16px', borderBottom: `1px solid ${token.colorBorderSecondary}` }}>
-                <Text strong style={{ fontSize: 16 }}>Filters</Text>
+                <Text strong style={{ fontSize: 16 }}>Bộ lọc</Text>
             </div>
 
             <Collapse
@@ -431,14 +431,14 @@ const ProductFilter = ({ activeSections = ['1'], onActiveSectionsChange }) => {
                         onClick={handleApply}
                         disabled={!hasPendingChanges}
                     >
-                        Apply Filters
+                        Áp dụng bộ lọc
                     </Button>
                     <Button
                         block
                         onClick={handleReset}
                         disabled={!hasActiveFilters}
                     >
-                        Reset
+                        Đặt lại
                     </Button>
                 </Space>
             </div>
