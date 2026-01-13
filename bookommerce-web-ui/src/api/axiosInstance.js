@@ -33,6 +33,14 @@ axiosInstance.interceptors.response.use(function (response) {
     // Bất kì mã trạng thái nào lọt ra ngoài tầm 2xx đều khiến hàm này được trigger\
     // Làm gì đó với lỗi response
     NProgress.done();
+
+    if (error.response && error.response.status === 401) {
+        // Exclude /protected/api/me from redirecting to login, allowing guests to stay on the page
+        if (!error.config.url.includes('/protected/api/me')) {
+            window.location.href = 'https://auth.bookommerce.com:8282/page/login?session_expired';
+        }
+    }
+
     return Promise.reject(error);
 });
 

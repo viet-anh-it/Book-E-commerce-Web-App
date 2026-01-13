@@ -31,7 +31,7 @@ const AdminDrawer = ({ collapsed }) => {
                 console.log(broken);
             }}
         >
-            <div className="demo-logo-vertical" />
+            <div className="demo-logo-vertical" style={{ height: 64 }} />
             <Menu
                 theme="dark"
                 mode="inline"

@@ -14,7 +14,7 @@ public class SessionConfig {
     public CookieSerializer cookieSerializer() {
         DefaultCookieSerializer serializer = new DefaultCookieSerializer();
         serializer.setCookieName("AUTH-SESSION");
-        serializer.setCookiePath("/");
+        serializer.setCookiePath("/oauth2");
         serializer.setDomainName("auth.bookommerce.com");
         serializer.setUseHttpOnlyCookie(true);
         serializer.setUseSecureCookie(true);

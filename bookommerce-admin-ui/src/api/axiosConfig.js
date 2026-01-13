@@ -34,8 +34,10 @@ axiosInstance.interceptors.response.use(function (response) {
     // Làm gì đó với lỗi response
     NProgress.done();
 
-    // If the error status is 401 (Unauthorized), let the application handle it
-    // e.g. via AuthContext or individual component error handling.
+    // If the error status is 401 (Unauthorized), redirect to store login page
+    if (error.response && error.response.status === 401) {
+        window.location.href = 'https://auth.bookommerce.com:8282/page/store-login?session_expired';
+    }
 
     return Promise.reject(error);
 });

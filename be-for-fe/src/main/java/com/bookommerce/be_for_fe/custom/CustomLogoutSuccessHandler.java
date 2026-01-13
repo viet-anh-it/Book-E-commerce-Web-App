@@ -37,19 +37,20 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
         HttpServletRequest request,
         HttpServletResponse response,
         Authentication authentication) throws IOException, ServletException {
-        OAuth2AuthenticationToken oauth2AuthenticationToken = (OAuth2AuthenticationToken) authentication;
-        this.oAuth2AuthorizedClientService.removeAuthorizedClient(
-            oauth2AuthenticationToken.getAuthorizedClientRegistrationId(),
-            oauth2AuthenticationToken.getName());
-        Set<GrantedAuthority> authorities = new HashSet<>(authentication.getAuthorities());
-        SimpleGrantedAuthority roleCustomer = new SimpleGrantedAuthority("ROLE_CUSTOMER");
-        if (authorities.contains(roleCustomer)) {
-            this.delegate.setPostLogoutRedirectUri("https://app.bookommerce.com:8080");
-            this.delegate.onLogoutSuccess(request, response, authentication);
-        } else {
-            this.delegate.setPostLogoutRedirectUri("https://auth.bookommerce.com:8282/page/store-login");
-            this.delegate.onLogoutSuccess(request, response, authentication);
-            
+        if (authentication != null) {
+            OAuth2AuthenticationToken oauth2AuthenticationToken = (OAuth2AuthenticationToken) authentication;
+            this.oAuth2AuthorizedClientService.removeAuthorizedClient(
+                oauth2AuthenticationToken.getAuthorizedClientRegistrationId(),
+                oauth2AuthenticationToken.getName());
+            Set<GrantedAuthority> authorities = new HashSet<>(authentication.getAuthorities());
+            SimpleGrantedAuthority roleCustomer = new SimpleGrantedAuthority("ROLE_CUSTOMER");
+            if (authorities.contains(roleCustomer)) {
+                this.delegate.setPostLogoutRedirectUri("https://app.bookommerce.com:8080");
+                this.delegate.onLogoutSuccess(request, response, authentication);
+            } else {
+                this.delegate.setPostLogoutRedirectUri("https://auth.bookommerce.com:8282/page/store-login");
+                this.delegate.onLogoutSuccess(request, response, authentication);
+            }
         }
     }
 }
