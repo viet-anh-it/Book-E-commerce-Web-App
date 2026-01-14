@@ -1,5 +1,5 @@
-import { LogoutOutlined, MenuOutlined, MoonOutlined, ShoppingCartOutlined, SunOutlined, UserOutlined } from '@ant-design/icons';
-import { Avatar, Badge, Button, Drawer, Dropdown, Grid, Layout, Menu, Space, Switch, Typography, theme } from 'antd';
+import { MenuOutlined, MoonOutlined, ShoppingCartOutlined, SunOutlined, UserOutlined } from '@ant-design/icons';
+import { Badge, Button, Drawer, Grid, Layout, Menu, Space, Switch, Typography, theme } from 'antd';
 import React, { useState } from 'react';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -13,7 +13,7 @@ import { useLocation, useNavigate } from 'react-router-dom';
 const Header = ({ isDarkMode, onToggleTheme }) => {
     const { user, logout } = useAuth();
     const {
-        token: { colorBgContainer, colorPrimary },
+        token: { colorBgContainer, colorPrimary, colorPrimaryBg },
     } = theme.useToken();
     const screens = useBreakpoint();
     const [menuOpen, setMenuOpen] = useState(false);
@@ -89,53 +89,19 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
         return () => window.removeEventListener('scroll', handleScroll);
     }, [location.pathname]);
 
-    const userMenuItems = [
-        {
-            key: 'header',
-            label: (
-                <div style={{ padding: '4px 12px', textAlign: 'center' }}>
-                    <Avatar
-                        size={64}
-                        src={user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
-                        style={{ marginBottom: 8, backgroundColor: colorPrimary }}
-                    />
-                    <div style={{ fontWeight: 600, fontSize: '16px' }}>{user?.username}</div>
-                </div>
-            ),
-            disabled: true,
-        },
-        {
-            type: 'divider',
-        },
-        {
-            key: 'profile',
-            label: 'Hồ sơ',
-            icon: <UserOutlined />,
-            onClick: () => navigate('/profile'),
-        },
-        {
-            type: 'divider',
-        },
-        {
-            key: 'logout',
-            label: 'Đăng xuất',
-            icon: <LogoutOutlined />,
-            danger: true,
-            onClick: () => {
-                const csrfToken = getCookie('XSRF-TOKEN');
-                window.alert(csrfToken);
-                const form = document.createElement('form');
-                form.method = 'POST';
-                form.action = 'https://bff.bookommerce.com:8181/protected/logout';
-                const input = document.createElement('input');
-                input.name = '_csrf';
-                input.value = csrfToken;
-                form.appendChild(input);
-                document.body.appendChild(form);
-                form.submit();
-            },
-        },
-    ];
+    const handleLogout = () => {
+        const csrfToken = getCookie('XSRF-TOKEN');
+        // window.alert(csrfToken); // Commenting out alert as it might be annoying in production, keeping if debugging needed
+        const form = document.createElement('form');
+        form.method = 'POST';
+        form.action = 'https://bff.bookommerce.com:8181/protected/logout';
+        const input = document.createElement('input');
+        input.name = '_csrf';
+        input.value = csrfToken;
+        form.appendChild(input);
+        document.body.appendChild(form);
+        form.submit();
+    };
 
     const menuItems = [];
 
@@ -218,30 +184,33 @@ const Header = ({ isDarkMode, onToggleTheme }) => {
                         checked={isDarkMode}
                         onChange={onToggleTheme}
                     />
-                    {user && location.pathname !== '/cart' && (
+                    {user && (
                         <Badge count={2} showZero>
                             <Button
                                 type="text"
                                 icon={<ShoppingCartOutlined style={{ fontSize: 20 }} />}
-                                onClick={() => navigate('/cart')}
+                                onClick={() => location.pathname !== '/cart' && navigate('/cart')}
+                                style={location.pathname === '/cart' ? { color: colorPrimary, backgroundColor: colorPrimaryBg, cursor: 'default' } : {}}
                             />
                         </Badge>
                     )}
 
                     {user ? (
-                        <Dropdown
-                            menu={{ items: userMenuItems }}
-                            placement="bottomRight"
-                            trigger={['hover', 'click']}
-                        >
-                            <div style={{ cursor: 'pointer', marginLeft: 8 }}>
-                                <Avatar
-                                    icon={<UserOutlined />}
-                                    src={user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
-                                    style={{ backgroundColor: colorPrimary }}
-                                />
-                            </div>
-                        </Dropdown>
+                        <>
+                            <Button
+                                type="text"
+                                icon={<UserOutlined />}
+                                onClick={() => location.pathname !== '/profile' && navigate('/profile')}
+                                style={location.pathname === '/profile' ? { color: colorPrimary, backgroundColor: colorPrimaryBg, cursor: 'default' } : {}}
+                            >
+                            </Button>
+                            <Button
+                                type="primary"
+                                onClick={handleLogout}
+                            >
+                                Đăng xuất
+                            </Button>
+                        </>
                     ) : (
                         screens.md && (
                             <Space>

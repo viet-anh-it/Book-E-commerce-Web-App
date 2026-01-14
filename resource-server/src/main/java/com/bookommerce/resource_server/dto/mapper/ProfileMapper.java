@@ -13,10 +13,12 @@ public interface ProfileMapper {
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "email", ignore = true)
+    @Mapping(target = "avatarUrlPath", ignore = true)
     Profile toProfile(UpdateMyProfileRequestDto updateMyProfileRequestDto);
 
     @Mapping(target = "id", ignore = true)
     @Mapping(target = "email", ignore = true)
+    @Mapping(target = "avatarUrlPath", ignore = true)
     void updateProfile(UpdateMyProfileRequestDto updateMyProfileRequestDto, @MappingTarget Profile profile);
 
     GetMyProfileResponseDto toGetMyProfileResponseDto(Profile profile);

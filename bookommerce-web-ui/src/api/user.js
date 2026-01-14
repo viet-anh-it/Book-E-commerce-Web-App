@@ -7,7 +7,7 @@ import axiosInstance from './axiosInstance';
  */
 export const updateProfile = async (userData) => {
     // Note: This endpoint is updated to match the profile path
-    return axiosInstance.patch('/api/me/profile', userData);
+    return axiosInstance.patch('/protected/api/me/profile', userData);
 };
 
 /**
@@ -15,7 +15,7 @@ export const updateProfile = async (userData) => {
  * @returns {Promise}
  */
 export const getProfile = async () => {
-    return axiosInstance.get('/api/me/profile');
+    return axiosInstance.get('/protected/api/me/profile');
 };
 /**
  * Change user email
@@ -47,4 +47,12 @@ export const uploadAvatar = async (file) => {
             'Content-Type': 'multipart/form-data',
         },
     });
+};
+
+/**
+ * Get user profile avatar
+ * @returns {Promise}
+ */
+export const getProfileAvatar = async () => {
+    return axiosInstance.get('/protected/api/me/profile/avatar');
 };

@@ -66,6 +66,8 @@ logging:
 upload:
   image:
     book: C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\upload\image\book\
+    avatar: C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\upload\image\avatar\
+    avatar.default: C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\upload\image\avatar\default\
 
 stream:
   key: user-events

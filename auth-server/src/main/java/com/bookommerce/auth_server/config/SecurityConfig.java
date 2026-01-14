@@ -157,6 +157,8 @@ public class SecurityConfig {
                     new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED),
                     new MediaTypeRequestMatcher(MediaType.APPLICATION_JSON)))
             .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
+                .redirectionEndpoint(redirectionEndpointConfigurer -> redirectionEndpointConfigurer
+                    .baseUri("/oauth2/login/code/*"))
                 .loginPage("/page/login")
                 .defaultSuccessUrl(apiGatewayBaseUrl + "/protected/oauth2/authorization/bff", true))
             .formLogin(formLoginConfigurer -> formLoginConfigurer.disable())
@@ -315,7 +317,7 @@ public class SecurityConfig {
 			.clientSecret("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")
 			.clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
 			.authorizationGrantType(AuthorizationGrantType.AUTHORIZATION_CODE)
-			.redirectUri(authServerBaseUrl + "/login/oauth2/code/google")
+			.redirectUri(authServerBaseUrl + "/oauth2/login/code/google")
 			.scope(OidcScopes.OPENID, OidcScopes.PROFILE, OidcScopes.EMAIL, OidcScopes.ADDRESS, OidcScopes.PHONE)
 			.authorizationUri("https://accounts.google.com/o/oauth2/v2/auth")
 			.tokenUri("https://www.googleapis.com/oauth2/v4/token")

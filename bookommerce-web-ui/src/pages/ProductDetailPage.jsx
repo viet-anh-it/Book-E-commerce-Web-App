@@ -51,6 +51,7 @@ const ProductDetailPage = () => {
             let description = 'Check your input';
 
             if (error.response) {
+                if (error.response.status === 401) return;
                 const { status, data } = error.response;
                 if (status === 200) {
 
@@ -64,9 +65,6 @@ const ProductDetailPage = () => {
                             </ul>
                         );
                     }
-                } else if (status === 401) {
-                    message = 'Unauthorized';
-                    description = 'Please login to continue.';
                 } else {
                     message = 'Đã xảy ra lỗi!';
                     description = data.message || 'Có lỗi xảy ra.';

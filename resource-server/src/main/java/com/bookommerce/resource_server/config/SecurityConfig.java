@@ -70,10 +70,11 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PATCH, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
                 .requestMatchers(HttpMethod.DELETE, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
                 // authorization for profile
+                .requestMatchers(HttpMethod.GET, "/api/me/profile/avatar").authenticated()
                 .requestMatchers(HttpMethod.GET, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 .requestMatchers(HttpMethod.PATCH, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 // authorization for image
-                .requestMatchers(HttpMethod.GET, "/images/books/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/images/books/**", "/images/avatars/**").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
 				.anyRequest().authenticated())
             .sessionManagement(sessionManagementConfigurer -> sessionManagementConfigurer

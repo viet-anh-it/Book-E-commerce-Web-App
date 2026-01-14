@@ -1,12 +1,5 @@
 package com.bookommerce.resource_server.entity;
 
-import lombok.AccessLevel;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
-import lombok.experimental.FieldDefaults;
-
 import java.time.LocalDate;
 
 import com.bookommerce.resource_server.constant.Genders;
@@ -19,6 +12,12 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
+import lombok.AccessLevel;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.experimental.FieldDefaults;
 
 @Entity
 @Getter
@@ -45,4 +44,6 @@ public class Profile {
     Genders gender;
 
     LocalDate dob;
+
+    String avatarUrlPath;
 }

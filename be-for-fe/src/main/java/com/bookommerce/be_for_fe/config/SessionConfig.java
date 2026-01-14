@@ -18,7 +18,7 @@ public class SessionConfig {
         serializer.setDomainName("bff.bookommerce.com");
         serializer.setUseHttpOnlyCookie(true);
         serializer.setUseSecureCookie(true);
-        serializer.setSameSite("Strict");
+        serializer.setSameSite("Lax");
         serializer.setCookieMaxAge(60 * 3);
         serializer.setUseBase64Encoding(false);
         return serializer;

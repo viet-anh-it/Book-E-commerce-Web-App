@@ -1,4 +1,4 @@
-import { LoginOutlined, StarOutlined, UpOutlined } from '@ant-design/icons';
+import { StarOutlined, UpOutlined } from '@ant-design/icons';
 import { Avatar, Button, Card, Col, Form, Input, List, Modal, notification, Popconfirm, Radio, Rate, Row, Select, Space, theme, Typography } from 'antd';
 import { AnimatePresence, motion } from 'framer-motion';
 import { useEffect, useRef, useState } from 'react';
@@ -413,7 +413,6 @@ const ProductReviews = ({
                         ) : (
                             <Button
                                 type="primary"
-                                icon={<LoginOutlined />}
                                 size="large"
                                 block
                                 href="https://auth.bookommerce.com:8282/page/login"

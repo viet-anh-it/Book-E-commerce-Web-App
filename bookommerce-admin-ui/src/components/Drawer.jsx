@@ -63,7 +63,7 @@ const AdminDrawer = ({ collapsed }) => {
                     {
                         key: '/users',
                         icon: <UserOutlined />,
-                        label: 'Người dùng',
+                        label: 'Tài khoản',
                     },
                 ]}
             />

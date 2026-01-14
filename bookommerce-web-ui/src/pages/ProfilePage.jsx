@@ -1,6 +1,4 @@
 import {
-    ArrowLeftOutlined,
-    CalendarOutlined,
     CameraOutlined,
     EditOutlined,
     LockOutlined,
@@ -60,6 +58,7 @@ const ProfilePage = () => {
     const [isAvatarModalVisible, setIsAvatarModalVisible] = useState(false);
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewUrl, setPreviewUrl] = useState(null);
+    const [avatarUrl, setAvatarUrl] = useState(null);
 
     const [profileData, setProfileData] = useState(null);
 
@@ -71,20 +70,21 @@ const ProfilePage = () => {
             const data = response.data.data;
             setProfileData(data);
             form.setFieldsValue({
-                firstName: data.firstName || '',
-                lastName: data.lastName || '',
-                phoneNumber: data.phone || '',
-                gender: data.gender || 'MALE',
+                firstName: data.firstName,
+                lastName: data.lastName,
+                phoneNumber: data.phone,
+                gender: data.gender,
                 dateOfBirth: data.dob ? dayjs(data.dob) : null,
             });
+            setAvatarUrl(data.avatarUrlPath);
         } catch (error) {
             console.error('Fetch profile error:', error);
             const status = error.response?.status;
             const errorMsg = error.response?.data?.message || error.message || 'Lỗi không xác định';
 
-            if ([401, 403, 500].includes(status)) {
+            if ([403, 500].includes(status)) {
                 message.error(errorMsg);
-            } else {
+            } else if (status !== 401) {
                 Modal.error({
                     title: 'Lỗi không xác định',
                     content: errorMsg,
@@ -142,9 +142,9 @@ const ProfilePage = () => {
 
                 form.setFields(formErrors);
                 message.error('Vui lòng kiểm tra lại thông tin nhập vào!');
-            } else if ([401, 403, 500].includes(status)) {
+            } else if ([403, 500].includes(status)) {
                 message.error(errorMsg);
-            } else {
+            } else if (status !== 401) {
                 Modal.error({
                     title: 'Cập nhật hồ sơ thất bại',
                     content: errorMsg,
@@ -165,6 +165,7 @@ const ProfilePage = () => {
             emailForm.resetFields();
         } catch (error) {
             console.error('Change email error:', error);
+            if (error.response?.status === 401) return;
             message.error('Thay đổi email thất bại: ' + (error.response?.data?.message || error.message || 'Lỗi không xác định'));
         } finally {
             setEmailLoading(false);
@@ -183,6 +184,7 @@ const ProfilePage = () => {
             passwordForm.resetFields();
         } catch (error) {
             console.error('Change password error:', error);
+            if (error.response?.status === 401) return;
             message.error('Thay đổi mật khẩu thất bại: ' + (error.response?.data?.message || error.message || 'Lỗi không xác định'));
         } finally {
             setPasswordLoading(false);
@@ -215,6 +217,7 @@ const ProfilePage = () => {
             setPreviewUrl(null);
         } catch (error) {
             console.error('Upload avatar error:', error);
+            if (error.response?.status === 401) return;
             message.error('Cập nhật ảnh đại diện thất bại: ' + (error.response?.data?.message || error.message || 'Lỗi không xác định'));
         } finally {
             setAvatarLoading(false);
@@ -255,7 +258,7 @@ const ProfilePage = () => {
                                     <Avatar
                                         size={100}
                                         icon={<UserOutlined />}
-                                        src={user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
+                                        src={previewUrl || avatarUrl || user?.avatarUrl}
                                         style={{
                                             backgroundColor: colorPrimary,
                                             border: `4px solid ${colorBgContainer}`,
@@ -281,13 +284,8 @@ const ProfilePage = () => {
                                     </div>
                                 </div>
                             </div>
-                            <Title level={4} style={{ marginBottom: 4 }}>
-                                {profileData?.lastName && profileData?.firstName
-                                    ? `${profileData.lastName} ${profileData.firstName}`
-                                    : user?.username || 'Người dùng'}
-                            </Title>
                             <div style={{ marginBottom: 16 }}>
-                                <Text type="secondary" style={{ display: 'block', marginBottom: 8 }}>
+                                <Text type="secondary" style={{ display: 'block', marginBottom: 8, whiteSpace: 'nowrap', overflow: 'hidden', textOverflow: 'ellipsis' }}>
                                     {user?.email || user?.username}
                                 </Text>
                                 <Space direction="vertical" style={{ width: '100%' }}>
@@ -312,20 +310,6 @@ const ProfilePage = () => {
                                     </Button>
                                 </Space>
                             </div>
-
-                            <Divider />
-
-                            <div style={{ textAlign: 'left' }}>
-                                <Space direction="vertical" style={{ width: '100%' }}>
-                                    <Text strong><UserOutlined style={{ marginRight: 8 }} /> Tài khoản</Text>
-                                    <Paragraph style={{ paddingLeft: 24, margin: 0 }}>{user?.username}</Paragraph>
-
-                                    <Text strong><CalendarOutlined style={{ marginRight: 8 }} /> Ngày tham gia</Text>
-                                    <Paragraph style={{ paddingLeft: 24, margin: 0 }}>
-                                        {user?.createdAt ? dayjs(user.createdAt).format('DD/MM/YYYY') : 'N/A'}
-                                    </Paragraph>
-                                </Space>
-                            </div>
                         </Card>
                     </Col>
 
@@ -338,21 +322,12 @@ const ProfilePage = () => {
                                 borderRadius: borderRadiusLG,
                                 boxShadow: '0 4px 12px rgba(0,0,0,0.05)',
                             }}
-                            extra={
-                                <Button
-                                    icon={<ArrowLeftOutlined />}
-                                    onClick={() => navigate(-1)}
-                                    type="text"
-                                >
-                                    Quay lại
-                                </Button>
-                            }
+
                         >
                             <Form
                                 form={form}
                                 layout="vertical"
                                 onFinish={onFinish}
-                                initialValues={{ gender: 'MALE' }}
                                 requiredMark="optional"
                             >
                                 <Row gutter={16}>
@@ -569,7 +544,7 @@ const ProfilePage = () => {
                     <div style={{ marginBottom: 32 }}>
                         <Avatar
                             size={300}
-                            src={previewUrl || user?.avatarUrl || 'https://i.pravatar.cc/150?u=fake'}
+                            src={previewUrl || avatarUrl || user?.avatarUrl}
                             icon={<UserOutlined style={{ fontSize: 100 }} />}
                             style={{
                                 border: `6px solid ${colorPrimary}`,

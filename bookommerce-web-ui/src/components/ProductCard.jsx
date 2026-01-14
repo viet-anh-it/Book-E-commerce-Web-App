@@ -50,6 +50,7 @@ const ProductCard = ({ product }) => {
             let description = 'Check your input';
 
             if (error.response) {
+                if (error.response.status === 401) return;
                 const { status, data } = error.response;
                 if (status === 200) {
                     // Sometimes 200 might cloak an error if backend style is weird, but per spec 200 is success. 
@@ -64,9 +65,6 @@ const ProductCard = ({ product }) => {
                             </ul>
                         );
                     }
-                } else if (status === 401) {
-                    message = 'Unauthorized';
-                    description = 'Please login to continue.';
                 } else {
                     message = 'Đã xảy ra lỗi!';
                     description = data.message || 'Có lỗi xảy ra.';

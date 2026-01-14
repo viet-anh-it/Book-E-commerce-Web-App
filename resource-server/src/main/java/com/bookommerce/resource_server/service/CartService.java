@@ -30,6 +30,7 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 
+// @formatter:off
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -47,7 +48,6 @@ public class CartService {
         return this.cartMapper.toGetCartResponseDto(cart);
     }
 
-    //@formatter:off
     @Transactional
     public void addToCart(AddToCartRequestDto addToCartRequestDto) {
         Optional<Book> optionalBook = this.bookRepository.findById(addToCartRequestDto.bookId());

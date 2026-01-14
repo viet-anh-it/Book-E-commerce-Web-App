@@ -1,4 +1,4 @@
-import { LogoutOutlined, MenuFoldOutlined, MenuUnfoldOutlined, MoonOutlined, SunOutlined } from '@ant-design/icons';
+import { MenuFoldOutlined, MenuUnfoldOutlined, MoonOutlined, SunOutlined } from '@ant-design/icons';
 import { theme as antTheme, Button, Flex, Layout, Switch, Typography } from 'antd';
 import { useAuth } from '../contexts/AuthContext';
 
@@ -65,8 +65,6 @@ const AdminHeader = ({ isDarkMode, onThemeChange, collapsed, setCollapsed }) => 
 
                 <Button
                     type="primary"
-                    danger
-                    icon={<LogoutOutlined />}
                     onClick={logout}
                 >
                     Đăng xuất

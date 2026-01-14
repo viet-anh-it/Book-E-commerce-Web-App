@@ -79,12 +79,14 @@ logging:
     org:
       springframework:
         security: DEBUG
-        session:
-          jdbc: DEBUG
-        jdbc:
-          core:
-            JdbcTemplate: DEBUG
-            StatementCreatorUtils: TRACE
+        security.oauth2.client.web: DEBUG
+        security.web.authentication: DEBUG
+        # session:
+        #   jdbc: DEBUG
+        # jdbc:
+        #   core:
+        #     JdbcTemplate: DEBUG
+        #     StatementCreatorUtils: TRACE
 
   file:
     name: ./logs/auth-server.log

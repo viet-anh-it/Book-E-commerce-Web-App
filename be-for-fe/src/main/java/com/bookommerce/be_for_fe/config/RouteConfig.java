@@ -129,18 +129,30 @@ public class RouteConfig {
         return GatewayRouterFunctions.route()
             .GET("/images/books/**", HandlerFunctions.http())
             .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
-            .build();
+            .build()
+            .and(GatewayRouterFunctions.route()
+                .GET("/images/avatars/**", HandlerFunctions.http())
+                .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
+                .build());
     }
 
     @Bean
     public RouterFunction<ServerResponse> profileRouter() {
         return GatewayRouterFunctions.route()
-            .GET("/api/me/profile", HandlerFunctions.http())
+            .GET("/protected/api/me/profile", HandlerFunctions.http())
+            .before(BeforeFilterFunctions.setPath("/api/me/profile"))
             .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
             .filter(TokenRelayFilterFunctions.tokenRelay())
             .build()
             .and(GatewayRouterFunctions.route()
-                .PATCH("/api/me/profile", HandlerFunctions.http())
+                .GET("/protected/api/me/profile/avatar", HandlerFunctions.http())
+                .before(BeforeFilterFunctions.setPath("/api/me/profile/avatar"))
+                .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
+                .filter(TokenRelayFilterFunctions.tokenRelay())
+                .build())
+            .and(GatewayRouterFunctions.route()
+                .PATCH("/protected/api/me/profile", HandlerFunctions.http())
+                .before(BeforeFilterFunctions.setPath("/api/me/profile"))
                 .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
                 .filter(TokenRelayFilterFunctions.tokenRelay())
                 .build());

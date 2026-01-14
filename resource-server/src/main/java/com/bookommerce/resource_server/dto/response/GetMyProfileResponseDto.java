@@ -10,5 +10,6 @@ public record GetMyProfileResponseDto (
     String firstName,
     String phone,
     Genders gender,
-    LocalDate dob
+    LocalDate dob,
+    String avatarUrlPath
 ) {}

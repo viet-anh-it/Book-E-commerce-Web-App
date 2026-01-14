@@ -1,5 +1,5 @@
 import { CloseOutlined } from '@ant-design/icons';
-import { Breadcrumb, Button, Col, Empty, Row, Spin, Typography, message, notification, theme } from 'antd';
+import { Breadcrumb, Button, Col, Empty, Row, Spin, Typography, notification, theme } from 'antd';
 import { useEffect, useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import BackToTopButton from '../components/BackToTopButton';
@@ -47,7 +47,7 @@ const CartPage = () => {
             }
         } catch (error) {
             console.error("Failed to fetch cart:", error);
-            message.error("Failed to load cart data.");
+            // message.error("Failed to load cart data.");
         } finally {
             if (showLoading) setLoading(false);
         }
@@ -101,6 +101,7 @@ const CartPage = () => {
             let description = 'Check your input';
 
             if (error.response) {
+                if (error.response.status === 401) return;
                 const { status, data } = error.response;
                 if (status === 200) {
                     // Success
@@ -111,9 +112,6 @@ const CartPage = () => {
                             description = fieldErrors[0].replace(/^\d+:/, '');
                         }
                     }
-                } else if (status === 401) {
-                    messageStr = 'Unauthorized';
-                    description = 'Please login to continue.';
                 } else if (status === 403) {
                     messageStr = 'Forbidden';
                     description = 'You are not allowed to do this.';
@@ -179,6 +177,7 @@ const CartPage = () => {
             let description = 'Check your input';
 
             if (error.response) {
+                if (error.response.status === 401) return;
                 const { status, data } = error.response;
                 if (status === 200) {
                     // Should be success
@@ -190,9 +189,6 @@ const CartPage = () => {
                             description = fieldErrors[0].replace(/^\d+:/, '');
                         }
                     }
-                } else if (status === 401) {
-                    messageStr = 'Unauthorized';
-                    description = 'Please login to continue.';
                 } else if (status === 403) {
                     messageStr = 'Forbidden';
                     description = 'You are not allowed to do this.';

@@ -38,6 +38,12 @@ public class ProfileController {
                 .build()); 
     }
 
+    @GetMapping("/me/profile/avatar")
+    public ResponseEntity<String> getMyProfileAvatar() {
+        return ResponseEntity.status(HttpStatus.OK)
+            .body("/images/avatars/default/default-avatar.svg");
+    }
+
     @PatchMapping("/me/profile")
     public ResponseEntity<ApiSuccessResponse<Void>> updateProfile(
         @RequestBody @Validated(ValidationOrder.class)

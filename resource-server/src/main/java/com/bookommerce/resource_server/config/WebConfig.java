@@ -17,6 +17,9 @@ public class WebConfig {
     @Value(value = "${upload.image.book}")
     String bookImageUploadDir;
 
+    @Value(value = "${upload.image.avatar.default}")
+    String avatarDefaultImageUploadDir;
+
     @Bean
     public WebMvcConfigurer webMvcConfigurer() {
         return new WebMvcConfigurer() {
@@ -24,6 +27,8 @@ public class WebConfig {
             public void addResourceHandlers(@NonNull ResourceHandlerRegistry registry) {
                 registry.addResourceHandler("/images/books/**")
                         .addResourceLocations("file:" + bookImageUploadDir);
+                registry.addResourceHandler("/images/avatars/default/**")
+                        .addResourceLocations("file:" + avatarDefaultImageUploadDir);
             }
         };
     }

@@ -80,8 +80,8 @@ const ProductControls = ({ totalItems, onOpenFilter }) => {
                     style={{ width: '100%' }}
                     onChange={handlePageSizeChange}
                     options={[
-                        { value: 10, label: '10 mục' },
-                        { value: 20, label: '20 mục' },
+                        { value: 10, label: '10 sản phẩm' },
+                        { value: 20, label: '20 sản phẩm' },
                     ]}
                 />
             </Space>

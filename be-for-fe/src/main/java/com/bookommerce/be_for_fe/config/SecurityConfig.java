@@ -84,10 +84,11 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.DELETE, "/protected/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
                 // authorization for profile
                 .requestMatchers(HttpMethod.GET, "/protected/api/me").authenticated()
-                .requestMatchers(HttpMethod.GET, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
-                .requestMatchers(HttpMethod.PATCH, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.GET, "/protected/api/me/profile/avatar").authenticated()
+                .requestMatchers(HttpMethod.GET, "/protected/api/me/profile").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.PATCH, "/protected/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 // authorization for image
-                .requestMatchers(HttpMethod.GET, "/images/books/**").permitAll()
+                .requestMatchers(HttpMethod.GET, "/images/books/**", "/images/avatars/**").permitAll()
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
             .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
