@@ -32,7 +32,7 @@ import {
 import dayjs from 'dayjs';
 import { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
-import { changeEmail, changePassword, getProfile, updateProfile, uploadAvatar } from '../api/user';
+import { changeEmail, changePassword, getProfile, updateMyProfileAvatar, updateProfile } from '../api/user';
 import { useAuth } from '../contexts/AuthContext';
 
 const { Content } = Layout;
@@ -59,6 +59,7 @@ const ProfilePage = () => {
     const [selectedFile, setSelectedFile] = useState(null);
     const [previewUrl, setPreviewUrl] = useState(null);
     const [avatarUrl, setAvatarUrl] = useState(null);
+    const [avatarForm] = Form.useForm();
 
     const [profileData, setProfileData] = useState(null);
 
@@ -104,10 +105,18 @@ const ProfilePage = () => {
         form.setFields(Object.keys(form.getFieldsValue()).map(key => ({ name: key, errors: [] })));
         setLoading(true);
         try {
+            const sanitizeInput = (val) => {
+                if (typeof val === 'string') {
+                    const trimmed = val.trim();
+                    return trimmed === '' ? null : trimmed;
+                }
+                return val;
+            };
+
             const payload = {
-                firstName: values.firstName,
-                lastName: values.lastName,
-                phone: values.phoneNumber,
+                firstName: sanitizeInput(values.firstName),
+                lastName: sanitizeInput(values.lastName),
+                phone: sanitizeInput(values.phoneNumber),
                 gender: values.gender,
                 dob: values.dateOfBirth ? values.dateOfBirth.format('YYYY-MM-DD') : null,
             };
@@ -198,27 +207,84 @@ const ProfilePage = () => {
             const reader = new FileReader();
             reader.onload = (e) => setPreviewUrl(e.target.result);
             reader.readAsDataURL(file);
+            avatarForm.setFieldsValue({
+                image: {
+                    file: file,
+                    fileList: [info.file]
+                }
+            });
         }
     };
 
-    const handleAvatarSubmit = async () => {
-        if (!selectedFile) {
-            message.error('Vui lòng chọn một tấm ảnh!');
-            return;
-        }
-
+    const handleAvatarSubmit = async (values) => {
         setAvatarLoading(true);
         try {
-            await uploadAvatar(selectedFile);
-            message.success('Cập nhật ảnh đại diện thành công!');
+            // We use avatarUrl or user.avatarUrl as the source of truth for the current server image path.
+            // previewUrl is only for local display of the selected file.
+            const currentSrc = avatarUrl || user?.avatarUrl || "";
+            // Extract path if it is a full URL, otherwise use it as is if it starts with /
+            let imageUrlPath = currentSrc;
+            if (currentSrc && currentSrc.startsWith('http')) {
+                try {
+                    const urlObj = new URL(currentSrc);
+                    imageUrlPath = urlObj.pathname;
+                } catch (e) {
+                    // ignore invalid url
+                }
+            }
+
+            const response = await updateMyProfileAvatar({
+                image: selectedFile,
+                imageUrlPath: imageUrlPath
+            });
+
+            message.success(response.data.message || 'Cập nhật ảnh đại diện thành công!');
+
+            // Update avatar URL from response data
+            if (response.data.data) {
+                setAvatarUrl(response.data.data);
+                // Also update user context if needed, though refreshUser() below might handle it
+            }
+
             await refreshUser();
             setIsAvatarModalVisible(false);
             setSelectedFile(null);
             setPreviewUrl(null);
+            avatarForm.resetFields();
         } catch (error) {
             console.error('Upload avatar error:', error);
-            if (error.response?.status === 401) return;
-            message.error('Cập nhật ảnh đại diện thất bại: ' + (error.response?.data?.message || error.message || 'Lỗi không xác định'));
+            const status = error.response?.status;
+            const errorData = error.response?.data;
+            const errorMsg = errorData?.message || error.message || 'Lỗi không xác định';
+
+            if (status === 400 && errorData?.errors?.fieldErrors) {
+                const fieldErrors = errorData.errors.fieldErrors;
+                const formErrors = [];
+
+                Object.keys(fieldErrors).forEach(field => {
+                    formErrors.push({
+                        name: field, // Backend field name 'image' matches form field name
+                        errors: fieldErrors[field],
+                    });
+                });
+
+                avatarForm.setFields(formErrors);
+                // message.error('Vui lòng kiểm tra lại thông tin nhập vào!'); // Optional
+            } else if ([401, 403, 500].includes(status) || errorData?.errors?.globalErrors?.length > 0) {
+                // Global errors or specific status codes
+                let msg = errorMsg;
+                if (errorData?.errors?.globalErrors?.length > 0) {
+                    msg = errorData.errors.globalErrors.join(', ');
+                }
+                message.error(msg);
+            } else {
+                // Other errors -> Modal
+                Modal.error({
+                    title: 'Cập nhật thất bại',
+                    content: errorMsg,
+                    centered: true,
+                });
+            }
         } finally {
             setAvatarLoading(false);
         }
@@ -258,7 +324,7 @@ const ProfilePage = () => {
                                     <Avatar
                                         size={100}
                                         icon={<UserOutlined />}
-                                        src={previewUrl || avatarUrl || user?.avatarUrl}
+                                        src={previewUrl || `https://bff.bookommerce.com:8181${avatarUrl}` || user?.avatarUrl}
                                         style={{
                                             backgroundColor: colorPrimary,
                                             border: `4px solid ${colorBgContainer}`,
@@ -529,8 +595,9 @@ const ProfilePage = () => {
                     setIsAvatarModalVisible(false);
                     setSelectedFile(null);
                     setPreviewUrl(null);
+                    avatarForm.resetFields();
                 }}
-                onOk={handleAvatarSubmit}
+                onOk={avatarForm.submit}
                 confirmLoading={avatarLoading}
                 okText="Xác nhận"
                 cancelText="Hủy"
@@ -540,37 +607,45 @@ const ProfilePage = () => {
                 transitionName=""
                 maskTransitionName=""
             >
-                <div style={{ textAlign: 'center', padding: '40px 0' }}>
-                    <div style={{ marginBottom: 32 }}>
-                        <Avatar
-                            size={300}
-                            src={previewUrl || avatarUrl || user?.avatarUrl}
-                            icon={<UserOutlined style={{ fontSize: 100 }} />}
-                            style={{
-                                border: `6px solid ${colorPrimary}`,
-                                boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
-                            }}
-                        />
-                    </div>
-
-                    <Upload
-                        showUploadList={false}
-                        beforeUpload={() => false}
-                        onChange={handleAvatarSelect}
-                        accept="image/*"
-                    >
-                        <Button icon={<CameraOutlined />} size="large" style={{ minWidth: 220 }}>
-                            Chọn ảnh từ máy tính
-                        </Button>
-                    </Upload>
-
-                    {selectedFile && (
-                        <div style={{ marginTop: 20 }}>
-                            <Text strong style={{ fontSize: 16 }}>Đã chọn: </Text>
-                            <Text type="secondary" style={{ fontSize: 16 }}>{selectedFile.name}</Text>
+                <Form
+                    form={avatarForm}
+                    onFinish={handleAvatarSubmit}
+                    layout="vertical"
+                >
+                    <div style={{ textAlign: 'center', padding: '40px 0' }}>
+                        <div style={{ marginBottom: 32 }}>
+                            <Avatar
+                                size={300}
+                                src={previewUrl || `https://bff.bookommerce.com:8181${avatarUrl}` || user?.avatarUrl}
+                                icon={<UserOutlined style={{ fontSize: 100 }} />}
+                                style={{
+                                    border: `6px solid ${colorPrimary}`,
+                                    boxShadow: '0 8px 24px rgba(0,0,0,0.12)'
+                                }}
+                            />
                         </div>
-                    )}
-                </div>
+
+                        <Form.Item name="image">
+                            <Upload
+                                showUploadList={false}
+                                beforeUpload={() => false}
+                                onChange={handleAvatarSelect}
+                                accept="image/*"
+                            >
+                                <Button icon={<CameraOutlined />} size="large" style={{ minWidth: 220 }}>
+                                    Chọn ảnh từ máy tính
+                                </Button>
+                            </Upload>
+                        </Form.Item>
+
+                        {selectedFile && (
+                            <div style={{ marginTop: 20 }}>
+                                <Text strong style={{ fontSize: 16 }}>Đã chọn: </Text>
+                                <Text type="secondary" style={{ fontSize: 16 }}>{selectedFile.name}</Text>
+                            </div>
+                        )}
+                    </div>
+                </Form>
             </Modal>
         </Content>
     );

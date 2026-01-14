@@ -210,8 +210,8 @@ public class SecurityConfig {
                     .build())
                 .tokenSettings(TokenSettings.builder()
                     .accessTokenFormat(OAuth2TokenFormat.SELF_CONTAINED)
-                    .accessTokenTimeToLive(Duration.ofSeconds(30))
-                    .refreshTokenTimeToLive(Duration.ofMinutes(5))
+                    .accessTokenTimeToLive(Duration.ofMinutes(5))
+                    .refreshTokenTimeToLive(Duration.ofMinutes((60 * 60 * 24 * 30) + 5 + 5))
                     .reuseRefreshTokens(false)
                     .build())
                 .build();

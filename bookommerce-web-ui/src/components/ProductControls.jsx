@@ -58,7 +58,7 @@ const ProductControls = ({ totalItems, onOpenFilter }) => {
             gap: 16
         }}>
             <div style={{ borderBottom: `1px solid ${token.colorBorderSecondary}`, paddingBottom: 16 }}>
-                <Text strong style={{ fontSize: 16 }}>Điều khiển</Text>
+                <Text strong style={{ fontSize: 16 }}>Tìm kiếm & Sắp xếp</Text>
             </div>
 
             <Space direction="vertical" style={{ width: '100%' }}>

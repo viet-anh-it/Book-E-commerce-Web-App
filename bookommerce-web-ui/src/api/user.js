@@ -35,14 +35,16 @@ export const changePassword = async (passwordData) => {
     return axiosInstance.post('/api/me/change-password', passwordData);
 };
 /**
- * Upload user avatar
- * @param {File} file - The image file to upload
+ * Update user avatar
+ * @param {Object} data - Contains image file and imageUrlPath
  * @returns {Promise}
  */
-export const uploadAvatar = async (file) => {
+export const updateMyProfileAvatar = async (data) => {
     const formData = new FormData();
-    formData.append('file', file);
-    return axiosInstance.post('/api/me/avatar', formData, {
+    if (data.image) formData.append('image', data.image);
+    if (data.imageUrlPath) formData.append('imageUrlPath', data.imageUrlPath);
+
+    return axiosInstance.patch('/protected/api/me/profile/avatar', formData, {
         headers: {
             'Content-Type': 'multipart/form-data',
         },

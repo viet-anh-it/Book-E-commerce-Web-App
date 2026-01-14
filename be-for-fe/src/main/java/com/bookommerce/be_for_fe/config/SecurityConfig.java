@@ -84,8 +84,8 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.DELETE, "/protected/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
                 // authorization for profile
                 .requestMatchers(HttpMethod.GET, "/protected/api/me").authenticated()
-                .requestMatchers(HttpMethod.GET, "/protected/api/me/profile/avatar").authenticated()
                 .requestMatchers(HttpMethod.GET, "/protected/api/me/profile").hasAuthority("ROLE_CUSTOMER")
+                .requestMatchers(HttpMethod.GET, "/protected/api/me/profile/avatar").hasAuthority("ROLE_CUSTOMER")
                 .requestMatchers(HttpMethod.PATCH, "/protected/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 // authorization for image
                 .requestMatchers(HttpMethod.GET, "/images/books/**", "/images/avatars/**").permitAll()

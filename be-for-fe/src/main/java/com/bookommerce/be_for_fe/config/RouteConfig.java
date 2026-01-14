@@ -145,7 +145,7 @@ public class RouteConfig {
             .filter(TokenRelayFilterFunctions.tokenRelay())
             .build()
             .and(GatewayRouterFunctions.route()
-                .GET("/protected/api/me/profile/avatar", HandlerFunctions.http())
+                .PATCH("/protected/api/me/profile/avatar", HandlerFunctions.http())
                 .before(BeforeFilterFunctions.setPath("/api/me/profile/avatar"))
                 .before(BeforeFilterFunctions.uri(RESOURCE_SERVER_BASE_URL))
                 .filter(TokenRelayFilterFunctions.tokenRelay())

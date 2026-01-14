@@ -24,7 +24,7 @@ public class SessionCookieMaxAgeSlidingInterceptor implements HandlerInterceptor
         cookie.setHttpOnly(true);
         cookie.setSecure(true);
         cookie.setAttribute("SameSite", "Strict");
-        cookie.setMaxAge(60 * 3);
+        cookie.setMaxAge(60 * 60 * 24 * 30);
         response.addCookie(cookie);
         return true;
     }

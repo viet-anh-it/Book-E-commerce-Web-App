@@ -7,7 +7,7 @@ import org.springframework.session.web.http.CookieSerializer;
 import org.springframework.session.web.http.DefaultCookieSerializer;
 
 @Configuration
-@EnableJdbcHttpSession(maxInactiveIntervalInSeconds = 60 * 3)
+@EnableJdbcHttpSession(maxInactiveIntervalInSeconds = 60 * 60 * 24 * 30)
 public class SessionConfig {
 
     @Bean
@@ -19,7 +19,7 @@ public class SessionConfig {
         serializer.setUseHttpOnlyCookie(true);
         serializer.setUseSecureCookie(true);
         serializer.setSameSite("Lax");
-        serializer.setCookieMaxAge(60 * 3);
+        serializer.setCookieMaxAge(60 * 60 * 24 * 30);
         serializer.setUseBase64Encoding(false);
         return serializer;
     }

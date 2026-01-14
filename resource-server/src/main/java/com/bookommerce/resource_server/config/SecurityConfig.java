@@ -70,7 +70,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.PATCH, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
                 .requestMatchers(HttpMethod.DELETE, "/api/carts/items/{cartItemId}").hasAuthority("ROLE_CUSTOMER")
                 // authorization for profile
-                .requestMatchers(HttpMethod.GET, "/api/me/profile/avatar").authenticated()
+                .requestMatchers(HttpMethod.PATCH, "/api/me/profile/avatar").hasAuthority("ROLE_CUSTOMER")
                 .requestMatchers(HttpMethod.GET, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 .requestMatchers(HttpMethod.PATCH, "/api/me/profile").hasAuthority("ROLE_CUSTOMER")
                 // authorization for image
