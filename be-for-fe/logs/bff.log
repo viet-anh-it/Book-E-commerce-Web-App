@@ -6562,3 +6562,835 @@ java.nio.channels.ClosedChannelException
 20:39:24.196 | INFO | TomcatWebServer: Tomcat started on port 8181 (https) with context path '/'
 20:39:24.206 | INFO | BeForFeApplication: Started BeForFeApplication in 0.879 seconds (process running for 9038.018)
 20:39:24.207 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+20:39:38.644 | INFO | [/]: Initializing Spring DispatcherServlet 'dispatcherServlet'
+20:39:38.644 | INFO | DispatcherServlet: Initializing Servlet 'dispatcherServlet'
+20:39:38.646 | INFO | DispatcherServlet: Completed initialization in 2 ms
+20:39:38.649 | DEBUG | FilterChainProxy: Securing OPTIONS /protected/api/me/profile/avatar
+20:39:38.667 | DEBUG | FilterChainProxy: Securing PATCH /protected/api/me/profile/avatar
+20:39:38.748 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:07:21Z, iat=2026-01-14T13:37:21Z, nonce=hF9H4CZ-9GUqV5Yy39jrq2ZjMxgMPYhqmcnG-G9CNyA, jti=7f555473-72a4-4f89-ab60-5e54b782e87e, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:39:38.761 | DEBUG | FilterChainProxy: Secured PATCH /protected/api/me/profile/avatar
+20:39:39.572 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:39:39.582 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:07:21Z, iat=2026-01-14T13:37:21Z, nonce=hF9H4CZ-9GUqV5Yy39jrq2ZjMxgMPYhqmcnG-G9CNyA, jti=7f555473-72a4-4f89-ab60-5e54b782e87e, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:39:39.592 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:39:39.795 | DEBUG | FilterChainProxy: Securing GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:39:39.796 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:39:39.797 | DEBUG | FilterChainProxy: Secured GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:41:03.432 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+20:41:03.440 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:07:21Z, iat=2026-01-14T13:37:21Z, nonce=hF9H4CZ-9GUqV5Yy39jrq2ZjMxgMPYhqmcnG-G9CNyA, jti=7f555473-72a4-4f89-ab60-5e54b782e87e, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:41:03.447 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+20:41:28.844 | DEBUG | FilterChainProxy: Securing GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:41:28.846 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:41:28.846 | DEBUG | FilterChainProxy: Secured GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:41:54.539 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+20:41:54.635 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:07:21Z, iat=2026-01-14T13:37:21Z, nonce=hF9H4CZ-9GUqV5Yy39jrq2ZjMxgMPYhqmcnG-G9CNyA, jti=7f555473-72a4-4f89-ab60-5e54b782e87e, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:41:54.654 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+20:41:55.847 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:11:55Z, iat=2026-01-14T13:41:55Z, jti=efe2a365-62ad-454d-a361-d9febe11f4fc, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@ceef2b3]
+20:44:00.248 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+20:44:00.261 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:11:55Z, iat=2026-01-14T13:41:55Z, jti=efe2a365-62ad-454d-a361-d9febe11f4fc, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:44:00.264 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+20:44:14.534 | DEBUG | FilterChainProxy: Securing GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:44:14.537 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:44:14.537 | DEBUG | FilterChainProxy: Secured GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:44:16.067 | DEBUG | FilterChainProxy: Securing OPTIONS /protected/api/me/profile/avatar
+20:44:16.078 | DEBUG | FilterChainProxy: Securing PATCH /protected/api/me/profile/avatar
+20:44:16.086 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:11:55Z, iat=2026-01-14T13:41:55Z, jti=efe2a365-62ad-454d-a361-d9febe11f4fc, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:44:16.086 | DEBUG | FilterChainProxy: Secured PATCH /protected/api/me/profile/avatar
+20:46:12.759 | DEBUG | FilterChainProxy: Securing OPTIONS /protected/api/me/profile/avatar
+20:46:12.860 | DEBUG | FilterChainProxy: Securing PATCH /protected/api/me/profile/avatar
+20:46:13.041 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:11:55Z, iat=2026-01-14T13:41:55Z, jti=efe2a365-62ad-454d-a361-d9febe11f4fc, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:46:13.045 | DEBUG | FilterChainProxy: Secured PATCH /protected/api/me/profile/avatar
+20:46:14.705 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@76016f12]
+20:46:15.561 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:46:15.573 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:46:15.574 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:46:19.204 | DEBUG | FilterChainProxy: Securing GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:46:19.205 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:46:19.207 | DEBUG | FilterChainProxy: Secured GET /images/avatars/af14ff92-8f06-47a8-9da7-0000145d0eef.jpg
+20:46:26.198 | DEBUG | FilterChainProxy: Securing OPTIONS /protected/api/me/profile/avatar
+20:46:26.233 | DEBUG | FilterChainProxy: Securing PATCH /protected/api/me/profile/avatar
+20:46:26.256 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:46:26.265 | DEBUG | FilterChainProxy: Secured PATCH /protected/api/me/profile/avatar
+20:46:26.870 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:46:26.878 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:46:26.878 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:46:27.080 | DEBUG | FilterChainProxy: Securing GET /images/avatars/323f8377-8480-4d47-8066-f6fdd9fa03cf.jpg
+20:46:27.088 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:46:27.098 | DEBUG | FilterChainProxy: Secured GET /images/avatars/323f8377-8480-4d47-8066-f6fdd9fa03cf.jpg
+20:46:29.603 | DEBUG | FilterChainProxy: Securing GET /images/avatars/323f8377-8480-4d47-8066-f6fdd9fa03cf.jpg
+20:46:29.603 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:46:29.604 | DEBUG | FilterChainProxy: Secured GET /images/avatars/323f8377-8480-4d47-8066-f6fdd9fa03cf.jpg
+20:46:37.065 | DEBUG | FilterChainProxy: Securing OPTIONS /protected/api/me/profile/avatar
+20:46:37.072 | DEBUG | FilterChainProxy: Securing PATCH /protected/api/me/profile/avatar
+20:46:37.080 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:46:37.080 | DEBUG | FilterChainProxy: Secured PATCH /protected/api/me/profile/avatar
+20:46:37.632 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:46:37.638 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:46:37.640 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:46:37.819 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+20:46:37.820 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:46:37.820 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+20:46:39.825 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+20:46:39.826 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:46:39.826 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+20:49:09.400 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:49:09.584 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:49:09.587 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:49:10.534 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+20:49:10.562 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:49:10.563 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+20:49:17.531 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+20:49:17.539 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:17.544 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+20:49:25.857 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:49:25.857 | DEBUG | FilterChainProxy: Securing GET /api/genres
+20:49:25.859 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:25.863 | DEBUG | FilterChainProxy: Secured GET /api/genres
+20:49:25.867 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:25.876 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:49:26.658 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:49:26.659 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.661 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:49:26.661 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:49:26.662 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.667 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:49:26.687 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:49:26.688 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:49:26.693 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.691 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:49:26.693 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.693 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:49:26.694 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:49:26.698 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.703 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:49:26.707 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:49:26.705 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:49:26.710 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:49:26.713 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.713 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:49:26.708 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.707 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.766 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:49:26.764 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:49:26.771 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:49:26.791 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.832 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:49:26.875 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:26.847 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:49:26.881 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:49:38.676 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC&genres=5
+20:49:38.678 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:38.678 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC&genres=5
+20:49:49.653 | DEBUG | FilterChainProxy: Securing POST /protected/logout
+20:49:49.739 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:49:49.739 | DEBUG | LogoutFilter: Logging out [OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:37:21Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:16:14Z, iat=2026-01-14T13:46:14Z, jti=4925a96c-4eb9-48e8-9b64-ffe249aed4d2, authorities=[ROLE_CUSTOMER], sid=6efv2KDNwv72XoSYH0dlgx9x9_7x3a-t2c88--vputE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=e504e636-5b55-45fb-9667-3ea92ef4fb87], Granted Authorities=[ROLE_CUSTOMER]]]
+20:49:49.760 | DEBUG | SecurityContextLogoutHandler: Invalidated session 6f027112-b1db-480f-a9bb-c2d207128bee
+20:49:49.862 | DEBUG | DefaultRedirectStrategy: Redirecting to https://auth.bookommerce.com:8282/connect/logout?id_token_hint=eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJuZ3V5ZW52aWV0YW5oLnBlcnNvbmFsQGdtYWlsLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODM5Nzg0MSwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4NDAwMTc0LCJpYXQiOjE3NjgzOTgzNzQsImp0aSI6IjQ5MjVhOTZjLTRlYjktNDhlOC05YjY0LWZmZTI0OWFlZDRkMiIsImF1dGhvcml0aWVzIjpbIlJPTEVfQ1VTVE9NRVIiXSwic2lkIjoiNmVmdjJLRE53djcyWG9TWUgwZGxneDl4OV83eDNhLXQyYzg4LS12cHV0RSJ9.Chq63PfnXHgj5Mc10mRSRSiNBmQAq7ONnN2D-gV--09P_CQkQlmmqifWojUUwD8KiMlt851KUGOD9mNRML8pG_gj3MqL9V-wlM2M9d-ZBf2UcdYmsCk3_yd8xrsAkWJgGpzARuBkvxBNpGPpYW6vu0NSqkxd7EjBccStAkzN-x227ALSoJyzzpy5Mnac83qWOqB2UGFJnBanMBwjH5ly2zu3wPxk5GNj2zFfI6ITvQtjtnR3SJ0AR0s0-VmBTuzSaLDqDcMJtf82OdYlHbB-Zhe2r8UO2MSW8M-8hAAjv_xg9ncbQItJZazFw_Ygf3kzPHrN3HG5ievKN7C-5efIPA&post_logout_redirect_uri=https://app.bookommerce.com:8080
+20:49:50.789 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:49:50.792 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:50.800 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@f150dd0, matchingMediaTypes=[text/html], useEquals=false, ignoredMediaTypes=[]]
+20:49:50.800 | DEBUG | DelegatingAuthenticationEntryPoint: Trying to match using MediaTypeRequestMatcher [contentNegotiationStrategy=org.springframework.web.accept.HeaderContentNegotiationStrategy@3049be75, matchingMediaTypes=[application/json], useEquals=false, ignoredMediaTypes=[]]
+20:49:50.800 | DEBUG | DelegatingAuthenticationEntryPoint: Match found! Executing org.springframework.security.web.authentication.HttpStatusEntryPoint@3ed0e0c8
+20:49:51.027 | DEBUG | FilterChainProxy: Securing GET /api/genres
+20:49:51.027 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:49:51.027 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.027 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.027 | DEBUG | FilterChainProxy: Secured GET /api/genres
+20:49:51.029 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:49:51.121 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:49:51.121 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.121 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:49:51.200 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:49:51.200 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.201 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:49:51.277 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:49:51.278 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.279 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:49:51.277 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:49:51.280 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:49:51.280 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:49:51.283 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.285 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:49:51.280 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:49:51.291 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.281 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:49:51.281 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.282 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.304 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.292 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:49:51.305 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:49:51.305 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:49:51.305 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:49:51.315 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:49:51.318 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.318 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:49:51.352 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:49:51.372 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:49:51.374 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:49:53.232 | DEBUG | FilterChainProxy: Securing GET /protected/oauth2/authorization/bff
+20:49:53.237 | DEBUG | DefaultRedirectStrategy: Redirecting to https://auth.bookommerce.com:8282/oauth2/authorize?response_type=code&client_id=bff&scope=openid%20profile&state=nzTvjKCK47C4T8OoMHkVS0PitqIteQpN4UEHlRX5L7U%3D&redirect_uri=https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff&nonce=9ZRxT9OIbDyGK1n0kGfjIbphK2m6AKjxP4ANH2U7jEI
+20:50:08.432 | DEBUG | FilterChainProxy: Securing GET /protected/oauth2/authorization/bff
+20:50:08.449 | DEBUG | DefaultRedirectStrategy: Redirecting to https://auth.bookommerce.com:8282/oauth2/authorize?response_type=code&client_id=bff&scope=openid%20profile&state=C6vp5pCNIfPmsywrH8zN3wTnTKmAD_k9pq3dB5Iiudk%3D&redirect_uri=https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff&nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc
+20:50:08.581 | DEBUG | FilterChainProxy: Securing GET /protected/login/oauth2/code/bff?code=CZ46qiNKCx2OcpWNGfiSqNIwTm3DIvq3-5NxU7hPlE2xFWYIanEMLhqQhIAdNl7T_afQjUOiV_4y31Mh6NNassIgOMjNm7T75UsqWX036RsnNhrcB4cBiRMxTc_avwAG&state=C6vp5pCNIfPmsywrH8zN3wTnTKmAD_k9pq3dB5Iiudk%3D
+20:50:09.203 | DEBUG | ChangeSessionIdAuthenticationStrategy: Changed session id from 7d3bec83-cc00-4e2e-8715-bc0eba04bd14
+20:50:09.204 | DEBUG | CsrfAuthenticationStrategy: Replaced CSRF Token
+20:50:09.205 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@51d30b32]
+20:50:09.206 | DEBUG | OAuth2LoginAuthenticationFilter: Set SecurityContextHolder to OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]
+20:50:35.423 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:50:35.433 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:50:35.434 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:50:48.134 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:50:48.136 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.137 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:50:48.384 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:50:48.385 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.385 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:50:48.399 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:50:48.401 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.402 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:50:48.403 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:50:48.403 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:50:48.404 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.404 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.404 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:50:48.404 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:50:48.405 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:50:48.419 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.422 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:50:48.435 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.422 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:50:48.451 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:50:48.456 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:50:48.497 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.497 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:50:48.497 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:50:48.497 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.498 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:50:48.527 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:50:48.536 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.538 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:50:48.585 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:50:48.602 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:48.639 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:50:52.303 | DEBUG | FilterChainProxy: Securing GET /api/books?page=1&size=10
+20:50:52.305 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.305 | DEBUG | FilterChainProxy: Secured GET /api/books?page=1&size=10
+20:50:52.429 | DEBUG | FilterChainProxy: Securing GET /images/books/180523-4.jpg
+20:50:52.430 | DEBUG | FilterChainProxy: Securing GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:50:52.430 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491873.jpg
+20:50:52.430 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.430 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_38340.jpg
+20:50:52.430 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_28289.jpg
+20:50:52.430 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.432 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.430 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.430 | DEBUG | FilterChainProxy: Secured GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:50:52.432 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.432 | DEBUG | FilterChainProxy: Secured GET /images/books/180523-4.jpg
+20:50:52.432 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_24750.jpg
+20:50:52.432 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491873.jpg
+20:50:52.432 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_28289.jpg
+20:50:52.432 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.432 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_24750.jpg
+20:50:52.432 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_38340.jpg
+20:50:52.480 | DEBUG | FilterChainProxy: Securing GET /images/books/2a478a9e-33e2-4350-b43d-dd009af0033a.jpg
+20:50:52.481 | DEBUG | FilterChainProxy: Securing GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:50:52.488 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_14864.jpg
+20:50:52.497 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.504 | DEBUG | FilterChainProxy: Secured GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:50:52.494 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.511 | DEBUG | FilterChainProxy: Secured GET /images/books/2a478a9e-33e2-4350-b43d-dd009af0033a.jpg
+20:50:52.496 | DEBUG | FilterChainProxy: Securing GET /images/books/280423-3.jpg
+20:50:52.527 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.498 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:50:52.532 | DEBUG | FilterChainProxy: Secured GET /images/books/280423-3.jpg
+20:50:52.532 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_14864.jpg
+20:51:49.645 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:51:49.652 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:51:49.652 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:51:49.771 | DEBUG | FilterChainProxy: Securing GET /api/books?page=1&size=10
+20:51:49.777 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:49.778 | DEBUG | FilterChainProxy: Secured GET /api/books?page=1&size=10
+20:51:50.008 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_28289.jpg
+20:51:50.009 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.013 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_28289.jpg
+20:51:50.024 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_24750.jpg
+20:51:50.030 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.037 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_24750.jpg
+20:51:50.030 | DEBUG | FilterChainProxy: Securing GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:51:50.031 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_14864.jpg
+20:51:50.032 | DEBUG | FilterChainProxy: Securing GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:51:50.047 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.040 | DEBUG | FilterChainProxy: Securing GET /images/books/280423-3.jpg
+20:51:50.044 | DEBUG | FilterChainProxy: Securing GET /images/books/180523-4.jpg
+20:51:50.047 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.047 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.048 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.047 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.048 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_14864.jpg
+20:51:50.048 | DEBUG | FilterChainProxy: Secured GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:51:50.048 | DEBUG | FilterChainProxy: Secured GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:51:50.048 | DEBUG | FilterChainProxy: Secured GET /images/books/280423-3.jpg
+20:51:50.048 | DEBUG | FilterChainProxy: Secured GET /images/books/180523-4.jpg
+20:51:50.113 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_38340.jpg
+20:51:50.114 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.114 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_38340.jpg
+20:51:50.189 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491873.jpg
+20:51:50.189 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_41937_1.jpg
+20:51:50.189 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.190 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_41937_1.jpg
+20:51:50.191 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:50.199 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491873.jpg
+20:51:54.253 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:51:54.254 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.254 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:51:54.399 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:51:54.403 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:51:54.403 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:51:54.403 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:51:54.404 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.404 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:51:54.405 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.405 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.405 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.406 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:51:54.405 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:51:54.405 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:51:54.406 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:51:54.406 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.410 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:51:54.406 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:51:54.406 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.418 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:51:54.478 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:51:54.479 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.481 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:51:54.512 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:51:54.518 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:51:54.522 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.531 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:51:54.519 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.523 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:51:54.535 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:51:54.536 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:54.542 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:51:55.404 | DEBUG | FilterChainProxy: Securing GET /api/books?page=1&size=10
+20:51:55.405 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.406 | DEBUG | FilterChainProxy: Secured GET /api/books?page=1&size=10
+20:51:55.539 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_28289.jpg
+20:51:55.540 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.541 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_28289.jpg
+20:51:55.556 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_14864.jpg
+20:51:55.557 | DEBUG | FilterChainProxy: Securing GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:51:55.559 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.565 | DEBUG | FilterChainProxy: Secured GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:51:55.559 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.559 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_41937_1.jpg
+20:51:55.563 | DEBUG | FilterChainProxy: Securing GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:51:55.571 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.571 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.570 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_14864.jpg
+20:51:55.571 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_41937_1.jpg
+20:51:55.571 | DEBUG | FilterChainProxy: Secured GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:51:55.575 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_24750.jpg
+20:51:55.577 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.578 | DEBUG | FilterChainProxy: Securing GET /images/books/280423-3.jpg
+20:51:55.579 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_24750.jpg
+20:51:55.582 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.585 | DEBUG | FilterChainProxy: Secured GET /images/books/280423-3.jpg
+20:51:55.594 | DEBUG | FilterChainProxy: Securing GET /images/books/180523-4.jpg
+20:51:55.599 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.607 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_38340.jpg
+20:51:55.617 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491873.jpg
+20:51:55.618 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.618 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:55.616 | DEBUG | FilterChainProxy: Secured GET /images/books/180523-4.jpg
+20:51:55.618 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_38340.jpg
+20:51:55.618 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491873.jpg
+20:51:57.527 | DEBUG | FilterChainProxy: Securing GET /api/books?page=2&size=10
+20:51:57.528 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:57.529 | DEBUG | FilterChainProxy: Secured GET /api/books?page=2&size=10
+20:51:57.599 | DEBUG | FilterChainProxy: Securing GET /images/books/050525-2.jpg
+20:51:57.599 | DEBUG | FilterChainProxy: Securing GET /images/books/b_a-1-t_p-2_1_2.jpg
+20:51:57.600 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:57.600 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:51:57.600 | DEBUG | FilterChainProxy: Secured GET /images/books/050525-2.jpg
+20:51:57.600 | DEBUG | FilterChainProxy: Secured GET /images/books/b_a-1-t_p-2_1_2.jpg
+20:52:00.627 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:52:00.629 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.630 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:52:00.797 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:00.798 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.799 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:52:00.798 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:52:00.798 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:52:00.798 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:52:00.801 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:00.802 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.802 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.805 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:52:00.802 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.803 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:52:00.806 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:52:00.803 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.808 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:52:00.805 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:52:00.807 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.833 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:52:00.839 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:00.836 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:52:00.855 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.880 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:00.843 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:00.859 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.902 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:52:00.861 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:00.887 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.910 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:00.918 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:00.919 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:04.104 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:52:04.105 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:04.106 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:52:06.670 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:52:06.672 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.673 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:52:06.795 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:06.796 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.796 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:06.925 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:06.925 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:52:06.958 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:52:06.967 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.972 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:06.985 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.958 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:52:06.962 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.963 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.974 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:52:06.988 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:52:06.987 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.988 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:06.990 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:52:06.987 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:06.988 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:52:06.990 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:06.991 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:52:07.556 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:52:07.558 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:52:07.558 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:07.558 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:07.559 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:07.560 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:52:07.560 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:52:07.560 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:07.562 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:08.135 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:52:08.144 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:52:08.145 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:52:08.285 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:52:08.287 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.288 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:52:08.372 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:08.373 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.373 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:08.392 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:52:08.396 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.396 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:52:08.407 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:52:08.414 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.415 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:52:08.419 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:52:08.423 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.425 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:52:08.429 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:52:08.430 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.437 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:52:08.446 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:52:08.456 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.464 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:52:08.465 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:52:08.476 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:08.479 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.487 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.489 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:52:08.491 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:08.497 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:08.500 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:08.509 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.516 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:08.519 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:08.522 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:12.677 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:52:12.687 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:52:12.687 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:52:12.815 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:52:12.816 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.816 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:52:12.887 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:12.888 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.888 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:12.900 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:52:12.909 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.909 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:52:12.917 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:52:12.918 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.919 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:52:12.930 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:52:12.932 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.933 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:52:12.945 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:52:12.947 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.948 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:52:12.952 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:52:12.957 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.958 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:52:12.967 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:52:12.968 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.975 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:52:12.983 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:12.991 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:12.992 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.994 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:12.998 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:12.999 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:13.014 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:13.019 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:13.045 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:17.971 | DEBUG | FilterChainProxy: Securing GET /protected/api/ratings?page=0&size=5&sort=CREATED_AT&order=DESC
+20:52:17.981 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:52:17.982 | DEBUG | FilterChainProxy: Secured GET /protected/api/ratings?page=0&size=5&sort=CREATED_AT&order=DESC
+20:52:47.901 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10
+20:52:47.903 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:47.903 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10
+20:52:48.077 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:48.077 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.078 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:52:48.092 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:52:48.098 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.092 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:52:48.093 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:52:48.096 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:52:48.096 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:52:48.103 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:52:48.104 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.112 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:48.115 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:52:48.116 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.117 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:52:48.112 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.118 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:52:48.113 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.114 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.119 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:52:48.120 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:52:48.186 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:48.189 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.198 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:52:48.213 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:52:48.215 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.215 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:48.215 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:52:48.215 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:52:48.217 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:52:49.451 | DEBUG | FilterChainProxy: Securing GET /protected/api/ratings?page=0&size=5&sort=CREATED_AT&order=DESC
+20:52:49.461 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:52:49.462 | DEBUG | FilterChainProxy: Secured GET /protected/api/ratings?page=0&size=5&sort=CREATED_AT&order=DESC
+20:52:54.831 | DEBUG | FilterChainProxy: Securing POST /protected/logout
+20:52:54.837 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:52:54.838 | DEBUG | LogoutFilter: Logging out [OAuth2AuthenticationToken [Principal=Name: [prodman@bookommerce.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=prodman@bookommerce.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:50:08Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:20:09Z, iat=2026-01-14T13:50:09Z, nonce=C079CA-YsjiKFY7RqalcpaGN7cdoEib3m1s4t5HFwTc, jti=23118617-e417-47e4-af30-51c86f10976a, authorities=[ROLE_PRODUCT_MANAGER], sid=qQyc0jDgVAD8BFHRcl6KhBLO9dTr5_oH6WqdBVACSV8}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=7d3bec83-cc00-4e2e-8715-bc0eba04bd14], Granted Authorities=[ROLE_PRODUCT_MANAGER]]]
+20:52:54.850 | DEBUG | SecurityContextLogoutHandler: Invalidated session ed57ac1c-bc50-4bc7-bf6c-9b68d93239b7
+20:52:54.859 | DEBUG | DefaultRedirectStrategy: Redirecting to https://auth.bookommerce.com:8282/connect/logout?id_token_hint=eyJraWQiOiJib29rb21tZXJjZS10b2tlbi1rZXkiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiJwcm9kbWFuQGJvb2tvbW1lcmNlLmNvbSIsImF1ZCI6ImJmZiIsImF6cCI6ImJmZiIsImF1dGhfdGltZSI6MTc2ODM5ODYwOCwiaXNzIjoiaHR0cHM6Ly9hdXRoLmJvb2tvbW1lcmNlLmNvbTo4MjgyIiwiZXhwIjoxNzY4NDAwNDA5LCJpYXQiOjE3NjgzOTg2MDksIm5vbmNlIjoiQzA3OUNBLVlzamlLRlk3UnFhbGNwYUdON2Nkb0VpYjNtMXM0dDVIRndUYyIsImp0aSI6IjIzMTE4NjE3LWU0MTctNDdlNC1hZjMwLTUxYzg2ZjEwOTc2YSIsImF1dGhvcml0aWVzIjpbIlJPTEVfUFJPRFVDVF9NQU5BR0VSIl0sInNpZCI6InFReWMwakRnVkFEOEJGSFJjbDZLaEJMTzlkVHI1X29INldxZEJWQUNTVjgifQ.XVQ_UmzWuJiLrZWZzvthu6O8aIsTNh4X1Z40JFc9rF9TkXgcJGBhAaHTvsuYZ3BXcngEPRL8NRE33OTB4f1dR8PX2-eXq-drEASS7cdQnBS2I7TQCwmj7ePnws4khcvg_vXwTVTefCjD3l8CsrsEIiLBsr7d_nEFlLTeuFM9UeuPl9rbiDJeVZYcXc_gQzbHuBe-uIcYKMelYYlp_-mwzYzaTJnRX3qSadWUlj9I9NimBCvzzByax05tPOiq3Uoe2CeQqj93_Be6AP0tuQ5ni0OJhiTnrGLiJ6oZrprJ0zyP55hkYaUP2xa2-OS9L_8VZSf9EeWX24gO9wlsCC-RWQ&post_logout_redirect_uri=https://auth.bookommerce.com:8282/page/store-login
+20:53:11.706 | DEBUG | FilterChainProxy: Securing GET /protected/oauth2/authorization/bff
+20:53:11.707 | DEBUG | DefaultRedirectStrategy: Redirecting to https://auth.bookommerce.com:8282/oauth2/authorize?response_type=code&client_id=bff&scope=openid%20profile&state=o-4FZEAm7XoguFH9x5xAh0o7aB1qzX117kMgT9M_COk%3D&redirect_uri=https://bff.bookommerce.com:8181/protected/login/oauth2/code/bff&nonce=uGGm4jkJ6b9Li_J4NcUEXnnFUt1erFLzmiT735D-0Fs
+20:53:11.789 | DEBUG | FilterChainProxy: Securing GET /protected/login/oauth2/code/bff?code=FagR60qDTN3GuL32Ln0OFiDYJIamZwxhmVG6MWYjxIIBNIcPD-q4bUO4_fFhjnTA1-vXRaYz4Vlr3F9UXttAjTMqKODkUrxF9PH8hvidtxeUo1EPInUR-Td304eo7XBY&state=o-4FZEAm7XoguFH9x5xAh0o7aB1qzX117kMgT9M_COk%3D
+20:53:12.174 | DEBUG | ChangeSessionIdAuthenticationStrategy: Changed session id from 109bc35c-e7fe-40ec-864c-1db61db39a6e
+20:53:12.175 | DEBUG | CsrfAuthenticationStrategy: Replaced CSRF Token
+20:53:12.175 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:23:12Z, iat=2026-01-14T13:53:12Z, nonce=uGGm4jkJ6b9Li_J4NcUEXnnFUt1erFLzmiT735D-0Fs, jti=98296e8a-dc95-419a-b9a8-6c379cc1d7b1, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@6ba9d9be]
+20:53:12.176 | DEBUG | OAuth2LoginAuthenticationFilter: Set SecurityContextHolder to OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:23:12Z, iat=2026-01-14T13:53:12Z, nonce=uGGm4jkJ6b9Li_J4NcUEXnnFUt1erFLzmiT735D-0Fs, jti=98296e8a-dc95-419a-b9a8-6c379cc1d7b1, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]
+20:53:12.629 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+20:53:12.645 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:23:12Z, iat=2026-01-14T13:53:12Z, nonce=uGGm4jkJ6b9Li_J4NcUEXnnFUt1erFLzmiT735D-0Fs, jti=98296e8a-dc95-419a-b9a8-6c379cc1d7b1, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+20:53:12.647 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+20:53:13.014 | DEBUG | FilterChainProxy: Securing GET /api/genres
+20:53:13.016 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.023 | DEBUG | FilterChainProxy: Secured GET /api/genres
+20:53:13.024 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:53:13.026 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.027 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:53:13.319 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:53:13.320 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.320 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:53:13.321 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:53:13.321 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.322 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:53:13.328 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:53:13.330 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.329 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:53:13.330 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:53:13.331 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.336 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:53:13.336 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:53:13.340 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:53:13.346 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:53:13.350 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.345 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.354 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:53:13.346 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.353 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:53:13.355 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:53:13.353 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:53:13.354 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:53:13.354 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.366 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.385 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:53:13.378 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:53:13.386 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:53:13.394 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:13.396 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:53:15.954 | DEBUG | FilterChainProxy: Securing GET /api/books/45
+20:53:15.955 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:15.955 | DEBUG | FilterChainProxy: Secured GET /api/books/45
+20:53:16.170 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:53:16.171 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:16.171 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:53:36.272 | DEBUG | FilterChainProxy: Securing GET /api/genres
+20:53:36.272 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:53:36.272 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.272 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.273 | DEBUG | FilterChainProxy: Secured GET /api/genres
+20:53:36.273 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:53:36.339 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:53:36.340 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.340 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:53:36.490 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:53:36.490 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:53:36.490 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:53:36.490 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:53:36.490 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:53:36.491 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.491 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.491 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:53:36.491 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.491 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.491 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.491 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:53:36.491 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:53:36.491 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:53:36.491 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:53:36.491 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:53:36.492 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.492 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:53:36.509 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:53:36.509 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:53:36.509 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:53:36.510 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.510 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.512 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:36.512 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:53:36.512 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:53:36.512 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:53:40.981 | DEBUG | FilterChainProxy: Securing GET /api/books?page=1&size=10&sort=TITLE&order=ASC
+20:53:40.982 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:40.985 | DEBUG | FilterChainProxy: Secured GET /api/books?page=1&size=10&sort=TITLE&order=ASC
+20:53:41.126 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_28289.jpg
+20:53:41.126 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.126 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_28289.jpg
+20:53:41.136 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_24750.jpg
+20:53:41.136 | DEBUG | FilterChainProxy: Securing GET /images/books/180523-4.jpg
+20:53:41.136 | DEBUG | FilterChainProxy: Securing GET /images/books/280423-3.jpg
+20:53:41.142 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_38340.jpg
+20:53:41.137 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.139 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.140 | DEBUG | FilterChainProxy: Securing GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:53:41.145 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491873.jpg
+20:53:41.142 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.143 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.144 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_24750.jpg
+20:53:41.145 | DEBUG | FilterChainProxy: Secured GET /images/books/180523-4.jpg
+20:53:41.145 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.151 | DEBUG | FilterChainProxy: Secured GET /images/books/bia-1_ngoanh-lai-da-mot-doi_3.jpg
+20:53:41.146 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.148 | DEBUG | FilterChainProxy: Secured GET /images/books/280423-3.jpg
+20:53:41.148 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_38340.jpg
+20:53:41.153 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491873.jpg
+20:53:41.176 | DEBUG | FilterChainProxy: Securing GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:53:41.176 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_14864.jpg
+20:53:41.188 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.190 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_14864.jpg
+20:53:41.180 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_41937_1.jpg
+20:53:41.185 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.192 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:41.193 | DEBUG | FilterChainProxy: Secured GET /images/books/cef924a2-426a-4bde-bf77-7f7e2b7a9507.jpg
+20:53:41.194 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_41937_1.jpg
+20:53:44.878 | DEBUG | FilterChainProxy: Securing GET /api/books?page=2&size=10&sort=TITLE&order=ASC
+20:53:44.879 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:44.879 | DEBUG | FilterChainProxy: Secured GET /api/books?page=2&size=10&sort=TITLE&order=ASC
+20:53:44.935 | DEBUG | FilterChainProxy: Securing GET /images/books/050525-2.jpg
+20:53:44.935 | DEBUG | FilterChainProxy: Securing GET /images/books/b_a-1-t_p-2_1_2.jpg
+20:53:44.936 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:44.936 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:44.936 | DEBUG | FilterChainProxy: Secured GET /images/books/050525-2.jpg
+20:53:44.936 | DEBUG | FilterChainProxy: Secured GET /images/books/b_a-1-t_p-2_1_2.jpg
+20:53:57.205 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=PRICE&order=ASC
+20:53:57.206 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:53:57.206 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=PRICE&order=ASC
+20:54:01.560 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=PRICE&order=DESC
+20:54:01.562 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.562 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=PRICE&order=DESC
+20:54:01.765 | DEBUG | FilterChainProxy: Securing GET /images/books/050525-2.jpg
+20:54:01.766 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.768 | DEBUG | FilterChainProxy: Secured GET /images/books/050525-2.jpg
+20:54:01.768 | DEBUG | FilterChainProxy: Securing GET /images/books/180523-4.jpg
+20:54:01.767 | DEBUG | FilterChainProxy: Securing GET /images/books/280423-3.jpg
+20:54:01.767 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:54:01.767 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491873.jpg
+20:54:01.768 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.769 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:54:01.769 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.769 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:54:01.769 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.769 | DEBUG | FilterChainProxy: Secured GET /images/books/280423-3.jpg
+20:54:01.769 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.769 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.770 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:54:01.769 | DEBUG | FilterChainProxy: Secured GET /images/books/180523-4.jpg
+20:54:01.770 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491873.jpg
+20:54:01.794 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:54:01.795 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.795 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:54:01.796 | DEBUG | FilterChainProxy: Securing GET /images/books/b_a-1-t_p-2_1_2.jpg
+20:54:01.797 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.796 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:54:01.798 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:54:01.798 | DEBUG | FilterChainProxy: Secured GET /images/books/b_a-1-t_p-2_1_2.jpg
+20:54:01.799 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.799 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:01.799 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:54:01.799 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:54:12.226 | DEBUG | FilterChainProxy: Securing GET /protected/api/carts
+20:54:12.231 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:23:12Z, iat=2026-01-14T13:53:12Z, nonce=uGGm4jkJ6b9Li_J4NcUEXnnFUt1erFLzmiT735D-0Fs, jti=98296e8a-dc95-419a-b9a8-6c379cc1d7b1, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+20:54:12.232 | DEBUG | FilterChainProxy: Secured GET /protected/api/carts
+20:54:12.652 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:54:12.652 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:12.653 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:54:17.406 | DEBUG | FilterChainProxy: Securing GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:54:17.406 | DEBUG | FilterChainProxy: Securing GET /api/genres
+20:54:17.407 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.407 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.407 | DEBUG | FilterChainProxy: Secured GET /api/genres
+20:54:17.407 | DEBUG | FilterChainProxy: Secured GET /api/books?page=0&size=10&sort=TITLE&order=ASC
+20:54:17.485 | DEBUG | FilterChainProxy: Securing GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:54:17.486 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.486 | DEBUG | FilterChainProxy: Secured GET /images/books/4658760b-7502-4022-b337-9926fee60006.jpg
+20:54:17.494 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491361.jpg
+20:54:17.495 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.496 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491361.jpg
+20:54:17.523 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212368209.jpg
+20:54:17.523 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.523 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212368209.jpg
+20:54:17.543 | DEBUG | FilterChainProxy: Securing GET /images/books/8936213491866.jpg
+20:54:17.543 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.543 | DEBUG | FilterChainProxy: Secured GET /images/books/8936213491866.jpg
+20:54:17.558 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:54:17.558 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.559 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:54:17.565 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:54:17.565 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.568 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667802993996_444d1025739493a61e7c63ddfc8997fc.jpg
+20:54:17.667 | DEBUG | FilterChainProxy: Securing GET /images/books/image_195509_1_30127_1.jpg
+20:54:17.668 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.668 | DEBUG | FilterChainProxy: Securing GET /images/books/8935212349208.jpg
+20:54:17.668 | DEBUG | FilterChainProxy: Securing GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:54:17.668 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.668 | DEBUG | FilterChainProxy: Securing GET /images/books/image_217968.jpg
+20:54:17.668 | DEBUG | FilterChainProxy: Secured GET /images/books/image_195509_1_30127_1.jpg
+20:54:17.668 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.668 | DEBUG | FilterChainProxy: Secured GET /images/books/8935212349208.jpg
+20:54:17.668 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:54:17.668 | DEBUG | FilterChainProxy: Secured GET /images/books/f3767a63-a769-4dc6-a0ad-5faf57cfeda2.jpg
+20:54:17.669 | DEBUG | FilterChainProxy: Secured GET /images/books/image_217968.jpg
+20:56:14.716 | DEBUG | FilterChainProxy: Securing GET /api/books/32
+20:56:14.717 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:56:14.717 | DEBUG | FilterChainProxy: Secured GET /api/books/32
+20:56:14.774 | DEBUG | FilterChainProxy: Securing GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+20:56:14.775 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+20:56:14.775 | DEBUG | FilterChainProxy: Secured GET /images/books/z6667803014073_b09f06964c4371f4fd5d5a532a319742.jpg
+21:02:09.987 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:02:10.016 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:23:12Z, iat=2026-01-14T13:53:12Z, nonce=uGGm4jkJ6b9Li_J4NcUEXnnFUt1erFLzmiT735D-0Fs, jti=98296e8a-dc95-419a-b9a8-6c379cc1d7b1, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:10.017 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:02:10.527 | DEBUG | HttpSessionSecurityContextRepository: Stored SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]] to HttpSession [org.springframework.session.web.http.SessionRepositoryFilter$SessionRepositoryRequestWrapper$HttpSessionWrapper@e9ef60d]
+21:02:11.112 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:11.113 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+21:02:11.113 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:18.575 | DEBUG | FilterChainProxy: Securing OPTIONS /protected/api/me/profile
+21:02:18.588 | DEBUG | FilterChainProxy: Securing PATCH /protected/api/me/profile
+21:02:18.597 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:18.599 | DEBUG | FilterChainProxy: Secured PATCH /protected/api/me/profile
+21:02:19.117 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:02:19.122 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:19.123 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:02:23.509 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+21:02:23.515 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:23.515 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+21:02:23.739 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:02:23.746 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:23.747 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:02:24.124 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:24.124 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+21:02:24.125 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:26.711 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+21:02:26.715 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:26.715 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+21:02:26.880 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:02:26.888 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:26.889 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:02:27.232 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:27.232 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+21:02:27.232 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:28.996 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+21:02:29.001 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:29.003 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+21:02:29.179 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:02:29.185 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:29.185 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:02:29.546 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:29.547 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+21:02:29.547 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:33.423 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+21:02:33.429 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:33.430 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+21:02:33.608 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:02:33.614 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:33.614 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:02:33.995 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:33.996 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+21:02:33.996 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:36.377 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+21:02:36.386 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:36.386 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+21:02:36.559 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:02:36.566 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:02:36.566 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:02:36.945 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:02:36.948 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+21:02:36.948 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:03:44.533 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:03:44.540 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:03:44.541 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:03:59.459 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:03:59.578 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:03:59.584 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:04:16.149 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:04:16.340 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:04:16.359 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:04:19.515 | DEBUG | FilterChainProxy: Securing GET /protected/api/me
+21:04:19.537 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:04:19.539 | DEBUG | FilterChainProxy: Secured GET /protected/api/me
+21:04:20.118 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:04:20.130 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:04:20.130 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile
+21:04:20.968 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:04:20.971 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
+21:04:20.972 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+21:04:49.513 | DEBUG | FilterChainProxy: Securing GET /protected/api/me/profile
+21:04:49.529 | DEBUG | HttpSessionSecurityContextRepository: Retrieved SecurityContextImpl [Authentication=OAuth2AuthenticationToken [Principal=Name: [nguyenvietanh.personal@gmail.com], Granted Authorities: [[OIDC_USER, SCOPE_openid, SCOPE_profile]], User Attributes: [{sub=nguyenvietanh.personal@gmail.com, aud=[bff], azp=bff, auth_time=2026-01-14T13:53:11Z, iss=https://auth.bookommerce.com:8282, exp=2026-01-14T14:32:10Z, iat=2026-01-14T14:02:10Z, jti=eead63e6-40f4-4a02-a7f4-55ceb61db0c9, authorities=[ROLE_CUSTOMER], sid=EvhgL_5_3IegxhFUYcvmilJCJtwbML8cTIeFlw0A8hE}], Credentials=[PROTECTED], Authenticated=true, Details=WebAuthenticationDetails [RemoteIpAddress=127.0.0.1, SessionId=109bc35c-e7fe-40ec-864c-1db61db39a6e], Granted Authorities=[ROLE_CUSTOMER]]]
+21:04:49.532 | DEBUG | FilterChainProxy: Secured GET /protected/api/me/profile

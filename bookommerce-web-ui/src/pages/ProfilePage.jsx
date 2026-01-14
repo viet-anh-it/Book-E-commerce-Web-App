@@ -356,8 +356,7 @@ const ProfilePage = () => {
                                 </Text>
                                 <Space direction="vertical" style={{ width: '100%' }}>
                                     <Button
-                                        type="primary"
-                                        ghost
+                                        type="default"
                                         size="small"
                                         icon={<EditOutlined />}
                                         onClick={() => setIsEmailModalVisible(true)}

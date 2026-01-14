@@ -75,6 +75,7 @@ public class ProfileService {
         this.profileRepository.save(profile);
     }
 
+    @Transactional
     public String updateMyProfileAvatar(UpdateMyProfileAvatarRequestDto updateMyProfileAvatarRequestDto) throws IOException {
         String currentAuthenticatedUsername = SecurityContextHolder.getContext().getAuthentication().getName();
         Profile profile = this.profileRepository.findByEmail(currentAuthenticatedUsername).get();
