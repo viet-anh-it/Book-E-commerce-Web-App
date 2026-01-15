@@ -12,6 +12,6 @@ import lombok.experimental.FieldDefaults;
 @NoArgsConstructor
 @AllArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE)
-public class RegistrationSuccessEvent {
-    String username;
+public class AccountActivationSuccessEvent {
+    String email;
 }

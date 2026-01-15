@@ -1,6 +1,6 @@
 package com.bookommerce.auth_server.entity;
 
-import java.util.Set;
+import java.time.Instant;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -9,8 +9,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
-import jakarta.persistence.JoinTable;
-import jakarta.persistence.ManyToMany;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
@@ -22,26 +21,23 @@ import lombok.experimental.FieldDefaults;
 @Entity
 @Getter
 @Setter
-@Table(name = "users")
+@Table(name = "account_activation_tokens")
 @FieldDefaults(level = AccessLevel.PRIVATE)
 @AllArgsConstructor
 @NoArgsConstructor
-public class User {
+public class AccountActivationToken {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     long id;
 
-    @Column(unique = true, nullable = false)
-    String email;
-
-    @Column(name = "password_hash")
-    String passwordHash;
+    @Column(nullable = false, unique = true)
+    String tokenValue;
 
     @Column(nullable = false)
-    boolean isActivated = false;
+    Instant expiresAt;
 
-    @ManyToMany(fetch = FetchType.LAZY)
-    @JoinTable(name = "users_roles", joinColumns = @JoinColumn(name = "user_id"), inverseJoinColumns = @JoinColumn(name = "role_id"))
-    Set<Role> roles;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false)
+    User user;
 }

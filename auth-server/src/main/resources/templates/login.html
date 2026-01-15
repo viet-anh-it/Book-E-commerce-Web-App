@@ -996,11 +996,41 @@
             }
         });
         // Check for 'session_expired' parameter
+        // Check for URL parameters
         const urlParams = new URLSearchParams(window.location.search);
+        let shouldUpdateUrl = false;
+
         if (urlParams.has('session_expired')) {
             showToast('Phiên đăng nhập đã hết hạn. Vui lòng đăng nhập lại để tiếp tục.', 'error', 'Hết hạn phiên');
-            // Remove 'session_expired' parameter but keep others
             urlParams.delete('session_expired');
+            shouldUpdateUrl = true;
+        }
+
+        if (urlParams.has('account_activation_token_not_found')) {
+            showToast('Không tìm thấy token kích hoạt tài khoản', 'error', 'Lỗi kích hoạt');
+            urlParams.delete('account_activation_token_not_found');
+            shouldUpdateUrl = true;
+        }
+
+        if (urlParams.has('invalid_account_activation_token_format')) {
+            showToast('Định dạng token kích hoạt tài khoản không hợp lệ', 'error', 'Lỗi kích hoạt');
+            urlParams.delete('invalid_account_activation_token_format');
+            shouldUpdateUrl = true;
+        }
+
+        if (urlParams.has('account_activation_token_expired')) {
+            showToast('Token kích hoạt tài khoản đã hết hạn', 'error', 'Lỗi kích hoạt');
+            urlParams.delete('account_activation_token_expired');
+            shouldUpdateUrl = true;
+        }
+
+        if (urlParams.has('activation_success')) {
+            showToast('Kích hoạt tài khoản thành công', 'success', 'Thành công');
+            urlParams.delete('activation_success');
+            shouldUpdateUrl = true;
+        }
+
+        if (shouldUpdateUrl) {
             const newUrl = window.location.pathname + (urlParams.toString() ? '?' + urlParams.toString() : '');
             window.history.replaceState({ path: newUrl }, '', newUrl);
         }

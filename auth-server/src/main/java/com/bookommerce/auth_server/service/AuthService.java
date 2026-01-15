@@ -1,7 +1,10 @@
 package com.bookommerce.auth_server.service;
 
+import java.io.IOException;
+import java.time.Instant;
 import java.util.HashSet;
 import java.util.Map;
+import java.util.Optional;
 import java.util.Set;
 
 import org.springframework.security.authentication.AuthenticationManager;
@@ -15,19 +18,24 @@ import org.springframework.security.core.context.SecurityContextHolderStrategy;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.context.SecurityContextRepository;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 import org.springframework.validation.BeanPropertyBindingResult;
 
 import com.bookommerce.auth_server.constant.Roles;
+import com.bookommerce.auth_server.dto.event.AccountActivationSuccessEvent;
 import com.bookommerce.auth_server.dto.event.RegistrationSuccessEvent;
 import com.bookommerce.auth_server.dto.request.LoginRequestDto;
 import com.bookommerce.auth_server.dto.request.RegistrationRequestDto;
+import com.bookommerce.auth_server.entity.AccountActivationToken;
 import com.bookommerce.auth_server.entity.Role;
 import com.bookommerce.auth_server.entity.User;
 import com.bookommerce.auth_server.exception.AccessDeniedException;
 import com.bookommerce.auth_server.exception.EmailAlreadyExistedException;
 import com.bookommerce.auth_server.mapper.UserMapper;
+import com.bookommerce.auth_server.repository.AccountActivationTokenRepository;
 import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
+import com.bookommerce.auth_server.service.event.AccountActivationSuccessEventPublisher;
 import com.bookommerce.auth_server.service.event.RegistrationSuccessEventPublisher;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -50,7 +58,10 @@ public class AuthService {
     SecurityContextRepository securityContextRepository;
     RoleRepository roleRepository;
     RegistrationSuccessEventPublisher registrationSuccessEventPublisher;
+    AccountActivationTokenRepository accountActivationTokenRepository;
+    AccountActivationSuccessEventPublisher accountActivationSuccessEventPublisher;
 
+    @Transactional
     public void register(RegistrationRequestDto registrationRequestDto) {
         if (this.userRepository.findByEmail(registrationRequestDto.email()).isPresent()) {
             BeanPropertyBindingResult bindingResult = new BeanPropertyBindingResult(registrationRequestDto, "registrationRequestDto");
@@ -96,5 +107,29 @@ public class AuthService {
 
         String redirectUrl = "https://bff.bookommerce.com:8181/protected/oauth2/authorization/bff";
         return Map.of("redirect", redirectUrl);
+    }
+
+    @Transactional
+    public void activateAccount(String token, HttpServletResponse response) throws IOException {
+        Optional<AccountActivationToken> optionalAccountActivationToken = 
+            this.accountActivationTokenRepository.findByTokenValue(token);
+        if (optionalAccountActivationToken.isEmpty()) {
+            response.sendRedirect("https://auth.bookommerce.com:8282/page/login?account_activation_token_not_found");
+            return;
+        }
+        
+        AccountActivationToken accountActivationToken = optionalAccountActivationToken.get();
+        if (accountActivationToken.getExpiresAt().isBefore(Instant.now())) {
+            response.sendRedirect("https://auth.bookommerce.com:8282/page/login?account_activation_token_expired");
+            return;
+        }
+
+        User user = accountActivationToken.getUser();
+        user.setActivated(true);
+        this.userRepository.save(user);
+        this.accountActivationTokenRepository.delete(accountActivationToken);
+
+        this.accountActivationSuccessEventPublisher.publishAccountActivationSuccessEvent(new AccountActivationSuccessEvent(user.getEmail()));
+        response.sendRedirect("https://auth.bookommerce.com:8282/page/login?activation_success");
     }
 }

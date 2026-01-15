@@ -70,6 +70,6 @@ upload:
     avatar.default: C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\upload\image\avatar\default\
 
 stream:
-  key: user-events
-  group: user-group
+  key: account-activation-success-event
+  group: account-activation-success-event-group
     

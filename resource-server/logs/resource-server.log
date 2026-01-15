@@ -414,3 +414,1244 @@
 11:35:36.224 | DEBUG | FilterChainProxy: Securing GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
 11:35:36.231 | DEBUG | AnonymousAuthenticationFilter: Set SecurityContextHolder to anonymous SecurityContext
 11:35:36.231 | DEBUG | FilterChainProxy: Secured GET /images/avatars/987057e2-451d-488c-99c3-1a9ec0746ad6.jpg
+19:39:24.503 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:39:24.506 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:39:24.575 | INFO | DevToolsPropertyDefaultsPostProcessor: Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+19:39:24.575 | INFO | DevToolsPropertyDefaultsPostProcessor: For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+19:39:26.139 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:39:26.141 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:39:26.349 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 191 ms. Found 7 JPA repository interfaces.
+19:39:26.370 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:39:26.372 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:39:26.401 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:39:26.402 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:39:26.403 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:39:26.404 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:39:26.405 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:39:26.407 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:39:26.408 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:39:26.408 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 22 ms. Found 0 Redis repository interfaces.
+19:39:27.889 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:39:27.957 | INFO | StandardService: Starting service [Tomcat]
+19:39:27.959 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:39:28.074 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:39:28.074 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 3498 ms
+19:39:28.410 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:39:28.499 | INFO | Version: HHH000412: Hibernate ORM core version 6.6.39.Final
+19:39:28.565 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:39:28.988 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:39:29.028 | INFO | HikariDataSource: HikariPool-1 - Starting...
+19:39:29.441 | INFO | HikariPool: HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4416b37e
+19:39:29.443 | INFO | HikariDataSource: HikariPool-1 - Start completed.
+19:39:29.501 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:39:29.522 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:39:30.601 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:39:30.718 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:39:31.795 | INFO | EventConfig: Creating consumer group: [stream=user-events, group=user-group]
+19:39:32.319 | INFO | EventConfig: Starting listener container: [stream=user-events, group=user-group]
+19:39:32.800 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:39:33.070 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:39:33.498 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:39:33.608 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [null]
+19:39:33.618 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:39:33.629 | INFO | BookommerceApplication: Started BookommerceApplication in 9.943 seconds (process running for 10.71)
+19:45:34.507 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:45:34.547 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:45:34.564 | INFO | GracefulShutdown: Graceful shutdown complete
+19:45:34.580 | WARN | RedisChannelHandler: Connection is already closed
+19:45:34.581 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72)
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41)
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40)
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012)
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673)
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618)
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282)
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380)
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367)
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233)
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145)
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126)
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111)
+	at java.base/java.lang.Thread.run(Thread.java:1583)
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688)
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199)
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184)
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689)
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810)
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689)
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81)
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81)
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274)
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281)
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850)
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811)
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173)
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166)
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998)
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74)
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30)
+	... 1 common frames omitted
+19:45:34.626 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:45:34.645 | INFO | HikariDataSource: HikariPool-1 - Shutdown initiated...
+19:45:34.668 | INFO | HikariDataSource: HikariPool-1 - Shutdown completed.
+19:45:34.897 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:45:34.898 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:45:35.207 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:45:35.208 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:45:35.248 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 38 ms. Found 7 JPA repository interfaces.
+19:45:35.254 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:45:35.254 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:45:35.265 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:35.265 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:35.266 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:35.266 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:35.267 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:35.267 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:35.267 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:35.267 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+19:45:35.447 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:45:35.450 | INFO | StandardService: Starting service [Tomcat]
+19:45:35.450 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:45:35.474 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:45:35.474 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 574 ms
+19:45:35.520 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:45:35.522 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:45:35.537 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:45:35.538 | INFO | HikariDataSource: HikariPool-2 - Starting...
+19:45:35.591 | INFO | HikariPool: HikariPool-2 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4fa95e70
+19:45:35.592 | INFO | HikariDataSource: HikariPool-2 - Start completed.
+19:45:35.594 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:45:35.595 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-2)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:45:35.780 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:45:35.854 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:45:36.105 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:45:36.137 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:45:36.268 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:45:36.317 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:45:36.449 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:45:36.503 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:45:36.507 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:45:36.516 | INFO | BookommerceApplication: Started BookommerceApplication in 1.662 seconds (process running for 373.598)
+19:45:36.519 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:45:55.385 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:45:55.387 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:45:55.394 | INFO | GracefulShutdown: Graceful shutdown complete
+19:45:55.401 | WARN | RedisChannelHandler: Connection is already closed
+19:45:55.402 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:45:55.410 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:45:55.410 | INFO | HikariDataSource: HikariPool-2 - Shutdown initiated...
+19:45:55.416 | INFO | HikariDataSource: HikariPool-2 - Shutdown completed.
+19:45:55.544 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:45:55.544 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:45:55.826 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:45:55.826 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:45:55.865 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 38 ms. Found 7 JPA repository interfaces.
+19:45:55.872 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:45:55.872 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:45:55.879 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:55.879 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:55.880 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:55.880 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:55.880 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:55.881 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:55.881 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:45:55.881 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+19:45:56.087 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:45:56.089 | INFO | StandardService: Starting service [Tomcat]
+19:45:56.090 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:45:56.112 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:45:56.112 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 564 ms
+19:45:56.158 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:45:56.159 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:45:56.167 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:45:56.168 | INFO | HikariDataSource: HikariPool-3 - Starting...
+19:45:56.186 | INFO | HikariPool: HikariPool-3 - Added connection com.mysql.cj.jdbc.ConnectionImpl@7e7c4bb5
+19:45:56.189 | INFO | HikariDataSource: HikariPool-3 - Start completed.
+19:45:56.192 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:45:56.193 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-3)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:45:56.341 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:45:56.390 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:45:56.590 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:45:56.616 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:45:56.620 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:45:56.774 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:45:56.818 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:45:56.929 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:45:56.962 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:45:56.966 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:45:56.970 | INFO | BookommerceApplication: Started BookommerceApplication in 1.475 seconds (process running for 394.051)
+19:45:56.973 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:46:02.527 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:46:02.529 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:46:02.535 | INFO | GracefulShutdown: Graceful shutdown complete
+19:46:02.539 | WARN | RedisChannelHandler: Connection is already closed
+19:46:02.540 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:46:02.551 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:46:02.553 | INFO | HikariDataSource: HikariPool-3 - Shutdown initiated...
+19:46:02.573 | INFO | HikariDataSource: HikariPool-3 - Shutdown completed.
+19:46:02.700 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:46:02.701 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:46:02.916 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:46:02.917 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:46:02.941 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 23 ms. Found 7 JPA repository interfaces.
+19:46:02.944 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:46:02.944 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:46:02.950 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:02.950 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:02.951 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:02.951 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:02.951 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:02.951 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:02.952 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:02.952 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+19:46:03.060 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:46:03.061 | INFO | StandardService: Starting service [Tomcat]
+19:46:03.062 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:46:03.082 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:46:03.083 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 378 ms
+19:46:03.129 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:46:03.131 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:46:03.140 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:46:03.141 | INFO | HikariDataSource: HikariPool-4 - Starting...
+19:46:03.152 | INFO | HikariPool: HikariPool-4 - Added connection com.mysql.cj.jdbc.ConnectionImpl@1b342900
+19:46:03.152 | INFO | HikariDataSource: HikariPool-4 - Start completed.
+19:46:03.154 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:46:03.155 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-4)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:46:03.259 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:46:03.302 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:46:03.455 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:46:03.478 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:46:03.480 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:46:03.581 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:46:03.613 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:46:03.694 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:46:03.721 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:46:03.724 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:46:03.727 | INFO | BookommerceApplication: Started BookommerceApplication in 1.073 seconds (process running for 400.809)
+19:46:03.729 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:46:56.564 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:46:56.567 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:46:56.572 | INFO | GracefulShutdown: Graceful shutdown complete
+19:46:56.576 | WARN | RedisChannelHandler: Connection is already closed
+19:46:56.577 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:46:56.584 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:46:56.585 | INFO | HikariDataSource: HikariPool-4 - Shutdown initiated...
+19:46:56.594 | INFO | HikariDataSource: HikariPool-4 - Shutdown completed.
+19:46:56.716 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:46:56.718 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:46:57.068 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:46:57.069 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:46:57.104 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 34 ms. Found 7 JPA repository interfaces.
+19:46:57.108 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:46:57.109 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:46:57.115 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:57.116 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:57.118 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:57.118 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:57.118 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:57.119 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:57.119 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:46:57.119 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 9 ms. Found 0 Redis repository interfaces.
+19:46:57.261 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:46:57.263 | INFO | StandardService: Starting service [Tomcat]
+19:46:57.263 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:46:57.279 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:46:57.279 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 557 ms
+19:46:57.324 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:46:57.327 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:46:57.333 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:46:57.335 | INFO | HikariDataSource: HikariPool-5 - Starting...
+19:46:57.348 | INFO | HikariPool: HikariPool-5 - Added connection com.mysql.cj.jdbc.ConnectionImpl@67d8432
+19:46:57.349 | INFO | HikariDataSource: HikariPool-5 - Start completed.
+19:46:57.351 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:46:57.352 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-5)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:46:57.471 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:46:57.510 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:46:57.709 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:46:57.729 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:46:57.734 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:46:57.825 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:46:57.853 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:46:57.926 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:46:57.954 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:46:57.958 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:46:57.962 | INFO | BookommerceApplication: Started BookommerceApplication in 1.286 seconds (process running for 455.043)
+19:46:57.964 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:47:02.459 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 3 class path changes (1 addition, 1 deletion, 1 modification)
+19:47:02.462 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:47:02.470 | INFO | GracefulShutdown: Graceful shutdown complete
+19:47:02.473 | WARN | RedisChannelHandler: Connection is already closed
+19:47:02.474 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:47:02.481 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:47:02.482 | INFO | HikariDataSource: HikariPool-5 - Shutdown initiated...
+19:47:02.490 | INFO | HikariDataSource: HikariPool-5 - Shutdown completed.
+19:47:02.597 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:47:02.597 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:47:02.820 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:47:02.820 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:47:02.863 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 41 ms. Found 7 JPA repository interfaces.
+19:47:02.870 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:47:02.870 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:47:02.881 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:02.881 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:02.882 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:02.882 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:02.883 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:02.883 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:02.884 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:02.884 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 11 ms. Found 0 Redis repository interfaces.
+19:47:03.055 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:47:03.056 | INFO | StandardService: Starting service [Tomcat]
+19:47:03.057 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:47:03.079 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:47:03.080 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 480 ms
+19:47:03.119 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:47:03.121 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:47:03.130 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:47:03.131 | INFO | HikariDataSource: HikariPool-6 - Starting...
+19:47:03.146 | INFO | HikariPool: HikariPool-6 - Added connection com.mysql.cj.jdbc.ConnectionImpl@d41fbaf
+19:47:03.146 | INFO | HikariDataSource: HikariPool-6 - Start completed.
+19:47:03.149 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:47:03.149 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-6)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:47:03.270 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:47:03.325 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:47:03.506 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:47:03.518 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:47:03.521 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:47:03.582 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:47:03.612 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:47:03.683 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:47:03.709 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:47:03.715 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:47:03.718 | INFO | BookommerceApplication: Started BookommerceApplication in 1.154 seconds (process running for 460.799)
+19:47:03.719 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:47:13.342 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:47:13.344 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:47:13.348 | INFO | GracefulShutdown: Graceful shutdown complete
+19:47:13.351 | WARN | RedisChannelHandler: Connection is already closed
+19:47:13.352 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:47:13.359 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:47:13.361 | INFO | HikariDataSource: HikariPool-6 - Shutdown initiated...
+19:47:13.365 | INFO | HikariDataSource: HikariPool-6 - Shutdown completed.
+19:47:13.469 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:47:13.469 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:47:13.647 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:47:13.648 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:47:13.670 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 20 ms. Found 7 JPA repository interfaces.
+19:47:13.672 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:47:13.672 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:47:13.677 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:13.677 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:13.678 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:13.678 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:13.678 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:13.678 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:13.678 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:13.679 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 5 ms. Found 0 Redis repository interfaces.
+19:47:13.777 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:47:13.778 | INFO | StandardService: Starting service [Tomcat]
+19:47:13.779 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:47:13.799 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:47:13.799 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 327 ms
+19:47:13.839 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:47:13.841 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:47:13.848 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:47:13.849 | INFO | HikariDataSource: HikariPool-7 - Starting...
+19:47:13.863 | INFO | HikariPool: HikariPool-7 - Added connection com.mysql.cj.jdbc.ConnectionImpl@577930d5
+19:47:13.864 | INFO | HikariDataSource: HikariPool-7 - Start completed.
+19:47:13.865 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:47:13.866 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-7)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:47:13.972 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:47:14.016 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:47:14.234 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:47:14.250 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:47:14.254 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:47:14.335 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:47:14.362 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:47:14.430 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:47:14.457 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:47:14.461 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:47:14.463 | INFO | BookommerceApplication: Started BookommerceApplication in 1.022 seconds (process running for 471.544)
+19:47:14.464 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:47:38.518 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:47:38.522 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:47:38.529 | INFO | GracefulShutdown: Graceful shutdown complete
+19:47:38.532 | WARN | RedisChannelHandler: Connection is already closed
+19:47:38.533 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:47:38.540 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:47:38.540 | INFO | HikariDataSource: HikariPool-7 - Shutdown initiated...
+19:47:38.544 | INFO | HikariDataSource: HikariPool-7 - Shutdown completed.
+19:47:38.639 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:47:38.639 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:47:38.809 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:47:38.810 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:47:38.833 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 23 ms. Found 7 JPA repository interfaces.
+19:47:38.836 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:47:38.837 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:47:38.844 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:38.845 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:38.845 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:38.845 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:38.846 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:38.846 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:38.846 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:47:38.846 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 8 ms. Found 0 Redis repository interfaces.
+19:47:38.966 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:47:38.967 | INFO | StandardService: Starting service [Tomcat]
+19:47:38.967 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:47:38.983 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:47:38.983 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 340 ms
+19:47:39.020 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:47:39.023 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:47:39.029 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:47:39.030 | INFO | HikariDataSource: HikariPool-8 - Starting...
+19:47:39.042 | INFO | HikariPool: HikariPool-8 - Added connection com.mysql.cj.jdbc.ConnectionImpl@30c63fb5
+19:47:39.042 | INFO | HikariDataSource: HikariPool-8 - Start completed.
+19:47:39.044 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:47:39.045 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-8)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:47:39.131 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:47:39.164 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:47:39.313 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:47:39.326 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:47:39.328 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:47:39.394 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:47:39.418 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:47:39.470 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:47:39.497 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:47:39.499 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:47:39.502 | INFO | BookommerceApplication: Started BookommerceApplication in 0.885 seconds (process running for 496.584)
+19:47:39.503 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:48:01.551 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:48:01.553 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:48:01.558 | INFO | GracefulShutdown: Graceful shutdown complete
+19:48:01.561 | WARN | RedisChannelHandler: Connection is already closed
+19:48:01.561 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:48:01.569 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:48:01.570 | INFO | HikariDataSource: HikariPool-8 - Shutdown initiated...
+19:48:01.578 | INFO | HikariDataSource: HikariPool-8 - Shutdown completed.
+19:48:01.710 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:48:01.711 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:48:01.920 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:48:01.920 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:48:01.946 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 24 ms. Found 7 JPA repository interfaces.
+19:48:01.950 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:48:01.950 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:48:01.959 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:01.959 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:01.960 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:01.960 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:01.961 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:01.961 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:01.961 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:01.961 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+19:48:02.065 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:48:02.066 | INFO | StandardService: Starting service [Tomcat]
+19:48:02.066 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:48:02.080 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:48:02.080 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 367 ms
+19:48:02.107 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:48:02.109 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:48:02.116 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:48:02.117 | INFO | HikariDataSource: HikariPool-9 - Starting...
+19:48:02.131 | INFO | HikariPool: HikariPool-9 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5e4818b7
+19:48:02.132 | INFO | HikariDataSource: HikariPool-9 - Start completed.
+19:48:02.134 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:48:02.135 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-9)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:48:02.235 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:48:02.286 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:48:02.341 | WARN | AnnotationConfigServletWebServerApplicationContext: Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eventConfig' defined in file [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\com\bookommerce\resource_server\config\EventConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'registrationSuccessEventListener' defined in file [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\com\bookommerce\resource_server\service\event\RegistrationSuccessEventListener.class]: Failed to instantiate [com.bookommerce.resource_server.service.event.RegistrationSuccessEventListener]: Constructor threw exception
+19:48:02.342 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:48:02.343 | INFO | HikariDataSource: HikariPool-9 - Shutdown initiated...
+19:48:02.390 | INFO | HikariDataSource: HikariPool-9 - Shutdown completed.
+19:48:02.391 | INFO | StandardService: Stopping service [Tomcat]
+19:48:02.399 | INFO | ConditionEvaluationReportLogger: 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+19:48:02.432 | ERROR | SpringApplication: Application run failed
+org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'eventConfig' defined in file [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\com\bookommerce\resource_server\config\EventConfig.class]: Unsatisfied dependency expressed through constructor parameter 0: Error creating bean with name 'registrationSuccessEventListener' defined in file [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\com\bookommerce\resource_server\service\event\RegistrationSuccessEventListener.class]: Failed to instantiate [com.bookommerce.resource_server.service.event.RegistrationSuccessEventListener]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:804) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:240) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1228) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1194) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1130) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:990) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.15.jar:6.2.15]
+	at org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext.refresh(ServletWebServerApplicationContext.java:146) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.9.jar:3.5.9]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.9.jar:3.5.9]
+	at com.bookommerce.resource_server.BookommerceApplication.main(BookommerceApplication.java:10) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.boot.devtools.restart.RestartLauncher.run(RestartLauncher.java:50) ~[spring-boot-devtools-3.5.9.jar:3.5.9]
+Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'registrationSuccessEventListener' defined in file [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\com\bookommerce\resource_server\service\event\RegistrationSuccessEventListener.class]: Failed to instantiate [com.bookommerce.resource_server.service.event.RegistrationSuccessEventListener]: Constructor threw exception
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:321) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.autowireConstructor(ConstructorResolver.java:309) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.autowireConstructor(AbstractAutowireCapableBeanFactory.java:1395) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1232) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.config.DependencyDescriptor.resolveCandidate(DependencyDescriptor.java:254) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.doResolveDependency(DefaultListableBeanFactory.java:1770) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.resolveDependency(DefaultListableBeanFactory.java:1653) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.resolveAutowiredArgument(ConstructorResolver.java:913) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.createArgumentArray(ConstructorResolver.java:791) ~[spring-beans-6.2.15.jar:6.2.15]
+	... 24 common frames omitted
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [com.bookommerce.resource_server.service.event.RegistrationSuccessEventListener]: Constructor threw exception
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:223) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:146) ~[spring-beans-6.2.15.jar:6.2.15]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:318) ~[spring-beans-6.2.15.jar:6.2.15]
+	... 38 common frames omitted
+Caused by: java.lang.Error: Unresolved compilation problem: 
+	The public type RegistrationSuccessEventListener must be defined in its own file
+
+	at com.bookommerce.resource_server.service.event.RegistrationSuccessEventListener.<init>(AccountActivationSuccessEventListener.java:20) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:62) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:502) ~[na:na]
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:486) ~[na:na]
+	at org.springframework.beans.BeanUtils.instantiateClass(BeanUtils.java:210) ~[spring-beans-6.2.15.jar:6.2.15]
+	... 40 common frames omitted
+19:48:41.993 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:48:41.994 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:48:42.292 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:48:42.293 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:48:42.320 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 26 ms. Found 7 JPA repository interfaces.
+19:48:42.324 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:48:42.325 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:48:42.330 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:42.331 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:42.331 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:42.332 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:42.333 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:42.333 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:42.333 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:48:42.333 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+19:48:42.445 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:48:42.446 | INFO | StandardService: Starting service [Tomcat]
+19:48:42.446 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:48:42.463 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:48:42.464 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 467 ms
+19:48:42.509 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:48:42.511 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:48:42.524 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:48:42.525 | INFO | HikariDataSource: HikariPool-10 - Starting...
+19:48:42.541 | INFO | HikariPool: HikariPool-10 - Added connection com.mysql.cj.jdbc.ConnectionImpl@4c7b88b4
+19:48:42.542 | INFO | HikariDataSource: HikariPool-10 - Start completed.
+19:48:42.544 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:48:42.544 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-10)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:48:42.666 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:48:42.706 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:48:42.837 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:48:42.850 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:48:42.853 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:48:42.919 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:48:42.945 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:48:43.006 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:48:43.032 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:48:43.040 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:48:43.043 | INFO | BookommerceApplication: Started BookommerceApplication in 1.081 seconds (process running for 560.123)
+19:48:43.043 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:49:14.367 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:49:14.371 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:49:14.375 | INFO | GracefulShutdown: Graceful shutdown complete
+19:49:14.378 | WARN | RedisChannelHandler: Connection is already closed
+19:49:14.379 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:49:14.387 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:49:14.388 | INFO | HikariDataSource: HikariPool-10 - Shutdown initiated...
+19:49:14.393 | INFO | HikariDataSource: HikariPool-10 - Shutdown completed.
+19:49:14.517 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:49:14.518 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:49:14.715 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:49:14.715 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:49:14.745 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 29 ms. Found 7 JPA repository interfaces.
+19:49:14.750 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:49:14.750 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:49:14.757 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:49:14.757 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:49:14.758 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:49:14.758 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:49:14.758 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:49:14.758 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:49:14.759 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:49:14.759 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 7 ms. Found 0 Redis repository interfaces.
+19:49:14.872 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:49:14.872 | INFO | StandardService: Starting service [Tomcat]
+19:49:14.873 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:49:14.887 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:49:14.887 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 368 ms
+19:49:14.913 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:49:14.915 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:49:14.921 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:49:14.922 | INFO | HikariDataSource: HikariPool-11 - Starting...
+19:49:14.937 | INFO | HikariPool: HikariPool-11 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e078021
+19:49:14.938 | INFO | HikariDataSource: HikariPool-11 - Start completed.
+19:49:14.940 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:49:14.940 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-11)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:49:15.082 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:49:15.147 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:49:15.404 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:49:15.429 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:49:15.435 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:49:15.529 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:49:15.553 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:49:15.609 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:49:15.634 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:49:15.638 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:49:15.640 | INFO | BookommerceApplication: Started BookommerceApplication in 1.15 seconds (process running for 592.721)
+19:49:15.641 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:50:00.416 | INFO | LocalDevToolsAutoConfiguration$RestartingClassPathChangeChangedEventListener: Restarting due to 1 class path change (0 additions, 0 deletions, 1 modification)
+19:50:00.418 | INFO | GracefulShutdown: Commencing graceful shutdown. Waiting for active requests to complete
+19:50:00.423 | INFO | GracefulShutdown: Graceful shutdown complete
+19:50:00.429 | WARN | RedisChannelHandler: Connection is already closed
+19:50:00.438 | INFO | LocalContainerEntityManagerFactoryBean: Closing JPA EntityManagerFactory for persistence unit 'default'
+19:50:00.436 | ERROR | DefaultStreamMessageListenerContainer$LoggingErrorHandler: Unexpected error occurred in scheduled task
+org.springframework.data.redis.RedisSystemException: Redis exception
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:72) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceExceptionConverter.convert(LettuceExceptionConverter.java:41) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.PassThroughExceptionTranslationStrategy.translate(PassThroughExceptionTranslationStrategy.java:40) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.FallbackExceptionTranslationStrategy.translate(FallbackExceptionTranslationStrategy.java:38) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.convertLettuceAccessException(LettuceConnection.java:310) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.await(LettuceConnection.java:1012) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceConnection.lambda$doInvoke$3(LettuceConnection.java:447) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$Synchronizer.invoke(LettuceInvoker.java:673) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceInvoker$DefaultManyInvocationSpec.toList(LettuceInvoker.java:618) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.connection.lettuce.LettuceStreamCommands.xReadGroup(LettuceStreamCommands.java:282) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$3(DefaultStreamMessageListenerContainer.java:234) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:413) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:380) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.core.RedisTemplate.execute(RedisTemplate.java:367) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.DefaultStreamMessageListenerContainer.lambda$getReadFunction$4(DefaultStreamMessageListenerContainer.java:233) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.readRecords(StreamPollTask.java:145) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.doLoop(StreamPollTask.java:126) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at org.springframework.data.redis.stream.StreamPollTask.run(StreamPollTask.java:111) ~[spring-data-redis-3.5.7.jar:3.5.7]
+	at java.base/java.lang.Thread.run(Thread.java:1583) ~[na:na]
+Caused by: io.lettuce.core.RedisException: Connection closed
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$7(DefaultEndpoint.java:688) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.getNullable(DefaultEndpoint.java:1199) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint$Lazy.get(DefaultEndpoint.java:1184) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.lambda$notifyDrainQueuedCommands$8(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.cancelCommands(DefaultEndpoint.java:810) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.DefaultEndpoint.notifyDrainQueuedCommands(DefaultEndpoint.java:689) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.lettuce.core.protocol.CommandHandler.channelInactive(CommandHandler.java:373) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.protocol.RedisHandshakeHandler.channelInactive(RedisHandshakeHandler.java:79) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.ChannelInboundHandlerAdapter.channelInactive(ChannelInboundHandlerAdapter.java:81) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.lettuce.core.ChannelGroupListener.channelInactive(ChannelGroupListener.java:54) ~[lettuce-core-6.6.0.RELEASE.jar:6.6.0.RELEASE/643bd47]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:303) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.fireChannelInactive(AbstractChannelHandlerContext.java:274) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline$HeadContext.channelInactive(DefaultChannelPipeline.java:1352) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:301) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelInactive(AbstractChannelHandlerContext.java:281) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.DefaultChannelPipeline.fireChannelInactive(DefaultChannelPipeline.java:850) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.AbstractChannel$AbstractUnsafe$7.run(AbstractChannel.java:811) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.runTask(AbstractEventExecutor.java:173) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.AbstractEventExecutor.safeExecute(AbstractEventExecutor.java:166) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor.runAllTasks(SingleThreadEventExecutor.java:472) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:569) ~[netty-transport-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.SingleThreadEventExecutor$4.run(SingleThreadEventExecutor.java:998) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.internal.ThreadExecutorMap$2.run(ThreadExecutorMap.java:74) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	at io.netty.util.concurrent.FastThreadLocalRunnable.run(FastThreadLocalRunnable.java:30) ~[netty-common-4.1.130.Final.jar:4.1.130.Final]
+	... 1 common frames omitted
+19:50:00.439 | INFO | HikariDataSource: HikariPool-11 - Shutdown initiated...
+19:50:00.448 | INFO | HikariDataSource: HikariPool-11 - Shutdown completed.
+19:50:00.557 | INFO | BookommerceApplication: Starting BookommerceApplication using Java 21.0.3 with PID 20600 (C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes started by PC in C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server)
+19:50:00.558 | INFO | BookommerceApplication: No active profile set, falling back to 1 default profile: "default"
+19:50:00.706 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:50:00.707 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+19:50:00.739 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 30 ms. Found 7 JPA repository interfaces.
+19:50:00.742 | INFO | RepositoryConfigurationDelegate: Multiple Spring Data modules found, entering strict repository configuration mode
+19:50:00.743 | INFO | RepositoryConfigurationDelegate: Bootstrapping Spring Data Redis repositories in DEFAULT mode.
+19:50:00.748 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.BookRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:50:00.748 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartItemRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:50:00.749 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.CartRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:50:00.749 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.GenreRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:50:00.750 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.ProfileRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:50:00.750 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:50:00.750 | INFO | RepositoryConfigurationExtensionSupport: Spring Data Redis - Could not safely identify store assignment for repository candidate interface com.bookommerce.resource_server.repository.RatingStatisticRepository; If you want this repository to be a Redis repository, consider annotating your entities with one of these annotations: org.springframework.data.redis.core.RedisHash (preferred), or consider extending one of the following types with your repository: org.springframework.data.keyvalue.repository.KeyValueRepository
+19:50:00.750 | INFO | RepositoryConfigurationDelegate: Finished Spring Data repository scanning in 6 ms. Found 0 Redis repository interfaces.
+19:50:00.842 | INFO | TomcatWebServer: Tomcat initialized with port 8383 (https)
+19:50:00.843 | INFO | StandardService: Starting service [Tomcat]
+19:50:00.843 | INFO | StandardEngine: Starting Servlet engine: [Apache Tomcat/10.1.50]
+19:50:00.861 | INFO | [/]: Initializing Spring embedded WebApplicationContext
+19:50:00.862 | INFO | ServletWebServerApplicationContext: Root WebApplicationContext: initialization completed in 302 ms
+19:50:00.893 | INFO | LogHelper: HHH000204: Processing PersistenceUnitInfo [name: default]
+19:50:00.896 | INFO | RegionFactoryInitiator: HHH000026: Second-level cache disabled
+19:50:00.902 | INFO | SpringPersistenceUnitInfo: No LoadTimeWeaver setup: ignoring JPA class transformer
+19:50:00.903 | INFO | HikariDataSource: HikariPool-12 - Starting...
+19:50:00.916 | INFO | HikariPool: HikariPool-12 - Added connection com.mysql.cj.jdbc.ConnectionImpl@72c65626
+19:50:00.916 | INFO | HikariDataSource: HikariPool-12 - Start completed.
+19:50:00.917 | WARN | deprecation: HHH90000025: MySQLDialect does not need to be specified explicitly using 'hibernate.dialect' (remove the property setting and it will be selected by default)
+19:50:00.918 | INFO | pooling: HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-12)']
+	Database driver: undefined/unknown
+	Database version: 8.0.44
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+19:50:00.992 | INFO | JtaPlatformInitiator: HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+19:50:01.028 | INFO | LocalContainerEntityManagerFactoryBean: Initialized JPA EntityManagerFactory for persistence unit 'default'
+19:50:01.228 | INFO | EventConfig: Creating consumer group: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:50:01.245 | WARN | EventConfig: BUSYGROUP Consumer Group name already exists
+19:50:01.251 | INFO | EventConfig: Starting listener container: [stream=account-activation-success-event, group=account-activation-success-event-group]
+19:50:01.336 | DEBUG | AuthenticationConfiguration$DefaultPasswordEncoderAuthenticationManagerBuilder: No authenticationProviders and no parentAuthenticationManager defined. Returning null.
+19:50:01.364 | DEBUG | DefaultSecurityFilterChain: Will secure any request with filters: DisableEncodeUrlFilter, WebAsyncManagerIntegrationFilter, SecurityContextHolderFilter, HeaderWriterFilter, LogoutFilter, BearerTokenAuthenticationFilter, AuthenticationFilter, RequestCacheAwareFilter, SecurityContextHolderAwareRequestFilter, AnonymousAuthenticationFilter, SessionManagementFilter, ExceptionTranslationFilter, AuthorizationFilter
+19:50:01.443 | WARN | OptionalLiveReloadServer: Unable to start LiveReload server
+19:50:01.481 | INFO | certificate: Connector [https-jsse-nio-8383], TLS virtual host [_default_], certificate type [UNDEFINED] configured from keystore [Set directly - location unknown] using alias [bookommerce_ssl] with trust store [C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\target\classes\bookommerce-ssl.p12]
+19:50:01.485 | INFO | TomcatWebServer: Tomcat started on port 8383 (https) with context path '/'
+19:50:01.486 | INFO | BookommerceApplication: Started BookommerceApplication in 0.949 seconds (process running for 638.568)
+19:50:01.487 | INFO | ConditionEvaluationDeltaLoggingListener: Condition evaluation unchanged
+19:55:23.461 | INFO | AccountActivationSuccessEventListener: >>>>>>>>>> Profile created for user: nguyenvietanh.shopping@gmail.com

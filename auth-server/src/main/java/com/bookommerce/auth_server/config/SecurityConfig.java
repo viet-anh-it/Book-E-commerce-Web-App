@@ -143,6 +143,7 @@ public class SecurityConfig {
                 // authorization for API
                 .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()
+                .requestMatchers(HttpMethod.GET, "/api/account/activate").permitAll()
                 // authorization for internal dispatch
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
@@ -184,8 +185,20 @@ public class SecurityConfig {
             for (Role role : roles) {
                 authorities.add(new SimpleGrantedAuthority(role.getName()));
             }
+
+            boolean enabled = user.isActivated();
+            boolean accountNonExpired = true;
+            boolean credentialsNonExpired = true;
+            boolean accountNonLocked = true;
+
             return new org.springframework.security.core.userdetails.User(
-                user.getEmail(), user.getPasswordHash(), authorities);
+                user.getEmail(),
+                user.getPasswordHash(),
+                enabled,
+                accountNonExpired,
+                credentialsNonExpired,
+                accountNonLocked,
+                authorities);
         };
     }
 

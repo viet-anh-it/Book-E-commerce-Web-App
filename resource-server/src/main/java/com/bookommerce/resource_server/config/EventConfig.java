@@ -7,15 +7,15 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.RedisSystemException;
+import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.stream.Consumer;
 import org.springframework.data.redis.connection.stream.MapRecord;
-import org.springframework.data.redis.connection.RedisConnectionFactory;
 import org.springframework.data.redis.connection.stream.ReadOffset;
 import org.springframework.data.redis.connection.stream.StreamOffset;
 import org.springframework.data.redis.stream.StreamListener;
 import org.springframework.data.redis.stream.StreamMessageListenerContainer;
-import org.springframework.data.redis.stream.Subscription;
 import org.springframework.data.redis.stream.StreamMessageListenerContainer.StreamMessageListenerContainerOptions;
+import org.springframework.data.redis.stream.Subscription;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -43,15 +43,15 @@ public class EventConfig {
 
     @Bean
     public StreamMessageListenerContainer<String, MapRecord<String, String, String>> streamMessageListenerContainer(
-            RedisConnectionFactory redisConnectionFactory) {
+        RedisConnectionFactory redisConnectionFactory) {
         log.info("Creating consumer group: [stream={}, group={}]", streamKey, group);
         createConsumerGroupIfNotExists(redisConnectionFactory, streamKey, group);
 
         StreamMessageListenerContainerOptions<String, MapRecord<String, String, String>> options =
                 StreamMessageListenerContainerOptions.builder()
-                        .batchSize(1)
-                        .pollTimeout(Duration.ofSeconds(1))
-                        .build();
+                    .batchSize(1)
+                    .pollTimeout(Duration.ofSeconds(1))
+                    .build();
 
         return StreamMessageListenerContainer.create(redisConnectionFactory, options);
     }
