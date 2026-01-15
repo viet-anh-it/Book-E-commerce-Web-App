@@ -105,8 +105,8 @@ logging:
 # Messaging / Stream Configuration
 # ===================================================================
 stream:
-  key: user-events
-  group: user-group
+  key: registration-success
+  group: registration-success-group
 
 # ===================================================================
 # Bookommerce URLs

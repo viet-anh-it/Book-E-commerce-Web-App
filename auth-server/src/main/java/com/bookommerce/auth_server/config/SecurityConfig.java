@@ -67,6 +67,7 @@ import org.springframework.security.web.csrf.CookieCsrfTokenRepository;
 import org.springframework.security.web.csrf.CsrfTokenRepository;
 import org.springframework.security.web.csrf.CsrfTokenRequestAttributeHandler;
 import org.springframework.security.web.csrf.CsrfTokenRequestHandler;
+import org.springframework.security.web.servlet.util.matcher.PathPatternRequestMatcher;
 import org.springframework.security.web.util.matcher.MediaTypeRequestMatcher;
 import org.springframework.web.servlet.config.annotation.InterceptorRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -165,7 +166,10 @@ public class SecurityConfig {
             .httpBasic(httpBasicConfigurer -> httpBasicConfigurer.disable())
             .csrf(csrfConfigurer -> csrfConfigurer
                 .csrfTokenRepository(this.csrfTokenRepository())
-                .csrfTokenRequestHandler(this.csrfTokenRequestHandler()))
+                .csrfTokenRequestHandler(this.csrfTokenRequestHandler())
+                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/register"))
+                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/login/customer"))
+                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/login/store")))
             .cors(Customizer.withDefaults());
         return http.build();
     }

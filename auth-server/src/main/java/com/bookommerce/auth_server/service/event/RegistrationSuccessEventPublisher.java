@@ -28,8 +28,15 @@ public class RegistrationSuccessEventPublisher {
     
     RedisTemplate<String, String> redisTemplate;
 
+    // public void publishRegistrationSuccessEvent(RegistrationSuccessEvent event) {
+    //     Map<String, String> message = Map.of("username", event.getUsername());
+    //     MapRecord<String, String, String> rec = 
+    //         StreamRecords.newRecord().ofMap(message).withStreamKey(this.streamKey);
+    //     this.redisTemplate.opsForStream().add(rec);
+    // }
+
     public void publishRegistrationSuccessEvent(RegistrationSuccessEvent event) {
-        Map<String, String> message = Map.of("username", event.getUsername());
+        Map<String, String> message = Map.of("email", event.getEmail());
         MapRecord<String, String, String> rec = 
             StreamRecords.newRecord().ofMap(message).withStreamKey(this.streamKey);
         this.redisTemplate.opsForStream().add(rec);
