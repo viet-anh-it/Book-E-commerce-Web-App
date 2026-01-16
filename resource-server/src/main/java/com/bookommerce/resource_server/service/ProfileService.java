@@ -29,7 +29,7 @@ import lombok.experimental.NonFinal;
 //@formatter:off
 @Service
 @RequiredArgsConstructor
-@SuppressWarnings("null")
+
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class ProfileService {
 

@@ -16,7 +16,6 @@ import lombok.experimental.FieldDefaults;
 // @formatter:off
 @Service
 @RequiredArgsConstructor
-@SuppressWarnings("null")
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class AccountActivationSuccessEventPublisher {
     

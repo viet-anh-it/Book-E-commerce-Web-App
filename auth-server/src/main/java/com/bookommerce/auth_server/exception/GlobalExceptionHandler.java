@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
         MethodArgumentNotValidException.class,
         EmailAlreadyExistedException.class
     })
-    @SuppressWarnings("null")
+    
     public ResponseEntity<ApiErrorResponse<Map<String, Object>>> handleValidationException(Exception ex) {
         BindingResult bindingResult = null;
         if (ex instanceof MethodArgumentNotValidException) {

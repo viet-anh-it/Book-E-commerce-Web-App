@@ -11,7 +11,7 @@ import org.springframework.web.servlet.function.ServerResponse;
 
 // @formatter:off
 @Configuration
-@SuppressWarnings("null")
+
 public class RouteConfig {
 
     private static final String RESOURCE_SERVER_BASE_URL = "https://api.bookommerce.com:8383";

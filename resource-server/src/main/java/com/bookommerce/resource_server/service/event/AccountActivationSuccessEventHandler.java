@@ -20,7 +20,7 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class AccountActivationSuccessEventListener implements StreamListener<String, MapRecord<String, String, String>> {
+public class AccountActivationSuccessEventHandler implements StreamListener<String, MapRecord<String, String, String>> {
 
     ProfileService profileService;
     ObjectMapper objectMapper = new ObjectMapper();

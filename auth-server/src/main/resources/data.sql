@@ -33,8 +33,8 @@ AND NOT EXISTS (SELECT 1 FROM roles_permissions rp WHERE rp.role_id = r.id AND r
 -- 5. Chèn User mới
 -- Mật khẩu '123456' đã được hash bằng BCrypt (độ dài 60 ký tự)
 -- Hash mẫu: $2a$10$cYLM.qoXpeAzcZhJ3oXRLu9Slkb61LHyWW5qJ4QKvHEMhaxZ5qCPi
-INSERT INTO users (email, password_hash)
-SELECT 'prodman@bookommerce.com', '$2a$10$cYLM.qoXpeAzcZhJ3oXRLu9Slkb61LHyWW5qJ4QKvHEMhaxZ5qCPi'
+INSERT INTO users (email, password_hash, is_activated)
+SELECT 'prodman@bookommerce.com', '$2a$10$cYLM.qoXpeAzcZhJ3oXRLu9Slkb61LHyWW5qJ4QKvHEMhaxZ5qCPi', 0
 WHERE NOT EXISTS (SELECT 1 FROM users WHERE email = 'prodman@bookommerce.com');
 
 -- 6. Gán Role ROLE_PRODUCT_MANAGER cho User vừa tạo

@@ -102,13 +102,6 @@ logging:
     file: "%d{HH:mm:ss.SSS} | %level | %logger{0}: %msg%n"
 
 # ===================================================================
-# Messaging / Stream Configuration
-# ===================================================================
-stream:
-  key: registration-success
-  group: registration-success-group
-
-# ===================================================================
 # Bookommerce URLs
 # ===================================================================
 bookommerce:

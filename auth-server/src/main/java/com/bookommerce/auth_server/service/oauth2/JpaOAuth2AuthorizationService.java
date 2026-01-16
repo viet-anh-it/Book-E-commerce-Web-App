@@ -6,12 +6,6 @@ import java.util.Map;
 import java.util.Optional;
 import java.util.function.Consumer;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.Module;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.bookommerce.auth_server.entity.oauth2.Authorization;
-import com.bookommerce.auth_server.repository.oauth2.AuthorizationRepository;
-
 import org.springframework.dao.DataRetrievalFailureException;
 import org.springframework.security.jackson2.SecurityJackson2Modules;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
@@ -34,9 +28,15 @@ import org.springframework.stereotype.Component;
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
+import com.bookommerce.auth_server.entity.oauth2.Authorization;
+import com.bookommerce.auth_server.repository.oauth2.AuthorizationRepository;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.Module;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 // @formatter:off
 @Component
-@SuppressWarnings("null")
+
 public class JpaOAuth2AuthorizationService implements OAuth2AuthorizationService {
     private final AuthorizationRepository authorizationRepository;
     private final RegisteredClientRepository registeredClientRepository;

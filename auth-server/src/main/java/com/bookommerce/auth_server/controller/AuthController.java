@@ -62,7 +62,9 @@ public class AuthController {
     }
 
     @GetMapping("/account/activate")
-    public void activateAccount(@RequestParam(name = "token", required = false) String token, HttpServletResponse response) throws IOException {
+    public void activateAccount(
+        @RequestParam(required = false) String token,
+        HttpServletResponse response) throws IOException {
         if (token == null) {
             response.sendRedirect("https://auth.bookommerce.com:8282/page/login?account_activation_token_not_found");
             return;

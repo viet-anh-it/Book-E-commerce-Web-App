@@ -19,6 +19,8 @@ import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.context.SecurityContextRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.transaction.support.TransactionSynchronization;
+import org.springframework.transaction.support.TransactionSynchronizationManager;
 import org.springframework.validation.BeanPropertyBindingResult;
 
 import com.bookommerce.auth_server.constant.Roles;
@@ -73,7 +75,12 @@ public class AuthService {
         Role role = this.roleRepository.findByName(Roles.ROLE_CUSTOMER.name());
         user.setRoles(Set.of(role));
         this.userRepository.save(user);
-        this.registrationSuccessEventPublisher.publishRegistrationSuccessEvent(new RegistrationSuccessEvent(user.getEmail()));
+        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
+            @Override
+            public void afterCommit() {
+                registrationSuccessEventPublisher.publishRegistrationSuccessEvent(new RegistrationSuccessEvent(user.getEmail()));
+            }
+        });
     }
 
     public Map<String, String> login(LoginRequestDto loginRequestDto, HttpServletRequest request, HttpServletResponse response) {

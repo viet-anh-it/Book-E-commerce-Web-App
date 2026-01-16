@@ -5,11 +5,6 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
-import com.fasterxml.jackson.core.type.TypeReference;
-import com.fasterxml.jackson.databind.Module;
-import com.fasterxml.jackson.databind.ObjectMapper;
-import com.bookommerce.auth_server.entity.oauth2.Client;
-
 import org.springframework.security.jackson2.SecurityJackson2Modules;
 import org.springframework.security.oauth2.core.AuthorizationGrantType;
 import org.springframework.security.oauth2.core.ClientAuthenticationMethod;
@@ -21,8 +16,13 @@ import org.springframework.security.oauth2.server.authorization.settings.TokenSe
 import org.springframework.util.Assert;
 import org.springframework.util.StringUtils;
 
+import com.bookommerce.auth_server.entity.oauth2.Client;
+import com.fasterxml.jackson.core.type.TypeReference;
+import com.fasterxml.jackson.databind.Module;
+import com.fasterxml.jackson.databind.ObjectMapper;
+
 // @formatter:off
-@SuppressWarnings("null")
+
 public class JpaRegisteredClientRepository implements RegisteredClientRepository {
 	private final ClientRepository clientRepository;
 	private final ObjectMapper objectMapper = new ObjectMapper();

@@ -19,7 +19,7 @@ import com.bookommerce.auth_server.repository.oauth2.AuthorizationConsentReposit
 
 // @formatter:off
 @Component
-@SuppressWarnings("null")
+
 public class JpaOAuth2AuthorizationConsentService implements OAuth2AuthorizationConsentService {
 	private final AuthorizationConsentRepository authorizationConsentRepository;
 	private final RegisteredClientRepository registeredClientRepository;

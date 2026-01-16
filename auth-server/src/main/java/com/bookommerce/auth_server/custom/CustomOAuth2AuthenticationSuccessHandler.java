@@ -18,7 +18,7 @@ public class CustomOAuth2AuthenticationSuccessHandler implements AuthenticationS
 
     //@formatter:off
     @Override
-    @SuppressWarnings("null")
+    
     public void onAuthenticationSuccess(
         HttpServletRequest request,
         HttpServletResponse response,
