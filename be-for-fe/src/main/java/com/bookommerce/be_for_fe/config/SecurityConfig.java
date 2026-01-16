@@ -104,7 +104,7 @@ public class SecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer
                 .defaultAuthenticationEntryPointFor(
-                    new LoginUrlAuthenticationEntryPoint(AUTH_SERVER_BASE_URL + "/page/login"),
+                    new LoginUrlAuthenticationEntryPoint(AUTH_SERVER_BASE_URL + "/page/login/customer"),
                     new MediaTypeRequestMatcher(MediaType.TEXT_HTML))
                 .defaultAuthenticationEntryPointFor(
                     new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED),

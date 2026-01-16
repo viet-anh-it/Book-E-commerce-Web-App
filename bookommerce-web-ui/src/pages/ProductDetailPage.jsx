@@ -566,7 +566,7 @@ const ProductDetailPage = () => {
                                     ) : (
                                         <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
                                             <Text style={{ fontSize: '16px' }}>Bạn muốn mua sách này?</Text>
-                                            <a href="https://auth.bookommerce.com:8282/page/login" className="auth-link" style={{ fontSize: '16px', fontWeight: 'bold', color: '#1890ff' }}>
+                                            <a href="https://auth.bookommerce.com:8282/page/login/customer" className="auth-link" style={{ fontSize: '16px', fontWeight: 'bold', color: '#1890ff' }}>
                                                 Đăng nhập để mua sắm
                                             </a>
                                         </div>

@@ -127,7 +127,7 @@ public class SecurityConfig {
             .securityContext(securityContextConfigurer -> securityContextConfigurer
                 .securityContextRepository(this.securityContextRepository()))
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer
-                .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/page/login")));
+                .authenticationEntryPoint(new LoginUrlAuthenticationEntryPoint("/page/login/customer")));
         return http.build();
     }
 
@@ -138,8 +138,11 @@ public class SecurityConfig {
             .authorizeHttpRequests((authorize) -> authorize
                 // authorization for view
                 .requestMatchers(HttpMethod.GET, "/page/signup").permitAll()                                                              
-                .requestMatchers(HttpMethod.GET, "/page/login").permitAll()
-                .requestMatchers(HttpMethod.GET, "/page/store-login").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/login/customer").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/login/store").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/signup/success").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/account/activate/expire").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/account/activate/error").permitAll()
                 // authorization for API
                 .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()
@@ -153,7 +156,7 @@ public class SecurityConfig {
                 .sessionCreationPolicy(SessionCreationPolicy.IF_REQUIRED))
             .exceptionHandling(exceptionHandlingConfigurer -> exceptionHandlingConfigurer
                 .defaultAuthenticationEntryPointFor(
-                    new LoginUrlAuthenticationEntryPoint("/page/login"),
+                    new LoginUrlAuthenticationEntryPoint("/page/login/customer"),
                     new MediaTypeRequestMatcher(MediaType.TEXT_HTML))
                 .defaultAuthenticationEntryPointFor(
                     new HttpStatusEntryPoint(HttpStatus.UNAUTHORIZED),
@@ -161,7 +164,7 @@ public class SecurityConfig {
             .oauth2Login(oauth2LoginConfigurer -> oauth2LoginConfigurer
                 .redirectionEndpoint(redirectionEndpointConfigurer -> redirectionEndpointConfigurer
                     .baseUri("/oauth2/login/code/*"))
-                .loginPage("/page/login")
+                .loginPage("/page/login/customer")
                 .defaultSuccessUrl(apiGatewayBaseUrl + "/protected/oauth2/authorization/bff", true))
             .formLogin(formLoginConfigurer -> formLoginConfigurer.disable())
             .httpBasic(httpBasicConfigurer -> httpBasicConfigurer.disable())
@@ -218,7 +221,7 @@ public class SecurityConfig {
                 .redirectUri(apiGatewayBaseUrl + "/protected/login/oauth2/code/bff")
                 .redirectUri("https://oauth.pstmn.io/v1/callback")
                 .postLogoutRedirectUri(webBaseUrl)
-                .postLogoutRedirectUri(authServerBaseUrl + "/page/store-login")
+                .postLogoutRedirectUri(authServerBaseUrl + "/page/login/store")
                 .scope(OidcScopes.OPENID)
                 .scope(OidcScopes.PROFILE)
                 .clientSettings(ClientSettings.builder()
@@ -316,8 +319,8 @@ public class SecurityConfig {
             @Override
             public void addInterceptors(@NonNull InterceptorRegistry registry) {
                 registry.addInterceptor(new LoginSignupPageInterceptor())
-                    .addPathPatterns("/page/login")
-                    .addPathPatterns("/page/store-login")
+                    .addPathPatterns("/page/login/customer")
+                    .addPathPatterns("/page/login/store")
                     .addPathPatterns("/page/signup");
             }
         };

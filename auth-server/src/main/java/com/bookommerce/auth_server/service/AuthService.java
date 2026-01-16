@@ -1,6 +1,5 @@
 package com.bookommerce.auth_server.service;
 
-import java.io.IOException;
 import java.time.Instant;
 import java.util.HashSet;
 import java.util.Map;
@@ -32,6 +31,8 @@ import com.bookommerce.auth_server.entity.AccountActivationToken;
 import com.bookommerce.auth_server.entity.Role;
 import com.bookommerce.auth_server.entity.User;
 import com.bookommerce.auth_server.exception.AccessDeniedException;
+import com.bookommerce.auth_server.exception.AccountActivationTokenExpiredException;
+import com.bookommerce.auth_server.exception.AccountActivationTokenNotFoundException;
 import com.bookommerce.auth_server.exception.EmailAlreadyExistedException;
 import com.bookommerce.auth_server.mapper.UserMapper;
 import com.bookommerce.auth_server.repository.AccountActivationTokenRepository;
@@ -117,18 +118,16 @@ public class AuthService {
     }
 
     @Transactional
-    public void activateAccount(String token, HttpServletResponse response) throws IOException {
+    public void activateAccount(String token) {
         Optional<AccountActivationToken> optionalAccountActivationToken = 
             this.accountActivationTokenRepository.findByTokenValue(token);
         if (optionalAccountActivationToken.isEmpty()) {
-            response.sendRedirect("https://auth.bookommerce.com:8282/page/login?account_activation_token_not_found");
-            return;
+            throw new AccountActivationTokenNotFoundException();
         }
         
         AccountActivationToken accountActivationToken = optionalAccountActivationToken.get();
         if (accountActivationToken.getExpiresAt().isBefore(Instant.now())) {
-            response.sendRedirect("https://auth.bookommerce.com:8282/page/login?account_activation_token_expired");
-            return;
+            throw new AccountActivationTokenExpiredException("account_activation_token_expired", accountActivationToken.getUser().getEmail());
         }
 
         User user = accountActivationToken.getUser();
@@ -136,7 +135,11 @@ public class AuthService {
         this.userRepository.save(user);
         this.accountActivationTokenRepository.delete(accountActivationToken);
 
-        this.accountActivationSuccessEventPublisher.publishAccountActivationSuccessEvent(new AccountActivationSuccessEvent(user.getEmail()));
-        response.sendRedirect("https://auth.bookommerce.com:8282/page/login?activation_success");
+        TransactionSynchronizationManager.registerSynchronization(new TransactionSynchronization() {
+            @Override
+            public void afterCommit() {
+                accountActivationSuccessEventPublisher.publishAccountActivationSuccessEvent(new AccountActivationSuccessEvent(user.getEmail()));
+            }
+        });
     }
 }

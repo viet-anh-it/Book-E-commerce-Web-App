@@ -48,7 +48,7 @@ public class CustomLogoutSuccessHandler implements LogoutSuccessHandler {
                 this.delegate.setPostLogoutRedirectUri("https://app.bookommerce.com:8080");
                 this.delegate.onLogoutSuccess(request, response, authentication);
             } else {
-                this.delegate.setPostLogoutRedirectUri("https://auth.bookommerce.com:8282/page/store-login");
+                this.delegate.setPostLogoutRedirectUri("https://auth.bookommerce.com:8282/page/login/store");
                 this.delegate.onLogoutSuccess(request, response, authentication);
             }
         }

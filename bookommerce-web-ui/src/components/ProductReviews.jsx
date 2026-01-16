@@ -415,7 +415,7 @@ const ProductReviews = ({
                                 type="primary"
                                 size="large"
                                 block
-                                href="https://auth.bookommerce.com:8282/page/login"
+                                href="https://auth.bookommerce.com:8282/page/login/customer"
                                 style={{
                                     height: '50px',
                                     fontSize: '16px',

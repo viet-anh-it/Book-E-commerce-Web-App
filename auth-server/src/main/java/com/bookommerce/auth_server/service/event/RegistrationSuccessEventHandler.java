@@ -51,7 +51,7 @@ public class RegistrationSuccessEventHandler implements StreamListener<String, M
         String tokenValue = UUID.randomUUID().toString();
         String accountActivationUrl = AUTH_SERVER_BASE_URL + ACCOUNT_ACTIVATION_API_PATH + "?token=" + tokenValue;
         accountActivationToken.setTokenValue(tokenValue);
-        accountActivationToken.setExpiresAt(Instant.now().plus(24, ChronoUnit.HOURS));
+        accountActivationToken.setExpiresAt(Instant.now().plus(1, ChronoUnit.SECONDS));
         accountActivationToken.setUser(this.userRepository.findByEmail(event.getEmail()).get());
         this.accountActivationTokenRepository.save(accountActivationToken);
         this.send(event.getEmail(), accountActivationUrl);

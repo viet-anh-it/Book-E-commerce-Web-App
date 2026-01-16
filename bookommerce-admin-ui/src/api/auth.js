@@ -23,5 +23,5 @@ export const getAuthenticatedUser = async () => {
  * Redirects the user to the store login page.
  */
 export const redirectToLogin = () => {
-    window.location.href = 'https://auth.bookommerce.com:8282/page/store-login';
+    window.location.href = 'https://auth.bookommerce.com:8282/page/login/store';
 };

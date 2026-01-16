@@ -16,6 +16,8 @@ import org.springframework.web.bind.annotation.RestController;
 import com.bookommerce.auth_server.dto.request.LoginRequestDto;
 import com.bookommerce.auth_server.dto.request.RegistrationRequestDto;
 import com.bookommerce.auth_server.dto.response.ApiSuccessResponse;
+import com.bookommerce.auth_server.exception.AccountActivationTokenExpiredException;
+import com.bookommerce.auth_server.exception.AccountActivationTokenNotFoundException;
 import com.bookommerce.auth_server.service.AuthService;
 import com.bookommerce.auth_server.validation.ValidationOrder;
 
@@ -66,15 +68,22 @@ public class AuthController {
         @RequestParam(required = false) String token,
         HttpServletResponse response) throws IOException {
         if (token == null) {
-            response.sendRedirect("https://auth.bookommerce.com:8282/page/login?account_activation_token_not_found");
+            response.sendRedirect("https://auth.bookommerce.com:8282/page/account/activate/error?account_activation_token_not_found");
             return;
         }
 
         if (!token.matches(ACCOUNT_ACTIVATION_TOKEN_PATTERN)) {
-            response.sendRedirect("https://auth.bookommerce.com:8282/page/login?invalid_account_activation_token_format");
+            response.sendRedirect("https://auth.bookommerce.com:8282/page/account/activate/error?invalid_account_activation_token_format");
             return;
         }
 
-        this.authService.activateAccount(token, response);
+        try {
+            this.authService.activateAccount(token);
+            response.sendRedirect("https://auth.bookommerce.com:8282/page/login/customer?activation_success");
+        } catch (AccountActivationTokenNotFoundException exception) {
+            response.sendRedirect("https://auth.bookommerce.com:8282/page/account/activate/error?account_activation_token_not_found");
+        } catch (AccountActivationTokenExpiredException exception) {
+            response.sendRedirect("https://auth.bookommerce.com:8282/page/account/activate/expire");
+        }
     }
 }

@@ -144,7 +144,7 @@ const ProductCard = ({ product }) => {
                         </div>
                     ) : (
                         <div key="login-link" style={{ padding: '0 12px', display: 'flex', alignItems: 'center', justifyContent: 'flex-end', width: '100%' }} onClick={e => e.stopPropagation()}>
-                            <a href="https://auth.bookommerce.com:8282/page/login" className="auth-link" style={{ fontSize: '14px', fontWeight: '500', color: '#1890ff' }}>
+                            <a href="https://auth.bookommerce.com:8282/page/login/customer" className="auth-link" style={{ fontSize: '14px', fontWeight: '500', color: '#1890ff' }}>
                                 Đăng nhập để mua sắm
                             </a>
                         </div>

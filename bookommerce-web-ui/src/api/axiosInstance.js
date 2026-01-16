@@ -38,7 +38,7 @@ axiosInstance.interceptors.response.use(function (response) {
         // Exclude /protected/api/me from redirecting to login, allowing guests to stay on the page
         // Only exclude if it exactly matches the auth check, not sub-resources like /profile
         if (!error.config.url.endsWith('/protected/api/me')) {
-            window.location.href = 'https://auth.bookommerce.com:8282/page/login?session_expired';
+            window.location.href = 'https://auth.bookommerce.com:8282/page/login/customer?session_expired';
         }
     }
 

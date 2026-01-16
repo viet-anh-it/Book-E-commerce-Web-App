@@ -36,7 +36,7 @@ axiosInstance.interceptors.response.use(function (response) {
 
     // If the error status is 401 (Unauthorized), redirect to store login page
     if (error.response && error.response.status === 401) {
-        window.location.href = 'https://auth.bookommerce.com:8282/page/store-login?session_expired';
+        window.location.href = 'https://auth.bookommerce.com:8282/page/login/store?session_expired';
     }
 
     return Promise.reject(error);
