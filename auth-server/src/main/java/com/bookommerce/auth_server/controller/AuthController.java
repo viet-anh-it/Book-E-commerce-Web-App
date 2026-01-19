@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.util.Map;
 
 import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -15,6 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import com.bookommerce.auth_server.dto.request.LoginRequestDto;
 import com.bookommerce.auth_server.dto.request.RegistrationRequestDto;
+import com.bookommerce.auth_server.dto.request.ResendAccountActivationEmailDto;
 import com.bookommerce.auth_server.dto.response.ApiSuccessResponse;
 import com.bookommerce.auth_server.exception.AccountActivationTokenExpiredException;
 import com.bookommerce.auth_server.exception.AccountActivationTokenNotFoundException;
@@ -27,8 +29,10 @@ import jakarta.validation.Valid;
 import lombok.AccessLevel;
 import lombok.AllArgsConstructor;
 import lombok.experimental.FieldDefaults;
+import lombok.extern.slf4j.Slf4j;
 
 // @formatter:off
+@Slf4j
 @RestController
 @RequestMapping("/api")
 @AllArgsConstructor
@@ -85,5 +89,24 @@ public class AuthController {
         } catch (AccountActivationTokenExpiredException exception) {
             response.sendRedirect("https://auth.bookommerce.com:8282/page/account/activate/expire");
         }
+    }
+
+    @PostMapping(
+        path = "/account/activate/email/send",
+        consumes = MediaType.APPLICATION_JSON_VALUE,
+        produces = MediaType.APPLICATION_JSON_VALUE
+    )
+    public ResponseEntity<ApiSuccessResponse<Void>> resendAccountActivationEmail(
+        @RequestBody
+        @Validated(ValidationOrder.class)
+        ResendAccountActivationEmailDto resendAccountActivationEmailDto
+    ) {
+        this.authService.resendAccountActivationEmail(resendAccountActivationEmailDto);
+        return ResponseEntity.status(HttpStatus.OK)
+            .contentType(MediaType.APPLICATION_JSON)
+            .body(ApiSuccessResponse.<Void>builder()
+                .status(HttpStatus.OK.value())
+                .message("Account activation email sent successfully")
+                .build());
     }
 }

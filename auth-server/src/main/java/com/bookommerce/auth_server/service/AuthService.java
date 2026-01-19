@@ -20,13 +20,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import org.springframework.transaction.support.TransactionSynchronization;
 import org.springframework.transaction.support.TransactionSynchronizationManager;
-import org.springframework.validation.BeanPropertyBindingResult;
+import org.springframework.validation.BindingResult;
 
 import com.bookommerce.auth_server.constant.Roles;
 import com.bookommerce.auth_server.dto.event.AccountActivationSuccessEvent;
 import com.bookommerce.auth_server.dto.event.RegistrationSuccessEvent;
 import com.bookommerce.auth_server.dto.request.LoginRequestDto;
 import com.bookommerce.auth_server.dto.request.RegistrationRequestDto;
+import com.bookommerce.auth_server.dto.request.ResendAccountActivationEmailDto;
 import com.bookommerce.auth_server.entity.AccountActivationToken;
 import com.bookommerce.auth_server.entity.Role;
 import com.bookommerce.auth_server.entity.User;
@@ -34,12 +35,15 @@ import com.bookommerce.auth_server.exception.AccessDeniedException;
 import com.bookommerce.auth_server.exception.AccountActivationTokenExpiredException;
 import com.bookommerce.auth_server.exception.AccountActivationTokenNotFoundException;
 import com.bookommerce.auth_server.exception.EmailAlreadyExistedException;
+import com.bookommerce.auth_server.exception.EmailNotFoundException;
+import com.bookommerce.auth_server.exception.UserAlreadyActivatedException;
 import com.bookommerce.auth_server.mapper.UserMapper;
 import com.bookommerce.auth_server.repository.AccountActivationTokenRepository;
 import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
 import com.bookommerce.auth_server.service.event.AccountActivationSuccessEventPublisher;
 import com.bookommerce.auth_server.service.event.RegistrationSuccessEventPublisher;
+import com.bookommerce.auth_server.validation.ValidationUtils;
 
 import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
@@ -67,8 +71,8 @@ public class AuthService {
     @Transactional
     public void register(RegistrationRequestDto registrationRequestDto) {
         if (this.userRepository.findByEmail(registrationRequestDto.email()).isPresent()) {
-            BeanPropertyBindingResult bindingResult = new BeanPropertyBindingResult(registrationRequestDto, "registrationRequestDto");
-            bindingResult.rejectValue("email", "email", "3:Email already existed");
+            BindingResult bindingResult = 
+                ValidationUtils.createBindingResult(registrationRequestDto, "registrationRequestDto", "email", "Email already existed");
             throw new EmailAlreadyExistedException(bindingResult);
         }
         User user = this.userMapper.toUser(registrationRequestDto);
@@ -141,5 +145,23 @@ public class AuthService {
                 accountActivationSuccessEventPublisher.publishAccountActivationSuccessEvent(new AccountActivationSuccessEvent(user.getEmail()));
             }
         });
+    }
+
+    public void resendAccountActivationEmail(ResendAccountActivationEmailDto resendAccountActivationEmailDto) {
+        Optional<User> optionalUser = this.userRepository.findByEmail(resendAccountActivationEmailDto.email());
+        if (optionalUser.isEmpty()) {
+            BindingResult bindingResult =
+                ValidationUtils.createBindingResult(resendAccountActivationEmailDto, "resendAccountActivationEmailDto", "email", "Email not found");
+            throw new EmailNotFoundException(bindingResult);
+        }
+
+        User user = optionalUser.get();
+        if (user.isActivated()) {
+            BindingResult bindingResult =
+                ValidationUtils.createBindingResult(resendAccountActivationEmailDto, "resendAccountActivationEmailDto", "email", "User already activated");
+            throw new UserAlreadyActivatedException(bindingResult);
+        }
+
+        // Send email
     }
 }

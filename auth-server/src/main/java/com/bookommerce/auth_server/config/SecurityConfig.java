@@ -147,6 +147,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()
                 .requestMatchers(HttpMethod.GET, "/api/account/activate").permitAll()
+                .requestMatchers(HttpMethod.POST, "/api/account/activate/email/send").permitAll()
                 // authorization for internal dispatch
                 .dispatcherTypeMatchers(DispatcherType.ERROR).permitAll()
                 .anyRequest().authenticated())
@@ -173,7 +174,9 @@ public class SecurityConfig {
                 .csrfTokenRequestHandler(this.csrfTokenRequestHandler())
                 .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/register"))
                 .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/login/customer"))
-                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/login/store")))
+                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/login/store"))
+                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.POST, "/api/account/activate/email/send"))
+                .ignoringRequestMatchers(PathPatternRequestMatcher.withDefaults().matcher(HttpMethod.GET, "/api/account/activate")))
             .cors(Customizer.withDefaults());
         return http.build();
     }

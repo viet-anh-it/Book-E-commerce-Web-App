@@ -20,17 +20,21 @@ public class GlobalExceptionHandler {
     //@formatter:off
     @ExceptionHandler({
         MethodArgumentNotValidException.class,
-        EmailAlreadyExistedException.class
+        EmailAlreadyExistedException.class,
+        EmailNotFoundException.class,
+        UserAlreadyActivatedException.class
     })
     
     public ResponseEntity<ApiErrorResponse<Map<String, Object>>> handleValidationException(Exception ex) {
         BindingResult bindingResult = null;
-        if (ex instanceof MethodArgumentNotValidException) {
-            MethodArgumentNotValidException methodArgumentNotValidException = (MethodArgumentNotValidException) ex;
+        if (ex instanceof MethodArgumentNotValidException methodArgumentNotValidException) {
             bindingResult = methodArgumentNotValidException.getBindingResult();
-        } else if (ex instanceof EmailAlreadyExistedException) {
-            EmailAlreadyExistedException emailAlreadyExistedException = (EmailAlreadyExistedException) ex;
+        } else if (ex instanceof EmailAlreadyExistedException emailAlreadyExistedException) {
             bindingResult = emailAlreadyExistedException.getBindingResult();
+        } else if (ex instanceof EmailNotFoundException emailNotFoundException) {
+            bindingResult = emailNotFoundException.getBindingResult();
+        } else if (ex instanceof UserAlreadyActivatedException userAlreadyActivatedException) {
+            bindingResult = userAlreadyActivatedException.getBindingResult();
         }
         // Extract global errors
         Map<String, Object> error = new HashMap<>();

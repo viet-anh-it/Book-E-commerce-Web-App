@@ -7,16 +7,15 @@ import jakarta.validation.ConstraintValidatorContext;
 import lombok.AccessLevel;
 import lombok.NoArgsConstructor;
 
+// @formatter:off
 @NoArgsConstructor(access = AccessLevel.PRIVATE)
-
 public final class ValidationUtils {
-    //@formatter:off
+    
     public static BindingResult createBindingResult(Object target, String objectName, String field, String defaultMessage) {
         BeanPropertyBindingResult bindingResult = new BeanPropertyBindingResult(target, objectName);
         bindingResult.rejectValue(field, "", defaultMessage);
         return bindingResult;
     }
-
 
     public static void buildGlobalValidationMessage(String message, ConstraintValidatorContext context) {
         context.disableDefaultConstraintViolation();
