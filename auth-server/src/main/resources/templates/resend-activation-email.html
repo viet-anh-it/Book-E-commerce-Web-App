@@ -635,6 +635,9 @@
                     } else {
                         showToast(errorMessage, 'error');
                     }
+                } else if (response.status === 429) {
+                    const data = await response.json();
+                    showToast(data.message, 'error');
                 } else {
                     showToast('Có lỗi xảy ra', 'error');
                 }
