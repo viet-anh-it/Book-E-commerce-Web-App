@@ -37,4 +37,9 @@ public class ViewController {
     public String renderActivationTokenErrorPage() {
         return "activation-token-error";
     }
+
+    @GetMapping("/account/activate/email/send")
+    public String renderResendActivationEmailPage() {
+        return "resend-activation-email";
+    }
 }

@@ -3,6 +3,7 @@ package com.bookommerce.auth_server.config;
 import java.time.Duration;
 import java.util.UUID;
 
+import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.RedisSystemException;
@@ -27,35 +28,61 @@ import lombok.extern.slf4j.Slf4j;
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class EventConfig {
-    StreamListener<String, MapRecord<String, String, String>> streamListener;
 
     @Bean
     public StreamMessageListenerContainer<String, MapRecord<String, String, String>> streamMessageListenerContainer(
             RedisConnectionFactory redisConnectionFactory) {
-        log.info("Creating consumer group: [stream={}, group={}]", "registration-success-event", "registration-success-event-group");
-        createConsumerGroupIfNotExists(redisConnectionFactory, "registration-success-event", "registration-success-event-group");
-
         StreamMessageListenerContainerOptions<String, MapRecord<String, String, String>> options =
                 StreamMessageListenerContainerOptions.builder()
                         .batchSize(1)
                         .pollTimeout(Duration.ofSeconds(1))
                         .build();
 
-        return StreamMessageListenerContainer.create(redisConnectionFactory, options);
+        StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer = 
+            StreamMessageListenerContainer.create(redisConnectionFactory, options);
+            
+        log.info("Starting listener container: [stream={}, group={}]", "registration-success-event", "registration-success-event-group");
+        listenerContainer.start();
+
+        return listenerContainer;
     }
 
     @Bean
-    public Subscription subscription(StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer) {
+    public Subscription registrationSuccessEventHandlerSubscription(
+        StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer,
+        @Qualifier("registrationSuccessEventHandler")
+        StreamListener<String, MapRecord<String, String, String>> registrationSuccessEventHandler,
+        RedisConnectionFactory redisConnectionFactory) {
+        log.info("Creating consumer group: [stream={}, group={}]", "registration-success-event", "registration-success-event-group");
+        createConsumerGroupIfNotExists(redisConnectionFactory, "registration-success-event", "registration-success-event-group");
+
         Subscription subscription = listenerContainer.register(
                 StreamMessageListenerContainer.StreamReadRequest
                         .builder(StreamOffset.create("registration-success-event", ReadOffset.lastConsumed()))
                         .cancelOnError(t -> false)
                         .consumer(Consumer.from("registration-success-event-group", UUID.randomUUID().toString()))
                         .autoAcknowledge(true)
-                        .build(), streamListener);
+                        .build(), registrationSuccessEventHandler);
 
-        log.info("Starting listener container: [stream={}, group={}]", "registration-success-event", "registration-success-event-group");
-        listenerContainer.start();
+        return subscription;
+    }
+
+    @Bean
+    public Subscription resendAccountActivationEmailEventHandlerSubscription(
+        StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer,
+        @Qualifier("resendAccountActivationEmailEventHandler")
+        StreamListener<String, MapRecord<String, String, String>> resendAccountActivationEmailEventHandler,
+        RedisConnectionFactory redisConnectionFactory) {
+        log.info("Creating consumer group: [stream={}, group={}]", "resend-account-activation-email-event", "resend-account-activation-email-event-group");
+        createConsumerGroupIfNotExists(redisConnectionFactory, "resend-account-activation-email-event", "resend-account-activation-email-event-group");
+
+        Subscription subscription = listenerContainer.register(
+                StreamMessageListenerContainer.StreamReadRequest
+                        .builder(StreamOffset.create("resend-account-activation-email-event", ReadOffset.lastConsumed()))
+                        .cancelOnError(t -> false)
+                        .consumer(Consumer.from("resend-account-activation-email-event-group", UUID.randomUUID().toString()))
+                        .autoAcknowledge(true)
+                        .build(), resendAccountActivationEmailEventHandler);
 
         return subscription;
     }

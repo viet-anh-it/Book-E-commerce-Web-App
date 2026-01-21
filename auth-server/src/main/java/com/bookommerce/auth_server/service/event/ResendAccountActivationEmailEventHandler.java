@@ -10,11 +10,10 @@ import org.springframework.data.redis.stream.StreamListener;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 import org.thymeleaf.TemplateEngine;
 import org.thymeleaf.context.Context;
 
-import com.bookommerce.auth_server.dto.event.RegistrationSuccessEvent;
+import com.bookommerce.auth_server.dto.event.ResendAccountActivationEmailEvent;
 import com.bookommerce.auth_server.entity.AccountActivationToken;
 import com.bookommerce.auth_server.repository.AccountActivationTokenRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
@@ -31,22 +30,21 @@ import lombok.extern.slf4j.Slf4j;
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
-public class RegistrationSuccessEventHandler implements StreamListener<String, MapRecord<String, String, String>> {
-
+public class ResendAccountActivationEmailEventHandler implements StreamListener<String, MapRecord<String, String, String>> {
+    
+    ObjectMapper objectMapper = new ObjectMapper();
     static String AUTH_SERVER_BASE_URL = "https://auth.bookommerce.com:8282";
     static String ACCOUNT_ACTIVATION_API_PATH = "/api/account/activate";
     JavaMailSender javaMailSender;
     TemplateEngine templateEngine;
-    ObjectMapper objectMapper = new ObjectMapper();
     AccountActivationTokenRepository accountActivationTokenRepository;
     UserRepository userRepository;
-
+    
     @Override
-    @Transactional
     public void onMessage(MapRecord<String, String, String> message) {
-        log.info(">>>>>>>>>> Starting handling registration success event...");
-        RegistrationSuccessEvent event =
-            objectMapper.convertValue(message.getValue(), RegistrationSuccessEvent.class);
+        log.info("Start handling resend account activation event");
+        ResendAccountActivationEmailEvent event =
+            objectMapper.convertValue(message.getValue(), ResendAccountActivationEmailEvent.class);
         AccountActivationToken accountActivationToken = new AccountActivationToken();
         String tokenValue = UUID.randomUUID().toString();
         String accountActivationUrl = AUTH_SERVER_BASE_URL + ACCOUNT_ACTIVATION_API_PATH + "?token=" + tokenValue;
@@ -56,6 +54,7 @@ public class RegistrationSuccessEventHandler implements StreamListener<String, M
         this.accountActivationTokenRepository.save(accountActivationToken);
         this.send(event.getEmail(), accountActivationUrl);
         log.info(">>>>>>>>>> Email sent to: {}", event.getEmail());
+        log.info("Finish handling resend account activation event");
     }
 
     private void send(String to, String accountActivationUrl) {
@@ -77,4 +76,5 @@ public class RegistrationSuccessEventHandler implements StreamListener<String, M
             log.error("Exception while sending email", exception);
         }
     }
+
 }

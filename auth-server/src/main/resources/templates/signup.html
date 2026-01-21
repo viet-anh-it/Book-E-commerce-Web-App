@@ -622,6 +622,9 @@
 
                 <div class="auth-footer">
                     Bạn đã có tài khoản? <a href="/page/login/customer">Đăng nhập</a>
+                    <div style="margin-top: 12px; font-size: 13px;">
+                        Nhận link <a href="/page/account/activate/email/send">kích hoạt</a>
+                    </div>
                 </div>
             </div>
         </div>
@@ -795,10 +798,8 @@
                 const data = await response.json();
 
                 if (response.status === 201) {
-                    showToast(data.message || 'Đăng ký người dùng thành công', 'success');
-                    setTimeout(() => {
-                        window.location.href = `/page/signup/success?email=${encodeURIComponent(emailInput.value)}`;
-                    }, 2000);
+                    localStorage.setItem('email', emailInput.value);
+                    window.location.href = `/page/signup/success`;
                 } else if (response.status === 400 && data.error) {
                     // Handle validation errors
                     if (data.error.fieldErrors) {

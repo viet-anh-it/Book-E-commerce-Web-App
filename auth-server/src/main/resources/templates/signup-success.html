@@ -395,7 +395,7 @@
                     <span id="themeIcon">☀️</span>
                 </button>
 
-                <a href="/" class="app-logo"><span>Book</span>ommerce</a>
+                <a class="app-logo"><span>Book</span>ommerce</a>
 
                 <div class="success-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"
@@ -443,8 +443,8 @@
         });
 
         // --- Logic ---
-        const urlParams = new URLSearchParams(window.location.search);
-        const email = urlParams.get('email');
+        const email = localStorage.getItem('email');
+        localStorage.removeItem('email');
         const emailDisplay = document.getElementById('emailDisplay');
 
         if (email) {
@@ -492,44 +492,39 @@
 
         toastClose.addEventListener('click', hideToast);
 
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-            return null;
-        }
-
         // --- Resend Email ---
         const resendBtn = document.getElementById('resendBtn');
         resendBtn.addEventListener('click', async () => {
-            if (!email) {
-                showToast('Không tìm thấy địa chỉ email.', 'error');
-                return;
-            }
-
             resendBtn.disabled = true;
             resendBtn.textContent = 'Đang gửi...';
 
             try {
-                const csrfToken = getCookie('XSRF-TOKEN');
-                const response = await fetch('/api/account/activation-email/resend', {
+                const response = await fetch('/api/account/activate/email/send', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'X-XSRF-TOKEN': csrfToken
                     },
                     body: JSON.stringify({ email: email })
                 });
 
                 if (response.ok) {
-                    showToast('Email kích hoạt đã được gửi lại.', 'success');
-                } else {
+                    showToast('Email kích hoạt đã được gửi lại', 'success');
+                } else if (response.status === 400) {
                     const data = await response.json();
-                    showToast(data.message || 'Có lỗi xảy ra', 'error');
+                    let errorMessage = data.message || 'Yêu cầu không hợp lệ';
+                    if (data.error && data.error.fieldErrors && data.error.fieldErrors.email && data.error.fieldErrors.email.length > 0) {
+                        errorMessage = data.error.fieldErrors.email[0];
+                    }
+                    showToast(errorMessage, 'error');
+                } else if (response.status === 500) {
+                    showToast('Lỗi máy chủ', 'error');
+                } else {
+                    showToast('Có lỗi xảy ra', 'error');
                 }
             } catch (error) {
-                showToast('Không thể kết nối đến máy chủ.', 'error');
+                console.log(error);
+                showToast('Không thể kết nối đến máy chủ', 'error');
             } finally {
                 resendBtn.disabled = false;
                 resendBtn.textContent = 'Gửi lại email kích hoạt';

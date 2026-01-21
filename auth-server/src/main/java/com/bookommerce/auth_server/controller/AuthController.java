@@ -102,6 +102,7 @@ public class AuthController {
         ResendAccountActivationEmailDto resendAccountActivationEmailDto
     ) {
         this.authService.resendAccountActivationEmail(resendAccountActivationEmailDto);
+        log.info("Account activation email sent successfully");
         return ResponseEntity.status(HttpStatus.OK)
             .contentType(MediaType.APPLICATION_JSON)
             .body(ApiSuccessResponse.<Void>builder()

@@ -143,6 +143,7 @@ public class SecurityConfig {
                 .requestMatchers(HttpMethod.GET, "/page/signup/success").permitAll()
                 .requestMatchers(HttpMethod.GET, "/page/account/activate/expire").permitAll()
                 .requestMatchers(HttpMethod.GET, "/page/account/activate/error").permitAll()
+                .requestMatchers(HttpMethod.GET, "/page/account/activate/email/send").permitAll()
                 // authorization for API
                 .requestMatchers(HttpMethod.POST, "/api/register").permitAll()
                 .requestMatchers(HttpMethod.POST, "/api/login/customer", "/api/login/store").permitAll()

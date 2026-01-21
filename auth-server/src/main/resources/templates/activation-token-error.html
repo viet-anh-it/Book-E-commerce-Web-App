@@ -412,7 +412,7 @@
                     <span id="themeIcon">☀️</span>
                 </button>
 
-                <a href="/" class="app-logo"><span>Book</span>ommerce</a>
+                <a class="app-logo"><span>Book</span>ommerce</a>
 
                 <div class="error-icon">
                     <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"
@@ -427,12 +427,6 @@
                 <p class="auth-subtitle" id="errorMessage">
                     Có lỗi xảy ra trong quá trình kích hoạt tài khoản của bạn.
                 </p>
-
-                <div class="form-group">
-                    <input type="email" id="emailInput" class="form-control"
-                        placeholder="Nhập email của bạn để nhận lại mã kích hoạt" required>
-                </div>
-
                 <button id="resendBtn" class="btn btn-primary">Gửi lại email kích hoạt</button>
                 <a href="/page/login/customer" class="btn btn-default">Quay lại trang đăng nhập</a>
             </div>
@@ -466,14 +460,13 @@
         // --- Logic ---
         const urlParams = new URLSearchParams(window.location.search);
         const errorMessageElement = document.getElementById('errorMessage');
-        const emailInput = document.getElementById('emailInput');
 
         if (urlParams.has('account_activation_token_not_found')) {
-            errorMessageElement.innerHTML = 'Mã kích hoạt không tồn tại hoặc đã được sử dụng.<br>Vui lòng kiểm tra lại hoặc yêu cầu mã mới.';
+            errorMessageElement.innerHTML = 'Liên kết không đúng hoặc đã hết hạn<br>Vui lòng kiểm tra lại hoặc yêu cầu email mới';
         } else if (urlParams.has('invalid_account_activation_token_format')) {
-            errorMessageElement.textContent = 'Định dạng mã kích hoạt không hợp lệ.';
+            errorMessageElement.textContent = 'Liên kết không hợp lệ';
         } else {
-            errorMessageElement.textContent = 'Có lỗi không mong muốn xảy ra trong quá trình kích hoạt.';
+            errorMessageElement.textContent = 'Lỗi không xác định';
         }
 
         // --- Toast Logic ---
@@ -515,60 +508,43 @@
 
         toastClose.addEventListener('click', hideToast);
 
-        function getCookie(name) {
-            const value = `; ${document.cookie}`;
-            const parts = value.split(`; ${name}=`);
-            if (parts.length === 2) return parts.pop().split(';').shift();
-            return null;
-        }
-
         // --- Resend Button Logic ---
         const resendBtn = document.getElementById('resendBtn');
 
         resendBtn.addEventListener('click', async () => {
-            const email = emailInput.value.trim();
-
-            if (!email) {
-                showToast('Vui lòng nhập địa chỉ email.', 'error');
-                emailInput.focus();
-                return;
-            }
-
-            // Email Regex Validation
-            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-            if (!emailRegex.test(email)) {
-                showToast('Địa chỉ email không hợp lệ.', 'error');
-                return;
-            }
-
+            const email = localStorage.getItem('email');
+            localStorage.removeItem('email');
             resendBtn.disabled = true;
             resendBtn.textContent = 'Đang gửi...';
 
             try {
-                const csrfToken = getCookie('XSRF-TOKEN');
-                const response = await fetch('/api/account/activation-email/resend', {
+                const response = await fetch('/api/account/activate/email/send', {
                     method: 'POST',
                     headers: {
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
-                        'X-XSRF-TOKEN': csrfToken
                     },
                     body: JSON.stringify({ email: email })
                 });
 
                 if (response.ok) {
-                    showToast('Email kích hoạt mới đã được gửi.', 'success');
-                    setTimeout(() => {
-                        window.location.href = `/page/signup/success?email=${encodeURIComponent(email)}`;
-                    }, 2000);
-                } else {
+                    showToast('Email kích hoạt mới đã được gửi', 'success');
+                } else if (response.status === 400) {
                     const data = await response.json();
-                    showToast(data.message || 'Có lỗi xảy ra', 'error');
-                    resendBtn.disabled = false;
-                    resendBtn.textContent = 'Gửi lại email kích hoạt';
+                    let errorMessage = data.message || 'Yêu cầu không hợp lệ';
+                    if (data.error && data.error.fieldErrors && data.error.fieldErrors.email && data.error.fieldErrors.email.length > 0) {
+                        errorMessage = data.error.fieldErrors.email[0];
+                    }
+                    showToast(errorMessage, 'error');
+                } else if (response.status === 500) {
+                    showToast('Lỗi máy chủ', 'error');
+                } else {
+                    showToast('Có lỗi xảy ra', 'error');
                 }
             } catch (error) {
-                showToast('Không thể kết nối đến máy chủ.', 'error');
+                console.log(error);
+                showToast('Không thể kết nối đến máy chủ', 'error');
+            } finally {
                 resendBtn.disabled = false;
                 resendBtn.textContent = 'Gửi lại email kích hoạt';
             }

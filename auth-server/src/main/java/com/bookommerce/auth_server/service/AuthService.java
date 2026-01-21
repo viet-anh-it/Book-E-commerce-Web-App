@@ -25,6 +25,7 @@ import org.springframework.validation.BindingResult;
 import com.bookommerce.auth_server.constant.Roles;
 import com.bookommerce.auth_server.dto.event.AccountActivationSuccessEvent;
 import com.bookommerce.auth_server.dto.event.RegistrationSuccessEvent;
+import com.bookommerce.auth_server.dto.event.ResendAccountActivationEmailEvent;
 import com.bookommerce.auth_server.dto.request.LoginRequestDto;
 import com.bookommerce.auth_server.dto.request.RegistrationRequestDto;
 import com.bookommerce.auth_server.dto.request.ResendAccountActivationEmailDto;
@@ -43,6 +44,7 @@ import com.bookommerce.auth_server.repository.RoleRepository;
 import com.bookommerce.auth_server.repository.UserRepository;
 import com.bookommerce.auth_server.service.event.AccountActivationSuccessEventPublisher;
 import com.bookommerce.auth_server.service.event.RegistrationSuccessEventPublisher;
+import com.bookommerce.auth_server.service.event.ResendAccountActivationEmailPublisher;
 import com.bookommerce.auth_server.validation.ValidationUtils;
 
 import jakarta.servlet.http.HttpServletRequest;
@@ -58,6 +60,7 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class AuthService {
 
+    static String AUTH_SERVER_BASE_URL = "https://auth.bookommerce.com:8282";
     UserRepository userRepository;
     UserMapper userMapper;
     PasswordEncoder passwordEncoder;
@@ -67,6 +70,7 @@ public class AuthService {
     RegistrationSuccessEventPublisher registrationSuccessEventPublisher;
     AccountActivationTokenRepository accountActivationTokenRepository;
     AccountActivationSuccessEventPublisher accountActivationSuccessEventPublisher;
+    ResendAccountActivationEmailPublisher resendAccountActivationEmailPublisher;
 
     @Transactional
     public void register(RegistrationRequestDto registrationRequestDto) {
@@ -162,6 +166,6 @@ public class AuthService {
             throw new UserAlreadyActivatedException(bindingResult);
         }
 
-        // Send email
+        resendAccountActivationEmailPublisher.publishResendAccountActivationEmailEvent(new ResendAccountActivationEmailEvent(user.getEmail()));
     }
 }

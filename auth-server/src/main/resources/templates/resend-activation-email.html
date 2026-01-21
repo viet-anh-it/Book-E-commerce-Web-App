@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="https://cdn1.fahasa.com/media/favicon/default/favicon4.ico" type="image/x-icon">
-    <title>Liên kết hết hạn - Bookommerce</title>
+    <title>Gửi lại email kích hoạt - Bookommerce</title>
     <!-- Font -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -23,7 +23,6 @@
             --border-hover: #4096ff;
             --error-color: #ff4d4f;
             --success-color: #52c41a;
-            --warning-color: #faad14;
             --shadow: 0 6px 16px 0 rgba(0, 0, 0, 0.08), 0 3px 6px -4px rgba(0, 0, 0, 0.12), 0 9px 28px 8px rgba(0, 0, 0, 0.05);
             --radius: 8px;
             --font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
@@ -81,7 +80,7 @@
             position: relative;
             display: flex;
             overflow: hidden;
-            min-height: 500px;
+            min-height: 550px;
         }
 
         /* Left Side: Visual */
@@ -97,7 +96,7 @@
         }
 
         .visual-content h2 {
-            font-size: 28px;
+            font-size: 32px;
             font-weight: 700;
             margin-bottom: 16px;
             line-height: 1.3;
@@ -117,16 +116,18 @@
             flex-direction: column;
             justify-content: center;
             position: relative;
-            align-items: center;
-            text-align: center;
         }
 
         /* Header */
+        .auth-header {
+            margin-bottom: 32px;
+        }
+
         .app-logo {
             font-size: 24px;
             font-weight: 600;
             color: var(--text-color);
-            margin-bottom: 24px;
+            margin-bottom: 8px;
             display: inline-block;
             text-decoration: none;
         }
@@ -135,29 +136,84 @@
             color: var(--primary-color);
         }
 
-        .warning-icon {
-            font-size: 64px;
-            color: var(--warning-color);
-            margin-bottom: 24px;
-        }
-
         .auth-title {
-            font-size: 20px;
-            font-weight: 600;
-            color: var(--text-color);
-            margin-bottom: 16px;
-        }
-
-        .auth-subtitle {
             font-size: 14px;
             color: var(--text-secondary);
-            margin-bottom: 32px;
-            line-height: 1.6;
+        }
+
+        /* Form Controls */
+        .form-item {
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        .form-label {
+            display: block;
+            margin-bottom: 8px;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        .form-label .required {
+            color: var(--error-color);
+            margin-left: 4px;
+            font-family: SimSun, sans-serif;
+        }
+
+        .input-wrapper {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .input-field {
+            width: 100%;
+            padding: 8px 11px;
+            font-size: 14px;
+            line-height: 1.5714285714285714;
+            color: var(--text-color);
+            background-color: var(--component-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            transition: var(--transition);
+        }
+
+        .input-field:hover {
+            border-color: var(--border-hover);
+        }
+
+        .input-field:focus {
+            border-color: var(--primary-color);
+            box-shadow: 0 0 0 2px rgba(22, 119, 255, 0.2);
+            outline: none;
+        }
+
+        [data-theme="dark"] .input-field:focus {
+            box-shadow: 0 0 0 2px rgba(22, 104, 220, 0.2);
+        }
+
+        /* Error state for inputs */
+        .input-field.error {
+            border-color: var(--error-color);
+        }
+
+        .input-field.error:focus {
+            border-color: var(--error-color);
+            box-shadow: 0 0 0 2px rgba(255, 77, 79, 0.2);
+        }
+
+        /* Fix Chrome Autofill */
+        input:-webkit-autofill,
+        input:-webkit-autofill:hover,
+        input:-webkit-autofill:focus,
+        input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 30px var(--component-bg) inset !important;
+            -webkit-text-fill-color: var(--text-color) !important;
+            transition: background-color 5000s ease-in-out 0s;
         }
 
         /* Buttons */
         .btn {
-            display: inline-block;
             width: 100%;
             font-weight: 500;
             text-align: center;
@@ -173,7 +229,6 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            text-decoration: none;
         }
 
         .btn-primary {
@@ -186,17 +241,47 @@
             background-color: var(--primary-hover);
         }
 
-        .btn-default {
-            background-color: transparent;
-            border-color: var(--border-color);
-            color: var(--text-color);
-            margin-top: 12px;
+        .btn-primary:disabled {
+            opacity: 0.6;
+            cursor: not-allowed;
         }
 
-        .btn-default:hover {
-            opacity: 0.8;
-            border-color: var(--primary-color);
+        /* Divider */
+        .divider {
+            display: flex;
+            align-items: center;
+            color: var(--text-secondary);
+            font-size: 12px;
+            margin: 24px 0;
+        }
+
+        .divider::before,
+        .divider::after {
+            content: '';
+            flex: 1;
+            border-top: 1px solid var(--border-color);
+        }
+
+        .divider span {
+            margin: 0 8px;
+        }
+
+        /* Footer */
+        .auth-footer {
+            margin-top: 24px;
+            text-align: center;
+            font-size: 14px;
+            color: var(--text-color);
+        }
+
+        .auth-footer a {
             color: var(--primary-color);
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        .auth-footer a:hover {
+            text-decoration: underline;
         }
 
         /* Theme Toggle */
@@ -238,6 +323,21 @@
             .auth-form-side {
                 padding: 32px 24px;
             }
+        }
+
+        /* Error Message */
+        .error-message {
+            color: var(--error-color);
+            font-size: 12px;
+            margin-top: 4px;
+            line-height: 1.5;
+            min-height: 18px;
+            transition: opacity 0.2s cubic-bezier(0.645, 0.045, 0.355, 1);
+            opacity: 0;
+        }
+
+        .error-message.visible {
+            opacity: 1;
         }
 
         /* Toast Notification */
@@ -287,20 +387,6 @@
             line-height: 1.4;
         }
 
-        .toast-icon {
-            font-size: 20px;
-            flex-shrink: 0;
-            margin-top: 2px;
-        }
-
-        .toast-success .toast-icon {
-            color: var(--success-color);
-        }
-
-        .toast-error .toast-icon {
-            color: var(--error-color);
-        }
-
         .toast-close {
             background: none;
             border: none;
@@ -313,6 +399,20 @@
 
         .toast-close:hover {
             color: var(--text-color);
+        }
+
+        .toast-icon {
+            font-size: 20px;
+            flex-shrink: 0;
+            margin-top: 2px;
+        }
+
+        .toast-success .toast-icon {
+            color: var(--success-color);
+        }
+
+        .toast-error .toast-icon {
+            color: var(--error-color);
         }
 
         .toast-progress-bar {
@@ -376,36 +476,40 @@
             <!-- Left Side: Visual -->
             <div class="auth-visual">
                 <div class="visual-content">
-                    <h2>Đừng bỏ lỡ<br>Cộng đồng Bookommerce</h2>
-                    <p>Kích hoạt tài khoản để tiếp tục trải nghiệm mua sắm tuyệt vời.</p>
+                    <h2>Bạn cần giúp đỡ?</h2>
+                    <p>Nhập email đã đăng ký của bạn và chúng tôi sẽ gửi lại liên kết kích hoạt</p>
                 </div>
             </div>
 
-            <!-- Right Side: Content -->
+            <!-- Right Side: Form -->
             <div class="auth-form-side">
                 <button class="theme-toggle" id="themeToggle" title="Toggle Theme">
                     <span id="themeIcon">☀️</span>
                 </button>
 
-                <a class="app-logo"><span>Book</span>ommerce</a>
-
-                <div class="warning-icon">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none"
-                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-                        <circle cx="12" cy="12" r="10"></circle>
-                        <line x1="12" y1="8" x2="12" y2="12"></line>
-                        <line x1="12" y1="16" x2="12.01" y2="16"></line>
-                    </svg>
+                <div class="auth-header">
+                    <a class="app-logo"><span>Book</span>ommerce</a>
+                    <p class="auth-title">Gửi lại email kích hoạt</p>
                 </div>
 
-                <div class="auth-title">Liên kết kích hoạt đã hết hạn</div>
-                <p class="auth-subtitle">
-                    Liên kết kích hoạt tài khoản của bạn đã hết hạn<br>
-                    Vui lòng yêu cầu gửi lại email kích hoạt mới
-                </p>
+                <form id="resendForm" novalidate>
+                    <div class="form-item" id="emailGroup">
+                        <label class="form-label" for="email">Email<span class="required">*</span></label>
+                        <div class="input-wrapper">
+                            <input type="email" id="email" name="email" class="input-field"
+                                placeholder="Nhập email của bạn">
+                        </div>
+                        <div class="error-message" id="error-email"></div>
+                    </div>
 
-                <button id="resendBtn" class="btn btn-primary">Gửi lại email kích hoạt</button>
-                <a href="/page/login/customer" class="btn btn-default">Quay lại trang đăng nhập</a>
+                    <button type="submit" class="btn btn-primary" id="submitBtn">Gửi link kích hoạt</button>
+                </form>
+
+                <div class="auth-footer">
+                    <div style="margin-bottom: 8px;">
+                        <a href="/page/login/customer">Quay lại trang đăng nhập</a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -434,26 +538,26 @@
             setTheme(currentTheme === 'dark' ? 'light' : 'dark');
         });
 
-        // --- Logic ---
-        const resendBtn = document.getElementById('resendBtn');
-
         // --- Toast Logic ---
         const toast = document.getElementById('toast');
-        const toastMessage = document.getElementById('toastMessage');
         const toastTitle = document.getElementById('toastTitle');
+        const toastMessage = document.getElementById('toastMessage');
         const toastIcon = document.getElementById('toastIcon');
         const toastClose = document.getElementById('toastClose');
         let toastTimeout;
 
-        function showToast(message, type = 'success') {
-            // Reset state
+        function showToast(message, type = 'success', title = null) {
             toast.className = 'toast';
-            void toast.offsetWidth; // trigger reflow
+            void toast.offsetWidth;
 
             toastMessage.textContent = message;
             toast.classList.add(type === 'error' ? 'toast-error' : 'toast-success');
 
-            toastTitle.textContent = type === 'error' ? 'Lỗi' : 'Thành công';
+            if (title) {
+                toastTitle.textContent = title;
+            } else {
+                toastTitle.textContent = type === 'error' ? 'Lỗi' : 'Thành công';
+            }
 
             if (type === 'success') {
                 toastIcon.innerHTML = '<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>';
@@ -476,11 +580,39 @@
 
         toastClose.addEventListener('click', hideToast);
 
-        resendBtn.addEventListener('click', async () => {
-            const email = localStorage.getItem('email');
-            localStorage.removeItem('email');
-            resendBtn.disabled = true;
-            resendBtn.textContent = 'Đang gửi...';
+        // --- Form Logic ---
+        const form = document.getElementById('resendForm');
+        const emailInput = document.getElementById('email');
+        const submitBtn = document.getElementById('submitBtn');
+
+        function showFieldError(fieldName, message) {
+            const input = form.querySelector(`input[name="${fieldName}"]`);
+            if (input) {
+                input.classList.add('error');
+                const errorDiv = document.getElementById(`error-${fieldName}`);
+                if (errorDiv) {
+                    errorDiv.textContent = message;
+                    errorDiv.classList.add('visible');
+                }
+            }
+        }
+
+        function clearErrors() {
+            const errorMessages = form.querySelectorAll('.error-message');
+            errorMessages.forEach(el => {
+                el.textContent = '';
+                el.classList.remove('visible');
+            });
+            const inputs = form.querySelectorAll('.input-field');
+            inputs.forEach(input => input.classList.remove('error'));
+        }
+
+        form.addEventListener('submit', async function (e) {
+            e.preventDefault();
+            clearErrors();
+
+            submitBtn.disabled = true;
+            submitBtn.textContent = 'Đang gửi...';
 
             try {
                 const response = await fetch('/api/account/activate/email/send', {
@@ -489,7 +621,7 @@
                         'Content-Type': 'application/json',
                         'Accept': 'application/json',
                     },
-                    body: JSON.stringify({ email: email })
+                    body: JSON.stringify({ email: emailInput.value })
                 });
 
                 if (response.ok) {
@@ -499,19 +631,19 @@
                     let errorMessage = data.message || 'Yêu cầu không hợp lệ';
                     if (data.error && data.error.fieldErrors && data.error.fieldErrors.email && data.error.fieldErrors.email.length > 0) {
                         errorMessage = data.error.fieldErrors.email[0];
+                        showFieldError('email', errorMessage);
+                    } else {
+                        showToast(errorMessage, 'error');
                     }
-                    showToast(errorMessage, 'error');
-                } else if (response.status === 500) {
-                    showToast('Lỗi máy chủ', 'error');
                 } else {
                     showToast('Có lỗi xảy ra', 'error');
                 }
             } catch (error) {
-                console.log(error);
+                console.error(error);
                 showToast('Không thể kết nối đến máy chủ', 'error');
             } finally {
-                resendBtn.disabled = false;
-                resendBtn.textContent = 'Gửi lại email kích hoạt';
+                submitBtn.disabled = false;
+                submitBtn.textContent = 'Gửi link kích hoạt';
             }
         });
     </script>
