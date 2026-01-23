@@ -240,20 +240,20 @@ public class SecurityConfig {
                     .build())
                 .build();
 
-        RegisteredClient resourceServer = RegisteredClient.withId("resource-server")
-                .clientId("resource-server")
-                .clientSecret("$2a$12$zBuKEpT5/7BJ/d7ZcoOGmepGXPdoZOx17VieNDn35cZMhnSMDlPT.")
-                .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
-                .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
-                .clientSettings(ClientSettings.builder()
-                    .requireAuthorizationConsent(false)
-                    .requireProofKey(false)
-                    .build())    
-                .build();
+        // RegisteredClient resourceServer = RegisteredClient.withId("resource-server")
+        //         .clientId("resource-server")
+        //         .clientSecret("$2a$12$zBuKEpT5/7BJ/d7ZcoOGmepGXPdoZOx17VieNDn35cZMhnSMDlPT.")
+        //         .clientAuthenticationMethod(ClientAuthenticationMethod.CLIENT_SECRET_BASIC)
+        //         .authorizationGrantType(AuthorizationGrantType.CLIENT_CREDENTIALS)
+        //         .clientSettings(ClientSettings.builder()
+        //             .requireAuthorizationConsent(false)
+        //             .requireProofKey(false)
+        //             .build())    
+        //         .build();
 
         JpaRegisteredClientRepository jpaRegisteredClientRepository = new JpaRegisteredClientRepository(clientRepository);
         jpaRegisteredClientRepository.save(bff);
-        jpaRegisteredClientRepository.save(resourceServer);
+        // jpaRegisteredClientRepository.save(resourceServer);
         return jpaRegisteredClientRepository;
     }
 
@@ -392,7 +392,7 @@ public class SecurityConfig {
     @Bean
     public CsrfTokenRequestHandler csrfTokenRequestHandler() {
         CsrfTokenRequestAttributeHandler handler = new CsrfTokenRequestAttributeHandler();
-        handler.setCsrfRequestAttributeName(null);
+        handler.setCsrfRequestAttributeName(null); // disable defered csrf
         return handler;
     }
 }

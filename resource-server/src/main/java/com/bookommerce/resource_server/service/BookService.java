@@ -9,6 +9,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
@@ -45,8 +46,10 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.NonFinal;
+import lombok.extern.slf4j.Slf4j;
 
-//@formatter:off
+// @formatter:off
+@Slf4j
 @Service
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
@@ -132,7 +135,9 @@ public class BookService {
         return pagedBooks.map(book -> this.bookMapper.toGetAllBooksResponseDto(book));
     }
 
+    @Cacheable(cacheNames = {"books"}, key = "'book:' + #bookIdRequestDto.id()")
     public GetBookByIdResponseDto getBookById(BookIdRequestDto bookIdRequestDto) {
+        log.info("Check caching");
         Optional<Book> optionalBook = this.bookRepository.findById(bookIdRequestDto.id());
         if (optionalBook.isEmpty()) {
             BindingResult bindingResult = 

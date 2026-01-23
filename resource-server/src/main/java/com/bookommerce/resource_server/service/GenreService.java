@@ -2,6 +2,7 @@ package com.bookommerce.resource_server.service;
 
 import java.util.List;
 
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
@@ -32,6 +33,7 @@ public class GenreService {
         this.genreRepository.save(genre);
     }
 
+    @Cacheable("genres")
     public List<Genre> getAllGenres() {
         return this.genreRepository.findAll();
     }

@@ -8,6 +8,7 @@ import java.util.Optional;
 import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -25,8 +26,10 @@ import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
 import lombok.experimental.FieldDefaults;
 import lombok.experimental.NonFinal;
+import lombok.extern.slf4j.Slf4j;
 
 //@formatter:off
+@Slf4j
 @Service
 @RequiredArgsConstructor
 
@@ -40,7 +43,12 @@ public class ProfileService {
     ProfileRepository profileRepository;
     ProfileMapper profileMapper;
 
+    @Cacheable(
+        cacheNames = {"profiles"}, 
+        key = "'profile:' + T(org.springframework.security.core.context.SecurityContextHolder)"+".context.authentication.name"
+    )
     public GetMyProfileResponseDto getMyProfile() {
+        log.info("Check caching");
         String currentAuthenticatedUsername = SecurityContextHolder.getContext().getAuthentication().getName();
         Optional<Profile> optionalProfile = this.profileRepository.findByEmail(currentAuthenticatedUsername);
         Profile profile = null;

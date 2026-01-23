@@ -27,8 +27,8 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class RateLimitingFilter extends OncePerRequestFilter {
 
-    static int THRESHOLD = 1;
-    static long WINDOW_SIZE_MS = 5_000;
+    static int THRESHOLD = 100;
+    static long WINDOW_SIZE_MS = 60_000;
     Map<String, Window> ipStorage = new ConcurrentHashMap<>();
 
     @Override
