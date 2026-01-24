@@ -1,9 +1,9 @@
 package com.bookommerce.auth_server.config;
 
 import java.time.Duration;
-import java.util.UUID;
 
 import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.RedisSystemException;
@@ -33,10 +33,10 @@ public class EventConfig {
     public StreamMessageListenerContainer<String, MapRecord<String, String, String>> streamMessageListenerContainer(
             RedisConnectionFactory redisConnectionFactory) {
         StreamMessageListenerContainerOptions<String, MapRecord<String, String, String>> options =
-                StreamMessageListenerContainerOptions.builder()
-                        .batchSize(1)
-                        .pollTimeout(Duration.ofSeconds(1))
-                        .build();
+            StreamMessageListenerContainerOptions.builder()
+                .batchSize(1)
+                .pollTimeout(Duration.ofSeconds(1))
+                .build();
 
         StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer = 
             StreamMessageListenerContainer.create(redisConnectionFactory, options);
@@ -53,17 +53,13 @@ public class EventConfig {
         @Qualifier("registrationSuccessEventHandler")
         StreamListener<String, MapRecord<String, String, String>> registrationSuccessEventHandler,
         RedisConnectionFactory redisConnectionFactory) {
-        log.info("Creating consumer group: [stream={}, group={}]", "registration-success-event", "registration-success-event-group");
-        createConsumerGroupIfNotExists(redisConnectionFactory, "registration-success-event", "registration-success-event-group");
-
         Subscription subscription = listenerContainer.register(
-                StreamMessageListenerContainer.StreamReadRequest
-                        .builder(StreamOffset.create("registration-success-event", ReadOffset.lastConsumed()))
-                        .cancelOnError(t -> false)
-                        .consumer(Consumer.from("registration-success-event-group", UUID.randomUUID().toString()))
-                        .autoAcknowledge(true)
-                        .build(), registrationSuccessEventHandler);
-
+            StreamMessageListenerContainer.StreamReadRequest
+                .builder(StreamOffset.create("registration-success-event", ReadOffset.lastConsumed()))
+                .cancelOnError(t -> false)
+                .consumer(Consumer.from("registration-success-event-group", "auth-server"))
+                .autoAcknowledge(true)
+                .build(), registrationSuccessEventHandler);
         return subscription;
     }
 
@@ -73,25 +69,32 @@ public class EventConfig {
         @Qualifier("resendAccountActivationEmailEventHandler")
         StreamListener<String, MapRecord<String, String, String>> resendAccountActivationEmailEventHandler,
         RedisConnectionFactory redisConnectionFactory) {
-        log.info("Creating consumer group: [stream={}, group={}]", "resend-account-activation-email-event", "resend-account-activation-email-event-group");
-        createConsumerGroupIfNotExists(redisConnectionFactory, "resend-account-activation-email-event", "resend-account-activation-email-event-group");
-
         Subscription subscription = listenerContainer.register(
-                StreamMessageListenerContainer.StreamReadRequest
-                        .builder(StreamOffset.create("resend-account-activation-email-event", ReadOffset.lastConsumed()))
-                        .cancelOnError(t -> false)
-                        .consumer(Consumer.from("resend-account-activation-email-event-group", UUID.randomUUID().toString()))
-                        .autoAcknowledge(true)
-                        .build(), resendAccountActivationEmailEventHandler);
-
+            StreamMessageListenerContainer.StreamReadRequest
+                .builder(StreamOffset.create("resend-account-activation-email-event", ReadOffset.lastConsumed()))
+                .cancelOnError(t -> false)
+                .consumer(Consumer.from("resend-account-activation-email-event-group", "auth-server"))
+                .autoAcknowledge(true)
+                .build(), resendAccountActivationEmailEventHandler);
         return subscription;
+    }
+
+    @Bean
+    public ApplicationRunner createConsumerGroupIfNotExists(RedisConnectionFactory redisConnectionFactory) {
+        return args -> {
+            log.info("Creating consumer group: [stream={}, group={}]", "registration-success-event", "registration-success-event-group");
+            createConsumerGroupIfNotExists(redisConnectionFactory, "registration-success-event", "registration-success-event-group");
+
+            log.info("Creating consumer group: [stream={}, group={}]", "resend-account-activation-email-event", "resend-account-activation-email-event-group");
+            createConsumerGroupIfNotExists(redisConnectionFactory, "resend-account-activation-email-event", "resend-account-activation-email-event-group");
+        };
     }
 
     private void createConsumerGroupIfNotExists(RedisConnectionFactory redisConnectionFactory, String streamKey, String groupName) {
         try {
             createConsumerGroup(redisConnectionFactory, streamKey, groupName);
-        } catch (RedisSystemException ex) {
-            log.error(ex.getMessage());
+        } catch (RedisSystemException redisSystemException) {
+            log.error(redisSystemException.getMessage());
         }
     }
 
@@ -100,8 +103,8 @@ public class EventConfig {
             redisConnectionFactory.getConnection()
                 .streamCommands()
                 .xGroupCreate(streamKey.getBytes(), groupName, ReadOffset.from("0-0"), true);
-        } catch (RedisSystemException exception) {
-            log.warn(exception.getCause().getMessage());
+        } catch (RedisSystemException redisSystemException) {
+            log.warn(redisSystemException.getCause().getMessage());
         }
     }
 }

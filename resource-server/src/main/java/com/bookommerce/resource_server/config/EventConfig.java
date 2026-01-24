@@ -1,8 +1,8 @@
 package com.bookommerce.resource_server.config;
 
 import java.time.Duration;
-import java.util.UUID;
 
+import org.springframework.boot.ApplicationRunner;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.redis.RedisSystemException;
@@ -24,7 +24,6 @@ import lombok.extern.slf4j.Slf4j;
 // @formatter:off
 @Slf4j
 @Configuration
-
 @RequiredArgsConstructor
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class EventConfig {
@@ -34,39 +33,46 @@ public class EventConfig {
     @Bean
     public StreamMessageListenerContainer<String, MapRecord<String, String, String>> streamMessageListenerContainer(
         RedisConnectionFactory redisConnectionFactory) {
-        log.info("Creating consumer group: [stream={}, group={}]", "account-activation-success-event", "account-activation-success-event-group");
-        createConsumerGroupIfNotExists(redisConnectionFactory, "account-activation-success-event", "account-activation-success-event-group");
-
         StreamMessageListenerContainerOptions<String, MapRecord<String, String, String>> options =
-                StreamMessageListenerContainerOptions.builder()
-                    .batchSize(1)
-                    .pollTimeout(Duration.ofSeconds(1))
-                    .build();
+            StreamMessageListenerContainerOptions.builder()
+                .batchSize(1)
+                .pollTimeout(Duration.ofSeconds(1))
+                .build();
 
-        return StreamMessageListenerContainer.create(redisConnectionFactory, options);
+        StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer = 
+            StreamMessageListenerContainer.create(redisConnectionFactory, options);
+
+        log.info("Starting listener container: [stream={}, group={}]", "account-activation-success-event", "account-activation-success-event-group");
+        listenerContainer.start();
+
+        return listenerContainer;
     }
 
     @Bean
     public Subscription subscription(StreamMessageListenerContainer<String, MapRecord<String, String, String>> listenerContainer) {
         Subscription subscription = listenerContainer.register(
-                StreamMessageListenerContainer.StreamReadRequest
-                        .builder(StreamOffset.create("account-activation-success-event", ReadOffset.lastConsumed()))
-                        .cancelOnError(t -> false)
-                        .consumer(Consumer.from("account-activation-success-event-group", UUID.randomUUID().toString()))
-                        .autoAcknowledge(true)
-                        .build(), streamListener);
-
-        log.info("Starting listener container: [stream={}, group={}]", "account-activation-success-event", "account-activation-success-event-group");
-        listenerContainer.start();
-
+            StreamMessageListenerContainer.StreamReadRequest
+                .builder(StreamOffset.create("account-activation-success-event", ReadOffset.lastConsumed()))
+                .cancelOnError(t -> false)
+                .consumer(Consumer.from("account-activation-success-event-group", "resource-server"))
+                .autoAcknowledge(true)
+                .build(), streamListener);
         return subscription;
+    }
+
+    @Bean
+    public ApplicationRunner createConsumerGroupIfNotExists(RedisConnectionFactory redisConnectionFactory) {
+        return args -> {
+            log.info("Creating consumer group: [stream={}, group={}]", "account-activation-success-event", "account-activation-success-event-group");
+            createConsumerGroupIfNotExists(redisConnectionFactory, "account-activation-success-event", "account-activation-success-event-group");
+        };
     }
 
     private void createConsumerGroupIfNotExists(RedisConnectionFactory redisConnectionFactory, String streamKey, String groupName) {
         try {
             createConsumerGroup(redisConnectionFactory, streamKey, groupName);
-        } catch (RedisSystemException ex) {
-            log.error(ex.getMessage());
+        } catch (RedisSystemException redisSystemException) {
+            log.error(redisSystemException.getMessage());
         }
     }
 
@@ -75,8 +81,8 @@ public class EventConfig {
             redisConnectionFactory.getConnection()
                 .streamCommands()
                 .xGroupCreate(streamKey.getBytes(), groupName, ReadOffset.from("0-0"), true);
-        } catch (RedisSystemException exception) {
-            log.warn(exception.getCause().getMessage());
+        } catch (RedisSystemException redisSystemException) {
+            log.warn(redisSystemException.getCause().getMessage());
         }
     }
 }
