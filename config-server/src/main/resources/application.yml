@@ -1,0 +1,14 @@
+server:
+  port: 8888 # Cổng mặc định của Config Server
+
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/your-org/your-config-repo.git
+          search-paths: # Tùy chọn: Thư mục con chứa file config
+            - config
+          default-label: main # Tùy chọn: Nhánh Git mặc định (ví dụ: main, master)
