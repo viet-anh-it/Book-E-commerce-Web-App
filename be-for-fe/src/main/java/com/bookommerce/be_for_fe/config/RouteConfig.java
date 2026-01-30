@@ -6,11 +6,8 @@ import org.springframework.cloud.gateway.server.mvc.handler.GatewayRouterFunctio
 import org.springframework.cloud.gateway.server.mvc.handler.HandlerFunctions;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.lang.NonNull;
 import org.springframework.web.servlet.function.RouterFunction;
 import org.springframework.web.servlet.function.ServerResponse;
-
-import com.bookommerce.be_for_fe.filter.RateLimitFilter;
 
 import lombok.AccessLevel;
 import lombok.RequiredArgsConstructor;
@@ -22,8 +19,6 @@ import lombok.experimental.FieldDefaults;
 @FieldDefaults(level = AccessLevel.PRIVATE, makeFinal = true)
 public class RouteConfig {
 
-    @NonNull
-    RateLimitFilter rateLimitFilter;
     static String RESOURCE_SERVER_BASE_URL = "https://api.bookommerce.com:8383";
 
     @Bean

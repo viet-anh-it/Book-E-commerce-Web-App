@@ -1,0 +1,50 @@
+server:
+  port: 8383
+  ssl:
+    bundle: resource-server-ssl
+spring:
+  ssl:
+    bundle:
+      jks:
+        resource-server-ssl:
+          keystore:
+            location: classpath:resource-server-keystore.p12
+            password: ${RESOURCE_SERVER_KEYSTORE_PASSWORD:password}
+          truststore:
+            location: classpath:resource-server-truststore.p12
+            password: ${RESOURCE_SERVER_TRUSTSTORE_PASSWORD:password}
+  output:
+    ansi:
+      enabled: always
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://localhost:3806/bookommerce_dev_db
+    username: root
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+logging:
+  level:
+    org:
+      springframework:
+        security: DEBUG
+  file:
+    name: ./logs/resource-server.log
+    max-size: 1024MB
+    max-history: 0
+    clean-history-on-start: true
+  pattern:
+    console: "%d{HH:mm:ss.SSS} | %clr(%level) | %clr(%logger{0}){green}: %msg%n"
+    file: "%d{HH:mm:ss.SSS} | %level | %logger{0}: %msg%n"
+upload:
+  image:
+    book: C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\upload\image\book\
+    avatar: C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\upload\image\avatar\
+    avatar.default: C:\Users\PC\OneDrive\Desktop\bookommerce\resource-server\upload\image\avatar\default\

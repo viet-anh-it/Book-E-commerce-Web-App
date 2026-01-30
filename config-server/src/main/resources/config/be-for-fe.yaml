@@ -1,0 +1,56 @@
+server:
+  port: 8181
+  ssl:
+    bundle: bff-ssl
+spring:
+  ssl:
+    bundle:
+      jks:
+        bff-ssl:
+          keystore:
+            location: classpath:bff-keystore.p12
+            password: ${BFF_KEYSTORE_PASSWORD:password}
+          truststore:
+            location: classpath:bff-truststore.p12
+            password: ${BFF_TRUSTSTORE_PASSWORD:password}
+  output:
+    ansi:
+      enabled: always
+  main:
+    banner-mode: off
+  datasource:
+    url: jdbc:mysql://localhost:3806/bookommerce-bff-dev-db
+    username: root
+    password: ${DB_PASSWORD}
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  session:
+    jdbc:
+      initialize-schema: always
+  jpa:
+    hibernate:
+      ddl-auto: update
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        '[format_sql]': true
+    show-sql: true
+logging:
+  file:
+    name: ./logs/bff.log
+  logback:
+    rollingpolicy:
+      max-file-size: 1024MB
+      max-history: 0
+      clean-history-on-start: true
+  level:
+    root: INFO
+    org:
+      hibernate:
+        SQL: DEBUG
+        tool:
+          schema: DEBUG
+      springframework:
+        security: DEBUG
+  pattern:
+    console: "%d{HH:mm:ss.SSS} | %clr(%level) | %clr(%logger{0}){green}: %msg%n"
+    file: "%d{HH:mm:ss.SSS} | %level | %logger{0}: %msg%n"

@@ -1,7 +1,7 @@
-import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
 import fs from 'fs'
 import path from 'path'
+import { defineConfig } from 'vite'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -11,8 +11,8 @@ export default defineConfig({
     port: 7979,
     open: false,
     https: {
-      pfx: fs.readFileSync(path.resolve(__dirname, 'bookommerce-ssl.p12')),
-      passphrase: '123456'
+      key: fs.readFileSync(path.resolve(__dirname, 'admin-ui-private.key')),
+      cert: fs.readFileSync(path.resolve(__dirname, 'admin-ui-cert.crt')),
     }
   }
 })

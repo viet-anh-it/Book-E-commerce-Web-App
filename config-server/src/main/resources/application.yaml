@@ -1,0 +1,24 @@
+server:
+  port: 8888
+  ssl:
+    bundle: config-server-ssl
+spring:
+  ssl:
+    bundle:
+      jks:
+        config-server-ssl:
+          keystore:
+            location: classpath:config-server-keystore.p12
+            password: ${CONFIG_SERVER_KEYSTORE_PASSWORD:password}
+          truststore:
+            location: classpath:config-server-truststore.p12
+            password: ${CONFIG_SERVER_TRUSTSTORE_PASSWORD:password}
+  application:
+    name: config-server
+  profiles:
+    active: native
+  cloud:
+    config:
+      server:
+        native:
+          search-locations: classpath:/config

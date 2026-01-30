@@ -1,77 +1,11 @@
-server:
-  port: 8181
-  ssl:
-    bundle: web-server-bundle
-
 spring:
-  output:
-    ansi:
-      enabled: always
-  main:
-    banner-mode: off
-  ssl:
-    bundle:
-      jks:
-        web-server-bundle: #user-defined name
-          key:
-            alias: bookommerce_ssl
-          keystore:
-            location: classpath:bookommerce-ssl.p12
-            password: 123456
-            type: PKCS12
-        client-trust-bundle: #user-defined name
-          key:
-            alias: bookommerce_ssl
-          keystore:
-            location: classpath:bookommerce-ssl.p12
-            password: 123456
-            type: PKCS12
-          truststore:
-            location: classpath:bookommerce-ssl.p12
-            password: 123456
-            type: PKCS12
   application:
     name: be-for-fe
-  datasource:
-    url: jdbc:mysql://localhost:3806/bookommerce-bff-dev-db
-    username: root
-    password: ${DB_PASSWORD}
-    driver-class-name: com.mysql.cj.jdbc.Driver
-  session:
-    jdbc:
-      initialize-schema: always
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQLDialect
-        format_sql: true
-    show-sql: true
-
-logging:
-  file:
-    name: ./logs/bff.log
-  logback:
-    rollingpolicy:
-      max-file-size: 1024MB
-      max-history: 0
-      clean-history-on-start: true
-  level:
-    root: INFO
-    org:
-      hibernate:
-        SQL: DEBUG
-        tool:
-          schema: DEBUG
-      springframework:
-        security: DEBUG
-        # session:
-        #   jdbc: DEBUG
-        # jdbc:
-        #   core:
-        #     JdbcTemplate: DEBUG
-        #     StatementCreatorUtils: TRACE
-  pattern:
-    console: "%d{HH:mm:ss.SSS} | %clr(%level) | %clr(%logger{0}){green}: %msg%n"
-    file: "%d{HH:mm:ss.SSS} | %level | %logger{0}: %msg%n"
+  cloud:
+    config:
+      tls:
+        enabled: true
+        trust-store: classpath:bff-truststore.p12
+        trust-store-password: ${BFF_TRUSTSTORE_PASSWORD:password}
+  config:
+    import: "optional:configserver:https://config.bookommerce.com:8888"
